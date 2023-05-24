@@ -1,9 +1,6 @@
 tray.on("CONFIG_SLOT_MOUNT", async ({ event, previousWizardState }) => {
   if (event.data.externalId !== tray.env.slotExternalId) return;
 
-  // this call is dependent on the object selected on the previous screen of the wizard
-  const acmeObject = "deals";
-
   // use the Http Client connector to call the Acme API
   const response = await tray.callConnector({
     connector: "bynder",
