@@ -1,6 +1,5 @@
 tray.on("CONFIG_SLOT_MOUNT", async ({ event, previousWizardState }) => {
 	if (event.data.externalId === "external_triggervalue") {
-		console.log({ event, previousWizardState });
 		if (
 			previousWizardState.values.external_triggervalue === false ||
 			previousWizardState.values.external_triggervalue === null ||
@@ -20,7 +19,6 @@ tray.on("CONFIG_SLOT_MOUNT", async ({ event, previousWizardState }) => {
 });
 
 tray.on("CONFIG_SLOT_VALUE_CHANGED", async ({ event, previousWizardState }) => {
-	console.log(event);
 	if (event.data.externalId === "external_columnid") {
 		const columnID = event.data.value;
 		return await getJsonSchema({ event, previousWizardState, columnID });
@@ -78,6 +76,7 @@ async function getJsonSchema({ event, previousWizardState, columnID }) {
 			value: "Enter Trigger Value",
 		};
 	} else {
+		console.log("returning option list", res.labels);
 		return {
 			...event.data,
 			type: "string",
