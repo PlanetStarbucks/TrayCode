@@ -1,6 +1,5 @@
-tray.on("CONFIG_SLOT_MOUNT", async ({ event, previousWizardState }) => {
+tray.on("CONFIG_SLOT_MOUNT", async ({ event, previousWizardState, previousSlotState }) => {
 	if (event.data.externalId === "external_columnid") {
-		console.log({ event, previousWizardState });
 		if (
 			previousWizardState.values.external_boardid === false ||
 			previousWizardState.values.external_boardid === null ||
@@ -21,7 +20,6 @@ tray.on("CONFIG_SLOT_MOUNT", async ({ event, previousWizardState }) => {
 
 tray.on("CONFIG_SLOT_VALUE_CHANGED", async ({ event, previousWizardState }) => {
 	if (event.data.externalId === "external_boardid") {
-		console.log("getting jsonSchema");
 		const boardID = event.data.value;
 		return await getJsonSchema({ event, previousWizardState, boardID });
 	} else {
@@ -54,7 +52,6 @@ async function getJsonSchema({ event, previousWizardState, boardID }) {
 	});
 
 	const mondayRes = JSON.parse(response);
-	console.log(response);
 	const columns = Object.entries(mondayRes.data.boards[0].columns).map((x) => {
 		return {
 			name: x[1].title,

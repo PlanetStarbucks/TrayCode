@@ -1,7 +1,29 @@
+tray.on("CONFIG_SLOT_MOUNT", async ({ event, previousWizardState }) => {
+	if (event.data.externalId === "external_triggervalue") {
+		console.log({ event, previousWizardState });
+		if (
+			previousWizardState.values.external_triggervalue === false ||
+			previousWizardState.values.external_triggervalue === null ||
+			previousWizardState.values.external_triggervalue === undefined
+		) {
+			return {
+				...event.data,
+				status: "LOADING",
+			};
+		} else {
+			const columnID = previousWizardState.values.external_columnid;
+			return await getJsonSchema({ event, previousWizardState, columnID });
+		}
+	} else {
+		return;
+	}
+});
+
 tray.on("CONFIG_SLOT_VALUE_CHANGED", async ({ event, previousWizardState }) => {
 	console.log(event);
 	if (event.data.externalId === "external_columnid") {
-		return await getJsonSchema({ event, previousWizardState });
+		const columnID = event.data.value;
+		return await getJsonSchema({ event, previousWizardState, columnID });
 	} else if (event.data.externalId === "external_boardid") {
 		return {
 			...event.data,
@@ -14,7 +36,7 @@ tray.on("CONFIG_SLOT_VALUE_CHANGED", async ({ event, previousWizardState }) => {
 	}
 });
 
-async function getJsonSchema({ event, previousWizardState }) {
+async function getJsonSchema({ event, previousWizardState, columnID }) {
 	const response = await tray.callConnector({
 		connector: "graphql-client",
 		version: "1.1",
@@ -32,7 +54,7 @@ async function getJsonSchema({ event, previousWizardState }) {
 			variables: [
 				{
 					key: "columnID",
-					value: event.data.value,
+					value: columnID,
 				},
 				{
 					key: "boardID",
@@ -41,15 +63,28 @@ async function getJsonSchema({ event, previousWizardState }) {
 			],
 		},
 	});
+
 	const res = JSON.parse(JSON.parse(response).data.boards[0].columns[0].settings_str);
 
 	//return jsonSchema in { text, value } to render in dropdown.
-	return {
-		...event.data,
-		type: "string",
-		status: "VISIBLE",
-		jsonSchema: {
-			enum: Object.values(res.labels),
-		},
-	};
+	if (res.labels === undefined) {
+		console.log("returning custom option");
+		return {
+			...event.data,
+			jsonSchema: {
+				type: "string",
+			},
+			status: "VISIBLE",
+			value: "Enter Trigger Value",
+		};
+	} else {
+		return {
+			...event.data,
+			type: "string",
+			status: "VISIBLE",
+			jsonSchema: {
+				enum: Object.values(res.labels),
+			},
+		};
+	}
 }
