@@ -1,10 +1,10 @@
 # TrayCode
 
-This repository if for storing functions used in Tray.io solutions. These are for the config wizard in embedded, and for JS script nodes that may be used in multiple workflows/solutions.
+This repository is for storing functions used in Tray.io solutions. These are for the config wizard in embedded, and for JS script nodes that may be used in multiple workflows/solutions.
 
 ---
 
-bynderMondayDynmaicMap:
+bynderMondayDynamicMap:
 
 Creates a table of Monday columns and Bynder metaproperties for metadata mapping. Calls both the Monday API and Bynder API, then formats those responses into a single table.
 
