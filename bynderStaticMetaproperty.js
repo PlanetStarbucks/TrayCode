@@ -1,3 +1,9 @@
+//This is for use with any static metaproperty map with Bynder.
+//The only thing that should need updated is the name of the authId
+//in the call connector operation.
+
+//Note that the config slot in the Workflow should be set to an empty array as default
+
 tray.on("CONFIG_SLOT_MOUNT", async ({ event, previousWizardState }) => {
 	if (event.data.externalId !== tray.env.slotExternalId) return;
 
