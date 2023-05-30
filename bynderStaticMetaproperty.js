@@ -1,7 +1,7 @@
 tray.on("CONFIG_SLOT_MOUNT", async ({ event, previousWizardState }) => {
 	if (event.data.externalId !== tray.env.slotExternalId) return;
 
-	// use the Http Client connector to call the Acme API
+	// use the Http Client connector to call the Bynder API
 	const response = await tray.callConnector({
 		connector: "bynder",
 		version: "2.0",
