@@ -12,7 +12,7 @@ tray.on("CONFIG_SLOT_MOUNT", async ({ event, previousWizardState }) => {
 		connector: "bynder",
 		version: "2.0",
 		operation: "list_metaproperties",
-		authId: previousWizardState.values.external_bynder_authentication_1,
+		authId: previousWizardState.values.external_bynder_authentication,
 		input: {
 			include_options: false,
 			include_count: false,
