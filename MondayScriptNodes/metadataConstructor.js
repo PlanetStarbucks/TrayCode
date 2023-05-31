@@ -8,6 +8,14 @@ const input = {
 			key: "text",
 			value: "7433D302-246D-45C8-80C58841FF0BF8D0",
 		},
+		{
+			key: "text",
+			value: null,
+		},
+		{
+			key: null,
+			value: "7433D302-246D-45C8-80C58841FF0BF8D0",
+		},
 	],
 	staticMetapropertyMap: {
 		"6C2EA67D-9A96-4769-A743413AD87B32A9": "Monday",
@@ -133,16 +141,45 @@ const input = {
 };
 
 const run = function (input) {
-	Object.keys(input.staticMetapropertyMap).forEach((key) => {
+	return {
+		staticMetapropertyMap: dotFormat(input.staticMetapropertyMap),
+		dynamicMetadataMap: mapBuild(removeNullArray(input.metadataMap)),
+	};
+};
+
+//function to remove null values from input arrays
+const removeNullArray = function (array) {
+	for (let i = 0; i < array.length; i++) {
+		if (array[i].value === null || array[i].key === null) {
+			array.splice(i, 1);
+			i--;
+		}
+	}
+	return array;
+};
+
+//function to remove null values from input objects
+const dotFormat = function (obj) {
+	Object.keys(obj).forEach((key) => {
 		if (key == "null") {
-			delete input.staticMetapropertyMap[key];
+			delete obj[key];
 		} else {
 			const newKey = `metaproperty.${key}`;
-			input.staticMetapropertyMap[newKey] = input.staticMetapropertyMap[key];
-			delete input.staticMetapropertyMap[key];
+			obj[newKey] = obj[key];
+			delete obj[key];
 		}
 	});
-	return input.staticMetapropertyMap;
+	return obj;
+};
+
+//function to build map in form of metaproperty.ID:value
+const mapBuild = function (obj) {
+	let resObj = {};
+	for (let i = 0; i < obj.length; i++) {
+		const keyValue = `${obj[i].value}`;
+		resObj[keyValue] = obj[i].key;
+	}
+	return resObj;
 };
 
 console.log(run(input));
