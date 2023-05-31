@@ -90,6 +90,7 @@ const getFirstList = async ({ event, previousWizardState, boardID }) => {
 		type: "string",
 		enum: columns.map(({ name, value }) => ({ text: name, value: value })),
 	};
+	console.log(result);
 	return result;
 };
 
