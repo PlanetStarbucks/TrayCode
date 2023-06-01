@@ -55,15 +55,18 @@ const input = {
 		"0A36E145-36E2-4141-A2D18C6BFE0B4B93": "person",
 		"7433D302-246D-45C8-80C58841FF0BF8D0": "text",
 	},
+	staticMetadataMap: {
+		"metaproperty.6C2EA67D-9A96-4769-A743413AD87B32A9": "Monday"
+	}
 };
 
 const run = function (input) {
-	let res = {};
+	let res = input.staticMetadataMap;
 	Object.entries(input.metadataMap).forEach((val) => {
 		const newKey = `metaproperty.${val[0]}`;
 		res[newKey] = mpValue(val[1], input.columnData);
 	});
-	return res;
+	return res
 };
 
 const mpValue = function (str, ary) {
