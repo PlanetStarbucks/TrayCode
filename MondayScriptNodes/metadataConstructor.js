@@ -138,12 +138,21 @@ const input = {
 			value: "7D7FF3F1-1348-4F01-A3FB6FB3DC2351B1",
 		},
 	],
+	configObj: {
+        boardID: "4375050651",
+        columnID: "status",
+        triggerValue: "Send to Bynder"
+    }
 };
 
 const run = function (input) {
 	return {
 		staticMetapropertyMap: dotFormat(input.staticMetapropertyMap),
 		dynamicMetadataMap: mapBuild(removeNullArray(input.metadataMap)),
+		configObj: {
+			...input.configObj,
+			boardID: Number(input.configObj.boardID)
+		}
 	};
 };
 
