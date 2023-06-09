@@ -4,6 +4,12 @@ This repository is for storing functions used in Tray.io solutions. These are fo
 
 ---
 
+bynderMondayBoardDataMap:
+
+Creates a table of hard coded values and Bynder metaproperties for mapping Monday items to Bynder. Can be scaled out to additional items as requested by clients. Currently includes link to board, asset, and item.
+
+---
+
 bynderMondayDynamicMap:
 
 Creates a table of Monday columns and Bynder metaproperties for metadata mapping. Calls both the Monday API and Bynder API, then formats those responses into a single table.

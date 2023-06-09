@@ -1,32 +1,24 @@
 const input = {
 	metadataMap: [
 		{
-			key: "person",
+			key: "text",
+			value: "A7C97A41-FFBB-409E-B4B76DD234FFAE35",
+		},
+		{
+			key: "people",
 			value: "0A36E145-36E2-4141-A2D18C6BFE0B4B93",
-		},
-		{
-			key: "text",
-			value: "7433D302-246D-45C8-80C58841FF0BF8D0",
-		},
-		{
-			key: "text",
-			value: null,
-		},
-		{
-			key: null,
-			value: "7433D302-246D-45C8-80C58841FF0BF8D0",
 		},
 	],
 	staticMetapropertyMap: {
-		"6C2EA67D-9A96-4769-A743413AD87B32A9": "Monday",
+		"6C2EA67D-9A96-4769-A743413AD87B32A9": "monday.com",
 	},
 	bynderMetapropertyList: [
 		{
-			text: "Testing date ui",
-			value: "D1F45D8B-B872-4322-B4A4A6F6517E1B7F",
+			text: "Monday Board",
+			value: "A5F07C43-4E23-4864-A2726A806DBDF91C",
 		},
 		{
-			text: "Testing Multi select",
+			text: "Multiselect Field",
 			value: "2F2DB080-C4FB-4758-92B3DCB85ED6B94C",
 		},
 		{
@@ -50,6 +42,10 @@ const input = {
 			value: "DD0FFCBD-E886-432A-8872E1767E181D5D",
 		},
 		{
+			text: "Monday Item",
+			value: "655C6830-C177-470A-A6A9D3FA36294423",
+		},
+		{
 			text: "File Type",
 			value: "CF0B535A-6D7D-4007-A2944BF5B33497C0",
 		},
@@ -60,10 +56,6 @@ const input = {
 		{
 			text: "Edited In",
 			value: "D76C8E41-6FE1-4574-AD83DE39152BC415",
-		},
-		{
-			text: "Testing Date",
-			value: "E5D67C91-4EB1-4C51-AD110D9069402828",
 		},
 		{
 			text: "Language",
@@ -98,7 +90,7 @@ const input = {
 			value: "3CDA2A1F-AF7E-457C-8E4595B64BB28B16",
 		},
 		{
-			text: "Testing text",
+			text: "Text Field 2",
 			value: "B1A4BE70-4401-4338-AF9A6FD4C682EE19",
 		},
 		{
@@ -114,6 +106,10 @@ const input = {
 			value: "7433D302-246D-45C8-80C58841FF0BF8D0",
 		},
 		{
+			text: "Monday Asset",
+			value: "CBC634F4-C9F4-4B6C-857F00430EEAC7F2",
+		},
+		{
 			text: "Workfront Document URL",
 			value: "74F390E6-918E-4ACE-8C0CA00005540A97",
 		},
@@ -126,7 +122,7 @@ const input = {
 			value: "567F67F3-A1C1-47EE-A73FEAEC37D96979",
 		},
 		{
-			text: "Testing Search Text",
+			text: "Text Field 1",
 			value: "A7C97A41-FFBB-409E-B4B76DD234FFAE35",
 		},
 		{
@@ -139,10 +135,27 @@ const input = {
 		},
 	],
 	configObj: {
-        boardID: "4375050651",
-        columnID: "status",
-        triggerValue: "Send to Bynder"
-    }
+		fileConversion: false,
+		columnID: "status",
+		triggerValue: "Send to Bynder",
+		boardID: "4375050651",
+		slug: "bynder-space",
+		fileColumn: "file",
+	},
+	boardDataMap: [
+		{
+			key: "https://{{slug}}.monday.com/boards/{{boardID}}/",
+			value: "A5F07C43-4E23-4864-A2726A806DBDF91C",
+		},
+		{
+			key: "https://{{slug}}.monday.com/boards/{{boardID}}/pulses/{{pulseID}}",
+			value: "655C6830-C177-470A-A6A9D3FA36294423",
+		},
+		{
+			key: "https://{{slug}}.monday.com/boards/{{boardID}}/pulses/{{pulseID}}?asset_id={{assetID}}",
+			value: "CBC634F4-C9F4-4B6C-857F00430EEAC7F2",
+		},
+	],
 };
 
 const run = function (input) {
@@ -151,8 +164,9 @@ const run = function (input) {
 		dynamicMetadataMap: mapBuild(removeNullArray(input.metadataMap)),
 		configObj: {
 			...input.configObj,
-			boardID: Number(input.configObj.boardID)
-		}
+			boardID: Number(input.configObj.boardID),
+		},
+		boardDataMap: mapBuild(removeNullArray(input.boardDataMap)),
 	};
 };
 
