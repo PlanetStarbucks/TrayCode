@@ -16,6 +16,12 @@ const TASK_STATUS_SLOT = tray.env.slotExternalId;
 /** The config slot for the Workfront authentication*/
 const WORKFRONT_AUTH_SLOT = tray.env.slotWorkfrontAuthentication;
 
+/** The config slot for the Bynder authentication*/
+const BYNDER_AUTH_SLOT = tray.env.slotBynderAuthentication;
+
+/** The base domain for the custom Workfront Account (everything before workfront.com) */
+const BASE_WF_DOMAIN = "something.my";
+
 /** An object for storing the HTTP call results */
 const CACHE = {
 	workfrontTaskStatus: null,
@@ -43,7 +49,7 @@ const handleEvent = async ({ event, previousSlotState, previousWizardState }) =>
 				connector: "http-client",
 				version: "5.6",
 				operation: "get_request",
-				authId: previousWizardState.values.external_workfront_fcc_custom_app_authentication,
+				authId: WORKFRONT_AUTH_SLOT,
 				input: {
 					follow_redirect: false,
 					follow_keep_method: false,
@@ -57,7 +63,7 @@ const handleEvent = async ({ event, previousSlotState, previousWizardState }) =>
 						},
 					},
 					case_sensitive_headers: false,
-					url: "https://fccfac.my.workfront.com/attask/api/v16.0/cstem/taskGroupStatuses",
+					url: `https://${BASE_WF_DOMAIN}.workfront.com/attask/api/v16.0/cstem/taskGroupStatuses`,
 					headers: [
 						{
 							key: "{$.auth.token_type}",
