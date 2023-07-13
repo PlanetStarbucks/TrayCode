@@ -1,3 +1,6 @@
+//function to return extensions from a given mimeType
+//list from https://www.npmjs.com/package/mime-db?activeTab=code
+
 const input = {
 	mimeType: "image/jpeg",
 };
@@ -186,6 +189,11 @@ const extList = {
 		source: "iana",
 		compressible: true,
 		extensions: ["svg", "svgz"],
+	},
+	"application/zip": {
+		source: "iana",
+		compressible: false,
+		extensions: ["zip"],
 	},
 };
 
