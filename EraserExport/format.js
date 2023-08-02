@@ -1203,7 +1203,7 @@ const groupString = function (ary) {
 
 const run = function () {
 	//console.log(groupBuilder(importJSON));
-	//console.log(JSON.stringify(structure(importJSON.workflows[0].steps_structure, groupBuilder(importJSON))));
+	console.log(JSON.stringify(structure(importJSON.workflows[0].steps_structure, groupBuilder(importJSON))));
 	const groupObject = structure(importJSON.workflows[0].steps_structure, groupBuilder(importJSON));
 	const groupStr = groupString(groupObject);
 	console.log(groupStr);
