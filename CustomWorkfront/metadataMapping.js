@@ -11,14 +11,8 @@
 /** The config slot where we'll put the table values into (and get them out of) */
 const TABLE_VALUES_SLOT = tray.env.slotExternalId;
 
-/** Edit this for the appropriate auth name of the custom keys */
-const WORKFRONT_AUTH_SLOT = previousWizardState.values;
-
-/** The config slot for the Bynder authentication*/
-const BYNDER_AUTH_SLOT = tray.env.slotBynderAuthentication;
-
 /** The base domain for the custom Workfront Account (everything before workfront.com) */
-const BASE_WF_DOMAIN = "something.my";
+const BASE_WF_DOMAIN = "SUB_DOMAIN.my";
 
 /** Array items corresponding to table rows will store the Workfront metadata under this key */
 const CELL0_KEY = "workfrontMetadata";
@@ -34,6 +28,12 @@ const CACHE = {
 
 /** Function called whenever the configuration item is shown or changed */
 const handleEvent = async ({ event, previousSlotState, previousWizardState }) => {
+	/** Edit this for the appropriate auth name of the custom keys */
+	const WORKFRONT_AUTH_SLOT = previousWizardState.values.external_workfront_AUTHNAME;
+
+	/** The config slot for the Bynder authentication*/
+	const BYNDER_AUTH_SLOT = previousWizardState.values.external_bynder_authentication;
+
 	console.log({ event, previousSlotState, previousWizardState });
 	/**
 	 * Call this to get the value of a config slot
@@ -215,7 +215,7 @@ const handleEvent = async ({ event, previousSlotState, previousWizardState }) =>
 			connector: "bynder",
 			version: "2.0",
 			operation: "list_metaproperties",
-			authId: slotValue(BYNDER_AUTH_SLOT),
+			authId: BYNDER_AUTH_SLOT,
 			input: {
 				include_options: true,
 				include_count: true,
