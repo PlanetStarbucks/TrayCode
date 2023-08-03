@@ -1131,6 +1131,8 @@ const importJSON = {
 	projects: [],
 };
 
+const badCharacters = ["[", "]"];
+
 const groupBuilder = function (importJSON) {
 	let res = [];
 	Object.entries(importJSON.workflows[0].steps).forEach((element) => {
@@ -1180,8 +1182,9 @@ const branchHandle = function (obj, groups) {
 
 const nodeStructure = function (obj, groups) {
 	let res = {};
-	res.title = groups.find((s) => s.name === obj.name).name;
+	res.title = `${groups.find((s) => s.name === obj.name).desc} - ${groups.find((s) => s.name === obj.name).name}`;
 	res.type = groups.find((s) => s.name === obj.name).type;
+
 	return res;
 };
 
@@ -1200,6 +1203,13 @@ const groupString = function (ary) {
 	}
 	return res;
 };
+
+function filterLetters(str, lettersToRemove) {
+	lettersToRemove.forEach(function (letter) {
+		str = str.replaceAll(letter, "");
+	});
+	return str;
+}
 
 const run = function () {
 	//console.log(groupBuilder(importJSON));
