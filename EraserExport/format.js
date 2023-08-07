@@ -3555,8 +3555,6 @@ const importJSON = {
 
 const views = ``;
 
-const badCharacters = ["[", "]"];
-
 const model = ``;
 
 const groupBuilder = function (importJSON) {
@@ -3594,24 +3592,6 @@ const modelBuilder = function (importArray) {
 	return res;
 };
 
-const structure = function (importArray, groups) {
-	let res = [];
-	importArray.forEach((element) => {
-		if (Object.keys(element.content).length === 0) {
-			res.push(nodeStructure(element, groups));
-		} else if (element.type === "loop") {
-			res.push({
-				branches: loopHandle(element, groups),
-			});
-		} else if (element.type === "branch") {
-			res.push({
-				branches: branchHandle(element, groups),
-			});
-		}
-	});
-	return res;
-};
-
 const loopHandle = function (ary, name) {
 	let res = `	${name.replace(/[^a-zA-Z0-9 ]/g, "")} = group "${groups.find((s) => s.name === name).desc.replace(/[^a-zA-Z0-9 ]/g, "")}" {
 		`;
@@ -3631,61 +3611,19 @@ const loopHandle = function (ary, name) {
 	return res;
 };
 
-const branchHandle = function (obj, groups) {
-	let path = nodeStructure(obj, groups);
-	Object.keys(obj.content).forEach((element) => {
-		path[element] = structure(obj.content[element], groups);
-	});
-	return path;
+const branchHandle = function (ary, name) {
+	let res = ``;
+	return res;
 };
 
 const nodeStructure = function (obj) {
 	console.log(obj);
 	let res = `	${obj.name.replace(/[^a-zA-Z0-9 ]/g, "")} = container "${groups.find((s) => s.name === obj.name).desc.replace(/[^a-zA-Z0-9 ]/g, "")}"
 	`;
-
-	//res.title = `${groups.find((s) => s.name === obj.name).desc} - ${groups.find((s) => s.name === obj.name).name}`;
-	//res.type = groups.find((s) => s.name === obj.name).type;
-
 	return res;
 };
-
-const groupString = function (ary) {
-	let res = "";
-	for (let i = 0; i < ary.length; i++) {
-		if (ary[i].branches === undefined) {
-			//console.log(ary[i]);
-			res = res + `${ary[i].title} [icon: lookupIcon]\n`;
-		} else if (ary[i].branches.type === "loop") {
-			//console.log(ary[i]);
-			res = res + `${ary[i].branches.title} [icon: lookupIcon]{\n ${groupString(ary[i].branches.loop)}}\n`;
-		} else if (ary[i].branches.type === "boolean-condition") {
-			res = res + `${ary[i].branches.title} [icon: lookupIcon]{\n ${groupString(ary[i].branches.true)}}\n`;
-		}
-	}
-	return res;
-};
-
-function filterLetters(str, lettersToRemove) {
-	lettersToRemove.forEach(function (letter) {
-		str = str.replaceAll(letter, "");
-	});
-	return str;
-}
 
 const groups = groupBuilder(importJSON);
-
-/*
-const run = function () {
-	//console.log(groupBuilder(importJSON));
-	console.log(JSON.stringify(structure(importJSON.workflows[0].steps_structure, groupBuilder(importJSON))));
-	const groupObject = structure(importJSON.workflows[0].steps_structure, groupBuilder(importJSON));
-	const groupStr = groupString(groupObject);
-	console.log(groupStr);
-};
-
-run();
-*/
 
 //console.log(groups);
 //console.log(JSON.stringify(modelBuilder(importJSON.workflows[0].steps_structure)));
