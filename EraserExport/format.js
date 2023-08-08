@@ -3,31 +3,29 @@ const importJSON = {
 	export_type: "workflow",
 	workflows: [
 		{
-			id: "c7d3ba8c-780d-41b5-9199-5fe3468a55c4",
-			created: "2022-11-22T17:04:53.261711Z",
+			id: "947c0475-2ab6-4680-a5c6-900523357a49",
+			created: "2022-08-08T18:54:46.470076Z",
 			workspace_id: "139e4592-3b78-46ad-885b-bc64d04d3bed",
-			project_id: "61e77b36-3e4a-42ac-8b73-06e9e77addff",
+			project_id: "325733e9-d11c-4f74-ae45-2aa8ea782c3b",
 			group: "b480641f-5f8a-4554-a647-84b3af4d5291",
-			creator: "139e4592-3b78-46ad-885b-bc64d04d3bed",
+			creator: "c0fb1638-958b-4aa0-a664-c3effbe736a5",
 			version: {
-				id: "61b163df-25e2-4a0b-8974-a1688be5622b",
-				created: "2023-07-21T09:19:33.920515Z",
+				id: "aa414ca1-8e23-4f20-8467-c49aafc6e700",
+				created: "2022-11-17T18:05:35.415979Z",
 			},
-			title: "[Adobe Stock v2] Sync Master",
+			title: "Adobe Stock Controller",
+			description: "The main controller for Adobe Stock, set on a chron trigger",
 			enabled: true,
 			tags: [],
 			settings: {
 				config: {
-					syncVector: false,
-					syncVideo: false,
+					syncVector: true,
+					syncVideo: true,
 					syncOrganization: "true",
+					accountCredentials:
+						'{"CLIENT_SECRET":"p8e-HRu6yLAootQZLCTi9yIuXe_imXPLpeqo","ORG_ID":"B22442B959EA26570A495EC7@AdobeOrg","API_KEY":"eff2ff028e324868b0f32e773e3966cc","TECHNICAL_ACCOUNT_ID":"F780157F62FD41310A495FC7@techacct.adobe.com","TECHNICAL_ACCOUNT_EMAIL":"f5df7389-bb24-47ad-9dc2-e59bab8cb301@techacct.adobe.com","PUBLIC_KEYS_WITH_EXPIRY":{"12e50b2d16b39ea42650a0e798054a88518606a4":"08/17/2023","613cdacb4adb6758a0a8141d8459da61fae2f9f8":"08/18/2023"}}',
 					offsetSize: "100",
-					waitingRoom: true,
-					searchLimit: "50",
-					metadataMapping: [],
-					chunkSize: 64000000,
-					staticMapInput: [],
-					dataMapInput: {},
+					waitingRoom: false,
 				},
 				input_schema: {},
 				output_schema: {},
@@ -39,22 +37,41 @@ const importJSON = {
 					content: {},
 				},
 				{
-					name: "date-time-helpers-1",
+					name: "storage-1",
 					type: "normal",
 					content: {},
 				},
 				{
-					name: "date-time-helpers-2",
+					name: "boolean-condition-3",
+					type: "branch",
+					content: {
+						true: [
+							{
+								name: "csv-5",
+								type: "normal",
+								content: {},
+							},
+							{
+								name: "storage-2",
+								type: "normal",
+								content: {},
+							},
+						],
+						false: [],
+					},
+				},
+				{
+					name: "storage-4",
 					type: "normal",
 					content: {},
 				},
 				{
-					name: "storage-3",
+					name: "csv-8",
 					type: "normal",
 					content: {},
 				},
 				{
-					name: "storage-14",
+					name: "bynder-4",
 					type: "normal",
 					content: {},
 				},
@@ -64,7 +81,27 @@ const importJSON = {
 					content: {},
 				},
 				{
-					name: "storage-2",
+					name: "storage-14",
+					type: "normal",
+					content: {},
+				},
+				{
+					name: "storage-15",
+					type: "normal",
+					content: {},
+				},
+				{
+					name: "storage-5",
+					type: "normal",
+					content: {},
+				},
+				{
+					name: "storage-6",
+					type: "normal",
+					content: {},
+				},
+				{
+					name: "object-helpers-1",
 					type: "normal",
 					content: {},
 				},
@@ -74,214 +111,32 @@ const importJSON = {
 					content: {
 						_loop: [
 							{
-								name: "loop-2",
-								type: "loop",
-								content: {
-									_loop: [
-										{
-											name: "storage-16",
-											type: "normal",
-											content: {},
-										},
-										{
-											name: "script-4",
-											type: "normal",
-											content: {},
-										},
-										{
-											name: "boolean-condition-3",
-											type: "branch",
-											content: {
-												true: [
-													{
-														name: "storage-4",
-														type: "normal",
-														content: {},
-													},
-													{
-														name: "math-helpers-1",
-														type: "normal",
-														content: {},
-													},
-													{
-														name: "http-client-1",
-														type: "normal",
-														content: {},
-													},
-													{
-														name: "list-helpers-1",
-														type: "normal",
-														content: {},
-													},
-													{
-														name: "boolean-condition-1",
-														type: "branch",
-														content: {
-															true: [
-																{
-																	name: "script-2",
-																	type: "normal",
-																	content: {},
-																},
-																{
-																	name: "boolean-condition-6",
-																	type: "branch",
-																	content: {
-																		true: [],
-																		false: [
-																			{
-																				name: "json-transformer-1",
-																				type: "normal",
-																				content: {},
-																			},
-																			{
-																				name: "json-transformer-2",
-																				type: "normal",
-																				content: {},
-																			},
-																			{
-																				name: "http-client-5",
-																				type: "normal",
-																				content: {},
-																			},
-																			{
-																				name: "json-transformer-4",
-																				type: "normal",
-																				content: {},
-																			},
-																			{
-																				name: "script-1",
-																				type: "normal",
-																				content: {},
-																			},
-																			{
-																				name: "storage-6",
-																				type: "normal",
-																				content: {},
-																			},
-																		],
-																	},
-																},
-															],
-															false: [
-																{
-																	name: "storage-1",
-																	type: "normal",
-																	content: {},
-																},
-																{
-																	name: "list-helpers-3",
-																	type: "normal",
-																	content: {},
-																},
-																{
-																	name: "storage-5",
-																	type: "normal",
-																	content: {},
-																},
-																{
-																	name: "storage-10",
-																	type: "normal",
-																	content: {},
-																},
-																{
-																	name: "break-loop-1",
-																	type: "break",
-																	content: {},
-																	target: "loop-1",
-																},
-															],
-														},
-													},
-													{
-														name: "math-helpers-2",
-														type: "normal",
-														content: {},
-													},
-													{
-														name: "storage-8",
-														type: "normal",
-														content: {},
-													},
-												],
-												false: [
-													{
-														name: "storage-7",
-														type: "normal",
-														content: {},
-													},
-													{
-														name: "list-helpers-2",
-														type: "normal",
-														content: {},
-													},
-													{
-														name: "storage-9",
-														type: "normal",
-														content: {},
-													},
-													{
-														name: "storage-11",
-														type: "normal",
-														content: {},
-													},
-													{
-														name: "break-loop-5",
-														type: "break",
-														content: {},
-														target: "loop-2",
-													},
-												],
-											},
-										},
-									],
-								},
-							},
-						],
-					},
-				},
-				{
-					name: "storage-12",
-					type: "normal",
-					content: {},
-				},
-				{
-					name: "loop-3",
-					type: "loop",
-					content: {
-						_loop: [
-							{
-								name: "storage-13",
+								name: "math-helpers-1",
 								type: "normal",
 								content: {},
 							},
 							{
-								name: "storage-17",
+								name: "http-client-1",
 								type: "normal",
 								content: {},
 							},
 							{
-								name: "loop-4",
-								type: "loop",
+								name: "list-helpers-1",
+								type: "normal",
+								content: {},
+							},
+							{
+								name: "boolean-condition-1",
+								type: "branch",
 								content: {
-									_loop: [
+									true: [
 										{
-											name: "logic-helpers-1",
-											type: "normal",
-											content: {},
-										},
-										{
-											name: "boolean-condition-7",
-											type: "branch",
+											name: "loop-2",
+											type: "loop",
 											content: {
-												true: [
+												_loop: [
 													{
-														name: "date-time-helpers-3",
-														type: "normal",
-														content: {},
-													},
-													{
-														name: "date-time-helpers-4",
+														name: "csv-3",
 														type: "normal",
 														content: {},
 													},
@@ -291,64 +146,189 @@ const importJSON = {
 														content: {
 															true: [
 																{
-																	name: "break-loop-2",
-																	type: "break",
-																	content: {},
-																	target: "loop-3",
-																},
-															],
-															false: [
-																{
-																	name: "storage-18",
-																	type: "normal",
-																	content: {},
-																},
-																{
-																	name: "script-5",
-																	type: "normal",
-																	content: {},
-																},
-																{
 																	name: "data-mapper-1",
 																	type: "normal",
 																	content: {},
 																},
 																{
-																	name: "boolean-condition-8",
+																	name: "date-time-helpers-1",
+																	type: "normal",
+																	content: {},
+																},
+																{
+																	name: "branch-1",
 																	type: "branch",
 																	content: {
-																		true: [
+																		__default__: [
+																			{
+																				name: "csv-9",
+																				type: "normal",
+																				content: {},
+																			},
+																		],
+																		branch1: [
+																			{
+																				name: "http-client-2",
+																				type: "normal",
+																				content: {},
+																			},
+																			{
+																				name: "file-helpers-3",
+																				type: "normal",
+																				content: {},
+																			},
 																			{
 																				name: "call-workflow-2",
 																				type: "normal",
 																				content: {},
 																			},
 																			{
-																				name: "storage-15",
-																				type: "normal",
-																				content: {},
+																				name: "bynder-1",
+																				type: "branch",
+																				content: {
+																					error: [
+																						{
+																							name: "csv-11",
+																							type: "normal",
+																							content: {},
+																						},
+																						{
+																							name: "break-loop-3",
+																							type: "break",
+																							content: {},
+																							target: "loop-2",
+																						},
+																					],
+																					success: [
+																						{
+																							name: "csv-2",
+																							type: "normal",
+																							content: {},
+																						},
+																					],
+																				},
 																			},
 																		],
-																		false: [
+																		branch2: [
 																			{
-																				name: "call-workflow-5",
-																				type: "normal",
-																				content: {},
+																				name: "boolean-condition-4",
+																				type: "branch",
+																				content: {
+																					true: [
+																						{
+																							name: "http-client-3",
+																							type: "normal",
+																							content: {},
+																						},
+																						{
+																							name: "file-helpers-1",
+																							type: "normal",
+																							content: {},
+																						},
+																						{
+																							name: "call-workflow-3",
+																							type: "normal",
+																							content: {},
+																						},
+																						{
+																							name: "bynder-2",
+																							type: "branch",
+																							content: {
+																								error: [
+																									{
+																										name: "csv-7",
+																										type: "normal",
+																										content: {},
+																									},
+																									{
+																										name: "break-loop-2",
+																										type: "break",
+																										content: {},
+																										target: "loop-2",
+																									},
+																								],
+																								success: [
+																									{
+																										name: "csv-1",
+																										type: "normal",
+																										content: {},
+																									},
+																								],
+																							},
+																						},
+																					],
+																					false: [],
+																				},
 																			},
+																		],
+																		branch3: [
 																			{
-																				name: "delay-1",
-																				type: "normal",
-																				content: {},
+																				name: "boolean-condition-5",
+																				type: "branch",
+																				content: {
+																					true: [
+																						{
+																							name: "http-client-4",
+																							type: "normal",
+																							content: {},
+																						},
+																						{
+																							name: "file-helpers-2",
+																							type: "normal",
+																							content: {},
+																						},
+																						{
+																							name: "call-workflow-4",
+																							type: "normal",
+																							content: {},
+																						},
+																						{
+																							name: "bynder-3",
+																							type: "branch",
+																							content: {
+																								error: [
+																									{
+																										name: "csv-12",
+																										type: "normal",
+																										content: {},
+																									},
+																									{
+																										name: "break-loop-4",
+																										type: "break",
+																										content: {},
+																										target: "loop-2",
+																									},
+																								],
+																								success: [
+																									{
+																										name: "csv-6",
+																										type: "normal",
+																										content: {},
+																									},
+																								],
+																							},
+																						},
+																					],
+																					false: [],
+																				},
 																			},
 																		],
 																	},
 																},
 															],
+															false: [],
 														},
 													},
 												],
-												false: [],
 											},
+										},
+									],
+									false: [
+										{
+											name: "break-loop-1",
+											type: "break",
+											content: {},
+											target: "loop-1",
 										},
 									],
 								},
@@ -356,10 +336,473 @@ const importJSON = {
 						],
 					},
 				},
+				{
+					name: "csv-10",
+					type: "normal",
+					content: {},
+				},
+				{
+					name: "csv-4",
+					type: "normal",
+					content: {},
+				},
 			],
 			steps: {
+				"storage-2": {
+					title: "Save SyncFile ID",
+					connector: {
+						name: "storage",
+						version: "1.4",
+					},
+					operation: "set",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						scope: {
+							type: "string",
+							value: "Account",
+						},
+						value: {
+							type: "jsonpath",
+							value: "$.steps.csv-5.id",
+						},
+						key: {
+							type: "string",
+							value: "adobeStockSyncFile-{$.env.solution_instance_id or:'adobeSolutionID'}",
+						},
+					},
+				},
+				"csv-4": {
+					title: "Export syncFile",
+					connector: {
+						name: "csv",
+						version: "7.0",
+					},
+					operation: "export_csv",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						include_header: {
+							type: "boolean",
+							value: true,
+						},
+						delimiter: {
+							type: "string",
+							value: "comma",
+						},
+						escape_char: {
+							type: "string",
+							value: "\\",
+						},
+						enclose_char: {
+							type: "string",
+							value: '"',
+						},
+						force_enclose: {
+							type: "boolean",
+							value: true,
+						},
+						enclose_headers: {
+							type: "boolean",
+							value: false,
+						},
+						rfc_4180: {
+							type: "object",
+							value: {
+								enabled: {
+									type: "boolean",
+									value: false,
+								},
+								lines_terminated_by: {
+									type: "string",
+									value: "\n",
+								},
+							},
+						},
+						id: {
+							type: "jsonpath",
+							value: "$.steps.storage-4.value",
+						},
+						name: {
+							type: "string",
+							value: "adobeStockSyncFile-{$.env.solution_instance_id or:'adobeSolutionID'}",
+						},
+					},
+				},
+				"csv-9": {
+					title: "CSV Editor",
+					connector: {
+						name: "csv",
+						version: "7.0",
+					},
+					operation: "add_row",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						stringify_boolean: {
+							type: "boolean",
+							value: true,
+						},
+						allow_null: {
+							type: "boolean",
+							value: false,
+						},
+						id: {
+							type: "jsonpath",
+							value: "$.steps.csv-8.id",
+						},
+						cells: {
+							type: "object",
+							value: {
+								AdobeStockID: {
+									type: "jsonpath",
+									value: "$.steps.loop-2.value.id",
+								},
+								time: {
+									type: "jsonpath",
+									value: "$.steps.date-time-helpers-1.result",
+								},
+								failType: {
+									type: "string",
+									value: "Unhandled FileType {$.steps.loop-2.value}",
+								},
+							},
+						},
+					},
+				},
+				"break-loop-4": {
+					title: "Break Loop",
+					connector: {
+						name: "break-loop",
+						version: "1.1",
+					},
+					operation: "continue",
+					output_schema: {},
+					error_handling: {},
+					properties: {},
+				},
+				"call-workflow-1": {
+					title: "Call Workflow",
+					connector: {
+						name: "call-workflow",
+						version: "2.0",
+					},
+					operation: "fire_and_wait_for_response",
+					output_schema: {
+						$schema: "http://json-schema.org/draft-04/schema#",
+						type: "object",
+						properties: {
+							response: {
+								type: "string",
+							},
+							"#workspace_id_hash": {
+								type: "string",
+							},
+							"#username_hash": {
+								type: "string",
+							},
+							"#workflow_title": {
+								type: "string",
+							},
+							"#execution_uuid": {
+								type: "string",
+							},
+							"#execution_start_time": {
+								type: "string",
+							},
+							"#execution_log_url": {
+								type: "string",
+							},
+							"#organization_uuid": {
+								type: "string",
+							},
+							"#datapot_id_hash": {
+								type: "string",
+							},
+							"#workflow_uuid": {
+								type: "string",
+							},
+						},
+					},
+					error_handling: {},
+					properties: {
+						workflow_id: {
+							type: "string",
+							value: "b843e900-cf72-42eb-8db8-a9ad71b4563c",
+						},
+						trigger_input: {
+							type: "jsonpath",
+							value: "$.steps.bynder-4.results[0]",
+						},
+					},
+				},
+				"storage-15": {
+					title: "Get Bearer Token",
+					connector: {
+						name: "storage",
+						version: "1.4",
+					},
+					operation: "get",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						scope: {
+							type: "string",
+							value: "Current Run",
+						},
+						default_value: {
+							type: "null",
+							value: null,
+						},
+						key: {
+							type: "string",
+							value: "JWTBearer",
+						},
+					},
+				},
+				"math-helpers-1": {
+					title: "Set Page Number",
+					connector: {
+						name: "math-helpers",
+						version: "2.0",
+					},
+					operation: "multiply",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						first_value: {
+							type: "jsonpath",
+							value: "$.steps.loop-1.index",
+						},
+						second_value: {
+							value: 50,
+							type: "integer",
+						},
+					},
+				},
+				"storage-14": {
+					title: "Set Bearer Token",
+					connector: {
+						name: "storage",
+						version: "1.4",
+					},
+					operation: "set",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						scope: {
+							type: "string",
+							value: "Current Run",
+						},
+						key: {
+							type: "string",
+							value: "JWTBearer",
+						},
+						value: {
+							type: "jsonpath",
+							value: "$.steps.call-workflow-1.response",
+						},
+					},
+				},
+				"file-helpers-2": {
+					title: "Save File",
+					connector: {
+						name: "file-helpers",
+						version: "2.5",
+					},
+					operation: "create_file",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						name: {
+							type: "string",
+							value: "Adobe Stock {$.steps.loop-2.value.id}.{$.steps.data-mapper-1.output.content_type}",
+						},
+						url: {
+							type: "jsonpath",
+							value: "$.steps.http-client-4.response.headers.location",
+						},
+					},
+				},
+				"csv-12": {
+					title: "CSV Editor",
+					connector: {
+						name: "csv",
+						version: "7.0",
+					},
+					operation: "add_row",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						stringify_boolean: {
+							type: "boolean",
+							value: true,
+						},
+						allow_null: {
+							type: "boolean",
+							value: false,
+						},
+						id: {
+							type: "jsonpath",
+							value: "$.steps.csv-8.id",
+						},
+						cells: {
+							type: "object",
+							value: {
+								AdobeStockID: {
+									type: "jsonpath",
+									value: "$.steps.loop-2.value.id",
+								},
+								time: {
+									type: "jsonpath",
+									value: "$.steps.date-time-helpers-1.result",
+								},
+								failType: {
+									type: "string",
+									value: "Bynder Upload Failure  {$.steps.loop-2.value}",
+								},
+							},
+						},
+					},
+				},
+				"csv-8": {
+					title: "Create Empty Error Log",
+					connector: {
+						name: "csv",
+						version: "7.0",
+					},
+					operation: "create_in_memory_csv",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						scope: {
+							type: "string",
+							value: "current_run",
+						},
+						number_of_columns: {
+							type: "integer",
+							value: 3,
+						},
+						number_of_rows: {
+							type: "integer",
+							value: 0,
+						},
+						use_utf8: {
+							type: "boolean",
+							value: false,
+						},
+						columns: {
+							type: "array",
+							value: [
+								{
+									type: "object",
+									value: {
+										name: {
+											type: "string",
+											value: "AdobeStockID",
+										},
+										type: {
+											type: "string",
+											value: "text",
+										},
+										format: {
+											type: "string",
+											value: "",
+										},
+									},
+								},
+								{
+									type: "object",
+									value: {
+										name: {
+											type: "string",
+											value: "time",
+										},
+										type: {
+											type: "string",
+											value: "text",
+										},
+									},
+								},
+								{
+									type: "object",
+									value: {
+										name: {
+											type: "string",
+											value: "failType",
+										},
+										type: {
+											type: "string",
+											value: "text",
+										},
+									},
+								},
+							],
+						},
+					},
+				},
+				"branch-1": {
+					title: "Branch",
+					connector: {
+						name: "branch",
+						version: "1.2",
+					},
+					operation: "simple",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						value: {
+							type: "jsonpath",
+							value: "$.steps.loop-2.value.content_type",
+						},
+						branches: {
+							type: "array",
+							value: [
+								{
+									type: "object",
+									value: {
+										value: {
+											type: "string",
+											value: "image/jpeg",
+										},
+										label: {
+											type: "string",
+											value: "Image",
+										},
+									},
+								},
+								{
+									type: "object",
+									value: {
+										value: {
+											type: "string",
+											value: "application/illustrator",
+										},
+										label: {
+											type: "string",
+											value: "Vector",
+										},
+									},
+								},
+								{
+									type: "object",
+									value: {
+										value: {
+											type: "string",
+											value: "video/quicktime",
+										},
+										label: {
+											type: "string",
+											value: "Video",
+										},
+									},
+								},
+							],
+						},
+					},
+				},
 				"data-mapper-1": {
-					title: "Map Content Types",
+					title: "Data Mapper",
 					connector: {
 						name: "data-mapper",
 						version: "3.5",
@@ -370,7 +813,7 @@ const importJSON = {
 						type: "object",
 						properties: {
 							output: {
-								type: "string",
+								type: "null",
 							},
 						},
 					},
@@ -448,62 +891,96 @@ const importJSON = {
 						},
 						input: {
 							type: "jsonpath",
-							value: "$.steps.loop-4.value.content_type",
+							value: "$.steps.loop-2.value",
 						},
 					},
 				},
-				"storage-16": {
-					title: "Init syncList by Key",
+				"bynder-3": {
+					title: "Upload to Bynder",
 					connector: {
-						name: "storage",
-						version: "1.4",
+						name: "bynder",
+						version: "1.3",
 					},
-					operation: "get",
-					output_schema: {
-						$schema: "http://json-schema.org/draft-04/schema#",
-						type: "object",
-						properties: {
-							value: {
-								type: "array",
-								items: {},
-							},
+					operation: "upload_asset",
+					output_schema: {},
+					error_handling: {
+						strategy: "manual",
+					},
+					authentication: {
+						group: "710d5e41-2a7b-4376-9792-dac8f2d89ba5",
+						title: "Keiffer Bynder Account - BLCR",
+						service_icon: {
+							icon_type: "url",
+							value: "//s3.amazonaws.com/images.tray.io/artisan/icons/55fdd831638972b19fec6bc4a2da6784.png",
+						},
+						scopes: [],
+						service_name: "bynder",
+						service_version: 1,
+					},
+					properties: {
+						file: {
+							type: "jsonpath",
+							value: "$.steps.file-helpers-2.file",
+						},
+						brand_id: {
+							type: "jsonpath",
+							value: "$.steps.bynder-4.results[0].id",
+						},
+						description: {
+							type: "jsonpath",
+							value: "$.steps.loop-2.value.title",
+						},
+						name: {
+							type: "jsonpath",
+							value: "$.steps.file-helpers-2.file.name",
+						},
+						tags: {
+							type: "jsonpath",
+							value: "$.steps.call-workflow-4.response",
 						},
 					},
+				},
+				"call-workflow-3": {
+					title: "Call Workflow",
+					connector: {
+						name: "call-workflow",
+						version: "2.0",
+					},
+					operation: "fire_and_wait_for_response",
+					output_schema: {},
 					error_handling: {},
 					properties: {
-						scope: {
+						workflow_id: {
 							type: "string",
-							value: "Current Run",
+							value: "a0acf960-0801-4e7d-b8e1-2ac5831e54c8",
 						},
-						key: {
-							type: "string",
-							value: "assetsSyncList-{$.env.solution_instance_id or:'adobeSolutionID'}-{$.steps.loop-1.index}",
-						},
-						default_value: {
-							type: "array",
-							value: [],
-						},
-					},
-				},
-				"storage-12": {
-					title: "Get syncKeyArray",
-					connector: {
-						name: "storage",
-						version: "1.4",
-					},
-					operation: "get",
-					output_schema: {
-						$schema: "http://json-schema.org/draft-04/schema#",
-						type: "object",
-						properties: {
+						trigger_input: {
+							type: "object",
 							value: {
-								type: "array",
-								items: {
-									type: "string",
+								bearer: {
+									type: "jsonpath",
+									value: "$.steps.storage-15.value",
+								},
+								stockID: {
+									type: "jsonpath",
+									value: "$.steps.loop-2.value.id",
+								},
+								apiKey: {
+									type: "jsonpath",
+									value: "$.steps.object-helpers-1.result.API_KEY",
 								},
 							},
 						},
 					},
+				},
+				"storage-5": {
+					title: "Set Client Credentials",
+					connector: {
+						name: "storage",
+						version: "1.4",
+					},
+					operation: "set",
+					output_schema: {},
 					error_handling: {},
 					properties: {
 						scope: {
@@ -512,27 +989,956 @@ const importJSON = {
 						},
 						key: {
 							type: "string",
-							value: "syncKeyArray",
+							value: "AdobeCredentials-{$.env.workflow_uuid}",
+						},
+						value: {
+							type: "jsonpath",
+							value: "$.config.accountCredentials",
+						},
+					},
+				},
+				"http-client-3": {
+					title: "Download Vector",
+					connector: {
+						name: "http-client",
+						version: "5.5",
+					},
+					operation: "get_request",
+					output_schema: {
+						$schema: "http://json-schema.org/draft-04/schema#",
+						type: "object",
+						properties: {
+							response: {
+								type: "object",
+								properties: {
+									status_code: {
+										type: "number",
+									},
+									headers: {
+										type: "object",
+										properties: {
+											"x-amz-id-2": {
+												type: "string",
+											},
+											"x-amz-request-id": {
+												type: "string",
+											},
+											date: {
+												type: "string",
+											},
+											"last-modified": {
+												type: "string",
+											},
+											"x-amz-expiration": {
+												type: "string",
+											},
+											etag: {
+												type: "string",
+											},
+											"x-amz-version-id": {
+												type: "string",
+											},
+											"content-disposition": {
+												type: "string",
+											},
+											"accept-ranges": {
+												type: "string",
+											},
+											"content-type": {
+												type: "string",
+											},
+											server: {
+												type: "string",
+											},
+											"content-length": {
+												type: "string",
+											},
+											connection: {
+												type: "string",
+											},
+										},
+									},
+									body: {
+										type: "object",
+										properties: {
+											file: {
+												type: "object",
+												properties: {
+													name: {
+														type: "string",
+													},
+													url: {
+														type: "string",
+													},
+													mime_type: {
+														type: "string",
+													},
+													expires: {
+														type: "number",
+													},
+												},
+											},
+										},
+									},
+								},
+							},
+						},
+					},
+					error_handling: {
+						target: "loop-2",
+						strategy: "continueLoop",
+					},
+					properties: {
+						auth: {
+							type: "object",
+							value: {
+								none: {
+									type: "null",
+									value: null,
+								},
+							},
+						},
+						follow_redirect: {
+							type: "boolean",
+							value: false,
+						},
+						follow_keep_method: {
+							type: "boolean",
+							value: false,
+						},
+						reject_unauthorized: {
+							type: "boolean",
+							value: true,
+						},
+						follow_authorization_header: {
+							type: "boolean",
+							value: false,
+						},
+						parse_response: {
+							type: "string",
+							value: "true",
+						},
+						status_code: {
+							type: "object",
+							value: {
+								only: {
+									type: "object",
+									value: {
+										status_code: {
+											type: "integer",
+											value: 302,
+										},
+									},
+								},
+							},
+						},
+						case_sensitive_headers: {
+							type: "boolean",
+							value: false,
+						},
+						url: {
+							type: "jsonpath",
+							value: "$.steps.loop-2.value.download_url",
+						},
+						headers: {
+							type: "array",
+							value: [
+								{
+									type: "object",
+									value: {
+										key: {
+											type: "string",
+											value: "x-api-key",
+										},
+										value: {
+											type: "jsonpath",
+											value: "$.steps.object-helpers-1.result.API_KEY",
+										},
+									},
+								},
+								{
+									type: "object",
+									value: {
+										key: {
+											type: "string",
+											value: "X-Product",
+										},
+										value: {
+											type: "string",
+											value: "BynderSync",
+										},
+									},
+								},
+								{
+									type: "object",
+									value: {
+										key: {
+											type: "string",
+											value: "Authorization",
+										},
+										value: {
+											type: "string",
+											value: "Bearer {$.steps.storage-15.value}",
+										},
+									},
+								},
+							],
+						},
+						return_response_as_file: {
+							value: false,
+							type: "boolean",
+						},
+					},
+				},
+				"bynder-4": {
+					title: "Get Bynder Brand ID",
+					connector: {
+						name: "bynder",
+						version: "1.3",
+					},
+					operation: "list_brands",
+					output_schema: {},
+					error_handling: {},
+					authentication: {
+						group: "710d5e41-2a7b-4376-9792-dac8f2d89ba5",
+						title: "Keiffer Bynder Account - BLCR",
+						service_icon: {
+							icon_type: "url",
+							value: "//s3.amazonaws.com/images.tray.io/artisan/icons/55fdd831638972b19fec6bc4a2da6784.png",
+						},
+						scopes: [],
+						service_name: "bynder",
+						service_version: 1,
+					},
+					properties: {},
+				},
+				"boolean-condition-5": {
+					title: "Boolean Condition",
+					connector: {
+						name: "boolean-condition",
+						version: "2.3",
+					},
+					operation: "boolean_condition",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						conditions: {
+							type: "array",
+							value: [
+								{
+									type: "object",
+									value: {
+										value1: {
+											type: "jsonpath",
+											value: "$.config.syncVideo",
+										},
+										comparison_type: {
+											type: "string",
+											value: "===",
+										},
+										value2: {
+											type: "boolean",
+											value: true,
+										},
+									},
+								},
+							],
+						},
+						strictness: {
+							type: "string",
+							value: "All",
+						},
+					},
+				},
+				"csv-7": {
+					title: "CSV Editor",
+					connector: {
+						name: "csv",
+						version: "7.0",
+					},
+					operation: "add_row",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						stringify_boolean: {
+							type: "boolean",
+							value: true,
+						},
+						allow_null: {
+							type: "boolean",
+							value: false,
+						},
+						id: {
+							type: "jsonpath",
+							value: "$.steps.csv-8.id",
+						},
+						cells: {
+							type: "object",
+							value: {
+								AdobeStockID: {
+									type: "jsonpath",
+									value: "$.steps.loop-2.value.id",
+								},
+								time: {
+									type: "jsonpath",
+									value: "$.steps.date-time-helpers-1.result",
+								},
+								failType: {
+									type: "string",
+									value: "Bynder Upload Failure  {$.steps.loop-2.value}",
+								},
+							},
+						},
+					},
+				},
+				"boolean-condition-2": {
+					title: "ID not in SyncFile? Upload",
+					connector: {
+						name: "boolean-condition",
+						version: "2.3",
+					},
+					operation: "boolean_condition",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						conditions: {
+							type: "array",
+							value: [
+								{
+									type: "object",
+									value: {
+										value1: {
+											type: "jsonpath",
+											value: "$.steps.csv-3.found",
+										},
+										comparison_type: {
+											type: "string",
+											value: "===",
+										},
+										value2: {
+											type: "boolean",
+											value: false,
+										},
+									},
+								},
+							],
+						},
+						strictness: {
+							type: "string",
+							value: "All",
+						},
+					},
+				},
+				"csv-10": {
+					title: "Export Error Log",
+					connector: {
+						name: "csv",
+						version: "7.0",
+					},
+					operation: "export_csv",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						include_header: {
+							type: "boolean",
+							value: true,
+						},
+						delimiter: {
+							type: "string",
+							value: "comma",
+						},
+						escape_char: {
+							type: "string",
+							value: "\\",
+						},
+						enclose_char: {
+							type: "string",
+							value: '"',
+						},
+						force_enclose: {
+							type: "boolean",
+							value: true,
+						},
+						enclose_headers: {
+							type: "boolean",
+							value: false,
+						},
+						rfc_4180: {
+							type: "object",
+							value: {
+								enabled: {
+									type: "boolean",
+									value: false,
+								},
+								lines_terminated_by: {
+									type: "string",
+									value: "\n",
+								},
+							},
+						},
+						id: {
+							type: "jsonpath",
+							value: "$.steps.csv-8.id",
+						},
+						name: {
+							type: "string",
+							value: "adobeStockErrorFile-{$.env.solution_instance_id or:'adobeSolutionID'}",
+						},
+					},
+				},
+				"bynder-2": {
+					title: "Upload to Bynder",
+					connector: {
+						name: "bynder",
+						version: "1.3",
+					},
+					operation: "upload_asset",
+					output_schema: {},
+					error_handling: {
+						strategy: "manual",
+					},
+					authentication: {
+						group: "710d5e41-2a7b-4376-9792-dac8f2d89ba5",
+						title: "Keiffer Bynder Account - BLCR",
+						service_icon: {
+							icon_type: "url",
+							value: "//s3.amazonaws.com/images.tray.io/artisan/icons/55fdd831638972b19fec6bc4a2da6784.png",
+						},
+						scopes: [],
+						service_name: "bynder",
+						service_version: 1,
+					},
+					properties: {
+						file: {
+							type: "jsonpath",
+							value: "$.steps.file-helpers-1.file",
+						},
+						brand_id: {
+							type: "jsonpath",
+							value: "$.steps.bynder-4.results[0].id",
+						},
+						description: {
+							type: "jsonpath",
+							value: "$.steps.loop-2.value.title",
+						},
+						name: {
+							type: "jsonpath",
+							value: "$.steps.file-helpers-1.file.name",
+						},
+						tags: {
+							type: "jsonpath",
+							value: "$.steps.call-workflow-3.response",
+						},
+					},
+				},
+				"csv-3": {
+					title: "Find Asset in SyncFile",
+					connector: {
+						name: "csv",
+						version: "7.0",
+					},
+					operation: "find_row",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						id: {
+							type: "jsonpath",
+							value: "$.steps.storage-4.value",
+						},
+						filters: {
+							type: "array",
+							value: [
+								{
+									type: "object",
+									value: {
+										column: {
+											type: "string",
+											value: "AdobeStockID",
+										},
+										operator: {
+											type: "string",
+											value: "=",
+										},
+										value: {
+											type: "string",
+											value: "{$.steps.loop-2.value.id}",
+										},
+									},
+								},
+							],
+						},
+					},
+				},
+				"call-workflow-2": {
+					title: "Call Workflow",
+					connector: {
+						name: "call-workflow",
+						version: "2.0",
+					},
+					operation: "fire_and_wait_for_response",
+					output_schema: {
+						$schema: "http://json-schema.org/draft-04/schema#",
+						type: "object",
+						properties: {
+							response: {
+								type: "array",
+								items: {
+									oneOf: [
+										{
+											type: "string",
+										},
+										{
+											type: "string",
+										},
+										{
+											type: "number",
+										},
+										{
+											type: "string",
+										},
+										{
+											type: "string",
+										},
+										{
+											type: "string",
+										},
+										{
+											type: "string",
+										},
+										{
+											type: "string",
+										},
+										{
+											type: "string",
+										},
+										{
+											type: "string",
+										},
+										{
+											type: "string",
+										},
+										{
+											type: "string",
+										},
+										{
+											type: "string",
+										},
+										{
+											type: "string",
+										},
+										{
+											type: "string",
+										},
+										{
+											type: "string",
+										},
+										{
+											type: "string",
+										},
+										{
+											type: "string",
+										},
+										{
+											type: "string",
+										},
+										{
+											type: "string",
+										},
+										{
+											type: "string",
+										},
+										{
+											type: "string",
+										},
+										{
+											type: "string",
+										},
+										{
+											type: "string",
+										},
+										{
+											type: "string",
+										},
+										{
+											type: "string",
+										},
+										{
+											type: "string",
+										},
+										{
+											type: "string",
+										},
+										{
+											type: "string",
+										},
+										{
+											type: "string",
+										},
+										{
+											type: "string",
+										},
+										{
+											type: "string",
+										},
+										{
+											type: "string",
+										},
+										{
+											type: "string",
+										},
+									],
+								},
+							},
+							"#workspace_id_hash": {
+								type: "string",
+							},
+							"#username_hash": {
+								type: "string",
+							},
+							"#workflow_title": {
+								type: "string",
+							},
+							"#execution_uuid": {
+								type: "string",
+							},
+							"#execution_start_time": {
+								type: "string",
+							},
+							"#execution_log_url": {
+								type: "string",
+							},
+							"#organization_uuid": {
+								type: "string",
+							},
+							"#datapot_id_hash": {
+								type: "string",
+							},
+							"#workflow_uuid": {
+								type: "string",
+							},
+						},
+					},
+					error_handling: {},
+					properties: {
+						workflow_id: {
+							type: "string",
+							value: "a0acf960-0801-4e7d-b8e1-2ac5831e54c8",
+						},
+						trigger_input: {
+							type: "object",
+							value: {
+								bearer: {
+									type: "jsonpath",
+									value: "$.steps.storage-15.value",
+								},
+								stockID: {
+									type: "jsonpath",
+									value: "$.steps.loop-2.value.id",
+								},
+								apiKey: {
+									type: "jsonpath",
+									value: "$.steps.object-helpers-1.result.API_KEY",
+								},
+							},
+						},
+					},
+				},
+				"break-loop-3": {
+					title: "Break Loop",
+					connector: {
+						name: "break-loop",
+						version: "1.1",
+					},
+					operation: "continue",
+					output_schema: {},
+					error_handling: {},
+					properties: {},
+				},
+				"boolean-condition-4": {
+					title: "Boolean Condition",
+					connector: {
+						name: "boolean-condition",
+						version: "2.3",
+					},
+					operation: "boolean_condition",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						conditions: {
+							type: "array",
+							value: [
+								{
+									type: "object",
+									value: {
+										value1: {
+											type: "jsonpath",
+											value: "$.config.syncVector",
+										},
+										comparison_type: {
+											type: "string",
+											value: "===",
+										},
+										value2: {
+											type: "boolean",
+											value: true,
+										},
+									},
+								},
+							],
+						},
+						strictness: {
+							type: "string",
+							value: "All",
+						},
+					},
+				},
+				"loop-1": {
+					title: "Loop Until Broken",
+					connector: {
+						name: "loop",
+						version: "1.3",
+					},
+					operation: "loop_forever",
+					output_schema: {
+						type: "object",
+						$schema: "http://json-schema.org/draft-03/schema",
+						id: "http://jsonschema.net",
+						properties: {
+							index: {
+								type: "number",
+								id: "http://jsonschema.net/index",
+							},
+						},
+					},
+					error_handling: {},
+					properties: {},
+				},
+				"storage-4": {
+					title: "Get SyncFile ID",
+					connector: {
+						name: "storage",
+						version: "1.4",
+					},
+					operation: "get",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						scope: {
+							type: "string",
+							value: "Account",
 						},
 						default_value: {
 							type: "null",
 							value: null,
 						},
+						key: {
+							type: "string",
+							value: "adobeStockSyncFile-{$.env.solution_instance_id or:'adobeSolutionID'}",
+						},
 					},
 				},
-				"list-helpers-3": {
-					title: "Remove Duplicates",
+				"http-client-4": {
+					title: "Download Video",
 					connector: {
-						name: "list-helpers",
-						version: "2.1",
+						name: "http-client",
+						version: "5.5",
 					},
-					operation: "remove_duplicates",
-					output_schema: {},
-					error_handling: {},
+					operation: "get_request",
+					output_schema: {
+						$schema: "http://json-schema.org/draft-04/schema#",
+						type: "object",
+						properties: {
+							status_code: {
+								type: "number",
+							},
+							headers: {
+								type: "object",
+								properties: {
+									connection: {
+										type: "string",
+									},
+									"content-type": {
+										type: "string",
+									},
+									expires: {
+										type: "string",
+									},
+									"cache-control": {
+										type: "string",
+									},
+									pragma: {
+										type: "string",
+									},
+									"x-request-id": {
+										type: "string",
+									},
+									"access-control-allow-methods": {
+										type: "string",
+									},
+									"access-control-allow-origin": {
+										type: "string",
+									},
+									"access-control-allow-headers": {
+										type: "string",
+									},
+									"access-control-expose-headers": {
+										type: "string",
+									},
+									"access-control-allow-credentials": {
+										type: "string",
+									},
+									"access-control-max-age": {
+										type: "string",
+									},
+									allow: {
+										type: "string",
+									},
+									location: {
+										type: "string",
+									},
+									"x-content-type-options": {
+										type: "string",
+									},
+									"x-xss-protection": {
+										type: "string",
+									},
+									"accept-ranges": {
+										type: "string",
+									},
+									date: {
+										type: "string",
+									},
+									via: {
+										type: "string",
+									},
+									"strict-transport-security": {
+										type: "string",
+									},
+									"x-served-by": {
+										type: "string",
+									},
+									"x-cache": {
+										type: "string",
+									},
+									"x-cache-hits": {
+										type: "string",
+									},
+									"transfer-encoding": {
+										type: "string",
+									},
+								},
+							},
+							response: {
+								type: "string",
+							},
+							message: {
+								type: "string",
+							},
+						},
+					},
+					error_handling: {
+						target: "loop-2",
+						strategy: "continueLoop",
+					},
 					properties: {
-						list: {
+						auth: {
+							type: "object",
+							value: {
+								none: {
+									type: "null",
+									value: null,
+								},
+							},
+						},
+						follow_redirect: {
+							type: "boolean",
+							value: false,
+						},
+						follow_keep_method: {
+							type: "boolean",
+							value: false,
+						},
+						reject_unauthorized: {
+							type: "boolean",
+							value: true,
+						},
+						follow_authorization_header: {
+							type: "boolean",
+							value: false,
+						},
+						parse_response: {
+							type: "string",
+							value: "true",
+						},
+						status_code: {
+							type: "object",
+							value: {
+								only: {
+									type: "object",
+									value: {
+										status_code: {
+											type: "integer",
+											value: 302,
+										},
+									},
+								},
+							},
+						},
+						case_sensitive_headers: {
+							type: "boolean",
+							value: false,
+						},
+						url: {
 							type: "jsonpath",
-							value: "$.steps.storage-1.value",
+							value: "$.steps.loop-2.value.download_url",
+						},
+						headers: {
+							type: "array",
+							value: [
+								{
+									type: "object",
+									value: {
+										key: {
+											type: "string",
+											value: "x-api-key",
+										},
+										value: {
+											type: "jsonpath",
+											value: "$.steps.object-helpers-1.result.API_KEY",
+										},
+									},
+								},
+								{
+									type: "object",
+									value: {
+										key: {
+											type: "string",
+											value: "X-Product",
+										},
+										value: {
+											type: "string",
+											value: "BynderSync",
+										},
+									},
+								},
+								{
+									type: "object",
+									value: {
+										key: {
+											type: "string",
+											value: "Authorization",
+										},
+										value: {
+											type: "string",
+											value: "Bearer {$.steps.storage-15.value}",
+										},
+									},
+								},
+							],
+						},
+						return_response_as_file: {
+							value: false,
+							type: "boolean",
 						},
 					},
 				},
@@ -571,1330 +1977,6 @@ const importJSON = {
 						strictness: {
 							type: "string",
 							value: "All",
-						},
-					},
-				},
-				"break-loop-5": {
-					title: "Break Loop 2",
-					connector: {
-						name: "break-loop",
-						version: "1.1",
-					},
-					operation: "break",
-					output_schema: {},
-					error_handling: {},
-					properties: {},
-				},
-				"storage-1": {
-					title: "Load Asset List by Key",
-					connector: {
-						name: "storage",
-						version: "1.4",
-					},
-					operation: "get",
-					output_schema: {
-						$schema: "http://json-schema.org/draft-04/schema#",
-						type: "object",
-						properties: {
-							value: {
-								type: "array",
-								items: {
-									type: "object",
-									properties: {
-										keywords: {
-											type: "array",
-											items: {
-												oneOf: [
-													{
-														type: "string",
-													},
-													{
-														type: "string",
-													},
-													{
-														type: "string",
-													},
-													{
-														type: "string",
-													},
-													{
-														type: "string",
-													},
-													{
-														type: "string",
-													},
-													{
-														type: "string",
-													},
-													{
-														type: "string",
-													},
-													{
-														type: "string",
-													},
-													{
-														type: "string",
-													},
-													{
-														type: "string",
-													},
-													{
-														type: "string",
-													},
-													{
-														type: "string",
-													},
-													{
-														type: "string",
-													},
-													{
-														type: "string",
-													},
-													{
-														type: "string",
-													},
-													{
-														type: "string",
-													},
-													{
-														type: "string",
-													},
-													{
-														type: "string",
-													},
-													{
-														type: "string",
-													},
-													{
-														type: "string",
-													},
-													{
-														type: "string",
-													},
-													{
-														type: "string",
-													},
-													{
-														type: "string",
-													},
-													{
-														type: "string",
-													},
-													{
-														type: "string",
-													},
-													{
-														type: "string",
-													},
-													{
-														type: "string",
-													},
-													{
-														type: "string",
-													},
-													{
-														type: "string",
-													},
-													{
-														type: "string",
-													},
-													{
-														type: "string",
-													},
-													{
-														type: "number",
-													},
-													{
-														type: "string",
-													},
-												],
-											},
-										},
-										content_type: {
-											type: "string",
-										},
-										download_url: {
-											type: "string",
-										},
-										country_name: {
-											type: "string",
-										},
-										description: {
-											type: "null",
-										},
-										marketing_text: {
-											type: "null",
-										},
-										id: {
-											type: "number",
-										},
-										title: {
-											type: "string",
-										},
-									},
-									required: ["keywords", "content_type", "download_url", "country_name", "description", "marketing_text", "id", "title"],
-								},
-							},
-						},
-					},
-					error_handling: {},
-					properties: {
-						scope: {
-							type: "string",
-							value: "Current Run",
-						},
-						key: {
-							type: "string",
-							value: "assetsSyncList-{$.env.solution_instance_id or:'adobeSolutionID'}-{$.steps.loop-1.index}",
-						},
-						default_value: {
-							type: "array",
-							value: [],
-						},
-					},
-				},
-				"script-5": {
-					title: "Build Metadata Object",
-					connector: {
-						name: "script",
-						version: "3.3",
-					},
-					operation: "execute",
-					output_schema: {},
-					error_handling: {},
-					properties: {
-						variables: {
-							type: "array",
-							value: [
-								{
-									type: "object",
-									value: {
-										name: {
-											type: "string",
-											value: "mapObject",
-										},
-										value: {
-											type: "jsonpath",
-											value: "$.steps.storage-3.value.metapropertyMapping.mapObject",
-										},
-									},
-								},
-								{
-									type: "object",
-									value: {
-										name: {
-											type: "string",
-											value: "metadata",
-										},
-										value: {
-											type: "jsonpath",
-											value: "$.steps.loop-4.value",
-										},
-									},
-								},
-								{
-									type: "object",
-									value: {
-										name: {
-											type: "string",
-											value: "staticMeta",
-										},
-										value: {
-											type: "jsonpath",
-											value: "$.steps.storage-3.value.metapropertyMapping.staticMeta",
-										},
-									},
-								},
-							],
-						},
-						script: {
-							type: "string",
-							value:
-								'// You can reference the input variables using input.NAME\n// Parsed JSON files could be referenced as fileInput\nexports.step = function (input) {\n\tconst mapping = input.mapObject\n\tconst propArray = input.metadata\n\tconst bynderMapping = {}\n\n\tObject.keys(mapping).forEach(function (key) {\n\t\tbynderMapping[key] = typeof ((propArray[`${(mapping[key])}`])) == "object" ? JSON.stringify(propArray[`${(mapping[key])}`]) : propArray[`${(mapping[key])}`]\n\t});\n\n\treturn Object.assign(bynderMapping, input.staticMeta)\n};',
-						},
-						file_output: {
-							type: "boolean",
-							value: false,
-						},
-					},
-				},
-				"delay-1": {
-					title: "Delay",
-					connector: {
-						name: "delay",
-						version: "1.0",
-					},
-					operation: "delay",
-					output_schema: {},
-					error_handling: {},
-					properties: {
-						time_unit: {
-							type: "string",
-							value: "seconds",
-						},
-						delay_value: {
-							type: "integer",
-							value: 10,
-						},
-					},
-				},
-				"storage-17": {
-					title: "Create waitingRoomID",
-					connector: {
-						name: "storage",
-						version: "1.4",
-					},
-					operation: "set",
-					output_schema: {},
-					error_handling: {},
-					properties: {
-						scope: {
-							type: "string",
-							value: "Current Run",
-						},
-						key: {
-							type: "string",
-							value: "waitingRoomID",
-						},
-						value: {
-							type: "string",
-							value: "",
-						},
-					},
-				},
-				"list-helpers-2": {
-					title: "Remove Duplicates",
-					connector: {
-						name: "list-helpers",
-						version: "2.1",
-					},
-					operation: "remove_duplicates",
-					output_schema: {},
-					error_handling: {},
-					properties: {
-						list: {
-							type: "jsonpath",
-							value: "$.steps.storage-7.value",
-						},
-					},
-				},
-				"script-1": {
-					title: "Merge syncList with Metadata",
-					connector: {
-						name: "script",
-						version: "3.3",
-					},
-					operation: "execute",
-					output_schema: {
-						$schema: "http://json-schema.org/draft-04/schema#",
-						type: "object",
-						properties: {
-							result: {
-								type: "array",
-								items: {
-									type: "object",
-									properties: {
-										id: {
-											type: "number",
-										},
-										title: {
-											type: "string",
-										},
-										keywords: {
-											type: "array",
-											items: {
-												type: "string",
-											},
-										},
-										download_url: {
-											type: "string",
-										},
-										content_type: {
-											type: "string",
-										},
-									},
-									required: ["id", "title", "keywords", "download_url", "content_type"],
-								},
-							},
-							console: {
-								type: "array",
-								items: {},
-							},
-						},
-					},
-					error_handling: {},
-					properties: {
-						variables: {
-							type: "array",
-							value: [
-								{
-									type: "object",
-									value: {
-										name: {
-											type: "string",
-											value: "assetList",
-										},
-										value: {
-											type: "jsonpath",
-											value: "$.steps.json-transformer-1.result",
-										},
-									},
-								},
-								{
-									type: "object",
-									value: {
-										name: {
-											type: "string",
-											value: "metadata",
-										},
-										value: {
-											type: "jsonpath",
-											value: "$.steps.json-transformer-4.result",
-										},
-									},
-								},
-							],
-						},
-						script: {
-							type: "string",
-							value:
-								"exports.step = function(input) {\nconst assetList = input.assetList\nconst metadata = input.metadata\nconst mergeById = (assetList, metadata) =>\n    assetList.map(itm => ({\n        ...metadata.find((item) => (item.id === itm.id) && item),\n        ...itm\n    }));\nreturn mergeById(assetList, metadata)\n}",
-						},
-						file_output: {
-							type: "boolean",
-							value: false,
-						},
-					},
-				},
-				"loop-3": {
-					title: "Loop syncKeyArray",
-					connector: {
-						name: "loop",
-						version: "1.3",
-					},
-					operation: "loop_array",
-					output_schema: {
-						$schema: "http://json-schema.org/draft-04/schema#",
-						type: "object",
-						properties: {
-							value: {
-								type: "string",
-							},
-							count: {
-								type: "number",
-							},
-							index: {
-								type: "number",
-							},
-							is_first: {
-								type: "boolean",
-							},
-							is_last: {
-								type: "boolean",
-							},
-							branch_name: {
-								type: "string",
-							},
-						},
-					},
-					error_handling: {},
-					properties: {
-						array: {
-							type: "jsonpath",
-							value: "$.steps.storage-12.value",
-						},
-					},
-				},
-				"storage-2": {
-					title: "Init pageCount",
-					connector: {
-						name: "storage",
-						version: "1.4",
-					},
-					operation: "set",
-					output_schema: {},
-					error_handling: {},
-					properties: {
-						scope: {
-							type: "string",
-							value: "Current Run",
-						},
-						key: {
-							type: "string",
-							value: "pageCount",
-						},
-						value: {
-							type: "number",
-							value: 0,
-						},
-					},
-				},
-				"date-time-helpers-3": {
-					title: "Get Current Time",
-					connector: {
-						name: "date-time-helpers",
-						version: "3.0",
-					},
-					operation: "current_timestamp",
-					output_schema: {},
-					error_handling: {},
-					properties: {
-						timezone: {
-							type: "string",
-							value: "PST8PDT",
-						},
-						format: {
-							type: "object",
-							value: {
-								existing_format: {
-									type: "string",
-									value: "X",
-								},
-							},
-						},
-					},
-				},
-				"storage-5": {
-					title: "Finalize List by Key",
-					connector: {
-						name: "storage",
-						version: "1.4",
-					},
-					operation: "set",
-					output_schema: {},
-					error_handling: {},
-					properties: {
-						scope: {
-							type: "string",
-							value: "Current Run",
-						},
-						key: {
-							type: "string",
-							value: "assetsSyncList-{$.env.solution_instance_id or:'adobeSolutionID'}-{$.steps.loop-1.index}",
-						},
-						value: {
-							type: "jsonpath",
-							value: "$.steps.list-helpers-3.result",
-						},
-					},
-				},
-				"storage-9": {
-					title: "Finalize List by Key",
-					connector: {
-						name: "storage",
-						version: "1.4",
-					},
-					operation: "set",
-					output_schema: {},
-					error_handling: {},
-					properties: {
-						scope: {
-							type: "string",
-							value: "Current Run",
-						},
-						key: {
-							type: "string",
-							value: "assetsSyncList-{$.env.solution_instance_id or:'adobeSolutionID'}-{$.steps.loop-1.index}",
-						},
-						value: {
-							type: "jsonpath",
-							value: "$.steps.list-helpers-2.result",
-						},
-					},
-				},
-				"boolean-condition-2": {
-					title: "Boolean Condition",
-					connector: {
-						name: "boolean-condition",
-						version: "2.3",
-					},
-					operation: "boolean_condition",
-					output_schema: {},
-					error_handling: {},
-					properties: {
-						conditions: {
-							type: "array",
-							value: [
-								{
-									type: "object",
-									value: {
-										value1: {
-											type: "jsonpath",
-											value: "$.steps.date-time-helpers-4.result",
-										},
-										comparison_type: {
-											type: "string",
-											value: "===",
-										},
-										value2: {
-											type: "boolean",
-											value: true,
-										},
-									},
-								},
-							],
-						},
-						strictness: {
-							type: "string",
-							value: "All",
-						},
-					},
-				},
-				"call-workflow-2": {
-					title: "Call Workflow",
-					connector: {
-						name: "call-workflow",
-						version: "2.0",
-					},
-					operation: "fire_and_wait_for_response",
-					output_schema: {
-						$schema: "http://json-schema.org/draft-04/schema#",
-						type: "object",
-						properties: {
-							response: {
-								type: "object",
-								properties: {
-									accessRequestId: {
-										type: "string",
-									},
-									mediaid: {
-										type: "string",
-									},
-									batchId: {
-										type: "string",
-									},
-									success: {
-										type: "boolean",
-									},
-									mediaitems: {
-										type: "array",
-										items: {
-											type: "object",
-											properties: {
-												original: {
-													type: "string",
-												},
-												destination: {
-													type: "string",
-												},
-											},
-											required: ["original", "destination"],
-										},
-									},
-								},
-							},
-							"#workspace_id_hash": {
-								type: "string",
-							},
-							"#username_hash": {
-								type: "string",
-							},
-							"#workflow_title": {
-								type: "string",
-							},
-							"#execution_uuid": {
-								type: "string",
-							},
-							"#execution_start_time": {
-								type: "string",
-							},
-							"#execution_log_url": {
-								type: "string",
-							},
-							"#organization_uuid": {
-								type: "string",
-							},
-							"#datapot_id_hash": {
-								type: "string",
-							},
-							"#workflow_uuid": {
-								type: "string",
-							},
-						},
-					},
-					error_handling: {
-						strategy: "automatic",
-					},
-					properties: {
-						workflow_id: {
-							type: "string",
-							value: "934452a0-e531-415b-88bb-34a0422e26e8",
-						},
-						trigger_input: {
-							type: "object",
-							value: {
-								assetData: {
-									type: "jsonpath",
-									value: "$.steps.loop-4.value",
-								},
-								waitingRoomID: {
-									type: "jsonpath",
-									value: "$.steps.storage-18.value",
-								},
-								fileName: {
-									type: "string",
-									value: "Adobe Stock {$.steps.loop-4.value.id}.{$.steps.data-mapper-1.output}",
-								},
-								solutionData: {
-									type: "jsonpath",
-									value: "$.steps.storage-3.value",
-								},
-								bearerToken: {
-									type: "jsonpath",
-									value: "$.steps.call-workflow-1.response",
-								},
-								metaPropertyMap: {
-									type: "jsonpath",
-									value: "$.steps.script-5.result",
-								},
-							},
-						},
-					},
-				},
-				"json-transformer-2": {
-					title: "Build Asset Array",
-					connector: {
-						name: "json-transformer",
-						version: "1.0",
-					},
-					operation: "transform",
-					output_schema: {
-						$schema: "http://json-schema.org/draft-04/schema#",
-						type: "object",
-						properties: {
-							result: {
-								type: "array",
-								items: {
-									type: "number",
-								},
-							},
-						},
-					},
-					error_handling: {},
-					properties: {
-						data: {
-							type: "object",
-							value: {
-								result: {
-									type: "jsonpath",
-									value: "$.steps.json-transformer-1.result",
-								},
-							},
-						},
-						query: {
-							type: "string",
-							value: "result.id",
-						},
-					},
-				},
-				"storage-3": {
-					title: "Load Solution Data Object",
-					connector: {
-						name: "storage",
-						version: "1.4",
-					},
-					operation: "get",
-					output_schema: {
-						$schema: "http://json-schema.org/draft-04/schema#",
-						type: "object",
-						properties: {
-							value: {
-								type: "object",
-								properties: {
-									metapropertyMapping: {
-										type: "object",
-										properties: {
-											metaString: {
-												type: "string",
-											},
-											queryObject: {
-												type: "object",
-												properties: {
-													keywords: {
-														type: "string",
-													},
-													is_licensed: {
-														type: "string",
-													},
-													country_name: {
-														type: "string",
-													},
-													creator_name: {
-														type: "string",
-													},
-													id: {
-														type: "string",
-													},
-													title: {
-														type: "string",
-													},
-													thumbnail_url: {
-														type: "string",
-													},
-												},
-											},
-											staticMeta: {
-												type: "object",
-												properties: {
-													"metaproperty.74F390E6-918E-4ACE-8C0CA00005540A97": {
-														type: "string",
-													},
-												},
-											},
-											queryString: {
-												type: "string",
-											},
-											mapObject: {
-												type: "object",
-												properties: {
-													"metaproperty.1734230F-A766-4924-B1C2EAB4A1469D2C": {
-														type: "string",
-													},
-													"metaproperty.77B98683-A921-4C0C-B0542AB4729B97EE": {
-														type: "string",
-													},
-													"metaproperty.139D00C8-2116-4707-901221E9C6699719": {
-														type: "string",
-													},
-													"metaproperty.0A36E145-36E2-4141-A2D18C6BFE0B4B93": {
-														type: "string",
-													},
-												},
-											},
-										},
-									},
-									brandID: {
-										type: "string",
-									},
-									initializationConfig: {
-										type: "object",
-										properties: {
-											current: {
-												type: "object",
-												properties: {
-													configValues: {
-														type: "array",
-														items: {
-															type: "object",
-															properties: {
-																externalId: {
-																	type: "string",
-																},
-																value: {
-																	type: ["object", "boolean", "string"],
-																	items: {
-																		type: "object",
-																		properties: {
-																			value: {
-																				type: ["string", "null"],
-																			},
-																			key: {
-																				type: "string",
-																			},
-																			text: {
-																				type: "string",
-																			},
-																		},
-																		required: ["value", "key", "text"],
-																	},
-																	properties: {
-																		"74F390E6-918E-4ACE-8C0CA00005540A97": {
-																			type: "string",
-																		},
-																	},
-																},
-															},
-															required: ["externalId", "value"],
-														},
-													},
-													enabled: {
-														type: "boolean",
-													},
-													authValues: {
-														type: "array",
-														items: {
-															type: "object",
-															properties: {
-																externalId: {
-																	type: "string",
-																},
-																authId: {
-																	type: "string",
-																},
-															},
-															required: ["externalId", "authId"],
-														},
-													},
-												},
-											},
-											previous: {
-												type: "object",
-												properties: {
-													configValues: {
-														type: "array",
-														items: {
-															type: "object",
-															properties: {
-																externalId: {
-																	type: "string",
-																},
-																value: {
-																	type: ["object", "boolean", "string"],
-																	items: {
-																		type: "object",
-																		properties: {
-																			value: {
-																				type: ["string", "null"],
-																			},
-																			key: {
-																				type: "string",
-																			},
-																			text: {
-																				type: "string",
-																			},
-																		},
-																		required: ["value", "key", "text"],
-																	},
-																	properties: {
-																		"74F390E6-918E-4ACE-8C0CA00005540A97": {
-																			type: "string",
-																		},
-																	},
-																},
-															},
-															required: ["externalId", "value"],
-														},
-													},
-													enabled: {
-														type: "boolean",
-													},
-													authValues: {
-														type: "array",
-														items: {
-															type: "object",
-															properties: {
-																externalId: {
-																	type: "string",
-																},
-																authId: {
-																	type: "string",
-																},
-															},
-															required: ["externalId", "authId"],
-														},
-													},
-												},
-											},
-											solutionInstanceId: {
-												type: "string",
-											},
-											eventType: {
-												type: "string",
-											},
-										},
-									},
-									stockCredentials: {
-										type: "object",
-										properties: {
-											CLIENT_SECRET: {
-												type: "string",
-											},
-											ORG_ID: {
-												type: "string",
-											},
-											API_KEY: {
-												type: "string",
-											},
-											PUBLIC_KEYS_WITH_EXPIRY: {
-												type: "object",
-												properties: {
-													"613cdacb4adb6758a0a8141d8459da61fae2f9f8": {
-														type: "string",
-													},
-													"12e50b2d16b39ea42650a0e798054a88518606a4": {
-														type: "string",
-													},
-												},
-											},
-											TECHNICAL_ACCOUNT_ID: {
-												type: "string",
-											},
-											TECHNICAL_ACCOUNT_EMAIL: {
-												type: "string",
-											},
-										},
-									},
-								},
-							},
-						},
-					},
-					error_handling: {},
-					properties: {
-						scope: {
-							type: "string",
-							value: "Account",
-						},
-						default_value: {
-							type: "null",
-							value: null,
-						},
-						key: {
-							type: "string",
-							value: "adobeStockSolutionData-{$.env.solution_instance_id or:'adobeSolutionID'}",
-						},
-					},
-				},
-				"storage-8": {
-					title: "Store Page Number",
-					connector: {
-						name: "storage",
-						version: "1.4",
-					},
-					operation: "set",
-					output_schema: {},
-					error_handling: {},
-					properties: {
-						scope: {
-							type: "string",
-							value: "Current Run",
-						},
-						key: {
-							type: "string",
-							value: "pageCount",
-						},
-						value: {
-							type: "jsonpath",
-							value: "$.steps.math-helpers-2.result",
-						},
-					},
-				},
-				"call-workflow-1": {
-					title: "Get Auth Token",
-					connector: {
-						name: "call-workflow",
-						version: "2.0",
-					},
-					operation: "fire_and_wait_for_response",
-					output_schema: {
-						$schema: "http://json-schema.org/draft-04/schema#",
-						type: "object",
-						properties: {
-							response: {
-								type: "string",
-							},
-							"#workspace_id_hash": {
-								type: "string",
-							},
-							"#username_hash": {
-								type: "string",
-							},
-							"#workflow_title": {
-								type: "string",
-							},
-							"#execution_uuid": {
-								type: "string",
-							},
-							"#execution_start_time": {
-								type: "string",
-							},
-							"#execution_log_url": {
-								type: "string",
-							},
-							"#organization_uuid": {
-								type: "string",
-							},
-							"#datapot_id_hash": {
-								type: "string",
-							},
-							"#workflow_uuid": {
-								type: "string",
-							},
-						},
-					},
-					error_handling: {},
-					properties: {
-						workflow_id: {
-							type: "string",
-							value: "fcf0e374-03b6-4a00-8221-24f648d15cd3",
-						},
-						trigger_input: {
-							type: "object",
-							value: {
-								data: {
-									type: "string",
-									value: "hello world",
-								},
-							},
-						},
-					},
-				},
-				"date-time-helpers-4": {
-					title: "Time for killSwitch ?",
-					connector: {
-						name: "date-time-helpers",
-						version: "3.0",
-					},
-					operation: "compare_dates",
-					output_schema: {},
-					error_handling: {},
-					properties: {
-						comparison: {
-							type: "string",
-							value: "IS AFTER",
-						},
-						resolution: {
-							type: "string",
-							value: "",
-						},
-						date_a: {
-							type: "jsonpath",
-							value: "$.steps.date-time-helpers-3.result",
-						},
-						date_b: {
-							type: "jsonpath",
-							value: "$.steps.date-time-helpers-2.result",
-						},
-					},
-				},
-				"loop-1": {
-					title: "Loop Until Broken",
-					connector: {
-						name: "loop",
-						version: "1.3",
-					},
-					operation: "loop_forever",
-					output_schema: {
-						type: "object",
-						$schema: "http://json-schema.org/draft-03/schema",
-						id: "http://jsonschema.net",
-						properties: {
-							index: {
-								type: "number",
-								id: "http://jsonschema.net/index",
-							},
-						},
-					},
-					error_handling: {},
-					properties: {},
-				},
-				"storage-4": {
-					title: "Get pageCount",
-					connector: {
-						name: "storage",
-						version: "1.4",
-					},
-					operation: "get",
-					output_schema: {},
-					error_handling: {},
-					properties: {
-						scope: {
-							type: "string",
-							value: "Current Run",
-						},
-						default_value: {
-							type: "null",
-							value: null,
-						},
-						key: {
-							type: "string",
-							value: "pageCount",
-						},
-					},
-				},
-				"storage-11": {
-					title: "Save Key to syncKeyArray",
-					connector: {
-						name: "storage",
-						version: "1.4",
-					},
-					operation: "append_to_list",
-					output_schema: {},
-					error_handling: {},
-					properties: {
-						scope: {
-							type: "string",
-							value: "Current Run",
-						},
-						key: {
-							type: "string",
-							value: "syncKeyArray",
-						},
-						value: {
-							type: "string",
-							value: "assetsSyncList-{$.env.solution_instance_id or:'adobeSolutionID'}-{$.steps.loop-1.index}",
-						},
-						create_if_missing: {
-							value: true,
-							type: "boolean",
-						},
-					},
-				},
-				"math-helpers-2": {
-					title: "Add Page Number",
-					connector: {
-						name: "math-helpers",
-						version: "2.0",
-					},
-					operation: "add",
-					output_schema: {},
-					error_handling: {},
-					properties: {
-						first_value: {
-							type: "jsonpath",
-							value: "$.steps.storage-4.value",
-						},
-						second_value: {
-							value: 1,
-							type: "integer",
-						},
-					},
-				},
-				"storage-15": {
-					title: "Store waitingRoomID",
-					connector: {
-						name: "storage",
-						version: "1.4",
-					},
-					operation: "set",
-					output_schema: {},
-					error_handling: {},
-					properties: {
-						scope: {
-							type: "string",
-							value: "Current Run",
-						},
-						key: {
-							type: "string",
-							value: "waitingRoomID",
-						},
-						value: {
-							type: "jsonpath",
-							value: "$.steps.call-workflow-2.response",
-							fallback: {
-								type: "string",
-								value: "",
-							},
-						},
-					},
-				},
-				"script-4": {
-					title: "Check Key Size",
-					connector: {
-						name: "script",
-						version: "3.3",
-					},
-					operation: "execute",
-					output_schema: {},
-					error_handling: {},
-					properties: {
-						variables: {
-							type: "array",
-							value: [
-								{
-									type: "object",
-									value: {
-										name: {
-											type: "string",
-											value: "syncKey",
-										},
-										value: {
-											type: "jsonpath",
-											value: "$.steps.storage-16.value",
-										},
-									},
-								},
-							],
-						},
-						script: {
-							type: "string",
-							value: "// You can reference the input variables using input.NAME\n// Parsed JSON files could be referenced as fileInput\nexports.step = function(input, fileInput) {\n\treturn JSON.stringify(input.syncKey).length;\n};",
-						},
-						file_output: {
-							type: "boolean",
-							value: false,
-						},
-					},
-				},
-				"boolean-condition-8": {
-					title: "Boolean Condition",
-					connector: {
-						name: "boolean-condition",
-						version: "2.3",
-					},
-					operation: "boolean_condition",
-					output_schema: {},
-					error_handling: {},
-					properties: {
-						conditions: {
-							type: "array",
-							value: [
-								{
-									type: "object",
-									value: {
-										value1: {
-											type: "jsonpath",
-											value: "$.config.waitingRoom",
-										},
-										comparison_type: {
-											type: "string",
-											value: "===",
-										},
-										value2: {
-											type: "boolean",
-											value: true,
-										},
-									},
-								},
-								{
-									type: "object",
-									value: {
-										comparison_type: {
-											type: "string",
-											value: "===",
-										},
-										is_case_sensitive: {
-											type: "boolean",
-											value: false,
-										},
-										value1: {
-											type: "jsonpath",
-											value: "$.steps.storage-18.value",
-										},
-										value2: {
-											type: "string",
-											value: "",
-										},
-									},
-								},
-							],
-						},
-						strictness: {
-							type: "string",
-							value: "All",
-						},
-					},
-				},
-				"storage-7": {
-					title: "Load Asset List by Key",
-					connector: {
-						name: "storage",
-						version: "1.4",
-					},
-					operation: "get",
-					output_schema: {},
-					error_handling: {},
-					properties: {
-						scope: {
-							type: "string",
-							value: "Current Run",
-						},
-						key: {
-							type: "string",
-							value: "assetsSyncList-{$.env.solution_instance_id or:'adobeSolutionID'}-{$.steps.loop-1.index}",
-						},
-						default_value: {
-							type: "array",
-							value: [],
 						},
 					},
 				},
@@ -2124,7 +2206,7 @@ const importJSON = {
 										},
 										value: {
 											type: "jsonpath",
-											value: "$.steps.storage-3.value.stockCredentials.API_KEY",
+											value: "$.steps.object-helpers-1.result.API_KEY",
 										},
 									},
 								},
@@ -2150,7 +2232,7 @@ const importJSON = {
 										},
 										value: {
 											type: "string",
-											value: "Bearer {$.steps.call-workflow-1.response}",
+											value: "Bearer {$.steps.storage-15.value}",
 										},
 									},
 								},
@@ -2168,7 +2250,7 @@ const importJSON = {
 										},
 										value: {
 											type: "string",
-											value: "50",
+											value: "100",
 										},
 									},
 								},
@@ -2202,44 +2284,6 @@ const importJSON = {
 						},
 					},
 				},
-				"boolean-condition-7": {
-					title: "Boolean Condition",
-					connector: {
-						name: "boolean-condition",
-						version: "2.3",
-					},
-					operation: "boolean_condition",
-					output_schema: {},
-					error_handling: {},
-					properties: {
-						conditions: {
-							type: "array",
-							value: [
-								{
-									type: "object",
-									value: {
-										value1: {
-											type: "jsonpath",
-											value: "$.steps.logic-helpers-1.result",
-										},
-										comparison_type: {
-											type: "string",
-											value: "===",
-										},
-										value2: {
-											type: "boolean",
-											value: true,
-										},
-									},
-								},
-							],
-						},
-						strictness: {
-							type: "string",
-							value: "All",
-						},
-					},
-				},
 				"list-helpers-1": {
 					title: "Count Licensed Assets",
 					connector: {
@@ -2256,8 +2300,458 @@ const importJSON = {
 						},
 					},
 				},
-				"http-client-5": {
-					title: "Get Asset Metadata",
+				"bynder-1": {
+					title: "Upload to Bynder",
+					connector: {
+						name: "bynder",
+						version: "1.3",
+					},
+					operation: "upload_asset",
+					output_schema: {},
+					error_handling: {
+						strategy: "manual",
+					},
+					authentication: {
+						group: "710d5e41-2a7b-4376-9792-dac8f2d89ba5",
+						title: "Keiffer Bynder Account - BLCR",
+						service_icon: {
+							icon_type: "url",
+							value: "//s3.amazonaws.com/images.tray.io/artisan/icons/55fdd831638972b19fec6bc4a2da6784.png",
+						},
+						scopes: [],
+						service_name: "bynder",
+						service_version: 1,
+					},
+					properties: {
+						file: {
+							type: "jsonpath",
+							value: "$.steps.file-helpers-3.file",
+						},
+						description: {
+							type: "jsonpath",
+							value: "$.steps.loop-2.value.title",
+						},
+						name: {
+							type: "string",
+							value: "Adobe Stock {$.steps.loop-2.value.id}.{$.steps.data-mapper-1.output.content_type}",
+						},
+						brand_id: {
+							type: "jsonpath",
+							value: "$.steps.bynder-4.results[0].id",
+						},
+						tags: {
+							type: "jsonpath",
+							value: "$.steps.call-workflow-2.response",
+						},
+					},
+				},
+				"csv-11": {
+					title: "CSV Editor",
+					connector: {
+						name: "csv",
+						version: "7.0",
+					},
+					operation: "add_row",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						stringify_boolean: {
+							type: "boolean",
+							value: true,
+						},
+						allow_null: {
+							type: "boolean",
+							value: false,
+						},
+						id: {
+							type: "jsonpath",
+							value: "$.steps.csv-8.id",
+						},
+						cells: {
+							type: "object",
+							value: {
+								AdobeStockID: {
+									type: "jsonpath",
+									value: "$.steps.loop-2.value.id",
+								},
+								time: {
+									type: "jsonpath",
+									value: "$.steps.date-time-helpers-1.result",
+								},
+								failType: {
+									type: "string",
+									value: "Bynder Upload Failure  {$.steps.loop-2.value}",
+								},
+							},
+						},
+					},
+				},
+				"csv-6": {
+					title: "Add to SyncFile",
+					connector: {
+						name: "csv",
+						version: "7.0",
+					},
+					operation: "add_row",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						stringify_boolean: {
+							type: "boolean",
+							value: true,
+						},
+						allow_null: {
+							type: "boolean",
+							value: false,
+						},
+						id: {
+							type: "jsonpath",
+							value: "$.steps.storage-4.value",
+						},
+						cells: {
+							type: "object",
+							value: {
+								AdobeStockID: {
+									type: "jsonpath",
+									value: "$.steps.loop-2.value.id",
+								},
+								BynderMediaID: {
+									type: "jsonpath",
+									value: "$.steps.bynder-3.mediaid",
+								},
+								timeUploaded: {
+									type: "jsonpath",
+									value: "$.steps.date-time-helpers-1.result",
+								},
+							},
+						},
+					},
+				},
+				"break-loop-2": {
+					title: "Break Loop",
+					connector: {
+						name: "break-loop",
+						version: "1.1",
+					},
+					operation: "continue",
+					output_schema: {},
+					error_handling: {},
+					properties: {},
+				},
+				"date-time-helpers-1": {
+					title: "Get Current Timestamp",
+					connector: {
+						name: "date-time-helpers",
+						version: "3.0",
+					},
+					operation: "current_timestamp",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						timezone: {
+							type: "string",
+							value: "UTC",
+						},
+						format: {
+							type: "object",
+							value: {
+								existing_format: {
+									type: "string",
+									value: "X",
+								},
+							},
+						},
+					},
+				},
+				"loop-2": {
+					title: "Loop Each Purchsed Asset",
+					connector: {
+						name: "loop",
+						version: "1.3",
+					},
+					operation: "loop_array",
+					output_schema: {
+						type: "object",
+						$schema: "http://json-schema.org/draft-03/schema",
+						id: "http://jsonschema.net",
+						additionalProperties: false,
+						properties: {
+							value: {
+								type: "object",
+								properties: {
+									license: {
+										type: "string",
+									},
+									license_date: {
+										type: "string",
+									},
+									download_url: {
+										type: "string",
+									},
+									id: {
+										type: "number",
+									},
+									title: {
+										type: "string",
+									},
+									creator_name: {
+										type: "string",
+									},
+									creator_id: {
+										type: "number",
+									},
+									content_url: {
+										type: "string",
+									},
+									media_type_id: {
+										type: "number",
+									},
+									vector_type: {
+										type: "null",
+									},
+									content_type: {
+										type: "string",
+									},
+									height: {
+										type: "number",
+									},
+									width: {
+										type: "number",
+									},
+									details_url: {
+										type: "string",
+									},
+								},
+								required: ["license", "license_date", "download_url", "id", "title", "creator_name", "creator_id", "content_url", "media_type_id", "vector_type", "content_type", "height", "width", "details_url"],
+							},
+							count: {
+								type: "number",
+								id: "http://jsonschema.net/total",
+							},
+							index: {
+								type: "number",
+								id: "http://jsonschema.net/index",
+							},
+							is_first: {
+								type: "boolean",
+								id: "http://jsonschema.net/is_first",
+							},
+							is_last: {
+								type: "boolean",
+								id: "http://jsonschema.net/is_last",
+							},
+						},
+					},
+					error_handling: {},
+					properties: {
+						array: {
+							type: "jsonpath",
+							value: "$.steps.http-client-1.response.body.files",
+						},
+					},
+				},
+				"storage-1": {
+					title: "Get SyncFile ID",
+					connector: {
+						name: "storage",
+						version: "1.4",
+					},
+					operation: "get",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						scope: {
+							type: "string",
+							value: "Account",
+						},
+						default_value: {
+							type: "null",
+							value: null,
+						},
+						key: {
+							type: "string",
+							value: "adobeStockSyncFile-{$.env.solution_instance_id or:'adobeSolutionID'}",
+						},
+					},
+				},
+				"csv-1": {
+					title: "Add to SyncFile",
+					connector: {
+						name: "csv",
+						version: "7.0",
+					},
+					operation: "add_row",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						stringify_boolean: {
+							type: "boolean",
+							value: true,
+						},
+						allow_null: {
+							type: "boolean",
+							value: false,
+						},
+						id: {
+							type: "jsonpath",
+							value: "$.steps.storage-4.value",
+						},
+						cells: {
+							type: "object",
+							value: {
+								AdobeStockID: {
+									type: "jsonpath",
+									value: "$.steps.loop-2.value.id",
+								},
+								BynderMediaID: {
+									type: "jsonpath",
+									value: "$.steps.bynder-2.mediaid",
+								},
+								timeUploaded: {
+									type: "jsonpath",
+									value: "$.steps.date-time-helpers-1.result",
+								},
+							},
+						},
+					},
+				},
+				"file-helpers-3": {
+					title: "Save File",
+					connector: {
+						name: "file-helpers",
+						version: "2.5",
+					},
+					operation: "create_file",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						url: {
+							type: "jsonpath",
+							value: "$.steps.http-client-2.response.headers.location",
+						},
+						name: {
+							type: "string",
+							value: "Adobe Stock {$.steps.loop-2.value.id}.{$.steps.data-mapper-1.output.content_type}",
+						},
+						headers: {
+							type: "object",
+							value: {},
+						},
+					},
+				},
+				"csv-5": {
+					title: "Create Empty SyncFile",
+					connector: {
+						name: "csv",
+						version: "7.0",
+					},
+					operation: "create_in_memory_csv",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						scope: {
+							type: "string",
+							value: "account",
+						},
+						number_of_columns: {
+							type: "integer",
+							value: 3,
+						},
+						number_of_rows: {
+							type: "integer",
+							value: 0,
+						},
+						use_utf8: {
+							type: "boolean",
+							value: false,
+						},
+						columns: {
+							type: "array",
+							value: [
+								{
+									type: "object",
+									value: {
+										name: {
+											type: "string",
+											value: "AdobeStockID",
+										},
+										type: {
+											type: "string",
+											value: "text",
+										},
+										format: {
+											type: "string",
+											value: "",
+										},
+									},
+								},
+								{
+									type: "object",
+									value: {
+										name: {
+											type: "string",
+											value: "BynderMediaID",
+										},
+										type: {
+											type: "string",
+											value: "text",
+										},
+									},
+								},
+								{
+									type: "object",
+									value: {
+										name: {
+											type: "string",
+											value: "timeUploaded",
+										},
+										type: {
+											type: "string",
+											value: "number",
+										},
+									},
+								},
+							],
+						},
+					},
+				},
+				"break-loop-1": {
+					title: "Break Loop if List = 0",
+					connector: {
+						name: "break-loop",
+						version: "1.1",
+					},
+					operation: "break",
+					output_schema: {},
+					error_handling: {},
+					properties: {},
+				},
+				"storage-6": {
+					title: "Get Client Credentials",
+					connector: {
+						name: "storage",
+						version: "1.4",
+					},
+					operation: "get",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						scope: {
+							type: "string",
+							value: "Current Run",
+						},
+						default_value: {
+							type: "null",
+							value: null,
+						},
+						key: {
+							type: "string",
+							value: "AdobeCredentials-{$.env.workflow_uuid}",
+						},
+					},
+				},
+				"http-client-2": {
+					title: "Download Image",
 					connector: {
 						name: "http-client",
 						version: "5.5",
@@ -2276,76 +2770,43 @@ const importJSON = {
 									headers: {
 										type: "object",
 										properties: {
-											server: {
+											"x-amz-id-2": {
+												type: "string",
+											},
+											"x-amz-request-id": {
 												type: "string",
 											},
 											date: {
 												type: "string",
 											},
-											"content-type": {
+											"last-modified": {
 												type: "string",
 											},
-											"transfer-encoding": {
+											"x-amz-expiration": {
 												type: "string",
 											},
-											connection: {
+											etag: {
 												type: "string",
 											},
-											expires: {
+											"x-amz-version-id": {
 												type: "string",
 											},
-											"cache-control": {
-												type: "string",
-											},
-											pragma: {
-												type: "string",
-											},
-											"x-request-id": {
-												type: "string",
-											},
-											"access-control-allow-methods": {
-												type: "string",
-											},
-											"access-control-allow-origin": {
-												type: "string",
-											},
-											"access-control-expose-headers": {
-												type: "string",
-											},
-											"access-control-allow-credentials": {
-												type: "string",
-											},
-											"access-control-max-age": {
-												type: "string",
-											},
-											allow: {
-												type: "string",
-											},
-											"x-content-type-options": {
-												type: "string",
-											},
-											"x-xss-protection": {
+											"content-disposition": {
 												type: "string",
 											},
 											"accept-ranges": {
 												type: "string",
 											},
-											via: {
+											"content-type": {
 												type: "string",
 											},
-											"x-served-by": {
+											server: {
 												type: "string",
 											},
-											"x-cache": {
+											"content-length": {
 												type: "string",
 											},
-											"x-cache-hits": {
-												type: "string",
-											},
-											"x-timer": {
-												type: "string",
-											},
-											vary: {
+											connection: {
 												type: "string",
 											},
 										},
@@ -2353,31 +2814,21 @@ const importJSON = {
 									body: {
 										type: "object",
 										properties: {
-											files: {
-												type: "array",
-												items: {
-													type: "object",
-													properties: {
-														id: {
-															type: "number",
-														},
-														title: {
-															type: "string",
-														},
-														keywords: {
-															type: "array",
-															items: {
-																type: "object",
-																properties: {
-																	name: {
-																		type: "string",
-																	},
-																},
-																required: ["name"],
-															},
-														},
+											file: {
+												type: "object",
+												properties: {
+													name: {
+														type: "string",
 													},
-													required: ["id", "title", "keywords"],
+													url: {
+														type: "string",
+													},
+													mime_type: {
+														type: "string",
+													},
+													expires: {
+														type: "number",
+													},
 												},
 											},
 										},
@@ -2386,7 +2837,10 @@ const importJSON = {
 							},
 						},
 					},
-					error_handling: {},
+					error_handling: {
+						target: "loop-2",
+						strategy: "continueLoop",
+					},
 					properties: {
 						auth: {
 							type: "object",
@@ -2420,16 +2874,12 @@ const importJSON = {
 						status_code: {
 							type: "object",
 							value: {
-								range: {
+								only: {
 									type: "object",
 									value: {
-										from: {
+										status_code: {
 											type: "integer",
-											value: 200,
-										},
-										to: {
-											type: "integer",
-											value: 299,
+											value: 302,
 										},
 									},
 								},
@@ -2440,8 +2890,8 @@ const importJSON = {
 							value: false,
 						},
 						url: {
-							type: "string",
-							value: "https://stock.adobe.io/Rest/Media/1/Files?&result_columns[]=id&result_columns[]=keywords&result_columns[]=title{$.steps.storage-3.value.metapropertyMapping.queryString}",
+							type: "jsonpath",
+							value: "$.steps.loop-2.value.download_url",
 						},
 						headers: {
 							type: "array",
@@ -2455,7 +2905,7 @@ const importJSON = {
 										},
 										value: {
 											type: "jsonpath",
-											value: "$.steps.storage-3.value.stockCredentials.API_KEY",
+											value: "$.steps.object-helpers-1.result.API_KEY",
 										},
 									},
 								},
@@ -2481,912 +2931,146 @@ const importJSON = {
 										},
 										value: {
 											type: "string",
-											value: "Bearer {$.steps.call-workflow-1.response}",
+											value: "Bearer {$.steps.storage-15.value}",
 										},
 									},
 								},
 							],
 						},
-						queries: {
-							type: "array",
-							value: [
-								{
-									type: "object",
-									value: {
-										key: {
-											type: "string",
-											value: "ids",
-										},
-										value: {
-											type: "jsonpath",
-											value: "$.steps.json-transformer-2.result",
-										},
-									},
-								},
-							],
-						},
-					},
-				},
-				"math-helpers-1": {
-					title: "Set Page Offset",
-					connector: {
-						name: "math-helpers",
-						version: "2.0",
-					},
-					operation: "multiply",
-					output_schema: {},
-					error_handling: {},
-					properties: {
-						first_value: {
-							type: "jsonpath",
-							value: "$.steps.storage-4.value",
-						},
-						second_value: {
-							value: 50,
-							type: "integer",
-						},
-					},
-				},
-				"storage-10": {
-					title: "Save Key to syncKeyArray",
-					connector: {
-						name: "storage",
-						version: "1.4",
-					},
-					operation: "append_to_list",
-					output_schema: {},
-					error_handling: {},
-					properties: {
-						scope: {
-							type: "string",
-							value: "Current Run",
-						},
-						key: {
-							type: "string",
-							value: "syncKeyArray",
-						},
-						value: {
-							type: "string",
-							value: "assetsSyncList-{$.env.solution_instance_id or:'adobeSolutionID'}-{$.steps.loop-1.index}",
-						},
-						create_if_missing: {
-							value: true,
+						return_response_as_file: {
+							value: false,
 							type: "boolean",
 						},
 					},
 				},
-				"break-loop-2": {
-					title: "Break All",
+				"object-helpers-1": {
+					title: "Create Credentials Object",
 					connector: {
-						name: "break-loop",
-						version: "1.1",
+						name: "object-helpers",
+						version: "4.1",
 					},
-					operation: "break",
+					operation: "json_parse",
+					output_schema: {
+						$schema: "http://json-schema.org/draft-04/schema#",
+						type: "object",
+						properties: {
+							result: {
+								type: "object",
+								properties: {
+									CLIENT_SECRET: {
+										type: "string",
+									},
+									ORG_ID: {
+										type: "string",
+									},
+									API_KEY: {
+										type: "string",
+									},
+									TECHNICAL_ACCOUNT_ID: {
+										type: "string",
+									},
+									TECHNICAL_ACCOUNT_EMAIL: {
+										type: "string",
+									},
+									PUBLIC_KEYS_WITH_EXPIRY: {
+										type: "object",
+										properties: {
+											"12e50b2d16b39ea42650a0e798054a88518606a4": {
+												type: "string",
+											},
+											"613cdacb4adb6758a0a8141d8459da61fae2f9f8": {
+												type: "string",
+											},
+										},
+									},
+								},
+							},
+						},
+					},
+					error_handling: {},
+					properties: {
+						source: {
+							type: "jsonpath",
+							value: "$.steps.storage-6.value",
+						},
+					},
+				},
+				"csv-2": {
+					title: "Add to SyncFile",
+					connector: {
+						name: "csv",
+						version: "7.0",
+					},
+					operation: "add_row",
 					output_schema: {},
 					error_handling: {},
-					properties: {},
+					properties: {
+						stringify_boolean: {
+							type: "boolean",
+							value: true,
+						},
+						allow_null: {
+							type: "boolean",
+							value: false,
+						},
+						id: {
+							type: "jsonpath",
+							value: "$.steps.storage-4.value",
+						},
+						cells: {
+							type: "object",
+							value: {
+								AdobeStockID: {
+									type: "jsonpath",
+									value: "$.steps.loop-2.value.id",
+								},
+								BynderMediaID: {
+									type: "jsonpath",
+									value: "$.steps.bynder-1.mediaid",
+								},
+								timeUploaded: {
+									type: "jsonpath",
+									value: "$.steps.date-time-helpers-1.result",
+								},
+							},
+						},
+					},
 				},
-				"call-workflow-5": {
+				"call-workflow-4": {
 					title: "Call Workflow",
 					connector: {
 						name: "call-workflow",
 						version: "2.0",
 					},
-					operation: "fire_and_forget",
+					operation: "fire_and_wait_for_response",
 					output_schema: {},
 					error_handling: {},
 					properties: {
 						workflow_id: {
 							type: "string",
-							value: "c3edf88b-310e-4028-bb93-698ff5deb176",
+							value: "a0acf960-0801-4e7d-b8e1-2ac5831e54c8",
 						},
 						trigger_input: {
 							type: "object",
 							value: {
-								assetData: {
+								bearer: {
 									type: "jsonpath",
-									value: "$.steps.loop-4.value",
+									value: "$.steps.storage-15.value",
 								},
-								waitingRoomID: {
+								stockID: {
 									type: "jsonpath",
-									value: "$.steps.storage-18.value",
+									value: "$.steps.loop-2.value.id",
 								},
-								fileName: {
-									type: "string",
-									value: "Adobe Stock {$.steps.loop-4.value.id}.{$.steps.data-mapper-1.output}",
-								},
-								solutionData: {
+								apiKey: {
 									type: "jsonpath",
-									value: "$.steps.storage-3.value",
-								},
-								bearerToken: {
-									type: "jsonpath",
-									value: "$.steps.call-workflow-1.response",
-								},
-								metaPropertyMap: {
-									type: "jsonpath",
-									value: "$.steps.script-5.result",
+									value: "$.steps.object-helpers-1.result.API_KEY",
 								},
 							},
-						},
-					},
-				},
-				"storage-14": {
-					title: "Get syncList",
-					connector: {
-						name: "storage",
-						version: "1.4",
-					},
-					operation: "get",
-					output_schema: {},
-					error_handling: {},
-					properties: {
-						scope: {
-							type: "string",
-							value: "Account",
-						},
-						key: {
-							type: "string",
-							value: "adobeStockSyncList-{$.env.solution_instance_id or:'adobeSolutionID'}",
-						},
-						default_value: {
-							type: "null",
-							value: null,
-						},
-					},
-				},
-				"logic-helpers-1": {
-					title: "Logic Helpers",
-					connector: {
-						name: "logic-helpers",
-						version: "2.1",
-					},
-					operation: "evaluation",
-					output_schema: {},
-					error_handling: {},
-					properties: {
-						initial_condition: {
-							type: "object",
-							value: {
-								not: {
-									type: "boolean",
-									value: false,
-								},
-								value1: {
-									type: "jsonpath",
-									value: "$.steps.loop-4.value.content_type",
-								},
-								condition: {
-									type: "string",
-									value: "===",
-								},
-								value2: {
-									type: "string",
-									value: "video/mp4",
-								},
-							},
-						},
-						initial_not: {
-							type: "boolean",
-							value: false,
-						},
-						further_conditions: {
-							type: "array",
-							value: [
-								{
-									type: "object",
-									value: {
-										not: {
-											type: "boolean",
-											value: false,
-										},
-										conjunction: {
-											type: "string",
-											value: "AND",
-										},
-										value1: {
-											type: "jsonpath",
-											value: "$.config.syncVideo",
-										},
-										condition: {
-											type: "string",
-											value: "===",
-										},
-										value2: {
-											type: "boolean",
-											value: true,
-										},
-									},
-								},
-							],
-						},
-						further_groups: {
-							type: "array",
-							value: [
-								{
-									type: "object",
-									value: {
-										initial_condition: {
-											type: "object",
-											value: {
-												not: {
-													type: "boolean",
-													value: false,
-												},
-												value1: {
-													type: "jsonpath",
-													value: "$.steps.loop-4.value.content_type",
-												},
-												condition: {
-													type: "string",
-													value: "===",
-												},
-												value2: {
-													type: "string",
-													value: "video/quicktime",
-												},
-											},
-										},
-										group_not: {
-											type: "boolean",
-											value: false,
-										},
-										conjunction: {
-											type: "string",
-											value: "OR",
-										},
-										further_conditions: {
-											type: "array",
-											value: [
-												{
-													type: "object",
-													value: {
-														not: {
-															type: "boolean",
-															value: false,
-														},
-														conjunction: {
-															type: "string",
-															value: "AND",
-														},
-														value1: {
-															type: "jsonpath",
-															value: "$.config.syncVideo",
-														},
-														condition: {
-															type: "string",
-															value: "===",
-														},
-														value2: {
-															type: "boolean",
-															value: true,
-														},
-													},
-												},
-											],
-										},
-									},
-								},
-								{
-									type: "object",
-									value: {
-										initial_condition: {
-											type: "object",
-											value: {
-												not: {
-													type: "boolean",
-													value: false,
-												},
-												value1: {
-													type: "jsonpath",
-													value: "$.steps.loop-4.value.content_type",
-												},
-												condition: {
-													type: "string",
-													value: "===",
-												},
-												value2: {
-													type: "string",
-													value: "application/illustrator",
-												},
-											},
-										},
-										group_not: {
-											type: "boolean",
-											value: false,
-										},
-										conjunction: {
-											type: "string",
-											value: "OR",
-										},
-										further_conditions: {
-											type: "array",
-											value: [
-												{
-													type: "object",
-													value: {
-														not: {
-															type: "boolean",
-															value: false,
-														},
-														conjunction: {
-															type: "string",
-															value: "AND",
-														},
-														value1: {
-															type: "jsonpath",
-															value: "$.config.syncVector",
-														},
-														condition: {
-															type: "string",
-															value: "===",
-														},
-														value2: {
-															type: "boolean",
-															value: true,
-														},
-													},
-												},
-											],
-										},
-									},
-								},
-								{
-									type: "object",
-									value: {
-										initial_condition: {
-											type: "object",
-											value: {
-												not: {
-													type: "boolean",
-													value: false,
-												},
-												value1: {
-													type: "jsonpath",
-													value: "$.steps.loop-4.value.content_type",
-												},
-												condition: {
-													type: "string",
-													value: "===",
-												},
-												value2: {
-													type: "string",
-													value: "application/postscript",
-												},
-											},
-										},
-										group_not: {
-											type: "boolean",
-											value: false,
-										},
-										conjunction: {
-											type: "string",
-											value: "OR",
-										},
-										further_conditions: {
-											type: "array",
-											value: [
-												{
-													type: "object",
-													value: {
-														not: {
-															type: "boolean",
-															value: false,
-														},
-														conjunction: {
-															type: "string",
-															value: "AND",
-														},
-														value1: {
-															type: "jsonpath",
-															value: "$.config.syncVector",
-														},
-														condition: {
-															type: "string",
-															value: "===",
-														},
-														value2: {
-															type: "boolean",
-															value: true,
-														},
-													},
-												},
-											],
-										},
-									},
-								},
-								{
-									type: "object",
-									value: {
-										initial_condition: {
-											type: "object",
-											value: {
-												not: {
-													type: "boolean",
-													value: false,
-												},
-												value1: {
-													type: "jsonpath",
-													value: "$.steps.loop-4.value.content_type",
-												},
-												condition: {
-													type: "string",
-													value: "===",
-												},
-												value2: {
-													type: "string",
-													value: "image/jpeg",
-												},
-											},
-										},
-										group_not: {
-											type: "boolean",
-											value: false,
-										},
-										conjunction: {
-											type: "string",
-											value: "OR",
-										},
-									},
-								},
-							],
-						},
-					},
-				},
-				"loop-4": {
-					title: "Loop Collection",
-					connector: {
-						name: "loop",
-						version: "1.3",
-					},
-					operation: "loop_array",
-					output_schema: {
-						type: "object",
-						$schema: "http://json-schema.org/draft-03/schema",
-						id: "http://jsonschema.net",
-						additionalProperties: false,
-						properties: {
-							value: {
-								type: "object",
-								properties: {
-									keywords: {
-										type: "array",
-										items: {
-											type: "string",
-										},
-									},
-									content_type: {
-										type: "string",
-									},
-									download_url: {
-										type: "string",
-									},
-									country_name: {
-										type: "string",
-									},
-									description: {
-										type: "null",
-									},
-									marketing_text: {
-										type: "null",
-									},
-									id: {
-										type: "number",
-									},
-									title: {
-										type: "string",
-									},
-								},
-								required: ["keywords", "content_type", "download_url", "country_name", "description", "marketing_text", "id", "title"],
-							},
-							count: {
-								type: "number",
-								id: "http://jsonschema.net/total",
-							},
-							index: {
-								type: "number",
-								id: "http://jsonschema.net/index",
-							},
-							is_first: {
-								type: "boolean",
-								id: "http://jsonschema.net/is_first",
-							},
-							is_last: {
-								type: "boolean",
-								id: "http://jsonschema.net/is_last",
-							},
-						},
-					},
-					error_handling: {},
-					properties: {
-						array: {
-							type: "jsonpath",
-							value: "$.steps.storage-13.value",
-						},
-					},
-				},
-				"storage-13": {
-					title: "Load syncKey",
-					connector: {
-						name: "storage",
-						version: "1.4",
-					},
-					operation: "get",
-					output_schema: {
-						$schema: "http://json-schema.org/draft-04/schema#",
-						type: "object",
-						properties: {
-							value: {
-								type: "array",
-								items: {
-									type: "object",
-									properties: {
-										keywords: {
-											type: "array",
-											items: {
-												type: "string",
-											},
-										},
-										content_type: {
-											type: "string",
-										},
-										download_url: {
-											type: "string",
-										},
-										country_name: {
-											type: "string",
-										},
-										description: {
-											type: "null",
-										},
-										marketing_text: {
-											type: "null",
-										},
-										id: {
-											type: "number",
-										},
-										title: {
-											type: "string",
-										},
-									},
-									required: ["keywords", "content_type", "download_url", "country_name", "description", "marketing_text", "id", "title"],
-								},
-							},
-						},
-					},
-					error_handling: {},
-					properties: {
-						scope: {
-							type: "string",
-							value: "Current Run",
-						},
-						default_value: {
-							type: "null",
-							value: null,
-						},
-						key: {
-							type: "jsonpath",
-							value: "$.steps.loop-3.value",
-						},
-					},
-				},
-				"storage-18": {
-					title: "Get waitingRoomID",
-					connector: {
-						name: "storage",
-						version: "1.4",
-					},
-					operation: "get",
-					output_schema: {},
-					error_handling: {},
-					properties: {
-						scope: {
-							type: "string",
-							value: "Current Run",
-						},
-						key: {
-							type: "string",
-							value: "waitingRoomID",
-						},
-						default_value: {
-							type: "null",
-							value: null,
-						},
-					},
-				},
-				"boolean-condition-6": {
-					title: "All Removed ?  GoTo Next",
-					connector: {
-						name: "boolean-condition",
-						version: "2.3",
-					},
-					operation: "boolean_condition",
-					output_schema: {},
-					error_handling: {},
-					properties: {
-						conditions: {
-							type: "array",
-							value: [
-								{
-									type: "object",
-									value: {
-										value1: {
-											type: "jsonpath",
-											value: "$.steps.script-2.result",
-										},
-										comparison_type: {
-											type: "string",
-											value: "===",
-										},
-										value2: {
-											type: "array",
-											value: [],
-										},
-									},
-								},
-							],
-						},
-						strictness: {
-							type: "string",
-							value: "All",
-						},
-					},
-				},
-				"date-time-helpers-1": {
-					title: "Get Current Time",
-					connector: {
-						name: "date-time-helpers",
-						version: "3.0",
-					},
-					operation: "current_timestamp",
-					output_schema: {},
-					error_handling: {},
-					properties: {
-						timezone: {
-							type: "string",
-							value: "PST8PDT",
-						},
-						format: {
-							type: "object",
-							value: {
-								existing_format: {
-									type: "string",
-									value: "X",
-								},
-							},
-						},
-					},
-				},
-				"loop-2": {
-					title: "Loop Until Key is Full",
-					connector: {
-						name: "loop",
-						version: "1.3",
-					},
-					operation: "loop_forever",
-					output_schema: {
-						type: "object",
-						$schema: "http://json-schema.org/draft-03/schema",
-						id: "http://jsonschema.net",
-						properties: {
-							index: {
-								type: "number",
-								id: "http://jsonschema.net/index",
-							},
-						},
-					},
-					error_handling: {},
-					properties: {},
-				},
-				"break-loop-1": {
-					title: "Break Loop 1 if List = 0",
-					connector: {
-						name: "break-loop",
-						version: "1.1",
-					},
-					operation: "break",
-					output_schema: {},
-					error_handling: {},
-					properties: {},
-				},
-				"storage-6": {
-					title: "Save Asset Data to Key",
-					connector: {
-						name: "storage",
-						version: "1.4",
-					},
-					operation: "append_to_list",
-					output_schema: {},
-					error_handling: {},
-					properties: {
-						scope: {
-							type: "string",
-							value: "Current Run",
-						},
-						key: {
-							type: "string",
-							value: "assetsSyncList-{$.env.solution_instance_id or:'adobeSolutionID'}-{$.steps.loop-1.index}",
-						},
-						value: {
-							type: "jsonpath",
-							value: "$.steps.script-1.result",
-						},
-						create_if_missing: {
-							value: true,
-							type: "boolean",
-						},
-					},
-				},
-				"json-transformer-4": {
-					title: "Compactify Metadata",
-					connector: {
-						name: "json-transformer",
-						version: "1.0",
-					},
-					operation: "transform",
-					output_schema: {
-						$schema: "http://json-schema.org/draft-04/schema#",
-						type: "object",
-						properties: {
-							result: {
-								type: "array",
-								items: {
-									type: "object",
-									properties: {
-										id: {
-											type: "number",
-										},
-										title: {
-											type: "string",
-										},
-									},
-									required: ["id", "title"],
-								},
-							},
-						},
-					},
-					error_handling: {},
-					properties: {
-						data: {
-							type: "object",
-							value: {
-								response: {
-									type: "jsonpath",
-									value: "$.steps.http-client-5.response",
-								},
-							},
-						},
-						query: {
-							type: "jsonpath",
-							value: "$.steps.storage-3.value.metapropertyMapping.metaString",
-						},
-					},
-				},
-				"script-2": {
-					title: "Remove Sync'd and Unsupported",
-					connector: {
-						name: "script",
-						version: "3.3",
-					},
-					operation: "execute",
-					output_schema: {
-						$schema: "http://json-schema.org/draft-04/schema#",
-						type: "object",
-						properties: {
-							result: {
-								type: "array",
-								items: {
-									type: "object",
-									properties: {
-										keywords: {
-											type: "array",
-											items: {
-												type: "string",
-											},
-										},
-										content_type: {
-											type: "string",
-										},
-										download_url: {
-											type: "string",
-										},
-										country_name: {
-											type: "string",
-										},
-										description: {
-											type: ["null", "string"],
-										},
-										marketing_text: {
-											type: "null",
-										},
-										id: {
-											type: "number",
-										},
-										title: {
-											type: "string",
-										},
-									},
-									required: ["keywords", "content_type", "download_url", "country_name", "description", "marketing_text", "id", "title"],
-								},
-							},
-							console: {
-								type: "array",
-								items: {},
-							},
-						},
-					},
-					error_handling: {},
-					properties: {
-						variables: {
-							type: "array",
-							value: [
-								{
-									type: "object",
-									value: {
-										name: {
-											type: "string",
-											value: "syncedAssets",
-										},
-										value: {
-											type: "jsonpath",
-											value: "$.steps.storage-14.value",
-										},
-									},
-								},
-								{
-									type: "object",
-									value: {
-										name: {
-											type: "string",
-											value: "fileList",
-										},
-										value: {
-											type: "jsonpath",
-											value: "$.steps.http-client-1.response.body.files",
-										},
-									},
-								},
-								{
-									type: "object",
-									value: {
-										name: {
-											type: "string",
-											value: "syncVideo",
-										},
-										value: {
-											type: "jsonpath",
-											value: "$.config.syncVideo",
-										},
-									},
-								},
-								{
-									type: "object",
-									value: {
-										name: {
-											type: "string",
-											value: "syncVector",
-										},
-										value: {
-											type: "jsonpath",
-											value: "$.config.syncVector",
-										},
-									},
-								},
-							],
-						},
-						script: {
-							type: "string",
-							value:
-								'exports.step = function (input) {\n  let fileList = input.fileList;\n  const syncedAssets = input.syncedAssets;\n  for (var i = 0; i < fileList.length; i++) {\n    var obj = fileList[i];\n\n    if (syncedAssets.indexOf(obj.id) !== -1) {\n      fileList.splice(i, 1);\n      i--;\n    }\n  }\n  const result = fileList.filter((obj) => {\n    if (input.syncVideo === false && input.syncVector === false) {\n      return obj.content_type === "image/jpeg";\n    } else if (input.syncVideo === true && input.syncVector === false) {\n      return (\n        obj.content_type === "image/jpeg" ||\n        obj.content_type === "video/mp4" ||\n        obj.content_type === "video/quicktime"\n      );\n    } else if (input.syncVideo === false && input.syncVector === true) {\n      return (\n        obj.content_type === "image/jpeg" ||\n        obj.content_type === "application/postscript" ||\n        obj.content_type === "application/illustrator"\n      );\n    } else if (input.syncVideo === true && input.syncVector === true) {\n      return (\n        obj.content_type === "image/jpeg" ||\n        obj.content_type === "video/mp4" ||\n        obj.content_type === "video/quicktime" ||\n        obj.content_type === "application/postscript" ||\n        obj.content_type === "application/illustrator"\n      );\n    }\n  });\n  return result;\n};',
-						},
-						file_output: {
-							type: "boolean",
-							value: false,
 						},
 					},
 				},
 				"boolean-condition-3": {
-					title: "Break When Key is Full",
+					title: "SyncFile = null? create",
 					connector: {
 						name: "boolean-condition",
 						version: "2.3",
@@ -3403,15 +3087,15 @@ const importJSON = {
 									value: {
 										value1: {
 											type: "jsonpath",
-											value: "$.steps.script-4.result",
+											value: "$.steps.storage-1.value",
 										},
 										comparison_type: {
 											type: "string",
-											value: "<=",
+											value: "===",
 										},
 										value2: {
-											type: "number",
-											value: 200000,
+											type: "null",
+											value: null,
 										},
 									},
 								},
@@ -3423,110 +3107,31 @@ const importJSON = {
 						},
 					},
 				},
-				"date-time-helpers-2": {
-					title: "Calc killSwitch",
+				"file-helpers-1": {
+					title: "Save File",
 					connector: {
-						name: "date-time-helpers",
-						version: "3.0",
+						name: "file-helpers",
+						version: "2.5",
 					},
-					operation: "plus",
+					operation: "create_file",
 					output_schema: {},
 					error_handling: {},
 					properties: {
-						years: {
-							type: "integer",
-							value: 0,
-						},
-						months: {
-							type: "integer",
-							value: 0,
-						},
-						weeks: {
-							type: "integer",
-							value: 0,
-						},
-						days: {
-							type: "integer",
-							value: 0,
-						},
-						business_days: {
-							type: "integer",
-							value: 0,
-						},
-						hours: {
-							type: "integer",
-							value: 1,
-						},
-						minutes: {
-							type: "integer",
-							value: 45,
-						},
-						seconds: {
-							type: "integer",
-							value: 0,
-						},
-						date: {
+						url: {
 							type: "jsonpath",
-							value: "$.steps.date-time-helpers-1.result",
+							value: "$.steps.http-client-3.response.headers.location",
 						},
-					},
-				},
-				"json-transformer-1": {
-					title: "Compactify Asset List",
-					connector: {
-						name: "json-transformer",
-						version: "1.0",
-					},
-					operation: "transform",
-					output_schema: {
-						$schema: "http://json-schema.org/draft-04/schema#",
-						type: "object",
-						properties: {
-							result: {
-								type: "array",
-								items: {
-									type: "object",
-									properties: {
-										title: {
-											type: "string",
-										},
-										download_url: {
-											type: "string",
-										},
-										id: {
-											type: "number",
-										},
-										content_type: {
-											type: "string",
-										},
-									},
-									required: ["title", "download_url", "id", "content_type"],
-								},
-							},
-						},
-					},
-					error_handling: {},
-					properties: {
-						data: {
-							type: "object",
-							value: {
-								result: {
-									type: "jsonpath",
-									value: "$.steps.script-2.result",
-								},
-							},
-						},
-						query: {
+						name: {
 							type: "string",
-							value: '[result.{\n     "title": title,\n     "download_url": download_url,\n     "id": id,\n     "content_type": content_type\n }]',
+							value: "Adobe Stock {$.steps.loop-2.value.id}.{$.steps.data-mapper-1.output.content_type}",
 						},
 					},
 				},
 				trigger: {
-					title: "Callable Trigger",
+					title: "Manual Trigger",
 					connector: {
-						name: "callable-trigger",
-						version: "2.0",
+						name: "noop",
+						version: "1.1",
 					},
 					operation: "trigger",
 					output_schema: {},
@@ -3536,16 +3141,12 @@ const importJSON = {
 			},
 			dependencies: [
 				{
-					id: "934452a0-e531-415b-88bb-34a0422e26e8",
-					name: "[Adobe Stock v2] Bynder Upload / Respond",
+					id: "a0acf960-0801-4e7d-b8e1-2ac5831e54c8",
+					name: "Adobe Stock Keyword Generator",
 				},
 				{
-					id: "c3edf88b-310e-4028-bb93-698ff5deb176",
-					name: "[Adobe Stock v2] Bynder Uploader",
-				},
-				{
-					id: "fcf0e374-03b6-4a00-8221-24f648d15cd3",
-					name: "[Adobe Stock v2] Client Credential Token",
+					id: "b843e900-cf72-42eb-8db8-a9ad71b4563c",
+					name: "Adobe Stock JWT Generator",
 				},
 			],
 		},
@@ -3575,51 +3176,86 @@ const modelBuilder = function (importArray) {
 	properties {
 		"structurizr.groupSeparator" "/"
 	}
-	workflow = softwareSystem "${importJSON.workflows[0].title.replace(/[^a-zA-Z0-9 ]/g, "")}" {
+	workflow = softwareSystem "${strReplace(importJSON.workflows[0].title)}" {
 	`;
 	importArray.forEach((element) => {
 		if (element.type === "loop") {
 			res = res + loopHandle(element.content._loop, element.name);
 		} else if (element.type === "branch") {
-			//Object.keys(element.content).forEach((el) => {
-			//	res = res + branchHandle(el);
-			//});
+			let branch = `	${strReplace(element.name)} = group "${strReplace(groups.find((s) => s.name === element.name).desc)}" {
+				`;
+			Object.keys(element.content).forEach((el) => {
+				branch = branch + branchHandle(element.content[el], el, element.name);
+			});
+			res = res + `${branch}}`;
 		} else {
 			res = res + nodeStructure(element);
 		}
 	});
-	res = `${res}}`;
-	return res;
-};
-
-const loopHandle = function (ary, name) {
-	let res = `	${name.replace(/[^a-zA-Z0-9 ]/g, "")} = group "${groups.find((s) => s.name === name).desc.replace(/[^a-zA-Z0-9 ]/g, "")}" {
-		`;
-	ary.forEach((element) => {
-		if (element.type === "loop") {
-			res = `${res}` + `${loopHandle(element.content._loop, element.name)}`;
-		} else if (element.type === "branch") {
-			//Object.keys(element.content).forEach((el) => {
-			//	res = res + branchHandle(el);
-			//});
-		} else {
-			res = res + nodeStructure(element);
-		}
-	});
-	res = `${res}
+	res = `${res}}
+	trigger -> storage1
+	storage1 -> storage4
 }`;
 	return res;
 };
 
-const branchHandle = function (ary, name) {
-	let res = ``;
+const loopHandle = function (ary, name) {
+	let res = `	${strReplace(name)} = group "${strReplace(groups.find((s) => s.name === name).desc)}" {
+		`;
+	let loop = ``;
+	ary.forEach((element) => {
+		if (element.type === "loop") {
+			loop = `${loopHandle(element.content._loop, element.name)}`;
+			res =
+				res +
+				`${loop}
+			}`;
+		} else if (element.type === "branch") {
+			let branch = `	${strReplace(element.name)} = group "${strReplace(groups.find((s) => s.name === element.name).desc)}" {
+				`;
+			Object.keys(element.content).forEach((el) => {
+				branch = branch + branchHandle(element.content[el], el, element.name);
+			});
+			res = res + `${branch}}`;
+		} else {
+			res = res + nodeStructure(element);
+		}
+	});
+	res = `${res}}
+	`;
+	return res;
+};
+
+const branchHandle = function (ary, name, elName) {
+	//console.log(ary, name, elName);
+	let res = `branch${strReplace(name)} = group "branch ${name}"
+	`;
+	let branch = ``;
+	ary.forEach((element) => {
+		if (element.type === "loop") {
+			loop = `${loopHandle(element.content._loop, element.name)}`;
+			res =
+				res +
+				`${loop}
+			}`;
+		} else if (element.type === "branch") {
+			//
+		} else {
+			res = res + nodeStructure(element);
+		}
+	});
 	return res;
 };
 
 const nodeStructure = function (obj) {
-	console.log(obj);
-	let res = `	${obj.name.replace(/[^a-zA-Z0-9 ]/g, "")} = container "${groups.find((s) => s.name === obj.name).desc.replace(/[^a-zA-Z0-9 ]/g, "")}"
+	//console.log(obj);
+	let res = `	${strReplace(obj.name)} = container "${strReplace(groups.find((s) => s.name === obj.name).desc)} - ${strReplace(obj.name)}"
 	`;
+	return res;
+};
+
+const strReplace = function (str) {
+	let res = str.replace(/[^a-zA-Z0-9 ]/g, "");
 	return res;
 };
 
