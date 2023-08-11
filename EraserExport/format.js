@@ -3,27 +3,46 @@ const importJSON = {
 	export_type: "workflow",
 	workflows: [
 		{
-			id: "1dac2f32-96e5-44a1-b64a-bdd9eb4d2283",
-			created: "2023-03-06T21:16:06.177760Z",
+			id: "c3edf88b-310e-4028-bb93-698ff5deb176",
+			created: "2023-03-16T21:43:53.365636Z",
 			workspace_id: "139e4592-3b78-46ad-885b-bc64d04d3bed",
-			project_id: "6f8096f2-a1d0-45b8-bb1e-f4e239e3a698",
-			group: "ad62ee41-c409-405e-87bf-e383edd7f747",
-			creator: "3133b2b7-d139-471f-81ff-3d67396973da",
+			project_id: "61e77b36-3e4a-42ac-8b73-06e9e77addff",
+			group: "8ae4b25e-fdcb-4c5d-8444-08e947a40857",
+			creator: "139e4592-3b78-46ad-885b-bc64d04d3bed",
 			version: {
-				id: "99157aab-a451-4000-8447-770e06fe2f2f",
-				created: "2023-04-04T20:35:52.677210Z",
+				id: "23010b37-724b-4927-bd3e-b6d9741dc4f2",
+				created: "2023-05-03T12:56:02.523536Z",
 			},
-			title: "Bynder to Marketo",
-			enabled: false,
+			title: "[Adobe Stock v2] Bynder Uploader",
+			enabled: true,
 			tags: [],
 			settings: {
 				config: {
-					initial_last_modified_date: "2023-03-21T22:39:24Z",
-					marketo_folder: 81,
-					bynder_tag_filter: "",
+					syncVector: false,
+					syncVideo: false,
+					syncOrganization: "true",
+					offsetSize: "100",
+					waitingRoom: true,
+					searchLimit: "50",
+					metadataMapping: [],
+					chunkSize: 64000000,
+					staticMapInput: [],
+					dataMapInput: {},
 				},
 				input_schema: {},
-				output_schema: {},
+				output_schema: {
+					type: "object",
+					properties: {
+						response: {
+							type: "string",
+							title: "New property",
+							default: "Failed Download",
+						},
+					},
+					additionalProperties: false,
+					required: [],
+					advanced: [],
+				},
 			},
 			steps_structure: [
 				{
@@ -32,27 +51,85 @@ const importJSON = {
 					content: {},
 				},
 				{
-					name: "storage-1",
-					type: "normal",
-					content: {},
-				},
-				{
-					name: "text-helpers-1",
-					type: "normal",
-					content: {},
-				},
-				{
-					name: "loop-1",
-					type: "loop",
+					name: "http-client-2",
+					type: "branch",
 					content: {
-						_loop: [
+						error: [
 							{
-								name: "storage-2",
+								name: "boolean-condition-5",
+								type: "branch",
+								content: {
+									true: [
+										{
+											name: "storage-6",
+											type: "normal",
+											content: {},
+										},
+										{
+											name: "storage-5",
+											type: "normal",
+											content: {},
+										},
+									],
+									false: [],
+								},
+							},
+							{
+								name: "terminate-4",
 								type: "normal",
 								content: {},
 							},
+						],
+						success: [],
+					},
+				},
+				{
+					name: "list-helpers-4",
+					type: "normal",
+					content: {},
+				},
+				{
+					name: "storage-8",
+					type: "normal",
+					content: {},
+				},
+				{
+					name: "storage-9",
+					type: "normal",
+					content: {},
+				},
+				{
+					name: "object-helpers-2",
+					type: "normal",
+					content: {},
+				},
+				{
+					name: "object-helpers-1",
+					type: "normal",
+					content: {},
+				},
+				{
+					name: "bynder-2",
+					type: "normal",
+					content: {},
+				},
+				{
+					name: "bynder-1",
+					type: "normal",
+					content: {},
+				},
+				{
+					name: "file-helpers-1",
+					type: "normal",
+					content: {},
+				},
+				{
+					name: "http-client-1",
+					type: "branch",
+					content: {
+						error: [
 							{
-								name: "bynder-1",
+								name: "json-transformer-1",
 								type: "normal",
 								content: {},
 							},
@@ -62,45 +139,135 @@ const importJSON = {
 								content: {},
 							},
 							{
+								name: "bynder-7",
+								type: "branch",
+								content: {
+									error: [
+										{
+											name: "storage-2",
+											type: "normal",
+											content: {},
+										},
+									],
+									success: [],
+								},
+							},
+							{
+								name: "storage-3",
+								type: "normal",
+								content: {},
+							},
+							{
+								name: "terminate-3",
+								type: "normal",
+								content: {},
+							},
+						],
+						success: [],
+					},
+				},
+				{
+					name: "bynder-3",
+					type: "normal",
+					content: {},
+				},
+				{
+					name: "bynder-5",
+					type: "normal",
+					content: {},
+				},
+				{
+					name: "loop-2",
+					type: "loop",
+					content: {
+						_loop: [
+							{
+								name: "bynder-6",
+								type: "normal",
+								content: {},
+							},
+							{
+								name: "list-helpers-1",
+								type: "normal",
+								content: {},
+							},
+							{
 								name: "boolean-condition-1",
 								type: "branch",
 								content: {
 									true: [
 										{
-											name: "loop-2",
-											type: "loop",
-											content: {
-												_loop: [
-													{
-														name: "bynder-2",
-														type: "normal",
-														content: {},
-													},
-													{
-														name: "file-helpers-1",
-														type: "normal",
-														content: {},
-													},
-													{
-														name: "marketo-1",
-														type: "normal",
-														content: {},
-													},
-												],
-											},
-										},
-										{
-											name: "storage-3",
-											type: "normal",
+											name: "break-loop-1",
+											type: "break",
 											content: {},
+											target: "loop-2",
 										},
 									],
 									false: [
 										{
-											name: "break-loop-1",
-											type: "break",
+											name: "list-helpers-2",
+											type: "normal",
 											content: {},
-											target: "loop-1",
+										},
+										{
+											name: "list-helpers-3",
+											type: "normal",
+											content: {},
+										},
+										{
+											name: "boolean-condition-2",
+											type: "branch",
+											content: {
+												true: [
+													{
+														name: "callable-workflow-response-5",
+														type: "normal",
+														content: {},
+													},
+													{
+														name: "terminate-1",
+														type: "normal",
+														content: {},
+													},
+												],
+												false: [
+													{
+														name: "boolean-condition-3",
+														type: "branch",
+														content: {
+															true: [
+																{
+																	name: "callable-workflow-response-4",
+																	type: "normal",
+																	content: {},
+																},
+																{
+																	name: "terminate-2",
+																	type: "normal",
+																	content: {},
+																},
+															],
+															false: [
+																{
+																	name: "math-helpers-2",
+																	type: "normal",
+																	content: {},
+																},
+																{
+																	name: "math-helpers-1",
+																	type: "normal",
+																	content: {},
+																},
+																{
+																	name: "delay-1",
+																	type: "normal",
+																	content: {},
+																},
+															],
+														},
+													},
+												],
+											},
 										},
 									],
 								},
@@ -108,63 +275,783 @@ const importJSON = {
 						],
 					},
 				},
+				{
+					name: "bynder-4",
+					type: "normal",
+					content: {},
+				},
+				{
+					name: "storage-1",
+					type: "normal",
+					content: {},
+				},
 			],
 			steps: {
-				"script-1": {
-					title: "Format assets for Marketo",
-					description: "Grab the needed info from Bynder assets and format for Marketo.",
+				"storage-2": {
+					title: "Store in errorList",
 					connector: {
-						name: "script",
-						version: "3.3",
+						name: "storage",
+						version: "1.4",
 					},
-					operation: "execute",
+					operation: "append_to_list",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						scope: {
+							type: "string",
+							value: "Account",
+						},
+						key: {
+							type: "string",
+							value: "adobeStockErrorList-{$.env.solution_instance_id or:'adobeSolutionID'}",
+						},
+						value: {
+							type: "object",
+							value: {
+								adobeStockID: {
+									type: "string",
+									value: "{$.steps.trigger.assetData.id}",
+								},
+								error: {
+									type: "string",
+									value: "{$.errors.http-client-1}",
+								},
+							},
+						},
+						create_if_missing: {
+							value: true,
+							type: "boolean",
+						},
+					},
+				},
+				"bynder-3": {
+					title: "Register Chunk",
+					connector: {
+						name: "bynder",
+						version: "2.0",
+					},
+					operation: "raw_http_request",
 					output_schema: {
 						$schema: "http://json-schema.org/draft-04/schema#",
 						type: "object",
 						properties: {
-							result: {
+							response: {
 								type: "object",
 								properties: {
-									bynder_to_marketo: {
-										type: "array",
-										items: {
-											type: "object",
-											properties: {
-												bynder_id: {
-													type: "string",
-												},
-												name: {
-													type: "string",
-												},
-												description: {
-													type: "string",
-												},
-											},
-											required: ["bynder_id", "name", "description"],
-										},
+									status_code: {
+										type: "number",
 									},
-									folder: {
-										type: "string",
-									},
-									new_last_modified: {
+									headers: {
 										type: "object",
 										properties: {
 											date: {
 												type: "string",
 											},
-											id: {
+											"content-type": {
+												type: "string",
+											},
+											"content-length": {
+												type: "string",
+											},
+											connection: {
+												type: "string",
+											},
+											server: {
+												type: "string",
+											},
+											"cache-control": {
+												type: "string",
+											},
+											"set-cookie": {
+												type: "array",
+												items: {
+													type: "string",
+												},
+											},
+											"x-frame-options": {
+												type: "string",
+											},
+											"access-control-allow-origin": {
+												type: "string",
+											},
+											"access-control-allow-credentials": {
+												type: "string",
+											},
+											"access-control-allow-methods": {
+												type: "string",
+											},
+											"access-control-allow-headers": {
+												type: "string",
+											},
+										},
+									},
+									body: {
+										type: "object",
+										properties: {
+											status: {
 												type: "string",
 											},
 										},
 									},
 								},
 							},
-							console: {
-								type: "array",
-								items: {},
+						},
+					},
+					error_handling: {},
+					authentication: {
+						group: "d9331e0a-9170-41e8-866c-13ec9a287df5",
+						title: "Keiffer Bynder oAuth2",
+						service_icon: {
+							icon_type: "url",
+							value: "//s3.amazonaws.com/images.tray.io/artisan/icons/55fdd831638972b19fec6bc4a2da6784.png",
+						},
+						scopes: ["collection:write", "asset:write", "current.profile:read", "meta.assetbank:read", "asset:read", "collection:read", "meta.assetbank:write", "admin.profile:read", "admin.user:read", "offline", "current.user:read"],
+						service_name: "bynder",
+						service_version: 2,
+					},
+					properties: {
+						method: {
+							type: "string",
+							value: "POST",
+						},
+						include_raw_body: {
+							type: "boolean",
+							value: false,
+						},
+						parse_response: {
+							type: "string",
+							value: "true",
+						},
+						url: {
+							type: "object",
+							value: {
+								full_url: {
+									type: "string",
+									value: "{$.auth.domain}/api/v4/upload/{$.steps.bynder-1.response.body.s3file.uploadid}/",
+								},
+							},
+						},
+						body: {
+							type: "object",
+							value: {
+								form_urlencoded: {
+									type: "object",
+									value: {
+										chunkNumber: {
+											type: "number",
+											value: 1,
+										},
+										targetid: {
+											type: "jsonpath",
+											value: "$.steps.bynder-1.response.body.s3file.targetid",
+										},
+										filename: {
+											type: "jsonpath",
+											value: "$.steps.http-client-1.response.body.PostResponse.Key",
+										},
+									},
+								},
+							},
+						},
+						headers: {
+							type: "array",
+							value: [
+								{
+									type: "object",
+									value: {
+										key: {
+											type: "string",
+											value: "Authorization",
+										},
+										value: {
+											type: "string",
+											value: "Bearer {$.auth.access_token}",
+										},
+									},
+								},
+							],
+						},
+					},
+				},
+				"list-helpers-3": {
+					title: "List Helpers",
+					connector: {
+						name: "list-helpers",
+						version: "2.1",
+					},
+					operation: "add_item_to_list",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						unique: {
+							type: "boolean",
+							value: false,
+						},
+						list: {
+							type: "jsonpath",
+							value: "$.steps.bynder-6.response.body.itemsRejected",
+						},
+						item: {
+							type: "jsonpath",
+							value: "$.steps.bynder-5.response.body.importId",
+						},
+					},
+				},
+				"bynder-2": {
+					title: "Get Upload URL",
+					connector: {
+						name: "bynder",
+						version: "2.0",
+					},
+					operation: "raw_http_request",
+					output_schema: {
+						$schema: "http://json-schema.org/draft-04/schema#",
+						type: "object",
+						properties: {
+							response: {
+								type: "object",
+								properties: {
+									status_code: {
+										type: "number",
+									},
+									headers: {
+										type: "object",
+										properties: {
+											date: {
+												type: "string",
+											},
+											"content-type": {
+												type: "string",
+											},
+											"content-length": {
+												type: "string",
+											},
+											connection: {
+												type: "string",
+											},
+											server: {
+												type: "string",
+											},
+											"set-cookie": {
+												type: "array",
+												items: {
+													type: "string",
+												},
+											},
+											"access-control-allow-origin": {
+												type: "string",
+											},
+											"access-control-allow-credentials": {
+												type: "string",
+											},
+											"access-control-allow-methods": {
+												type: "string",
+											},
+											"access-control-allow-headers": {
+												type: "string",
+											},
+										},
+									},
+									body: {
+										type: "string",
+									},
+								},
 							},
 						},
 					},
+					error_handling: {},
+					authentication: {
+						group: "d9331e0a-9170-41e8-866c-13ec9a287df5",
+						title: "Keiffer Bynder oAuth2",
+						service_icon: {
+							icon_type: "url",
+							value: "//s3.amazonaws.com/images.tray.io/artisan/icons/55fdd831638972b19fec6bc4a2da6784.png",
+						},
+						scopes: ["collection:write", "asset:write", "current.profile:read", "meta.assetbank:read", "asset:read", "collection:read", "meta.assetbank:write", "admin.profile:read", "admin.user:read", "offline", "current.user:read"],
+						service_name: "bynder",
+						service_version: 2,
+					},
+					properties: {
+						method: {
+							type: "string",
+							value: "GET",
+						},
+						url: {
+							type: "object",
+							value: {
+								full_url: {
+									type: "string",
+									value: "{$.auth.domain}/api/upload/endpoint",
+								},
+							},
+						},
+						include_raw_body: {
+							type: "boolean",
+							value: false,
+						},
+						parse_response: {
+							type: "string",
+							value: "true",
+						},
+						body: {
+							type: "object",
+							value: {
+								form_urlencoded: {
+									type: "object",
+									value: {},
+								},
+							},
+						},
+					},
+				},
+				"bynder-5": {
+					title: "Finalise Upload",
+					connector: {
+						name: "bynder",
+						version: "2.0",
+					},
+					operation: "raw_http_request",
+					output_schema: {
+						$schema: "http://json-schema.org/draft-04/schema#",
+						type: "object",
+						properties: {
+							response: {
+								type: "object",
+								properties: {
+									status_code: {
+										type: "number",
+									},
+									headers: {
+										type: "object",
+										properties: {
+											date: {
+												type: "string",
+											},
+											"content-type": {
+												type: "string",
+											},
+											"content-length": {
+												type: "string",
+											},
+											connection: {
+												type: "string",
+											},
+											server: {
+												type: "string",
+											},
+											"cache-control": {
+												type: "string",
+											},
+											"set-cookie": {
+												type: "array",
+												items: {
+													type: "string",
+												},
+											},
+											"x-frame-options": {
+												type: "string",
+											},
+											"access-control-allow-origin": {
+												type: "string",
+											},
+											"access-control-allow-credentials": {
+												type: "string",
+											},
+											"access-control-allow-methods": {
+												type: "string",
+											},
+											"access-control-allow-headers": {
+												type: "string",
+											},
+										},
+									},
+									body: {
+										type: "object",
+										properties: {
+											locationType: {
+												type: "string",
+											},
+											originalFilename: {
+												type: "string",
+											},
+											filename: {
+												type: "string",
+											},
+											output: {
+												type: "string",
+											},
+											batchId: {
+												type: "string",
+											},
+											success: {
+												type: "boolean",
+											},
+											importId: {
+												type: "string",
+											},
+											file: {
+												type: "object",
+												properties: {
+													bucket: {
+														type: "string",
+													},
+													path: {
+														type: "string",
+													},
+													type: {
+														type: "string",
+													},
+												},
+											},
+											sendRequest: {
+												type: "boolean",
+											},
+										},
+									},
+								},
+							},
+						},
+					},
+					error_handling: {},
+					authentication: {
+						group: "d9331e0a-9170-41e8-866c-13ec9a287df5",
+						title: "Keiffer Bynder oAuth2",
+						service_icon: {
+							icon_type: "url",
+							value: "//s3.amazonaws.com/images.tray.io/artisan/icons/55fdd831638972b19fec6bc4a2da6784.png",
+						},
+						scopes: ["collection:write", "asset:write", "current.profile:read", "meta.assetbank:read", "asset:read", "collection:read", "meta.assetbank:write", "admin.profile:read", "admin.user:read", "offline", "current.user:read"],
+						service_name: "bynder",
+						service_version: 2,
+					},
+					properties: {
+						method: {
+							type: "string",
+							value: "POST",
+						},
+						include_raw_body: {
+							type: "boolean",
+							value: false,
+						},
+						parse_response: {
+							type: "string",
+							value: "true",
+						},
+						url: {
+							type: "object",
+							value: {
+								full_url: {
+									type: "string",
+									value: "{$.auth.domain}/api/v4/upload/{$.steps.bynder-1.response.body.s3file.uploadid}",
+								},
+							},
+						},
+						body: {
+							type: "object",
+							value: {
+								form_urlencoded: {
+									type: "object",
+									value: {
+										targetid: {
+											type: "jsonpath",
+											value: "$.steps.bynder-1.response.body.s3file.targetid",
+										},
+										s3_filename: {
+											type: "jsonpath",
+											value: "$.steps.http-client-1.response.body.PostResponse.Location",
+										},
+										chunks: {
+											type: "number",
+											value: 1,
+										},
+										original_filename: {
+											type: "jsonpath",
+											value: "$.steps.trigger.fileName",
+										},
+									},
+								},
+							},
+						},
+						headers: {
+							type: "array",
+							value: [
+								{
+									type: "object",
+									value: {
+										value: {
+											type: "string",
+											value: "Bearer {$.auth.access_token}",
+										},
+										key: {
+											type: "string",
+											value: "Authorization",
+										},
+									},
+								},
+							],
+						},
+						query_parameters: {
+							type: "array",
+							value: [],
+						},
+					},
+				},
+				"boolean-condition-1": {
+					title: "Boolean Condition",
+					connector: {
+						name: "boolean-condition",
+						version: "2.3",
+					},
+					operation: "boolean_condition",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						conditions: {
+							type: "array",
+							value: [
+								{
+									type: "object",
+									value: {
+										value1: {
+											type: "jsonpath",
+											value: "$.steps.list-helpers-1.result",
+										},
+										comparison_type: {
+											type: "string",
+											value: "===",
+										},
+										value2: {
+											type: "boolean",
+											value: true,
+										},
+									},
+								},
+							],
+						},
+						strictness: {
+							type: "string",
+							value: "All",
+						},
+					},
+				},
+				"math-helpers-2": {
+					title: "Add 1 to Index",
+					connector: {
+						name: "math-helpers",
+						version: "2.0",
+					},
+					operation: "add",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						first_value: {
+							type: "jsonpath",
+							value: "$.steps.loop-2.index",
+						},
+						second_value: {
+							value: 1,
+							type: "integer",
+						},
+					},
+				},
+				"terminate-1": {
+					title: "Terminate",
+					connector: {
+						name: "terminate",
+						version: "1.1",
+					},
+					operation: "fail_run",
+					output_schema: {},
+					error_handling: {},
+					properties: {},
+				},
+				"math-helpers-1": {
+					title: "Linear Delay Function",
+					connector: {
+						name: "math-helpers",
+						version: "2.0",
+					},
+					operation: "multiply",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						first_value: {
+							type: "jsonpath",
+							value: "$.steps.math-helpers-2.result",
+						},
+						second_value: {
+							value: 3,
+							type: "integer",
+						},
+					},
+				},
+				"terminate-2": {
+					title: "Terminate",
+					connector: {
+						name: "terminate",
+						version: "1.1",
+					},
+					operation: "fail_run",
+					output_schema: {},
+					error_handling: {},
+					properties: {},
+				},
+				"loop-2": {
+					title: "Loop Collection",
+					connector: {
+						name: "loop",
+						version: "1.3",
+					},
+					operation: "loop_forever",
+					output_schema: {
+						$schema: "http://json-schema.org/draft-04/schema#",
+						type: "object",
+						properties: {
+							index: {
+								type: "number",
+							},
+							branch_name: {
+								type: "string",
+							},
+						},
+					},
+					error_handling: {},
+					properties: {},
+				},
+				"storage-1": {
+					title: "Store assetID in syncList",
+					connector: {
+						name: "storage",
+						version: "1.4",
+					},
+					operation: "append_to_list",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						scope: {
+							type: "string",
+							value: "Account",
+						},
+						key: {
+							type: "string",
+							value: "adobeStockSyncList-{$.env.solution_instance_id or:'adobeSolutionID'}",
+						},
+						value: {
+							type: "jsonpath",
+							value: "$.steps.trigger.assetData.id",
+						},
+					},
+				},
+				"callable-workflow-response-4": {
+					title: "Callable response",
+					connector: {
+						name: "callable-workflow-response",
+						version: "1.0",
+					},
+					operation: "response",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						response: {
+							value: {
+								response: {
+									type: "string",
+									value: "Upload Failure",
+								},
+							},
+							type: "object",
+						},
+					},
+				},
+				"bynder-7": {
+					title: "Vanilla Upload",
+					connector: {
+						name: "bynder",
+						version: "2.0",
+					},
+					operation: "upload_asset",
+					output_schema: {},
+					error_handling: {
+						strategy: "manual",
+					},
+					authentication: {
+						group: "d9331e0a-9170-41e8-866c-13ec9a287df5",
+						title: "Keiffer Bynder oAuth2",
+						service_icon: {
+							icon_type: "url",
+							value: "//s3.amazonaws.com/images.tray.io/artisan/icons/55fdd831638972b19fec6bc4a2da6784.png",
+						},
+						scopes: ["collection:write", "asset:write", "current.profile:read", "meta.assetbank:read", "asset:read", "collection:read", "meta.assetbank:write", "admin.profile:read", "admin.user:read", "offline", "current.user:read"],
+						service_name: "bynder",
+						service_version: 2,
+					},
+					properties: {
+						file: {
+							type: "jsonpath",
+							value: "$.steps.file-helpers-1.file",
+						},
+						brand_id: {
+							type: "jsonpath",
+							value: "$.steps.trigger.solutionData.brandID",
+						},
+						name: {
+							type: "jsonpath",
+							value: "$.steps.trigger.fileName",
+						},
+						description: {
+							type: "jsonpath",
+							value: "$.steps.trigger.assetData.title",
+						},
+						tags: {
+							type: "jsonpath",
+							value: "$.steps.trigger.assetData.keywords",
+						},
+						audit: {
+							type: "jsonpath",
+							value: "$.config.waitingRoom",
+						},
+						metaproperty: {
+							type: "jsonpath",
+							value: "$.steps.script-1.result",
+						},
+						access_request_id: {
+							type: "jsonpath",
+							value: "$.steps.trigger.waitingRoomID",
+						},
+					},
+				},
+				"list-helpers-2": {
+					title: "List Helpers",
+					connector: {
+						name: "list-helpers",
+						version: "2.1",
+					},
+					operation: "add_item_to_list",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						unique: {
+							type: "boolean",
+							value: false,
+						},
+						list: {
+							type: "jsonpath",
+							value: "$.steps.bynder-6.response.body.itemsFailed",
+						},
+						item: {
+							type: "jsonpath",
+							value: "$.steps.bynder-5.response.body.importId",
+						},
+					},
+				},
+				"script-1": {
+					title: "Join Arrays in Format",
+					connector: {
+						name: "script",
+						version: "3.3",
+					},
+					operation: "execute",
+					output_schema: {},
 					error_handling: {},
 					properties: {
 						variables: {
@@ -175,37 +1062,11 @@ const importJSON = {
 									value: {
 										name: {
 											type: "string",
-											value: "bynder_assets",
+											value: "metadataMap",
 										},
 										value: {
 											type: "jsonpath",
-											value: "$.steps.bynder-1.media",
-										},
-									},
-								},
-								{
-									type: "object",
-									value: {
-										name: {
-											type: "string",
-											value: "last_modified",
-										},
-										value: {
-											type: "jsonpath",
-											value: "$.steps.storage-1.value",
-										},
-									},
-								},
-								{
-									type: "object",
-									value: {
-										name: {
-											type: "string",
-											value: "folder_id",
-										},
-										value: {
-											type: "jsonpath",
-											value: "$.config.marketo_folder",
+											value: "$.steps.json-transformer-1.result",
 										},
 									},
 								},
@@ -213,8 +1074,7 @@ const importJSON = {
 						},
 						script: {
 							type: "string",
-							value:
-								'/**\n * Script use to parse the Bynder assets into an array for uploading to Marketo.\n * \n * @param {Object} input - contains the following properties from the workflow:\n * @param {Array} input.bynder_assets - collection of Bynder assets that has been created/changed since the last sync\n * @param {Object} input.last_modified - contains the dateModified and id of the last Bynder asset processed\n * @param {number} input.folder_id - Marketo folder where the Bynder assets will be uploaded\n *\n * @param {*} fileInput - not used\n * \n * @returns {Object} - contains the following:\n *  - {Array} bynder_to_marketo - collection of Bynder assets that need to be sent to Marketo\n *  - {string} folder - stringify\'d JSON object of the folder for Marketo \n *  - {Object} new_last_modified - object that contains the dateModified and id of the last Bynder asset for the current page\n */\nexports.step = function(input, fileInput) {\n  const last_modified = input.last_modified;\n  // default new last modified won\'t be used if there are no other assets to process\n  let new_last_modified = { date: "", id: "" };\n  \n  const bynder_to_marketo = [];\n  // loop bynder assets\n  _.forEach(input.bynder_assets, function(a) {\n    // if the asset\'s dateModified and id match what was last synced then it will be skipped\n    if (a.dateModified != last_modified.date || a.id != last_modified.id) {\n      // set new last asset info\n      new_last_modified = { date: a.dateModified, id: a.id };\n      \n      const data = {};\n      data["bynder_id"] = a.id;\n      \n      // formatting the file name with the Bynder asset ID and adding the extension\n      // the Bynder asset ID will help make the file unique in Marketo so it isn\'t overwritten incorrectly\n      data["name"] = `${a.name}_${a.id}.${a.extension[0]}`;\n      \n      // format the Marketo description with a few Bynder asset standard properties\n      const desc = `Created: ${moment(a.dateCreated).format("YYYY-MM-DD")} by ${a.userCreated}\\nPublished: ${moment(a.datePublished).format("YYYY-MM-DD")}\\nCopyright: ${a.copyright}\\n\\n${a.description}`;\n      // Marketo only allows up to 2000 characters\n      data["description"] = desc.substring(0, 2000);\n      \n      bynder_to_marketo.push(data);\n    }\n  });\n  \n  // set Marketo folder where Bynder assets will be uploaded\n  const folder = JSON.stringify({ id: input.folder_id, type: "Folder" });\n  \n  return { bynder_to_marketo, folder, new_last_modified };\n};',
+							value: '// You can reference the input variables using input.NAME\n// Parsed JSON files could be referenced as fileInput\nexports.step = function (input) {\n\tconst mapObject = []\n\tinput.metadataMap.id.forEach((value, index) => {\n\t\tmapObject.push(\n\t\t\t{\n\t\t\t\t"id": value,\n\t\t\t\t"options": [input.metadataMap.options[index]]\n\t\t\t},\n\t\t)\n\t})\n\treturn mapObject\n}',
 						},
 						file_output: {
 							type: "boolean",
@@ -222,58 +1082,61 @@ const importJSON = {
 						},
 					},
 				},
-				"storage-2": {
-					title: "[Run] Increment page",
-					description: "The first loop will set this to 1 and then add 1 for each loop after. Value is used in the bynder-1 step to page through the assets.",
+				"object-helpers-2": {
+					title: "Merge Map with Save Asset",
+					connector: {
+						name: "object-helpers",
+						version: "4.1",
+					},
+					operation: "merge_two_objects",
+					output_schema: {
+						$schema: "http://json-schema.org/draft-04/schema#",
+						type: "object",
+						properties: {
+							result: {
+								type: "object",
+								properties: {},
+							},
+						},
+					},
+					error_handling: {},
+					properties: {
+						source: {
+							type: "jsonpath",
+							value: "$.steps.storage-9.value",
+						},
+						target: {
+							type: "jsonpath",
+							value: "$.steps.trigger.metaPropertyMap",
+						},
+					},
+				},
+				"storage-5": {
+					title: "Store assetID in syncList",
 					connector: {
 						name: "storage",
 						version: "1.4",
 					},
-					operation: "atomic_increment",
+					operation: "append_to_list",
 					output_schema: {},
 					error_handling: {},
 					properties: {
 						scope: {
 							type: "string",
-							value: "Current Run",
-						},
-						value_to_add: {
-							type: "integer",
-							value: 1,
+							value: "Account",
 						},
 						key: {
 							type: "string",
-							value: "page",
+							value: "adobeStockSyncList-{$.env.solution_instance_id or:'adobeSolutionID'}",
 						},
-					},
-				},
-				"text-helpers-1": {
-					title: "Format tags array",
-					description: "Format required by the bynder-1 step even if it is empty or only one tag. Configured to support multiple tags if a comma is used.",
-					connector: {
-						name: "text-helpers",
-						version: "3.0",
-					},
-					operation: "split",
-					output_schema: {},
-					error_handling: {},
-					properties: {
-						text: {
+						value: {
 							type: "jsonpath",
-							value: "$.config.bynder_tag_filter",
-							fallback: {
-								value: "",
-								type: "string",
-							},
-						},
-						split_by: {
-							type: "string",
-							value: ",",
+							value: "$.steps.trigger.assetData.id",
 						},
 					},
 				},
-				"bynder-2": {
-					title: "Download asset",
+				"bynder-4": {
+					title: "Save Asset",
 					connector: {
 						name: "bynder",
 						version: "2.0",
@@ -301,9 +1164,6 @@ const importJSON = {
 											connection: {
 												type: "string",
 											},
-											vary: {
-												type: "string",
-											},
 											date: {
 												type: "string",
 											},
@@ -318,6 +1178,9 @@ const importJSON = {
 												items: {
 													type: "string",
 												},
+											},
+											location: {
+												type: "string",
 											},
 											"x-frame-options": {
 												type: "string",
@@ -351,8 +1214,32 @@ const importJSON = {
 									body: {
 										type: "object",
 										properties: {
-											s3_file: {
+											accessRequestId: {
 												type: "string",
+											},
+											mediaid: {
+												type: "string",
+											},
+											batchId: {
+												type: "string",
+											},
+											success: {
+												type: "boolean",
+											},
+											mediaitems: {
+												type: "array",
+												items: {
+													type: "object",
+													properties: {
+														original: {
+															type: "string",
+														},
+														destination: {
+															type: "string",
+														},
+													},
+													required: ["original", "destination"],
+												},
 											},
 										},
 									},
@@ -362,13 +1249,820 @@ const importJSON = {
 					},
 					error_handling: {},
 					authentication: {
-						group: "9172b5ce-7198-4a32-9ef9-fccb0ecf66e9",
-						title: "Lynton Web's bynder account",
+						group: "d9331e0a-9170-41e8-866c-13ec9a287df5",
+						title: "Keiffer Bynder oAuth2",
 						service_icon: {
 							icon_type: "url",
 							value: "//s3.amazonaws.com/images.tray.io/artisan/icons/55fdd831638972b19fec6bc4a2da6784.png",
 						},
-						scopes: ["asset:write", "meta.assetbank:read", "asset:read", "meta.assetbank:write", "offline"],
+						scopes: ["collection:write", "asset:write", "current.profile:read", "meta.assetbank:read", "asset:read", "collection:read", "meta.assetbank:write", "admin.profile:read", "admin.user:read", "offline", "current.user:read"],
+						service_name: "bynder",
+						service_version: 2,
+					},
+					properties: {
+						method: {
+							type: "string",
+							value: "POST",
+						},
+						include_raw_body: {
+							type: "boolean",
+							value: false,
+						},
+						parse_response: {
+							type: "string",
+							value: "true",
+						},
+						url: {
+							type: "object",
+							value: {
+								full_url: {
+									type: "string",
+									value: "{$.auth.domain}/api/v4/media/save/{$.steps.bynder-5.response.body.importId}",
+								},
+							},
+						},
+						body: {
+							type: "object",
+							value: {
+								form_data: {
+									type: "jsonpath",
+									value: "$.steps.object-helpers-1.result",
+								},
+							},
+						},
+						headers: {
+							type: "array",
+							value: [
+								{
+									type: "object",
+									value: {
+										value: {
+											type: "string",
+											value: "Bearer {$.auth.access_token}",
+										},
+										key: {
+											type: "string",
+											value: "Authorization",
+										},
+									},
+								},
+							],
+						},
+						query_parameters: {
+							type: "array",
+							value: [],
+						},
+					},
+				},
+				"boolean-condition-5": {
+					title: "Boolean Condition",
+					connector: {
+						name: "boolean-condition",
+						version: "2.3",
+					},
+					operation: "boolean_condition",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						conditions: {
+							type: "array",
+							value: [
+								{
+									type: "object",
+									value: {
+										value1: {
+											type: "jsonpath",
+											value: "$.errors.http-client-2.response.error",
+										},
+										comparison_type: {
+											type: "string",
+											value: "===",
+										},
+										value2: {
+											type: "string",
+											value: "This is embarrassing, but this file cannot be downloaded.",
+										},
+									},
+								},
+								{
+									type: "object",
+									value: {
+										comparison_type: {
+											type: "string",
+											value: "===",
+										},
+										is_case_sensitive: {
+											type: "boolean",
+											value: false,
+										},
+										value2: {
+											type: "string",
+											value: "Resource cannot be found.",
+										},
+										value1: {
+											type: "jsonpath",
+											value: "$.errors.http-client-2.response.error",
+										},
+									},
+								},
+							],
+						},
+						strictness: {
+							type: "string",
+							value: "Any",
+						},
+					},
+				},
+				"storage-9": {
+					title: "Load Save Asset Object",
+					connector: {
+						name: "storage",
+						version: "1.4",
+					},
+					operation: "get",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						scope: {
+							type: "string",
+							value: "Current Run",
+						},
+						key: {
+							type: "string",
+							value: "bynderForm",
+						},
+						default_value: {
+							type: "null",
+							value: null,
+						},
+					},
+				},
+				"boolean-condition-2": {
+					title: "Boolean Condition",
+					connector: {
+						name: "boolean-condition",
+						version: "2.3",
+					},
+					operation: "boolean_condition",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						conditions: {
+							type: "array",
+							value: [
+								{
+									type: "object",
+									value: {
+										value1: {
+											type: "jsonpath",
+											value: "$.steps.list-helpers-2.result",
+										},
+										comparison_type: {
+											type: "string",
+											value: "===",
+										},
+										value2: {
+											type: "boolean",
+											value: true,
+										},
+									},
+								},
+								{
+									type: "object",
+									value: {
+										comparison_type: {
+											type: "string",
+											value: "===",
+										},
+										is_case_sensitive: {
+											type: "boolean",
+											value: false,
+										},
+										value1: {
+											type: "jsonpath",
+											value: "$.steps.list-helpers-3.result",
+										},
+										value2: {
+											type: "boolean",
+											value: true,
+										},
+									},
+								},
+							],
+						},
+						strictness: {
+							type: "string",
+							value: "Any",
+						},
+					},
+				},
+				"storage-3": {
+					title: "Store assetID in syncList",
+					connector: {
+						name: "storage",
+						version: "1.4",
+					},
+					operation: "append_to_list",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						scope: {
+							type: "string",
+							value: "Account",
+						},
+						key: {
+							type: "string",
+							value: "adobeStockSyncList-{$.env.solution_instance_id or:'adobeSolutionID'}",
+						},
+						value: {
+							type: "jsonpath",
+							value: "$.steps.trigger.assetData.id",
+						},
+					},
+				},
+				"storage-8": {
+					title: "Create Save Asset Object",
+					connector: {
+						name: "storage",
+						version: "1.4",
+					},
+					operation: "set",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						scope: {
+							type: "string",
+							value: "Current Run",
+						},
+						key: {
+							type: "string",
+							value: "bynderForm",
+						},
+						value: {
+							type: "object",
+							value: {
+								brandId: {
+									type: "jsonpath",
+									value: "$.steps.trigger.solutionData.brandID",
+								},
+								name: {
+									type: "jsonpath",
+									value: "$.steps.trigger.fileName",
+								},
+								tags: {
+									type: "jsonpath",
+									value: "$.steps.list-helpers-4.result",
+								},
+								audit: {
+									type: "string",
+									value: "{$.config.waitingRoom}",
+								},
+								description: {
+									type: "jsonpath",
+									value: "$.steps.trigger.assetData.title",
+								},
+								accessRequestId: {
+									type: "jsonpath",
+									value: "$.steps.trigger.waitingRoomID",
+								},
+							},
+						},
+					},
+				},
+				"http-client-1": {
+					title: "Upload File",
+					connector: {
+						name: "http-client",
+						version: "5.5",
+					},
+					operation: "post_request",
+					output_schema: {
+						$schema: "http://json-schema.org/draft-04/schema#",
+						type: "object",
+						properties: {
+							response: {
+								type: "object",
+								properties: {
+									status_code: {
+										type: "number",
+									},
+									headers: {
+										type: "object",
+										properties: {
+											"x-amz-id-2": {
+												type: "string",
+											},
+											"x-amz-request-id": {
+												type: "string",
+											},
+											date: {
+												type: "string",
+											},
+											"x-amz-expiration": {
+												type: "string",
+											},
+											"x-amz-server-side-encryption": {
+												type: "string",
+											},
+											etag: {
+												type: "string",
+											},
+											location: {
+												type: "string",
+											},
+											"content-type": {
+												type: "string",
+											},
+											server: {
+												type: "string",
+											},
+											"content-length": {
+												type: "string",
+											},
+											connection: {
+												type: "string",
+											},
+										},
+									},
+									body: {
+										type: "object",
+										properties: {
+											PostResponse: {
+												type: "object",
+												properties: {
+													Location: {
+														type: "string",
+													},
+													Bucket: {
+														type: "string",
+													},
+													Key: {
+														type: "string",
+													},
+													ETag: {
+														type: "string",
+													},
+												},
+											},
+										},
+									},
+								},
+							},
+						},
+					},
+					error_handling: {
+						strategy: "manual",
+					},
+					properties: {
+						auth: {
+							type: "object",
+							value: {
+								none: {
+									type: "null",
+									value: null,
+								},
+							},
+						},
+						follow_redirect: {
+							type: "boolean",
+							value: false,
+						},
+						follow_keep_method: {
+							type: "boolean",
+							value: false,
+						},
+						reject_unauthorized: {
+							type: "boolean",
+							value: true,
+						},
+						follow_authorization_header: {
+							type: "boolean",
+							value: false,
+						},
+						parse_response: {
+							type: "string",
+							value: "true",
+						},
+						status_code: {
+							type: "object",
+							value: {
+								range: {
+									type: "object",
+									value: {
+										from: {
+											type: "integer",
+											value: 200,
+										},
+										to: {
+											type: "integer",
+											value: 299,
+										},
+									},
+								},
+							},
+						},
+						case_sensitive_headers: {
+							type: "boolean",
+							value: false,
+						},
+						url: {
+							type: "jsonpath",
+							value: "$.steps.bynder-2.response.body",
+						},
+						body: {
+							type: "object",
+							value: {
+								form_data: {
+									type: "object",
+									value: {
+										"Content-Type": {
+											type: "jsonpath",
+											value: "$.steps.bynder-1.response.body.multipart_params.Content-Type",
+										},
+										Policy: {
+											type: "jsonpath",
+											value: "$.steps.bynder-1.response.body.multipart_params.Policy",
+										},
+										"X-Amz-Signature": {
+											type: "jsonpath",
+											value: "$.steps.bynder-1.response.body.multipart_params.X-Amz-Signature",
+										},
+										acl: {
+											type: "jsonpath",
+											value: "$.steps.bynder-1.response.body.multipart_params.acl",
+										},
+										key: {
+											type: "jsonpath",
+											value: "$.steps.bynder-1.response.body.multipart_params.key",
+										},
+										success_action_status: {
+											type: "jsonpath",
+											value: "$.steps.bynder-1.response.body.multipart_params.success_action_status",
+										},
+										"x-amz-algorithm": {
+											type: "jsonpath",
+											value: "$.steps.bynder-1.response.body.multipart_params.x-amz-algorithm",
+										},
+										"x-amz-credential": {
+											type: "jsonpath",
+											value: "$.steps.bynder-1.response.body.multipart_params.x-amz-credential",
+										},
+										"x-amz-date": {
+											type: "jsonpath",
+											value: "$.steps.bynder-1.response.body.multipart_params.x-amz-date",
+										},
+										name: {
+											type: "jsonpath",
+											value: "$.steps.trigger.fileName",
+										},
+										chunk: {
+											type: "string",
+											value: "1",
+										},
+										chunks: {
+											type: "string",
+											value: "1",
+										},
+										Filename: {
+											type: "string",
+											value: "{$.steps.bynder-1.response.body.multipart_params}/p1",
+										},
+										file: {
+											type: "jsonpath",
+											value: "$.steps.file-helpers-1.file",
+										},
+									},
+								},
+							},
+						},
+					},
+				},
+				"list-helpers-1": {
+					title: "List Helpers",
+					connector: {
+						name: "list-helpers",
+						version: "2.1",
+					},
+					operation: "contains",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						list: {
+							type: "jsonpath",
+							value: "$.steps.bynder-6.response.body.itemsDone",
+						},
+						match: {
+							type: "jsonpath",
+							value: "$.steps.bynder-5.response.body.importId",
+						},
+					},
+				},
+				"bynder-1": {
+					title: "Initialize Upload",
+					connector: {
+						name: "bynder",
+						version: "2.0",
+					},
+					operation: "raw_http_request",
+					output_schema: {
+						$schema: "http://json-schema.org/draft-04/schema#",
+						type: "object",
+						properties: {
+							response: {
+								type: "object",
+								properties: {
+									status_code: {
+										type: "number",
+									},
+									headers: {
+										type: "object",
+										properties: {
+											date: {
+												type: "string",
+											},
+											"content-type": {
+												type: "string",
+											},
+											"content-length": {
+												type: "string",
+											},
+											connection: {
+												type: "string",
+											},
+											server: {
+												type: "string",
+											},
+											"set-cookie": {
+												type: "array",
+												items: {
+													type: "string",
+												},
+											},
+											"access-control-allow-origin": {
+												type: "string",
+											},
+											"access-control-allow-credentials": {
+												type: "string",
+											},
+											"access-control-allow-methods": {
+												type: "string",
+											},
+											"access-control-allow-headers": {
+												type: "string",
+											},
+										},
+									},
+									body: {
+										type: "object",
+										properties: {
+											s3file: {
+												type: "object",
+												properties: {
+													uploadid: {
+														type: "string",
+													},
+													targetid: {
+														type: "string",
+													},
+												},
+											},
+											s3_filename: {
+												type: "string",
+											},
+											target_key: {
+												type: "string",
+											},
+											multipart_params: {
+												type: "object",
+												properties: {
+													acl: {
+														type: "string",
+													},
+													success_action_status: {
+														type: "string",
+													},
+													"Content-Type": {
+														type: "string",
+													},
+													key: {
+														type: "string",
+													},
+													Policy: {
+														type: "string",
+													},
+													"X-Amz-Signature": {
+														type: "string",
+													},
+													"x-amz-credential": {
+														type: "string",
+													},
+													"x-amz-algorithm": {
+														type: "string",
+													},
+													"x-amz-date": {
+														type: "string",
+													},
+												},
+											},
+										},
+									},
+								},
+							},
+						},
+					},
+					error_handling: {},
+					authentication: {
+						group: "d9331e0a-9170-41e8-866c-13ec9a287df5",
+						title: "Keiffer Bynder oAuth2",
+						service_icon: {
+							icon_type: "url",
+							value: "//s3.amazonaws.com/images.tray.io/artisan/icons/55fdd831638972b19fec6bc4a2da6784.png",
+						},
+						scopes: ["collection:write", "asset:write", "current.profile:read", "meta.assetbank:read", "asset:read", "collection:read", "meta.assetbank:write", "admin.profile:read", "admin.user:read", "offline", "current.user:read"],
+						service_name: "bynder",
+						service_version: 2,
+					},
+					properties: {
+						method: {
+							type: "string",
+							value: "POST",
+						},
+						include_raw_body: {
+							type: "boolean",
+							value: false,
+						},
+						parse_response: {
+							type: "string",
+							value: "true",
+						},
+						url: {
+							type: "object",
+							value: {
+								full_url: {
+									type: "string",
+									value: "{$.auth.domain}/api/upload/init",
+								},
+							},
+						},
+						body: {
+							type: "object",
+							value: {
+								form_urlencoded: {
+									type: "object",
+									value: {
+										filename: {
+											type: "jsonpath",
+											value: "$.steps.trigger.fileName",
+										},
+									},
+								},
+							},
+						},
+						headers: {
+							type: "array",
+							value: [
+								{
+									type: "object",
+									value: {
+										key: {
+											type: "string",
+											value: "Content-Type",
+										},
+										value: {
+											type: "string",
+											value: "application/x-www-form-urlencoded",
+										},
+									},
+								},
+								{
+									type: "object",
+									value: {
+										key: {
+											type: "string",
+											value: "Authorization",
+										},
+										value: {
+											type: "string",
+											value: "Bearer {$.auth.access_token}",
+										},
+									},
+								},
+							],
+						},
+					},
+				},
+				"callable-workflow-response-5": {
+					title: "Callable response",
+					connector: {
+						name: "callable-workflow-response",
+						version: "1.0",
+					},
+					operation: "response",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						response: {
+							value: {
+								response: {
+									type: "string",
+									value: "Upload Failure",
+								},
+							},
+							type: "object",
+						},
+					},
+				},
+				"bynder-6": {
+					title: "Poll Upload",
+					connector: {
+						name: "bynder",
+						version: "2.0",
+					},
+					operation: "raw_http_request",
+					output_schema: {
+						$schema: "http://json-schema.org/draft-04/schema#",
+						type: "object",
+						properties: {
+							response: {
+								type: "object",
+								properties: {
+									status_code: {
+										type: "number",
+									},
+									headers: {
+										type: "object",
+										properties: {
+											date: {
+												type: "string",
+											},
+											"content-type": {
+												type: "string",
+											},
+											"content-length": {
+												type: "string",
+											},
+											connection: {
+												type: "string",
+											},
+											server: {
+												type: "string",
+											},
+											"cache-control": {
+												type: "string",
+											},
+											"set-cookie": {
+												type: "array",
+												items: {
+													type: "string",
+												},
+											},
+											"x-frame-options": {
+												type: "string",
+											},
+											"access-control-allow-origin": {
+												type: "string",
+											},
+											"access-control-allow-credentials": {
+												type: "string",
+											},
+											"access-control-allow-methods": {
+												type: "string",
+											},
+											"access-control-allow-headers": {
+												type: "string",
+											},
+										},
+									},
+									body: {
+										type: "object",
+										properties: {
+											itemsFailed: {
+												type: "array",
+												items: {},
+											},
+											itemsRejected: {
+												type: "array",
+												items: {},
+											},
+											itemsDone: {
+												type: "array",
+												items: {},
+											},
+										},
+									},
+								},
+							},
+						},
+					},
+					error_handling: {},
+					authentication: {
+						group: "d9331e0a-9170-41e8-866c-13ec9a287df5",
+						title: "Keiffer Bynder oAuth2",
+						service_icon: {
+							icon_type: "url",
+							value: "//s3.amazonaws.com/images.tray.io/artisan/icons/55fdd831638972b19fec6bc4a2da6784.png",
+						},
+						scopes: ["collection:write", "asset:write", "current.profile:read", "meta.assetbank:read", "asset:read", "collection:read", "meta.assetbank:write", "admin.profile:read", "admin.user:read", "offline", "current.user:read"],
 						service_name: "bynder",
 						service_version: 2,
 					},
@@ -388,31 +2082,126 @@ const importJSON = {
 						url: {
 							type: "object",
 							value: {
-								endpoint: {
+								full_url: {
 									type: "string",
-									value: "/v4/media/{$.steps.loop-2.value.bynder_id}/download/",
+									value: "{$.auth.domain}/api/v4/upload/poll/",
 								},
 							},
 						},
 						body: {
 							type: "object",
 							value: {
-								none: {
-									type: "null",
-									value: null,
+								form_urlencoded: {
+									type: "object",
+									value: {
+										filename: {
+											type: "jsonpath",
+											value: "$.steps.trigger.fileName",
+										},
+									},
 								},
+							},
+						},
+						headers: {
+							type: "array",
+							value: [
+								{
+									type: "object",
+									value: {
+										value: {
+											type: "string",
+											value: "Bearer {$.auth.access_token}",
+										},
+										key: {
+											type: "string",
+											value: "Authorization",
+										},
+									},
+								},
+							],
+						},
+						query_parameters: {
+							type: "array",
+							value: [
+								{
+									type: "object",
+									value: {
+										key: {
+											type: "string",
+											value: "items",
+										},
+										value: {
+											type: "jsonpath",
+											value: "$.steps.bynder-5.response.body.importId",
+										},
+									},
+								},
+							],
+						},
+					},
+				},
+				"list-helpers-4": {
+					title: "Join Keywords to String",
+					connector: {
+						name: "list-helpers",
+						version: "2.1",
+					},
+					operation: "join",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						separator: {
+							type: "string",
+							value: ",",
+						},
+						list: {
+							type: "jsonpath",
+							value: "$.steps.trigger.assetData.keywords",
+							fallback: {
+								type: "array",
+								value: [
+									{
+										type: "string",
+										value: "Adobe Stock",
+									},
+									{
+										type: "string",
+										value: "{$.steps.trigger.assetData.id}",
+									},
+								],
 							},
 						},
 					},
 				},
-				"storage-3": {
-					title: "[Acc] Set last modified",
-					description: '"env.solution_instance_id"_bynder_last_modified_to_marketo',
+				"terminate-4": {
+					title: "Terminate",
+					connector: {
+						name: "terminate",
+						version: "1.1",
+					},
+					operation: "terminate_run",
+					output_schema: {},
+					error_handling: {},
+					properties: {},
+				},
+				"break-loop-1": {
+					title: "Break Loop",
+					connector: {
+						name: "break-loop",
+						version: "1.1",
+					},
+					operation: "break",
+					output_schema: {},
+					error_handling: {},
+					properties: {},
+				},
+				"storage-6": {
+					title: "Store in errorList",
 					connector: {
 						name: "storage",
 						version: "1.4",
 					},
-					operation: "set",
+					operation: "append_to_list",
 					output_schema: {},
 					error_handling: {},
 					properties: {
@@ -422,37 +2211,286 @@ const importJSON = {
 						},
 						key: {
 							type: "string",
-							value: "{$.env.solution_instance_id or:'dev'}_bynder_last_modified_to_marketo",
+							value: "adobeStockErrorList-{$.env.solution_instance_id or:'adobeSolutionID'}",
 						},
 						value: {
-							type: "jsonpath",
-							value: "$.steps.script-1.result.new_last_modified",
+							type: "object",
+							value: {
+								adobeStockID: {
+									type: "string",
+									value: "{$.steps.trigger.assetData.id}",
+								},
+								error: {
+									type: "string",
+									value: "{$.errors.http-client-2}",
+								},
+							},
+						},
+						create_if_missing: {
+							value: true,
+							type: "boolean",
 						},
 					},
 				},
-				"loop-1": {
-					title: "Loop paging",
+				"terminate-3": {
+					title: "Terminate",
 					connector: {
-						name: "loop",
-						version: "1.3",
+						name: "terminate",
+						version: "1.1",
 					},
-					operation: "loop_forever",
-					output_schema: {
-						type: "object",
-						$schema: "http://json-schema.org/draft-03/schema",
-						id: "http://jsonschema.net",
-						properties: {
-							index: {
-								type: "number",
-								id: "http://jsonschema.net/index",
-							},
-						},
-					},
+					operation: "terminate_run",
+					output_schema: {},
 					error_handling: {},
 					properties: {},
 				},
-				"boolean-condition-1": {
-					title: "bynder_to_marketo has data?",
+				"http-client-2": {
+					title: "Download Asset",
+					connector: {
+						name: "http-client",
+						version: "5.5",
+					},
+					operation: "get_request",
+					output_schema: {
+						$schema: "http://json-schema.org/draft-04/schema#",
+						type: "object",
+						properties: {
+							response: {
+								type: "object",
+								properties: {
+									status_code: {
+										type: "number",
+									},
+									headers: {
+										type: "object",
+										properties: {
+											connection: {
+												type: "string",
+											},
+											"content-type": {
+												type: "string",
+											},
+											expires: {
+												type: "string",
+											},
+											"cache-control": {
+												type: "string",
+											},
+											pragma: {
+												type: "string",
+											},
+											"x-request-id": {
+												type: "string",
+											},
+											"access-control-allow-methods": {
+												type: "string",
+											},
+											"access-control-allow-origin": {
+												type: "string",
+											},
+											"access-control-allow-headers": {
+												type: "string",
+											},
+											"access-control-expose-headers": {
+												type: "string",
+											},
+											"access-control-allow-credentials": {
+												type: "string",
+											},
+											"access-control-max-age": {
+												type: "string",
+											},
+											allow: {
+												type: "string",
+											},
+											location: {
+												type: "string",
+											},
+											"x-content-type-options": {
+												type: "string",
+											},
+											"x-xss-protection": {
+												type: "string",
+											},
+											"accept-ranges": {
+												type: "string",
+											},
+											via: {
+												type: "string",
+											},
+											date: {
+												type: "string",
+											},
+											"strict-transport-security": {
+												type: "string",
+											},
+											"x-served-by": {
+												type: "string",
+											},
+											"x-cache": {
+												type: "string",
+											},
+											"x-cache-hits": {
+												type: "string",
+											},
+											"transfer-encoding": {
+												type: "string",
+											},
+										},
+									},
+									body: {
+										type: "string",
+									},
+								},
+							},
+						},
+					},
+					error_handling: {
+						strategy: "manual",
+					},
+					properties: {
+						auth: {
+							type: "object",
+							value: {
+								none: {
+									type: "null",
+									value: null,
+								},
+							},
+						},
+						follow_redirect: {
+							type: "boolean",
+							value: false,
+						},
+						follow_keep_method: {
+							type: "boolean",
+							value: false,
+						},
+						reject_unauthorized: {
+							type: "boolean",
+							value: true,
+						},
+						follow_authorization_header: {
+							type: "boolean",
+							value: false,
+						},
+						parse_response: {
+							type: "string",
+							value: "true",
+						},
+						status_code: {
+							type: "object",
+							value: {
+								only: {
+									type: "object",
+									value: {
+										status_code: {
+											type: "integer",
+											value: 302,
+										},
+									},
+								},
+							},
+						},
+						case_sensitive_headers: {
+							type: "boolean",
+							value: false,
+						},
+						url: {
+							type: "jsonpath",
+							value: "$.steps.trigger.assetData.download_url",
+						},
+						headers: {
+							type: "array",
+							value: [
+								{
+									type: "object",
+									value: {
+										key: {
+											type: "string",
+											value: "x-api-key",
+										},
+										value: {
+											type: "jsonpath",
+											value: "$.steps.trigger.solutionData.stockCredentials.API_KEY",
+										},
+									},
+								},
+								{
+									type: "object",
+									value: {
+										key: {
+											type: "string",
+											value: "X-Product",
+										},
+										value: {
+											type: "string",
+											value: "BynderSync",
+										},
+									},
+								},
+								{
+									type: "object",
+									value: {
+										key: {
+											type: "string",
+											value: "Authorization",
+										},
+										value: {
+											type: "string",
+											value: "Bearer {$.steps.trigger.bearerToken}",
+										},
+									},
+								},
+							],
+						},
+						return_response_as_file: {
+							value: false,
+							type: "boolean",
+						},
+					},
+				},
+				"object-helpers-1": {
+					title: "Remove Null/Empty Values",
+					connector: {
+						name: "object-helpers",
+						version: "4.1",
+					},
+					operation: "remove_null_values",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						values_to_remove: {
+							type: "string",
+							value: "both",
+						},
+						source: {
+							type: "jsonpath",
+							value: "$.steps.object-helpers-2.result",
+						},
+					},
+				},
+				"delay-1": {
+					title: "Delay",
+					connector: {
+						name: "delay",
+						version: "1.0",
+					},
+					operation: "delay",
+					output_schema: {},
+					error_handling: {},
+					properties: {
+						time_unit: {
+							type: "string",
+							value: "seconds",
+						},
+						delay_value: {
+							type: "jsonpath",
+							value: "$.steps.math-helpers-1.result",
+						},
+					},
+				},
+				"boolean-condition-3": {
+					title: "Boolean Condition",
 					connector: {
 						name: "boolean-condition",
 						version: "2.3",
@@ -469,15 +2507,15 @@ const importJSON = {
 									value: {
 										value1: {
 											type: "jsonpath",
-											value: "$.steps.script-1.result.bynder_to_marketo",
+											value: "$.steps.loop-2.index",
 										},
 										comparison_type: {
 											type: "string",
-											value: "!==",
+											value: ">=",
 										},
 										value2: {
-											type: "array",
-											value: [],
+											type: "number",
+											value: 15,
 										},
 									},
 								},
@@ -489,595 +2527,33 @@ const importJSON = {
 						},
 					},
 				},
-				"bynder-1": {
-					title: "List assets",
+				"json-transformer-1": {
+					title: "Split Meta to Arrays",
 					connector: {
-						name: "bynder",
-						version: "2.0",
+						name: "json-transformer",
+						version: "1.0",
 					},
-					operation: "list_assets",
-					output_schema: {
-						$schema: "http://json-schema.org/draft-04/schema#",
-						type: "object",
-						properties: {
-							media: {
-								type: "array",
-								items: {
-									type: "object",
-									properties: {
-										description: {
-											type: "string",
-										},
-										id: {
-											type: "string",
-										},
-										copyright: {
-											type: "string",
-										},
-										type: {
-											type: "string",
-										},
-										idHash: {
-											type: "string",
-										},
-										height: {
-											type: "number",
-										},
-										archive: {
-											type: "number",
-										},
-										datePublished: {
-											type: "string",
-										},
-										fileSize: {
-											type: "number",
-										},
-										brandId: {
-											type: "string",
-										},
-										name: {
-											type: "string",
-										},
-										extension: {
-											type: "array",
-											items: {
-												type: "string",
-											},
-										},
-										userCreated: {
-											type: "string",
-										},
-										dateCreated: {
-											type: "string",
-										},
-										isPublic: {
-											type: "number",
-										},
-										propertyOptions: {
-											type: "array",
-											items: {
-												type: "string",
-											},
-										},
-										orientation: {
-											type: "string",
-										},
-										dateModified: {
-											type: "string",
-										},
-										width: {
-											type: "number",
-										},
-										watermarked: {
-											type: "number",
-										},
-										limited: {
-											type: "number",
-										},
-										property_portfolioLink: {
-											type: "string",
-										},
-										property_testingdate: {
-											type: "string",
-										},
-										property_Workfront_Task_URL: {
-											type: "string",
-										},
-										"property_figmage-page-id": {
-											type: "string",
-										},
-										property_usage: {
-											type: "array",
-											items: {
-												type: "string",
-											},
-										},
-										property_Testing_Single_select: {
-											type: "array",
-											items: {
-												type: "string",
-											},
-										},
-										"property_figmage-doc-id": {
-											type: "string",
-										},
-										property_Testing_Search_Text: {
-											type: "string",
-										},
-										property_Workfront_Version_ID: {
-											type: "string",
-										},
-										property_Workfront_Document_ID: {
-											type: "array",
-											items: {
-												type: "string",
-											},
-										},
-										property_sourcelocation: {
-											type: "string",
-										},
-										property_desc: {
-											type: "string",
-										},
-										property_Testing_text: {
-											type: "string",
-										},
-										property_Testing_Multi_select: {
-											type: "array",
-											items: {
-												type: "string",
-											},
-										},
-										property_photographer: {
-											type: "string",
-										},
-										property_Workfront_Document_URL: {
-											type: "string",
-										},
-										property_Testing_date_ui: {
-											type: "string",
-										},
-										property_Testing_Search_Text2: {
-											type: "string",
-										},
-										property_downloadLink: {
-											type: "string",
-										},
-										transformBaseUrl: {
-											type: "string",
-										},
-										thumbnails: {
-											type: "object",
-											properties: {
-												mini: {
-													type: "string",
-												},
-												transformBaseUrl: {
-													type: "string",
-												},
-												webimage: {
-													type: "string",
-												},
-												small: {
-													type: "string",
-												},
-												thumbnail: {
-													type: "string",
-												},
-												thul: {
-													type: "string",
-												},
-											},
-										},
-										videoPreviewURLs: {
-											type: "array",
-											items: {
-												type: "string",
-											},
-										},
-										tags: {
-											type: "array",
-											items: {
-												type: "string",
-											},
-										},
-										"property_figmage-node-id": {
-											type: "string",
-										},
-										property_region: {
-											type: "array",
-											items: {
-												type: "string",
-											},
-										},
-									},
-									required: [
-										"description",
-										"id",
-										"copyright",
-										"type",
-										"idHash",
-										"height",
-										"archive",
-										"datePublished",
-										"fileSize",
-										"brandId",
-										"name",
-										"extension",
-										"userCreated",
-										"dateCreated",
-										"isPublic",
-										"orientation",
-										"dateModified",
-										"width",
-										"watermarked",
-										"limited",
-										"thumbnails",
-										"propertyOptions",
-										"property_Workfront_Task_URL",
-										"property_Workfront_Version_ID",
-										"property_Workfront_Document_ID",
-										"property_Workfront_Document_URL",
-										"transformBaseUrl",
-										"tags",
-										"property_Testing_Search_Text",
-										"property_Testing_Search_Text2",
-										"property_sourcelocation",
-										"property_Testing_date_ui",
-									],
-								},
-							},
-							total: {
-								type: "object",
-								properties: {
-									count: {
-										type: "number",
-									},
-								},
-							},
-						},
-					},
-					error_handling: {},
-					authentication: {
-						group: "9172b5ce-7198-4a32-9ef9-fccb0ecf66e9",
-						title: "Lynton Web's bynder account",
-						service_icon: {
-							icon_type: "url",
-							value: "//s3.amazonaws.com/images.tray.io/artisan/icons/55fdd831638972b19fec6bc4a2da6784.png",
-						},
-						scopes: ["asset:write", "meta.assetbank:read", "asset:read", "meta.assetbank:write", "offline"],
-						service_name: "bynder",
-						service_version: 2,
-					},
-					properties: {
-						limit: {
-							type: "integer",
-							value: 50,
-						},
-						page: {
-							type: "jsonpath",
-							value: "$.steps.storage-2.value",
-						},
-						include_total: {
-							value: true,
-							type: "boolean",
-						},
-						order_by: {
-							type: "string",
-							value: "dateModified asc",
-						},
-						date_modified: {
-							type: "jsonpath",
-							value: "$.steps.storage-1.value.date",
-						},
-						include_media_items: {
-							value: false,
-							type: "boolean",
-						},
-						tags: {
-							type: "jsonpath",
-							value: "$.steps.text-helpers-1.result",
-						},
-					},
-				},
-				"loop-2": {
-					title: "Loop bynder_to_marketo",
-					connector: {
-						name: "loop",
-						version: "1.3",
-					},
-					operation: "loop_array",
-					output_schema: {
-						type: "object",
-						$schema: "http://json-schema.org/draft-03/schema",
-						id: "http://jsonschema.net",
-						additionalProperties: false,
-						properties: {
-							value: {
-								type: "object",
-								properties: {
-									bynder_id: {
-										type: "string",
-									},
-									name: {
-										type: "string",
-									},
-									description: {
-										type: "string",
-									},
-								},
-								required: ["bynder_id", "name", "description"],
-							},
-							count: {
-								type: "number",
-								id: "http://jsonschema.net/total",
-							},
-							index: {
-								type: "number",
-								id: "http://jsonschema.net/index",
-							},
-							is_first: {
-								type: "boolean",
-								id: "http://jsonschema.net/is_first",
-							},
-							is_last: {
-								type: "boolean",
-								id: "http://jsonschema.net/is_last",
-							},
-						},
-					},
-					error_handling: {},
-					properties: {
-						array: {
-							type: "jsonpath",
-							value: "$.steps.script-1.result.bynder_to_marketo",
-						},
-					},
-				},
-				"storage-1": {
-					title: "[Acc] Get last modified",
-					description: '"env.solution_instance_id"_bynder_last_modified_to_marketo',
-					connector: {
-						name: "storage",
-						version: "1.4",
-					},
-					operation: "get",
-					output_schema: {
-						$schema: "http://json-schema.org/draft-04/schema#",
-						type: "object",
-						properties: {
-							value: {
-								type: "object",
-								properties: {
-									date: {
-										type: "string",
-									},
-									id: {
-										type: "string",
-									},
-								},
-							},
-						},
-					},
-					error_handling: {},
-					properties: {
-						scope: {
-							type: "string",
-							value: "Account",
-						},
-						default_value: {
-							type: "object",
-							value: {
-								date: {
-									type: "jsonpath",
-									value: "$.config.initial_last_modified_date",
-								},
-								id: {
-									type: "string",
-									value: "",
-								},
-							},
-						},
-						key: {
-							type: "string",
-							value: "{$.env.solution_instance_id or:'dev'}_bynder_last_modified_to_marketo",
-						},
-					},
-				},
-				"break-loop-1": {
-					title: "Break loop-1",
-					connector: {
-						name: "break-loop",
-						version: "1.1",
-					},
-					operation: "break",
+					operation: "transform",
 					output_schema: {},
 					error_handling: {},
-					properties: {},
-				},
-				"marketo-1": {
-					title: "Upload file",
-					description: "Matching by file name, the upload will create or update as needed.",
-					connector: {
-						name: "marketo",
-						version: "2.26",
-					},
-					operation: "raw_http_request",
-					output_schema: {
-						$schema: "http://json-schema.org/draft-04/schema#",
-						type: "object",
-						properties: {
-							response: {
-								type: "object",
-								properties: {
-									status_code: {
-										type: "number",
-									},
-									headers: {
-										type: "object",
-										properties: {
-											server: {
-												type: "string",
-											},
-											date: {
-												type: "string",
-											},
-											"content-type": {
-												type: "string",
-											},
-											"transfer-encoding": {
-												type: "string",
-											},
-											connection: {
-												type: "string",
-											},
-										},
-									},
-									body: {
-										type: "object",
-										properties: {
-											success: {
-												type: "boolean",
-											},
-											errors: {
-												type: "array",
-												items: {},
-											},
-											requestId: {
-												type: "string",
-											},
-											warnings: {
-												type: "array",
-												items: {},
-											},
-											result: {
-												type: "array",
-												items: {
-													type: "object",
-													properties: {
-														id: {
-															type: "number",
-														},
-														size: {
-															type: "number",
-														},
-														mimeType: {
-															type: "string",
-														},
-														url: {
-															type: "string",
-														},
-														folder: {
-															type: "object",
-															properties: {
-																type: {
-																	type: "string",
-																},
-																id: {
-																	type: "number",
-																},
-																name: {
-																	type: "string",
-																},
-															},
-														},
-														name: {
-															type: "string",
-														},
-														description: {
-															type: "string",
-														},
-														createdAt: {
-															type: "string",
-														},
-														updatedAt: {
-															type: "string",
-														},
-													},
-												},
-											},
-										},
-									},
-								},
-							},
-						},
-					},
-					error_handling: {},
-					authentication: {
-						group: "bfb4f23c-8ba3-44dc-bc86-7ca964223544",
-						title: "Lynton Web's marketo account",
-						service_icon: {
-							icon_type: "url",
-							value: "//s3.amazonaws.com/images.tray.io/static/service/icons/ff5b50468146efc229acffcbb014175b.png",
-						},
-						scopes: [],
-						service_name: "marketo",
-						service_version: 1,
-					},
 					properties: {
-						endpoint: {
-							type: "jsonpath",
-							value: "$.auth.endpoint",
-						},
-						client_id: {
-							type: "jsonpath",
-							value: "$.auth.client_id",
-						},
-						client_secret: {
-							type: "jsonpath",
-							value: "$.auth.client_secret",
-						},
-						quota_wait: {
-							type: "boolean",
-							value: false,
-						},
-						method: {
-							type: "string",
-							value: "POST",
-						},
-						include_raw_body: {
-							type: "boolean",
-							value: false,
-						},
-						parse_response: {
-							type: "string",
-							value: "true",
-						},
-						url: {
+						data: {
 							type: "object",
 							value: {
-								endpoint: {
-									type: "string",
-									value: "/asset/v1/files.json",
+								result: {
+									type: "jsonpath",
+									value: "$.steps.trigger.metaPropertyMap",
 								},
 							},
 						},
-						body: {
-							type: "object",
-							value: {
-								form_data: {
-									type: "object",
-									value: {
-										description: {
-											type: "jsonpath",
-											value: "$.steps.loop-2.value.description",
-										},
-										folder: {
-											type: "jsonpath",
-											value: "$.steps.script-1.result.folder",
-										},
-										file: {
-											type: "jsonpath",
-											value: "$.steps.file-helpers-1.file",
-										},
-									},
-								},
-							},
+						query: {
+							type: "string",
+							value: "{\n\t\"id\": $a := result.$filter($keys().$split('.'), function($v) {\n\t$v != 'metaproperty'\n\t}),\n\t\"options\": $b := $each(result, function($v) {\n\t$v\n\t})\n}",
 						},
 					},
 				},
 				"file-helpers-1": {
-					title: "Create file from URL",
+					title: "Save File",
 					connector: {
 						name: "file-helpers",
 						version: "2.5",
@@ -1088,41 +2564,458 @@ const importJSON = {
 					properties: {
 						url: {
 							type: "jsonpath",
-							value: "$.steps.bynder-2.response.body.s3_file",
+							value: "$.steps.http-client-2.response.headers.location",
 						},
 						name: {
 							type: "jsonpath",
-							value: "$.steps.loop-2.value.name",
+							value: "$.steps.trigger.fileName",
+						},
+						headers: {
+							type: "object",
+							value: {},
 						},
 					},
 				},
 				trigger: {
-					title: "Scheduled trigger (every 5m)",
+					title: "Callable Trigger",
 					connector: {
-						name: "scheduled",
-						version: "3.5",
+						name: "callable-trigger",
+						version: "2.0",
 					},
-					operation: "simple",
-					output_schema: {},
+					operation: "trigger",
+					output_schema: {
+						$schema: "http://json-schema.org/draft-04/schema#",
+						type: "object",
+						properties: {
+							assetData: {
+								type: "object",
+								properties: {
+									keywords: {
+										type: "array",
+										items: {
+											oneOf: [
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "string",
+												},
+												{
+													type: "number",
+												},
+												{
+													type: "string",
+												},
+											],
+										},
+									},
+									content_type: {
+										type: "string",
+									},
+									is_licensed: {
+										type: "string",
+									},
+									download_url: {
+										type: "string",
+									},
+									country_name: {
+										type: "string",
+									},
+									creator_name: {
+										type: "string",
+									},
+									id: {
+										type: "number",
+									},
+									title: {
+										type: "string",
+									},
+									thumbnail_url: {
+										type: "string",
+									},
+								},
+							},
+							waitingRoomID: {
+								type: "string",
+							},
+							fileName: {
+								type: "string",
+							},
+							solutionData: {
+								type: "object",
+								properties: {
+									metapropertyMapping: {
+										type: "object",
+										properties: {
+											metaString: {
+												type: "string",
+											},
+											queryObject: {
+												type: "object",
+												properties: {
+													keywords: {
+														type: "string",
+													},
+													is_licensed: {
+														type: "string",
+													},
+													country_name: {
+														type: "string",
+													},
+													creator_name: {
+														type: "string",
+													},
+													id: {
+														type: "string",
+													},
+													title: {
+														type: "string",
+													},
+													thumbnail_url: {
+														type: "string",
+													},
+												},
+											},
+											staticMeta: {
+												type: "object",
+												properties: {
+													"metaproperty.74F390E6-918E-4ACE-8C0CA00005540A97": {
+														type: "string",
+													},
+												},
+											},
+											queryString: {
+												type: "string",
+											},
+											mapObject: {
+												type: "object",
+												properties: {
+													"metaproperty.1734230F-A766-4924-B1C2EAB4A1469D2C": {
+														type: "string",
+													},
+													"metaproperty.77B98683-A921-4C0C-B0542AB4729B97EE": {
+														type: "string",
+													},
+													"metaproperty.139D00C8-2116-4707-901221E9C6699719": {
+														type: "string",
+													},
+													"metaproperty.0A36E145-36E2-4141-A2D18C6BFE0B4B93": {
+														type: "string",
+													},
+												},
+											},
+										},
+									},
+									brandID: {
+										type: "string",
+									},
+									initializationConfig: {
+										type: "object",
+										properties: {
+											current: {
+												type: "object",
+												properties: {
+													configValues: {
+														type: "array",
+														items: {
+															type: "object",
+															properties: {
+																externalId: {
+																	type: "string",
+																},
+																value: {
+																	type: ["object", "boolean", "string"],
+																	items: {
+																		type: "object",
+																		properties: {
+																			value: {
+																				type: ["string", "null"],
+																			},
+																			key: {
+																				type: "string",
+																			},
+																			text: {
+																				type: "string",
+																			},
+																		},
+																		required: ["value", "key", "text"],
+																	},
+																	properties: {
+																		"74F390E6-918E-4ACE-8C0CA00005540A97": {
+																			type: "string",
+																		},
+																	},
+																},
+															},
+															required: ["externalId", "value"],
+														},
+													},
+													enabled: {
+														type: "boolean",
+													},
+													authValues: {
+														type: "array",
+														items: {
+															type: "object",
+															properties: {
+																externalId: {
+																	type: "string",
+																},
+																authId: {
+																	type: "string",
+																},
+															},
+															required: ["externalId", "authId"],
+														},
+													},
+												},
+											},
+											previous: {
+												type: "object",
+												properties: {
+													configValues: {
+														type: "array",
+														items: {
+															type: "object",
+															properties: {
+																externalId: {
+																	type: "string",
+																},
+																value: {
+																	type: ["object", "boolean", "string"],
+																	items: {
+																		type: "object",
+																		properties: {
+																			value: {
+																				type: ["string", "null"],
+																			},
+																			key: {
+																				type: "string",
+																			},
+																			text: {
+																				type: "string",
+																			},
+																		},
+																		required: ["value", "key", "text"],
+																	},
+																	properties: {
+																		"74F390E6-918E-4ACE-8C0CA00005540A97": {
+																			type: "string",
+																		},
+																	},
+																},
+															},
+															required: ["externalId", "value"],
+														},
+													},
+													enabled: {
+														type: "boolean",
+													},
+													authValues: {
+														type: "array",
+														items: {
+															type: "object",
+															properties: {
+																externalId: {
+																	type: "string",
+																},
+																authId: {
+																	type: "string",
+																},
+															},
+															required: ["externalId", "authId"],
+														},
+													},
+												},
+											},
+											solutionInstanceId: {
+												type: "string",
+											},
+											eventType: {
+												type: "string",
+											},
+										},
+									},
+									stockCredentials: {
+										type: "object",
+										properties: {
+											CLIENT_SECRET: {
+												type: "string",
+											},
+											ORG_ID: {
+												type: "string",
+											},
+											API_KEY: {
+												type: "string",
+											},
+											PUBLIC_KEYS_WITH_EXPIRY: {
+												type: "object",
+												properties: {
+													"613cdacb4adb6758a0a8141d8459da61fae2f9f8": {
+														type: "string",
+													},
+													"12e50b2d16b39ea42650a0e798054a88518606a4": {
+														type: "string",
+													},
+												},
+											},
+											TECHNICAL_ACCOUNT_ID: {
+												type: "string",
+											},
+											TECHNICAL_ACCOUNT_EMAIL: {
+												type: "string",
+											},
+										},
+									},
+								},
+							},
+							bearerToken: {
+								type: "string",
+							},
+							metaPropertyMap: {
+								type: "object",
+								properties: {
+									"metaproperty.1734230F-A766-4924-B1C2EAB4A1469D2C": {
+										type: "string",
+									},
+									"metaproperty.77B98683-A921-4C0C-B0542AB4729B97EE": {
+										type: "string",
+									},
+									"metaproperty.139D00C8-2116-4707-901221E9C6699719": {
+										type: "string",
+									},
+									"metaproperty.0A36E145-36E2-4141-A2D18C6BFE0B4B93": {
+										type: "string",
+									},
+									"metaproperty.74F390E6-918E-4ACE-8C0CA00005540A97": {
+										type: "string",
+									},
+								},
+							},
+							"#calling_workflow": {
+								type: "string",
+							},
+							"#calling_execution": {
+								type: "string",
+							},
+							"#calling_execution_log_url": {
+								type: "string",
+							},
+						},
+					},
 					error_handling: {},
-					properties: {
-						synchronous: {
-							type: "boolean",
-							value: true,
-						},
-						public_url: {
-							type: "jsonpath",
-							value: "$.env.public_url",
-						},
-						interval: {
-							type: "integer",
-							value: 5,
-						},
-						time_unit: {
-							type: "string",
-							value: "minutes",
-						},
-					},
+					properties: {},
 				},
 			},
 			dependencies: [],
@@ -1130,6 +3023,8 @@ const importJSON = {
 	],
 	projects: [],
 };
+
+let emptyCount = 0;
 
 const strReplace = function (str) {
 	let res = str.replace(/[^a-zA-Z0-9 ]/g, "");
@@ -1163,17 +3058,7 @@ const modelBegin = `model {
 	workflow = softwareSystem "${strReplace(importJSON.workflows[0].title)}" `;
 
 const modelEnd = `
-	}
 	trigger -> storage1
-	storage1 -> texthelpers1
-	texthelpers1 -> storage2
-	storage2 -> bynder1
-	bynder1 -> script1
-	script1 -> bynder2
-	script1 -> breakloop1
-	bynder2 -> filehelpers1
-	filehelpers1 -> marketo1
-	marketo1 -> bynder2
 	}
 	
 	views {
@@ -1199,65 +3084,47 @@ const groupBuilder = function (importJSON) {
 
 const modelBuilder = function (importArray) {
 	let res = modelBegin;
-	let nodeAry = [];
-	importArray.forEach((element) => {
-		if (element.type === "loop") {
-			nodeAry.push(loopHandle(element.content._loop, element.name));
-		} else if (element.type === "branch") {
-			nodeAry.push(`${strReplace(element.name)} = group "${strReplace(groups.find((s) => s.name === element.name).desc)}" {`);
-			Object.entries(element.content).forEach((el) => {
-				nodeAry.push(branchHandle(el, element.name));
-			});
-		} else {
-			nodeAry.push(nodeStructure(element));
-		}
-	});
-	res = `${res} ${bracketeer(nodeAry.join(`\n\t\t`))} ${modelEnd}`;
+
+	res = `${res} ${nodeLogic(importArray)} ${modelEnd}`;
 	return res;
 };
 
 const loopHandle = function (ary, name) {
 	let res = `\t${strReplace(name)} = group "${strReplace(groups.find((s) => s.name === name).desc)}" `;
-	let nodeAry = [];
-	ary.forEach((element) => {
-		if (element.type === "loop") {
-			nodeAry.push(loopHandle(element.content._loop, element.name));
-		} else if (element.type === "branch") {
-			nodeAry.push(`${strReplace(element.name)} = group "${strReplace(groups.find((s) => s.name === element.name).desc)}" {`);
-			Object.entries(element.content).forEach((el) => {
-				nodeAry.push(branchHandle(el, element.name));
-			});
-		} else {
-			nodeAry.push(nodeStructure(element));
-		}
-	});
-	res = `${res} ${bracketeer(nodeAry.join(`\n\t\t\t`))}`;
+	res = `${res} ${nodeLogic(ary)}`;
 	return res;
 };
 
 const branchHandle = function (ary, name) {
 	let res = `\tbranch${strReplace(ary[0])}${parseNumber(name)} = group "branch ${ary[0]}" `;
+	res = `${res} ${nodeLogic(ary[1])}`;
+	return res;
+};
+
+const nodeLogic = function (ary) {
+	let res = ``;
 	let nodeAry = [];
-	/*
 	if (ary.length === 0) {
-		res =
-			res +
-			`empty${strReplace(name)}${parseNumber(elName)} = container "nofunction${parseNumber(elName)}"
-	`;
-	}			*/
-	ary[1].forEach((element) => {
-		if (element.type === "loop") {
-			nodeAry.push(loopHandle(element.content._loop, element.name));
-		} else if (element.type === "branch") {
-			nodeAry.push(`${strReplace(element.name)} = group "${strReplace(groups.find((s) => s.name === element.name).desc)}" {`);
-			Object.entries(element.content).forEach((el) => {
-				nodeAry.push(branchHandle(el, element.name));
-			});
-		} else {
-			nodeAry.push(nodeStructure(element));
-		}
-	});
-	res = `${res} ${bracketeer(nodeAry.join(`\n\t\t\t\t`))}`;
+		emptyCount++;
+		res = `empty${emptyCount} = container "No Function ${emptyCount}"`;
+		return `${bracketeer(res)}`;
+	} else {
+		ary.forEach((element) => {
+			if (element.type === "loop") {
+				nodeAry.push(loopHandle(element.content._loop, element.name));
+			} else if (element.type === "branch") {
+				let branchAry = [];
+				branchAry.push(`${strReplace(element.name)} = group "${strReplace(groups.find((s) => s.name === element.name).desc)}" {`);
+				Object.entries(element.content).forEach((el) => {
+					branchAry.push(branchHandle(el, element.name));
+				});
+				nodeAry.push(`${branchAry.join(`\n\t\t`)} \n\t}`);
+			} else {
+				nodeAry.push(nodeStructure(element));
+			}
+		});
+	}
+	res = `${bracketeer(nodeAry.join(`\n\t`))}`;
 	return res;
 };
 
