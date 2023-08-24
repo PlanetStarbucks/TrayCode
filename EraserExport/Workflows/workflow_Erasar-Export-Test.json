@@ -1,0 +1,256 @@
+ {
+  "tray_export_version": 4,
+  "export_type": "workflow",
+  "workflows": [
+    {
+      "id": "a8aad120-5b21-41a4-bf6f-d4abb63372f4",
+      "created": "2023-08-18T19:42:16.250995Z",
+      "workspace_id": "3bcfad28-3db5-4d34-b562-0e2e4978be5c",
+      "creator": "c0fb1638-958b-4aa0-a664-c3effbe736a5",
+      "version": {
+        "id": "6004c916-25ec-4826-9eb5-60e66f6b2205",
+        "created": "2023-08-18T19:49:50.388709Z"
+      },
+      "title": "Erasar Export Test",
+      "enabled": false,
+      "tags": [],
+      "settings": {
+        "config": {},
+        "input_schema": {},
+        "output_schema": {}
+      },
+      "steps_structure": [
+        {
+          "name": "trigger",
+          "type": "normal",
+          "content": {}
+        },
+        {
+          "name": "storage-1",
+          "type": "normal",
+          "content": {}
+        },
+        {
+          "name": "data-mapper-1",
+          "type": "normal",
+          "content": {}
+        },
+        {
+          "name": "loop-1",
+          "type": "loop",
+          "content": {
+            "_loop": [
+              {
+                "name": "csv-reader-1",
+                "type": "normal",
+                "content": {}
+              },
+              {
+                "name": "file-helpers-1",
+                "type": "normal",
+                "content": {}
+              },
+              {
+                "name": "random-helpers-1",
+                "type": "normal",
+                "content": {}
+              }
+            ]
+          }
+        },
+        {
+          "name": "slack-1",
+          "type": "normal",
+          "content": {}
+        }
+      ],
+      "steps": {
+        "slack-1": {
+          "title": "Send a message",
+          "connector": {
+            "name": "slack",
+            "version": "9.1"
+          },
+          "operation": "send_message",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "token": {
+              "type": "jsonpath",
+              "value": "$.auth.access_token"
+            },
+            "username": {
+              "type": "string",
+              "value": "Tray.io"
+            },
+            "as_user": {
+              "type": "boolean",
+              "value": false
+            },
+            "parse": {
+              "type": "string",
+              "value": "none"
+            },
+            "link_names": {
+              "type": "boolean",
+              "value": false
+            },
+            "reply_broadcast": {
+              "type": "boolean",
+              "value": false
+            }
+          }
+        },
+        "random-helpers-1": {
+          "title": "Generate Randoms",
+          "connector": {
+            "name": "random-helpers",
+            "version": "2.0"
+          },
+          "operation": "random_hex",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "hex_length": {
+              "type": "integer",
+              "value": 16
+            }
+          }
+        },
+        "loop-1": {
+          "title": "Loop Data Records",
+          "connector": {
+            "name": "loop",
+            "version": "1.3"
+          },
+          "operation": "loop_array",
+          "output_schema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-03/schema",
+            "id": "http://jsonschema.net",
+            "additionalProperties": false,
+            "properties": {
+              "value": {
+                "type": [
+                  "string",
+                  "number",
+                  "object",
+                  "array",
+                  "boolean",
+                  "null"
+                ],
+                "id": "http://jsonschema.net/item"
+              },
+              "count": {
+                "type": "number",
+                "id": "http://jsonschema.net/total"
+              },
+              "index": {
+                "type": "number",
+                "id": "http://jsonschema.net/index"
+              },
+              "is_first": {
+                "type": "boolean",
+                "id": "http://jsonschema.net/is_first"
+              },
+              "is_last": {
+                "type": "boolean",
+                "id": "http://jsonschema.net/is_last"
+              }
+            }
+          },
+          "error_handling": {},
+          "properties": {
+            "array": {
+              "type": "array",
+              "value": []
+            }
+          }
+        },
+        "storage-1": {
+          "title": "Get Solution Data",
+          "connector": {
+            "name": "storage",
+            "version": "1.4"
+          },
+          "operation": "set",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "scope": {
+              "type": "string",
+              "value": "Current Run"
+            }
+          }
+        },
+        "csv-reader-1": {
+          "title": "Read CSV",
+          "connector": {
+            "name": "csv-reader",
+            "version": "3.2"
+          },
+          "operation": "create_csv",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "scope": {
+              "type": "string",
+              "value": "current_run"
+            },
+            "has_header": {
+              "type": "boolean",
+              "value": true
+            },
+            "delimiter": {
+              "type": "string",
+              "value": ","
+            },
+            "end_line": {
+              "type": "string",
+              "value": "Unix / LF"
+            },
+            "return_results": {
+              "type": "boolean",
+              "value": true
+            }
+          }
+        },
+        "data-mapper-1": {
+          "title": "Map Data Together",
+          "connector": {
+            "name": "data-mapper",
+            "version": "3.5"
+          },
+          "operation": "map_keys",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {}
+        },
+        "file-helpers-1": {
+          "title": "Save the file",
+          "connector": {
+            "name": "file-helpers",
+            "version": "2.5"
+          },
+          "operation": "convert_file",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {}
+        },
+        "trigger": {
+          "title": "Webhook",
+          "connector": {
+            "name": "webhook",
+            "version": "2.3"
+          },
+          "operation": "webhook",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {}
+        }
+      },
+      "dependencies": []
+    }
+  ],
+  "projects": []
+}
