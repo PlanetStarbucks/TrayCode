@@ -1,0 +1,2199 @@
+ {
+  "tray_export_version": 4,
+  "export_type": "workflow",
+  "workflows": [
+    {
+      "id": "dac5b677-6b06-4410-988d-9539b0e308ce",
+      "created": "2023-05-02T18:17:19.464089Z",
+      "workspace_id": "139e4592-3b78-46ad-885b-bc64d04d3bed",
+      "project_id": "ca7cccf0-dfe4-4316-ab87-df07b3c8f7fc",
+      "creator": "c0fb1638-958b-4aa0-a664-c3effbe736a5",
+      "version": {
+        "id": "758b84cf-e75a-42f7-b8fd-a438c95d59fc",
+        "created": "2023-08-28T22:58:17.631022Z"
+      },
+      "title": "[Bynder - Monday] Sync Master",
+      "enabled": false,
+      "tags": [],
+      "settings": {
+        "config": {
+          "boardID": 4375050651,
+          "columnID": "status",
+          "triggerValue": "Send to Bynder",
+          "metapropertyMap": [],
+          "staticMetapropertyMap": [],
+          "bynderMetapropertyList": [],
+          "fileConversion": false,
+          "fileColumn": "file",
+          "boardDataMap": [],
+          "includeUpdates": true
+        },
+        "input_schema": {},
+        "output_schema": {}
+      },
+      "steps_structure": [
+        {
+          "name": "trigger",
+          "type": "normal",
+          "content": {}
+        },
+        {
+          "name": "storage-4",
+          "type": "normal",
+          "content": {}
+        },
+        {
+          "name": "date-time-helpers-2",
+          "type": "normal",
+          "content": {}
+        },
+        {
+          "name": "storage-1",
+          "type": "normal",
+          "content": {}
+        },
+        {
+          "name": "date-time-helpers-1",
+          "type": "normal",
+          "content": {}
+        },
+        {
+          "name": "boolean-condition-4",
+          "type": "branch",
+          "content": {
+            "true": [
+              {
+                "name": "call-workflow-1",
+                "type": "normal",
+                "content": {}
+              }
+            ],
+            "false": []
+          }
+        },
+        {
+          "name": "storage-5",
+          "type": "normal",
+          "content": {}
+        },
+        {
+          "name": "storage-2",
+          "type": "normal",
+          "content": {}
+        },
+        {
+          "name": "loop-2",
+          "type": "loop",
+          "content": {
+            "_loop": [
+              {
+                "name": "storage-3",
+                "type": "normal",
+                "content": {}
+              },
+              {
+                "name": "graphql-client-1",
+                "type": "normal",
+                "content": {}
+              },
+              {
+                "name": "boolean-condition-2",
+                "type": "branch",
+                "content": {
+                  "true": [
+                    {
+                      "name": "break-loop-1",
+                      "type": "break",
+                      "content": {},
+                      "target": "loop-2"
+                    }
+                  ],
+                  "false": [
+                    {
+                      "name": "loop-1",
+                      "type": "loop",
+                      "content": {
+                        "_loop": [
+                          {
+                            "name": "object-helpers-1",
+                            "type": "normal",
+                            "content": {}
+                          },
+                          {
+                            "name": "boolean-condition-1",
+                            "type": "branch",
+                            "content": {
+                              "true": [
+                                {
+                                  "name": "graphql-client-2",
+                                  "type": "normal",
+                                  "content": {}
+                                },
+                                {
+                                  "name": "boolean-condition-5",
+                                  "type": "branch",
+                                  "content": {
+                                    "true": [
+                                      {
+                                        "name": "list-helpers-1",
+                                        "type": "normal",
+                                        "content": {}
+                                      },
+                                      {
+                                        "name": "storage-10",
+                                        "type": "normal",
+                                        "content": {}
+                                      }
+                                    ],
+                                    "false": [
+                                      {
+                                        "name": "storage-9",
+                                        "type": "normal",
+                                        "content": {}
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "name": "storage-11",
+                                  "type": "normal",
+                                  "content": {}
+                                },
+                                {
+                                  "name": "loop-3",
+                                  "type": "loop",
+                                  "content": {
+                                    "_loop": [
+                                      {
+                                        "name": "script-1",
+                                        "type": "normal",
+                                        "content": {}
+                                      },
+                                      {
+                                        "name": "json-transformer-1",
+                                        "type": "normal",
+                                        "content": {}
+                                      },
+                                      {
+                                        "name": "script-2",
+                                        "type": "normal",
+                                        "content": {}
+                                      },
+                                      {
+                                        "name": "file-helpers-1",
+                                        "type": "normal",
+                                        "content": {}
+                                      },
+                                      {
+                                        "name": "storage-7",
+                                        "type": "normal",
+                                        "content": {}
+                                      },
+                                      {
+                                        "name": "boolean-condition-3",
+                                        "type": "branch",
+                                        "content": {
+                                          "true": [
+                                            {
+                                              "name": "bynder-2",
+                                              "type": "branch",
+                                              "content": {
+                                                "error": [
+                                                  {
+                                                    "name": "bynder-3",
+                                                    "type": "normal",
+                                                    "content": {}
+                                                  },
+                                                  {
+                                                    "name": "storage-8",
+                                                    "type": "normal",
+                                                    "content": {}
+                                                  }
+                                                ],
+                                                "success": [
+                                                  {
+                                                    "name": "bynder-4",
+                                                    "type": "normal",
+                                                    "content": {}
+                                                  }
+                                                ]
+                                              }
+                                            }
+                                          ],
+                                          "false": [
+                                            {
+                                              "name": "bynder-1",
+                                              "type": "normal",
+                                              "content": {}
+                                            },
+                                            {
+                                              "name": "storage-6",
+                                              "type": "normal",
+                                              "content": {}
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ],
+                              "false": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "storage-12",
+          "type": "normal",
+          "content": {}
+        }
+      ],
+      "steps": {
+        "script-1": {
+          "title": "Format Metadata",
+          "connector": {
+            "name": "script",
+            "version": "3.3"
+          },
+          "operation": "execute",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "variables": {
+              "type": "array",
+              "value": [
+                {
+                  "type": "object",
+                  "value": {
+                    "name": {
+                      "type": "string",
+                      "value": "columnData"
+                    },
+                    "value": {
+                      "type": "jsonpath",
+                      "value": "$.steps.graphql-client-2.data.boards[0].items[0].column_values"
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "value": {
+                    "name": {
+                      "type": "string",
+                      "value": "metadataMap"
+                    },
+                    "value": {
+                      "type": "jsonpath",
+                      "value": "$.steps.storage-4.value.dynamicMetadataMap"
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "value": {
+                    "name": {
+                      "type": "string",
+                      "value": "staticMetadataMap"
+                    },
+                    "value": {
+                      "type": "jsonpath",
+                      "value": "$.steps.storage-4.value.staticMetadataMap"
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "value": {
+                    "name": {
+                      "type": "string",
+                      "value": "boardDataMap"
+                    },
+                    "value": {
+                      "type": "jsonpath",
+                      "value": "$.steps.storage-4.value.boardDataMap"
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "value": {
+                    "name": {
+                      "type": "string",
+                      "value": "eventData"
+                    },
+                    "value": {
+                      "type": "object",
+                      "value": {
+                        "boardID": {
+                          "type": "jsonpath",
+                          "value": "$.steps.object-helpers-1.result.board_id"
+                        },
+                        "pulseID": {
+                          "type": "jsonpath",
+                          "value": "$.steps.object-helpers-1.result.pulse_id"
+                        },
+                        "assetID": {
+                          "type": "jsonpath",
+                          "value": "$.steps.loop-3.value.id"
+                        },
+                        "slug": {
+                          "type": "jsonpath",
+                          "value": "$.steps.storage-4.value.configObj.slug"
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "script": {
+              "type": "string",
+              "value": "// You can reference the input variables using input.NAME\n// Parsed JSON files could be referenced as fileInput\nexports.step = function (input) {\n\tlet res = {\n\t\t...dynamicFormat(input.metadataMap, input.columnData),\n\t\t...boardFormat(input.boardDataMap, input.eventData),\n\t};\n\treturn res;\n};\n\nconst dynamicFormat = function (map, columnData) {\n\tlet res = {};\n\tObject.entries(map).forEach((val) => {\n\t\tconst newKey = `metaproperty.${val[0]}`;\n\t\tres[newKey] = mpValue(val[1], columnData);\n\t});\n\treturn res;\n};\n\nconst boardFormat = function (map, eventData) {\n\tlet res = {};\n\tObject.entries(map).forEach((val) => {\n\t\tconst newKey = `metaproperty.${val[0]}`;\n\t\tconst newVal = val[1]\n\t\t\t.replace(`{{slug}}`, eventData.slug)\n\t\t\t.replace(`{{pulseID}}`, eventData.pulseID)\n\t\t\t.replace(`{{assetID}}`, eventData.assetID)\n\t\t\t.replace(`{{boardID}}`, eventData.boardID);\n\t\tres[newKey] = newVal;\n\t});\n\treturn res;\n};\n\nconst mpValue = function (str, ary) {\n\tlet result = \"\";\n\tary.forEach((element) => {\n\t\tif (element.id === str) {\n\t\t\tresult = element.text;\n\t\t}\n\t});\n\treturn result;\n};"
+            },
+            "file_output": {
+              "type": "boolean",
+              "value": false
+            }
+          }
+        },
+        "bynder-3": {
+          "title": "Upload to Bynder",
+          "connector": {
+            "name": "bynder",
+            "version": "2.0"
+          },
+          "operation": "upload_asset",
+          "output_schema": {},
+          "error_handling": {},
+          "authentication": {
+            "group": "d9331e0a-9170-41e8-866c-13ec9a287df5",
+            "title": "Keiffer Bynder oAuth2",
+            "service_icon": {
+              "icon_type": "url",
+              "value": "//s3.amazonaws.com/images.tray.io/artisan/icons/55fdd831638972b19fec6bc4a2da6784.png"
+            },
+            "scopes": [
+              "collection:write",
+              "asset:write",
+              "current.profile:read",
+              "meta.assetbank:read",
+              "asset:read",
+              "collection:read",
+              "meta.assetbank:write",
+              "admin.profile:read",
+              "admin.user:read",
+              "offline",
+              "current.user:read"
+            ],
+            "service_name": "bynder",
+            "service_version": 2
+          },
+          "properties": {
+            "file": {
+              "type": "jsonpath",
+              "value": "$.steps.file-helpers-1.file"
+            },
+            "brand_id": {
+              "type": "jsonpath",
+              "value": "$.steps.storage-4.value.brandID"
+            },
+            "name": {
+              "type": "jsonpath",
+              "value": "$.steps.loop-3.value.name"
+            },
+            "description": {
+              "type": "string",
+              "value": "Uploaded from Monday.  https://bynder-space.monday.com/boards/{$.config.boardID}/pulses/{$.steps.object-helpers-1.result.pulse_id}"
+            },
+            "metaproperty": {
+              "type": "jsonpath",
+              "value": "$.steps.script-2.result"
+            },
+            "tags": {
+              "type": "array",
+              "value": [
+                {
+                  "type": "string",
+                  "value": "monday.com, {$.steps.loop-3.value.id}"
+                }
+              ]
+            }
+          }
+        },
+        "storage-12": {
+          "title": "Data Storage",
+          "connector": {
+            "name": "storage",
+            "version": "1.4"
+          },
+          "operation": "set",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "scope": {
+              "type": "string",
+              "value": "Current Run"
+            },
+            "key": {
+              "type": "string",
+              "value": "endNode"
+            },
+            "value": {
+              "type": "string",
+              "value": "this is the end"
+            }
+          }
+        },
+        "call-workflow-1": {
+          "title": "This doesn't work yet",
+          "connector": {
+            "name": "call-workflow",
+            "version": "2.0"
+          },
+          "operation": "fire_and_wait_for_response",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "workflow_id": {
+              "type": "string",
+              "value": "52525a79-710b-4575-8d74-3155ebe03e98"
+            },
+            "trigger_input": {
+              "type": "jsonpath",
+              "value": "$.steps.storage-4.value"
+            }
+          }
+        },
+        "boolean-condition-1": {
+          "title": "Check Trigger Condition",
+          "connector": {
+            "name": "boolean-condition",
+            "version": "2.3"
+          },
+          "operation": "boolean_condition",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "conditions": {
+              "type": "array",
+              "value": [
+                {
+                  "type": "object",
+                  "value": {
+                    "value1": {
+                      "type": "jsonpath",
+                      "value": "$.steps.object-helpers-1.result.value.label.text"
+                    },
+                    "comparison_type": {
+                      "type": "string",
+                      "value": "==="
+                    },
+                    "value2": {
+                      "type": "jsonpath",
+                      "value": "$.config.triggerValue"
+                    }
+                  }
+                }
+              ]
+            },
+            "strictness": {
+              "type": "string",
+              "value": "All"
+            }
+          }
+        },
+        "graphql-client-2": {
+          "title": "Get Asset and Item Data",
+          "connector": {
+            "name": "graphql-client",
+            "version": "1.1"
+          },
+          "operation": "raw_query",
+          "output_schema": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "properties": {
+                  "boards": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "items": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "column_values": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "string"
+                                    },
+                                    "title": {
+                                      "type": "string"
+                                    },
+                                    "text": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "id",
+                                    "title",
+                                    "text"
+                                  ]
+                                }
+                              },
+                              "updates": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "string"
+                                    },
+                                    "assets": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "object",
+                                        "properties": {
+                                          "id": {
+                                            "type": "string"
+                                          },
+                                          "name": {
+                                            "type": "string"
+                                          },
+                                          "public_url": {
+                                            "type": "string"
+                                          },
+                                          "file_extension": {
+                                            "type": "string"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "assets": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "string"
+                                    },
+                                    "public_url": {
+                                      "type": "string"
+                                    },
+                                    "file_extension": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "id",
+                                    "public_url",
+                                    "file_extension"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "account_id": {
+                "type": "number"
+              }
+            }
+          },
+          "error_handling": {},
+          "authentication": {
+            "group": "b341f4be-75b2-4e29-bd90-b579fb40f429",
+            "title": "BLCR Monday",
+            "service_icon": {
+              "icon_type": "url",
+              "value": "//s3.amazonaws.com/images.tray.io/artisan/icons/944ba223a5c1b5f4b495708e7cd5ee37.png"
+            },
+            "scopes": [],
+            "service_name": "monday",
+            "service_version": 1
+          },
+          "properties": {
+            "query": {
+              "value": "query getItem($boardID: [Int]!, $pulseID: [Int]!) {\n  boards(ids: $boardID) {\n    id\n    name\n    items(ids: $pulseID) {\n      column_values {\n        id\n        title\n        text\n      }\n      updates {\n        id\n        assets {\n          id\n          name\n          public_url\n          file_extension\n        }\n      }\n      assets(assets_source: all) {\n        id\n        name\n        public_url\n        file_extension\n      }\n    }\n  }\n}",
+              "type": "string"
+            },
+            "graphql_endpoint": {
+              "type": "string",
+              "value": "https://api.monday.com/v2"
+            },
+            "headers": {
+              "type": "array",
+              "value": [
+                {
+                  "type": "object",
+                  "value": {
+                    "key": {
+                      "type": "string",
+                      "value": "Authorization"
+                    },
+                    "value": {
+                      "type": "string",
+                      "value": "{$.auth.api_key}"
+                    }
+                  }
+                }
+              ]
+            },
+            "variables": {
+              "type": "array",
+              "value": [
+                {
+                  "type": "object",
+                  "value": {
+                    "value": {
+                      "type": "jsonpath",
+                      "value": "$.steps.storage-4.value.configObj.boardID"
+                    },
+                    "key": {
+                      "type": "string",
+                      "value": "boardID"
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "value": {
+                    "key": {
+                      "type": "string",
+                      "value": "pulseID"
+                    },
+                    "value": {
+                      "type": "jsonpath",
+                      "value": "$.steps.object-helpers-1.result.pulse_id"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "bynder-1": {
+          "title": "Upload to Bynder",
+          "connector": {
+            "name": "bynder",
+            "version": "2.0"
+          },
+          "operation": "upload_asset",
+          "output_schema": {},
+          "error_handling": {},
+          "authentication": {
+            "group": "d9331e0a-9170-41e8-866c-13ec9a287df5",
+            "title": "Keiffer Bynder oAuth2",
+            "service_icon": {
+              "icon_type": "url",
+              "value": "//s3.amazonaws.com/images.tray.io/artisan/icons/55fdd831638972b19fec6bc4a2da6784.png"
+            },
+            "scopes": [
+              "collection:write",
+              "asset:write",
+              "current.profile:read",
+              "meta.assetbank:read",
+              "asset:read",
+              "collection:read",
+              "meta.assetbank:write",
+              "admin.profile:read",
+              "admin.user:read",
+              "offline",
+              "current.user:read"
+            ],
+            "service_name": "bynder",
+            "service_version": 2
+          },
+          "properties": {
+            "file": {
+              "type": "jsonpath",
+              "value": "$.steps.file-helpers-1.file"
+            },
+            "brand_id": {
+              "type": "jsonpath",
+              "value": "$.steps.storage-4.value.brandID"
+            },
+            "name": {
+              "type": "jsonpath",
+              "value": "$.steps.loop-3.value.name"
+            },
+            "description": {
+              "type": "string",
+              "value": "Uploaded from Monday.  https://bynder-space.monday.com/boards/{$.config.boardID}/pulses/{$.steps.object-helpers-1.result.pulse_id}"
+            },
+            "metaproperty": {
+              "type": "jsonpath",
+              "value": "$.steps.script-2.result"
+            },
+            "tags": {
+              "type": "array",
+              "value": [
+                {
+                  "type": "string",
+                  "value": "monday.com, {$.steps.loop-3.value.id}"
+                }
+              ]
+            }
+          }
+        },
+        "storage-10": {
+          "title": "Set Asset List",
+          "connector": {
+            "name": "storage",
+            "version": "1.4"
+          },
+          "operation": "set",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "scope": {
+              "type": "string",
+              "value": "Current Run"
+            },
+            "key": {
+              "type": "string",
+              "value": "assetList"
+            },
+            "value": {
+              "type": "jsonpath",
+              "value": "$.steps.list-helpers-1.result"
+            }
+          }
+        },
+        "storage-1": {
+          "title": "Get lastRunTime",
+          "connector": {
+            "name": "storage",
+            "version": "1.4"
+          },
+          "operation": "get",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "scope": {
+              "type": "string",
+              "value": "Account"
+            },
+            "default_value": {
+              "type": "null",
+              "value": null
+            },
+            "key": {
+              "type": "string",
+              "value": "lastRunTime--{$.env.solution_instance_id or:'adobeSolutionID'}"
+            }
+          }
+        },
+        "object-helpers-1": {
+          "title": "Objectify Event Data",
+          "connector": {
+            "name": "object-helpers",
+            "version": "4.1"
+          },
+          "operation": "json_parse",
+          "output_schema": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "type": "object",
+            "properties": {
+              "result": {
+                "type": "object",
+                "properties": {
+                  "board_id": {
+                    "type": "number"
+                  },
+                  "group_id": {
+                    "type": "string"
+                  },
+                  "is_top_group": {
+                    "type": "boolean"
+                  },
+                  "pulse_id": {
+                    "type": "number"
+                  },
+                  "pulse_name": {
+                    "type": "string"
+                  },
+                  "column_id": {
+                    "type": "string"
+                  },
+                  "column_type": {
+                    "type": "string"
+                  },
+                  "column_title": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "object",
+                    "properties": {
+                      "label": {
+                        "type": "object",
+                        "properties": {
+                          "index": {
+                            "type": "number"
+                          },
+                          "text": {
+                            "type": "string"
+                          },
+                          "style": {
+                            "type": "object",
+                            "properties": {
+                              "color": {
+                                "type": "string"
+                              },
+                              "border": {
+                                "type": "string"
+                              },
+                              "var_name": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "is_done": {
+                            "type": "boolean"
+                          }
+                        }
+                      },
+                      "post_id": {
+                        "type": "null"
+                      }
+                    }
+                  },
+                  "previous_value": {
+                    "type": "object",
+                    "properties": {
+                      "label": {
+                        "type": "object",
+                        "properties": {
+                          "index": {
+                            "type": "number"
+                          },
+                          "text": {
+                            "type": "string"
+                          },
+                          "style": {
+                            "type": "object",
+                            "properties": {
+                              "color": {
+                                "type": "string"
+                              },
+                              "border": {
+                                "type": "string"
+                              },
+                              "var_name": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "is_done": {
+                            "type": "boolean"
+                          }
+                        }
+                      },
+                      "post_id": {
+                        "type": "null"
+                      }
+                    }
+                  },
+                  "is_column_with_hide_permissions": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          },
+          "error_handling": {},
+          "properties": {
+            "source": {
+              "type": "jsonpath",
+              "value": "$.steps.loop-1.value.data"
+            }
+          }
+        },
+        "loop-3": {
+          "title": "Loop Assets",
+          "connector": {
+            "name": "loop",
+            "version": "1.3"
+          },
+          "operation": "loop_array",
+          "output_schema": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "type": "object",
+            "properties": {
+              "value": {
+                "type": [
+                  "object",
+                  "array",
+                  "string",
+                  "number",
+                  "boolean",
+                  "null"
+                ],
+                "title": "Value",
+                "id": "http://jsonschema.net/value"
+              },
+              "count": {
+                "type": "number"
+              },
+              "index": {
+                "type": "number"
+              },
+              "is_first": {
+                "type": "boolean"
+              },
+              "is_last": {
+                "type": "boolean"
+              },
+              "branch_name": {
+                "type": "string"
+              }
+            }
+          },
+          "error_handling": {},
+          "properties": {
+            "array": {
+              "type": "jsonpath",
+              "value": "$.steps.storage-11.value"
+            }
+          }
+        },
+        "storage-2": {
+          "title": "Init pageCount",
+          "connector": {
+            "name": "storage",
+            "version": "1.4"
+          },
+          "operation": "set",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "scope": {
+              "type": "string",
+              "value": "Current Run"
+            },
+            "key": {
+              "type": "string",
+              "value": "pageCount"
+            },
+            "value": {
+              "type": "number",
+              "value": 0
+            }
+          }
+        },
+        "storage-5": {
+          "title": "Set New lastRunTime",
+          "connector": {
+            "name": "storage",
+            "version": "1.4"
+          },
+          "operation": "set",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "scope": {
+              "type": "string",
+              "value": "Account"
+            },
+            "key": {
+              "type": "string",
+              "value": "lastRunTime--{$.env.solution_instance_id or:'adobeSolutionID'}"
+            },
+            "value": {
+              "type": "jsonpath",
+              "value": "$.steps.date-time-helpers-2.result"
+            }
+          }
+        },
+        "bynder-4": {
+          "title": "Upload as Version",
+          "connector": {
+            "name": "bynder",
+            "version": "2.0"
+          },
+          "operation": "upload_asset",
+          "output_schema": {},
+          "error_handling": {},
+          "authentication": {
+            "group": "d9331e0a-9170-41e8-866c-13ec9a287df5",
+            "title": "Keiffer Bynder oAuth2",
+            "service_icon": {
+              "icon_type": "url",
+              "value": "//s3.amazonaws.com/images.tray.io/artisan/icons/55fdd831638972b19fec6bc4a2da6784.png"
+            },
+            "scopes": [
+              "collection:write",
+              "asset:write",
+              "current.profile:read",
+              "meta.assetbank:read",
+              "asset:read",
+              "collection:read",
+              "meta.assetbank:write",
+              "admin.profile:read",
+              "admin.user:read",
+              "offline",
+              "current.user:read"
+            ],
+            "service_name": "bynder",
+            "service_version": 2
+          },
+          "properties": {
+            "file": {
+              "type": "jsonpath",
+              "value": "$.steps.file-helpers-1.file"
+            },
+            "brand_id": {
+              "type": "jsonpath",
+              "value": "$.steps.storage-4.value.brandID"
+            },
+            "name": {
+              "type": "jsonpath",
+              "value": "$.steps.loop-3.value.name"
+            },
+            "description": {
+              "type": "string",
+              "value": "Uploaded from Monday.  https://bynder-space.monday.com/boards/{$.config.boardID}/pulses/{$.steps.object-helpers-1.result.pulse_id}"
+            },
+            "metaproperty": {
+              "type": "jsonpath",
+              "value": "$.steps.script-2.result"
+            },
+            "media_id": {
+              "type": "jsonpath",
+              "value": "$.steps.storage-7.value.bynderID"
+            },
+            "tags": {
+              "type": "array",
+              "value": [
+                {
+                  "type": "string",
+                  "value": "monday.com, {$.steps.loop-3.value.id}"
+                }
+              ]
+            }
+          }
+        },
+        "boolean-condition-5": {
+          "title": "Include Assets in Updates?",
+          "connector": {
+            "name": "boolean-condition",
+            "version": "2.3"
+          },
+          "operation": "boolean_condition",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "conditions": {
+              "type": "array",
+              "value": [
+                {
+                  "type": "object",
+                  "value": {
+                    "value1": {
+                      "type": "jsonpath",
+                      "value": "$.config.includeUpdates"
+                    },
+                    "comparison_type": {
+                      "type": "string",
+                      "value": "==="
+                    },
+                    "value2": {
+                      "type": "boolean",
+                      "value": true
+                    }
+                  }
+                }
+              ]
+            },
+            "strictness": {
+              "type": "string",
+              "value": "All"
+            }
+          }
+        },
+        "storage-9": {
+          "title": "Set Asset List",
+          "connector": {
+            "name": "storage",
+            "version": "1.4"
+          },
+          "operation": "set",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "scope": {
+              "type": "string",
+              "value": "Current Run"
+            },
+            "key": {
+              "type": "string",
+              "value": "assetList"
+            },
+            "value": {
+              "type": "jsonpath",
+              "value": "$.steps.graphql-client-2.data.boards[0].items[0].assets",
+              "fallback": {
+                "type": "array",
+                "value": []
+              }
+            }
+          }
+        },
+        "boolean-condition-2": {
+          "title": "Events === Empty ? End Loop",
+          "connector": {
+            "name": "boolean-condition",
+            "version": "2.3"
+          },
+          "operation": "boolean_condition",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "conditions": {
+              "type": "array",
+              "value": [
+                {
+                  "type": "object",
+                  "value": {
+                    "value1": {
+                      "type": "jsonpath",
+                      "value": "$.steps.graphql-client-1.data.boards[0].activity_logs"
+                    },
+                    "comparison_type": {
+                      "type": "string",
+                      "value": "==="
+                    },
+                    "value2": {
+                      "type": "array",
+                      "value": []
+                    }
+                  }
+                }
+              ]
+            },
+            "strictness": {
+              "type": "string",
+              "value": "All"
+            }
+          }
+        },
+        "graphql-client-1": {
+          "title": "Get Events from lastRunTime",
+          "connector": {
+            "name": "graphql-client",
+            "version": "1.1"
+          },
+          "operation": "raw_query",
+          "output_schema": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "properties": {
+                  "boards": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "activity_logs": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "string"
+                              },
+                              "event": {
+                                "type": "string"
+                              },
+                              "data": {
+                                "type": "string"
+                              },
+                              "created_at": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "account_id": {
+                "type": "number"
+              }
+            }
+          },
+          "error_handling": {},
+          "authentication": {
+            "group": "b341f4be-75b2-4e29-bd90-b579fb40f429",
+            "title": "BLCR Monday",
+            "service_icon": {
+              "icon_type": "url",
+              "value": "//s3.amazonaws.com/images.tray.io/artisan/icons/944ba223a5c1b5f4b495708e7cd5ee37.png"
+            },
+            "scopes": [],
+            "service_name": "monday",
+            "service_version": 1
+          },
+          "properties": {
+            "query": {
+              "value": "query getBoard($page: Int!, $boardID: [Int]!, $columnID: [String]!, $from: ISO8601DateTime!) {\n  boards(ids: $boardID) {\n    id\n    name\n    activity_logs(limit: 10, page: $page, column_ids: $columnID, from: $from) {\n      id\n      event\n      data\n      created_at\n    }\n  }\n}",
+              "type": "string"
+            },
+            "graphql_endpoint": {
+              "type": "string",
+              "value": "https://api.monday.com/v2"
+            },
+            "headers": {
+              "type": "array",
+              "value": [
+                {
+                  "type": "object",
+                  "value": {
+                    "key": {
+                      "type": "string",
+                      "value": "Authorization"
+                    },
+                    "value": {
+                      "type": "string",
+                      "value": "{$.auth.api_key}"
+                    }
+                  }
+                }
+              ]
+            },
+            "variables": {
+              "type": "array",
+              "value": [
+                {
+                  "type": "object",
+                  "value": {
+                    "value": {
+                      "type": "jsonpath",
+                      "value": "$.steps.storage-4.value.configObj.boardID"
+                    },
+                    "key": {
+                      "type": "string",
+                      "value": "boardID"
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "value": {
+                    "key": {
+                      "type": "string",
+                      "value": "columnID"
+                    },
+                    "value": {
+                      "type": "jsonpath",
+                      "value": "$.steps.storage-4.value.configObj.columnID"
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "value": {
+                    "value": {
+                      "type": "jsonpath",
+                      "value": "$.steps.date-time-helpers-1.result"
+                    },
+                    "key": {
+                      "type": "string",
+                      "value": "from"
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "value": {
+                    "key": {
+                      "type": "string",
+                      "value": "page"
+                    },
+                    "value": {
+                      "type": "jsonpath",
+                      "value": "$.steps.storage-3.value"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "bynder-2": {
+          "title": "Check Bynder Asset",
+          "connector": {
+            "name": "bynder",
+            "version": "2.0"
+          },
+          "operation": "get_asset",
+          "output_schema": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "type": "object",
+            "properties": {
+              "results": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "description": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "copyright": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    },
+                    "idHash": {
+                      "type": "string"
+                    },
+                    "height": {
+                      "type": "number"
+                    },
+                    "datePublished": {
+                      "type": "string"
+                    },
+                    "fileSize": {
+                      "type": "number"
+                    },
+                    "brandId": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "extension": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "userCreated": {
+                      "type": "string"
+                    },
+                    "dateCreated": {
+                      "type": "string"
+                    },
+                    "isPublic": {
+                      "type": "number"
+                    },
+                    "propertyOptions": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "orientation": {
+                      "type": "string"
+                    },
+                    "dateModified": {
+                      "type": "string"
+                    },
+                    "width": {
+                      "type": "number"
+                    },
+                    "watermarked": {
+                      "type": "number"
+                    },
+                    "limited": {
+                      "type": "number"
+                    },
+                    "archive": {
+                      "type": "number"
+                    },
+                    "property_usage": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "property_sourcelocation": {
+                      "type": "string"
+                    },
+                    "transformBaseUrl": {
+                      "type": "string"
+                    },
+                    "thumbnails": {
+                      "type": "object",
+                      "properties": {
+                        "mini": {
+                          "type": "string"
+                        },
+                        "transformBaseUrl": {
+                          "type": "string"
+                        },
+                        "webimage": {
+                          "type": "string"
+                        },
+                        "small": {
+                          "type": "string"
+                        },
+                        "thumbnail": {
+                          "type": "string"
+                        },
+                        "thul": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "property_Workfront_Document_ID": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "property_photographer": {
+                      "type": "string"
+                    },
+                    "tags": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "property_figmage-page-id": {
+                      "type": "string"
+                    },
+                    "property_Testing_text": {
+                      "type": "string"
+                    },
+                    "property_Workfront_Document_URL": {
+                      "type": "string"
+                    },
+                    "videoPreviewURLs": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "required": [
+                    "description",
+                    "id",
+                    "copyright",
+                    "type",
+                    "idHash",
+                    "height",
+                    "datePublished",
+                    "fileSize",
+                    "brandId",
+                    "name",
+                    "extension",
+                    "userCreated",
+                    "dateCreated",
+                    "isPublic",
+                    "propertyOptions",
+                    "orientation",
+                    "dateModified",
+                    "width",
+                    "watermarked",
+                    "limited",
+                    "archive",
+                    "property_sourcelocation",
+                    "transformBaseUrl",
+                    "thumbnails",
+                    "property_Workfront_Document_ID",
+                    "property_photographer",
+                    "tags",
+                    "property_figmage-page-id",
+                    "property_Testing_text",
+                    "property_Workfront_Document_URL",
+                    "property_usage"
+                  ]
+                }
+              }
+            }
+          },
+          "error_handling": {
+            "strategy": "manual"
+          },
+          "authentication": {
+            "group": "d9331e0a-9170-41e8-866c-13ec9a287df5",
+            "title": "Keiffer Bynder oAuth2",
+            "service_icon": {
+              "icon_type": "url",
+              "value": "//s3.amazonaws.com/images.tray.io/artisan/icons/55fdd831638972b19fec6bc4a2da6784.png"
+            },
+            "scopes": [
+              "collection:write",
+              "asset:write",
+              "current.profile:read",
+              "meta.assetbank:read",
+              "asset:read",
+              "collection:read",
+              "meta.assetbank:write",
+              "admin.profile:read",
+              "admin.user:read",
+              "offline",
+              "current.user:read"
+            ],
+            "service_name": "bynder",
+            "service_version": 2
+          },
+          "properties": {
+            "versions": {
+              "type": "boolean",
+              "value": false
+            },
+            "stats": {
+              "type": "boolean",
+              "value": false
+            },
+            "asset_id": {
+              "type": "jsonpath",
+              "value": "$.steps.storage-7.value.bynderID"
+            }
+          }
+        },
+        "storage-3": {
+          "title": "Increment pageCount",
+          "connector": {
+            "name": "storage",
+            "version": "1.4"
+          },
+          "operation": "atomic_increment",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "scope": {
+              "type": "string",
+              "value": "Current Run"
+            },
+            "key": {
+              "type": "string",
+              "value": "pageCount"
+            },
+            "value_to_add": {
+              "type": "integer",
+              "value": 1
+            }
+          }
+        },
+        "storage-8": {
+          "title": "Save Asset Data",
+          "connector": {
+            "name": "storage",
+            "version": "1.4"
+          },
+          "operation": "set",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "scope": {
+              "type": "string",
+              "value": "Account"
+            },
+            "key": {
+              "type": "string",
+              "value": "mondaySolutionData-{$.env.solution_instance_id or:'Monday'}-{$.steps.loop-3.value.id}"
+            },
+            "value": {
+              "type": "object",
+              "value": {
+                "mondayID": {
+                  "type": "jsonpath",
+                  "value": "$.steps.loop-3.value.id"
+                },
+                "bynderID": {
+                  "type": "jsonpath",
+                  "value": "$.steps.bynder-3.mediaid"
+                },
+                "filename": {
+                  "type": "jsonpath",
+                  "value": "$.steps.loop-3.value.name"
+                }
+              }
+            }
+          }
+        },
+        "boolean-condition-4": {
+          "title": "Boolean Condition",
+          "connector": {
+            "name": "boolean-condition",
+            "version": "2.3"
+          },
+          "operation": "boolean_condition",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "conditions": {
+              "type": "array",
+              "value": [
+                {
+                  "type": "object",
+                  "value": {
+                    "value1": {
+                      "type": "jsonpath",
+                      "value": "$.steps.storage-4.value.configObj.fileConversion"
+                    },
+                    "comparison_type": {
+                      "type": "string",
+                      "value": "==="
+                    },
+                    "value2": {
+                      "type": "boolean",
+                      "value": true
+                    }
+                  }
+                }
+              ]
+            },
+            "strictness": {
+              "type": "string",
+              "value": "All"
+            }
+          }
+        },
+        "loop-1": {
+          "title": "Loop Events",
+          "connector": {
+            "name": "loop",
+            "version": "1.3"
+          },
+          "operation": "loop_array",
+          "output_schema": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "type": "object",
+            "properties": {
+              "value": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "event": {
+                    "type": "string"
+                  },
+                  "data": {
+                    "type": "string"
+                  },
+                  "created_at": {
+                    "type": "string"
+                  }
+                }
+              },
+              "count": {
+                "type": "number"
+              },
+              "index": {
+                "type": "number"
+              },
+              "is_first": {
+                "type": "boolean"
+              },
+              "is_last": {
+                "type": "boolean"
+              },
+              "branch_name": {
+                "type": "string"
+              }
+            }
+          },
+          "error_handling": {},
+          "properties": {
+            "array": {
+              "type": "jsonpath",
+              "value": "$.steps.graphql-client-1.data.boards[0].activity_logs"
+            }
+          }
+        },
+        "storage-4": {
+          "title": "Get solutionData",
+          "connector": {
+            "name": "storage",
+            "version": "1.4"
+          },
+          "operation": "get",
+          "output_schema": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "type": "object",
+            "properties": {
+              "value": {
+                "type": "object",
+                "properties": {
+                  "bynderURL": {
+                    "type": "string"
+                  },
+                  "brandID": {
+                    "type": "string"
+                  },
+                  "boardDataMap": {
+                    "type": "object",
+                    "properties": {
+                      "655C6830-C177-470A-A6A9D3FA36294423": {
+                        "type": "string"
+                      },
+                      "A5F07C43-4E23-4864-A2726A806DBDF91C": {
+                        "type": "string"
+                      },
+                      "CBC634F4-C9F4-4B6C-857F00430EEAC7F2": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "staticMetadataMap": {
+                    "type": "object",
+                    "properties": {
+                      "metaproperty.6C2EA67D-9A96-4769-A743413AD87B32A9": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "mondayURL": {
+                    "type": "string"
+                  },
+                  "configObj": {
+                    "type": "object",
+                    "properties": {
+                      "fileConversion": {
+                        "type": "boolean"
+                      },
+                      "columnID": {
+                        "type": "string"
+                      },
+                      "triggerValue": {
+                        "type": "string"
+                      },
+                      "boardID": {
+                        "type": "number"
+                      },
+                      "slug": {
+                        "type": "string"
+                      },
+                      "fileColumn": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "dynamicMetadataMap": {
+                    "type": "object",
+                    "properties": {
+                      "0A36E145-36E2-4141-A2D18C6BFE0B4B93": {
+                        "type": "string"
+                      },
+                      "A7C97A41-FFBB-409E-B4B76DD234FFAE35": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "error_handling": {},
+          "properties": {
+            "scope": {
+              "type": "string",
+              "value": "Account"
+            },
+            "key": {
+              "type": "string",
+              "value": "mondaySolutionData-{$.env.solution_instance_id or:'Monday'}"
+            },
+            "default_value": {
+              "type": "null",
+              "value": null
+            }
+          }
+        },
+        "storage-11": {
+          "title": "Get Asset List",
+          "connector": {
+            "name": "storage",
+            "version": "1.4"
+          },
+          "operation": "get",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "scope": {
+              "type": "string",
+              "value": "Current Run"
+            },
+            "key": {
+              "type": "string",
+              "value": "assetList"
+            },
+            "default_value": {
+              "type": "null",
+              "value": null
+            }
+          }
+        },
+        "storage-7": {
+          "title": "Get Asset Data",
+          "connector": {
+            "name": "storage",
+            "version": "1.4"
+          },
+          "operation": "get",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "scope": {
+              "type": "string",
+              "value": "Account"
+            },
+            "key": {
+              "type": "string",
+              "value": "mondaySolutionData-{$.env.solution_instance_id or:'Monday'}-{$.steps.loop-3.value.id}"
+            },
+            "default_value": {
+              "type": "null",
+              "value": null
+            }
+          }
+        },
+        "list-helpers-1": {
+          "title": "Join Asset Lists",
+          "connector": {
+            "name": "list-helpers",
+            "version": "2.1"
+          },
+          "operation": "concatenate",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "list": {
+              "type": "jsonpath",
+              "value": "$.steps.graphql-client-2.data.boards[0].items[0].assets",
+              "fallback": {
+                "type": "array",
+                "value": []
+              }
+            },
+            "list_two": {
+              "type": "jsonpath",
+              "value": "$.steps.graphql-client-2.data.boards[0].items[0].updates[0].assets",
+              "fallback": {
+                "type": "array",
+                "value": []
+              }
+            }
+          }
+        },
+        "date-time-helpers-1": {
+          "title": "Convert to ISO 8601",
+          "connector": {
+            "name": "date-time-helpers",
+            "version": "3.0"
+          },
+          "operation": "format",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "timezone": {
+              "type": "string",
+              "value": "UTC"
+            },
+            "date": {
+              "type": "jsonpath",
+              "value": "$.steps.storage-1.value"
+            },
+            "format": {
+              "type": "object",
+              "value": {
+                "existing_format": {
+                  "type": "string",
+                  "value": "YYYY-MM-DDTHH:mm:ssZ"
+                }
+              }
+            }
+          }
+        },
+        "loop-2": {
+          "title": "Loop Until End",
+          "connector": {
+            "name": "loop",
+            "version": "1.3"
+          },
+          "operation": "loop_forever",
+          "output_schema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-03/schema",
+            "id": "http://jsonschema.net",
+            "properties": {
+              "index": {
+                "type": "number",
+                "id": "http://jsonschema.net/index"
+              }
+            }
+          },
+          "error_handling": {},
+          "properties": {}
+        },
+        "break-loop-1": {
+          "title": "Break Loop",
+          "connector": {
+            "name": "break-loop",
+            "version": "1.1"
+          },
+          "operation": "break",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {}
+        },
+        "storage-6": {
+          "title": "Save Asset Data",
+          "connector": {
+            "name": "storage",
+            "version": "1.4"
+          },
+          "operation": "set",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "scope": {
+              "type": "string",
+              "value": "Account"
+            },
+            "key": {
+              "type": "string",
+              "value": "mondaySolutionData-{$.env.solution_instance_id or:'Monday'}-{$.steps.loop-3.value.id}"
+            },
+            "value": {
+              "type": "object",
+              "value": {
+                "mondayID": {
+                  "type": "jsonpath",
+                  "value": "$.steps.loop-3.value.id"
+                },
+                "bynderID": {
+                  "type": "jsonpath",
+                  "value": "$.steps.bynder-1.mediaid"
+                },
+                "filename": {
+                  "type": "jsonpath",
+                  "value": "$.steps.loop-3.value.name"
+                }
+              }
+            }
+          }
+        },
+        "script-2": {
+          "title": "Create bynderUploadObj",
+          "connector": {
+            "name": "script",
+            "version": "3.3"
+          },
+          "operation": "execute",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "variables": {
+              "type": "array",
+              "value": [
+                {
+                  "type": "object",
+                  "value": {
+                    "name": {
+                      "type": "string",
+                      "value": "metadataMap"
+                    },
+                    "value": {
+                      "type": "jsonpath",
+                      "value": "$.steps.json-transformer-1.result"
+                    }
+                  }
+                }
+              ]
+            },
+            "script": {
+              "type": "string",
+              "value": "// You can reference the input variables using input.NAME\n// Parsed JSON files could be referenced as fileInput\nexports.step = function (input) {\n\tconst mapObject = []\n\tinput.metadataMap.id.forEach((value, index) => {\n\t\tmapObject.push(\n\t\t\t{\n\t\t\t\t\"id\": value,\n\t\t\t\t\"options\": [input.metadataMap.options[index]]\n\t\t\t},\n\t\t)\n\t})\n\treturn mapObject\n}"
+            },
+            "file_output": {
+              "type": "boolean",
+              "value": false
+            }
+          }
+        },
+        "boolean-condition-3": {
+          "title": "Asset Already Uploaded",
+          "connector": {
+            "name": "boolean-condition",
+            "version": "2.3"
+          },
+          "operation": "boolean_condition",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "conditions": {
+              "type": "array",
+              "value": [
+                {
+                  "type": "object",
+                  "value": {
+                    "value1": {
+                      "type": "jsonpath",
+                      "value": "$.steps.storage-7.value"
+                    },
+                    "comparison_type": {
+                      "type": "string",
+                      "value": "!=="
+                    },
+                    "value2": {
+                      "type": "null",
+                      "value": null
+                    }
+                  }
+                }
+              ]
+            },
+            "strictness": {
+              "type": "string",
+              "value": "All"
+            }
+          }
+        },
+        "date-time-helpers-2": {
+          "title": "Get Current Time",
+          "connector": {
+            "name": "date-time-helpers",
+            "version": "3.0"
+          },
+          "operation": "current_timestamp",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "timezone": {
+              "type": "string",
+              "value": "PST8PDT"
+            },
+            "format": {
+              "type": "object",
+              "value": {
+                "existing_format": {
+                  "type": "string",
+                  "value": "X"
+                }
+              }
+            }
+          }
+        },
+        "json-transformer-1": {
+          "title": "Split Metadata to Array",
+          "connector": {
+            "name": "json-transformer",
+            "version": "1.0"
+          },
+          "operation": "transform",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "query": {
+              "type": "string",
+              "value": "{\n\t\"id\": [$a := result.$filter($keys().$split('.'), function($v) {\n\t$v != 'metaproperty'\n\t})],\n\t\"options\": [$b := $each(result, function($v) {\n\t$v\n\t})]\n}"
+            },
+            "data": {
+              "type": "object",
+              "value": {
+                "result": {
+                  "type": "jsonpath",
+                  "value": "$.steps.script-1.result"
+                }
+              }
+            }
+          }
+        },
+        "file-helpers-1": {
+          "title": "Get Asset",
+          "connector": {
+            "name": "file-helpers",
+            "version": "2.5"
+          },
+          "operation": "create_file",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "url": {
+              "type": "jsonpath",
+              "value": "$.steps.loop-3.value.public_url"
+            },
+            "name": {
+              "type": "jsonpath",
+              "value": "$.steps.loop-3.value.name"
+            }
+          }
+        },
+        "trigger": {
+          "title": "Scheduled Trigger",
+          "connector": {
+            "name": "scheduled",
+            "version": "3.5"
+          },
+          "operation": "simple",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "synchronous": {
+              "type": "boolean",
+              "value": true
+            },
+            "public_url": {
+              "type": "jsonpath",
+              "value": "$.env.public_url"
+            },
+            "interval": {
+              "type": "integer",
+              "value": 5
+            },
+            "time_unit": {
+              "type": "string",
+              "value": "minutes"
+            }
+          }
+        }
+      },
+      "dependencies": [
+        {
+          "id": "52525a79-710b-4575-8d74-3155ebe03e98",
+          "name": "[Bynder - Monday] File Converter"
+        }
+      ]
+    }
+  ],
+  "projects": []
+}

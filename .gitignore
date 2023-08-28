@@ -1,0 +1,6 @@
+# Ignore Files that is not necessary on the repo for Tray.IO Codes
+
+# misc
+.DS_Store
+.AppleDouble
+.LSOverride

@@ -1,0 +1,2626 @@
+{
+	"tray_export_version": 4,
+	"export_type": "workflow",
+	"workflows": [
+		{
+			"id": "89d4a982-25e5-4057-bc55-870584e5bd20",
+			"created": "2022-09-06T17:30:03.755924Z",
+			"workspace_id": "139e4592-3b78-46ad-885b-bc64d04d3bed",
+			"project_id": "7d7a0de2-c080-41ec-8193-5cb682f7d591",
+			"group": "3af2b0b4-1efe-4e52-83ed-e6ab95b0283b",
+			"creator": "139e4592-3b78-46ad-885b-bc64d04d3bed",
+			"version": {
+				"id": "0ee50278-dfb8-4222-a786-fa9dad0bb696",
+				"created": "2023-07-14T18:13:44.612595Z"
+			},
+			"title": "[Webdam - Dropbox] Sync Master",
+			"enabled": true,
+			"tags": [],
+			"settings": {
+				"config": {
+					"staticMapInput": [],
+					"dataMapInput": [],
+					"folderLimiter": 5,
+					"includeSubfolders": true,
+					"uploadLimiter": 10,
+					"delaySeconds": 30,
+					"syncURL": "urlHere"
+				},
+				"input_schema": {},
+				"output_schema": {}
+			},
+			"steps_structure": [
+				{
+					"name": "trigger",
+					"type": "normal",
+					"content": {}
+				},
+				{
+					"name": "storage-1",
+					"type": "normal",
+					"content": {}
+				},
+				{
+					"name": "storage-2",
+					"type": "normal",
+					"content": {}
+				},
+				{
+					"name": "storage-3",
+					"type": "normal",
+					"content": {}
+				},
+				{
+					"name": "storage-4",
+					"type": "normal",
+					"content": {}
+				},
+				{
+					"name": "boolean-condition-1",
+					"type": "branch",
+					"content": {
+						"true": [
+							{
+								"name": "storage-5",
+								"type": "normal",
+								"content": {}
+							}
+						],
+						"false": []
+					}
+				},
+				{
+					"name": "storage-20",
+					"type": "normal",
+					"content": {}
+				},
+				{
+					"name": "storage-22",
+					"type": "normal",
+					"content": {}
+				},
+				{
+					"name": "dropbox-1",
+					"type": "normal",
+					"content": {}
+				},
+				{
+					"name": "json-transformer-1",
+					"type": "normal",
+					"content": {}
+				},
+				{
+					"name": "script-1",
+					"type": "normal",
+					"content": {}
+				},
+				{
+					"name": "storage-6",
+					"type": "normal",
+					"content": {}
+				},
+				{
+					"name": "boolean-condition-2",
+					"type": "branch",
+					"content": {
+						"true": [],
+						"false": [
+							{
+								"name": "loop-4",
+								"type": "loop",
+								"content": {
+									"_loop": [
+										{
+											"name": "dropbox-2",
+											"type": "normal",
+											"content": {}
+										},
+										{
+											"name": "storage-9",
+											"type": "normal",
+											"content": {}
+										},
+										{
+											"name": "boolean-condition-3",
+											"type": "branch",
+											"content": {
+												"true": [
+													{
+														"name": "loop-5",
+														"type": "loop",
+														"content": {
+															"_loop": [
+																{
+																	"name": "delay-1",
+																	"type": "normal",
+																	"content": {}
+																},
+																{
+																	"name": "storage-10",
+																	"type": "normal",
+																	"content": {}
+																},
+																{
+																	"name": "boolean-condition-8",
+																	"type": "branch",
+																	"content": {
+																		"true": [],
+																		"false": [
+																			{
+																				"name": "break-loop-2",
+																				"type": "break",
+																				"content": {},
+																				"target": "loop-5"
+																			}
+																		]
+																	}
+																}
+															]
+														}
+													},
+													{
+														"name": "call-workflow-1",
+														"type": "normal",
+														"content": {}
+													}
+												],
+												"false": [
+													{
+														"name": "call-workflow-3",
+														"type": "normal",
+														"content": {}
+													}
+												]
+											}
+										}
+									]
+								}
+							},
+							{
+								"name": "boolean-condition-4",
+								"type": "branch",
+								"content": {
+									"true": [
+										{
+											"name": "storage-21",
+											"type": "normal",
+											"content": {}
+										},
+										{
+											"name": "loop-2",
+											"type": "loop",
+											"content": {
+												"_loop": [
+													{
+														"name": "storage-8",
+														"type": "normal",
+														"content": {}
+													},
+													{
+														"name": "dropbox-3",
+														"type": "normal",
+														"content": {}
+													},
+													{
+														"name": "json-transformer-2",
+														"type": "normal",
+														"content": {}
+													},
+													{
+														"name": "script-2",
+														"type": "normal",
+														"content": {}
+													},
+													{
+														"name": "storage-11",
+														"type": "normal",
+														"content": {}
+													},
+													{
+														"name": "boolean-condition-5",
+														"type": "branch",
+														"content": {
+															"true": [],
+															"false": [
+																{
+																	"name": "loop-3",
+																	"type": "loop",
+																	"content": {
+																		"_loop": [
+																			{
+																				"name": "dropbox-4",
+																				"type": "normal",
+																				"content": {}
+																			},
+																			{
+																				"name": "storage-12",
+																				"type": "normal",
+																				"content": {}
+																			},
+																			{
+																				"name": "boolean-condition-6",
+																				"type": "branch",
+																				"content": {
+																					"true": [
+																						{
+																							"name": "loop-6",
+																							"type": "loop",
+																							"content": {
+																								"_loop": [
+																									{
+																										"name": "delay-2",
+																										"type": "normal",
+																										"content": {}
+																									},
+																									{
+																										"name": "storage-13",
+																										"type": "normal",
+																										"content": {}
+																									},
+																									{
+																										"name": "boolean-condition-7",
+																										"type": "branch",
+																										"content": {
+																											"true": [],
+																											"false": [
+																												{
+																													"name": "break-loop-1",
+																													"type": "break",
+																													"content": {},
+																													"target": "loop-6"
+																												}
+																											]
+																										}
+																									}
+																								]
+																							}
+																						},
+																						{
+																							"name": "call-workflow-2",
+																							"type": "normal",
+																							"content": {}
+																						}
+																					],
+																					"false": [
+																						{
+																							"name": "call-workflow-4",
+																							"type": "normal",
+																							"content": {}
+																						}
+																					]
+																				}
+																			}
+																		]
+																	}
+																}
+															]
+														}
+													},
+													{
+														"name": "storage-14",
+														"type": "normal",
+														"content": {}
+													},
+													{
+														"name": "boolean-condition-9",
+														"type": "branch",
+														"content": {
+															"true": [
+																{
+																	"name": "break-loop-3",
+																	"type": "break",
+																	"content": {},
+																	"target": "loop-2"
+																}
+															],
+															"false": []
+														}
+													}
+												]
+											}
+										}
+									],
+									"false": []
+								}
+							}
+						]
+					}
+				},
+				{
+					"name": "storage-15",
+					"type": "normal",
+					"content": {}
+				},
+				{
+					"name": "boolean-condition-10",
+					"type": "branch",
+					"content": {
+						"true": [
+							{
+								"name": "storage-16",
+								"type": "normal",
+								"content": {}
+							},
+							{
+								"name": "loop-1",
+								"type": "loop",
+								"content": {
+									"_loop": [
+										{
+											"name": "storage-17",
+											"type": "normal",
+											"content": {}
+										},
+										{
+											"name": "boolean-condition-11",
+											"type": "branch",
+											"content": {
+												"true": [
+													{
+														"name": "loop-7",
+														"type": "loop",
+														"content": {
+															"_loop": [
+																{
+																	"name": "delay-3",
+																	"type": "normal",
+																	"content": {}
+																},
+																{
+																	"name": "storage-18",
+																	"type": "normal",
+																	"content": {}
+																},
+																{
+																	"name": "boolean-condition-12",
+																	"type": "branch",
+																	"content": {
+																		"true": [],
+																		"false": [
+																			{
+																				"name": "break-loop-4",
+																				"type": "break",
+																				"content": {},
+																				"target": "loop-7"
+																			}
+																		]
+																	}
+																}
+															]
+														}
+													}
+												],
+												"false": [
+													{
+														"name": "call-workflow-6",
+														"type": "normal",
+														"content": {}
+													}
+												]
+											}
+										}
+									]
+								}
+							}
+						],
+						"false": []
+					}
+				}
+			],
+			"steps": {
+				"script-1": {
+					"title": "Remove Synced Files",
+					"connector": {
+						"name": "script",
+						"version": "3.3"
+					},
+					"operation": "execute",
+					"output_schema": {
+						"$schema": "http://json-schema.org/draft-04/schema#",
+						"type": "object",
+						"properties": {
+							"result": {
+								"type": "object",
+								"properties": {
+									"files": {
+										"type": "array",
+										"items": {
+											"type": "object",
+											"properties": {
+												"id": {
+													"type": "string"
+												},
+												"name": {
+													"type": "string"
+												},
+												"pathLower": {
+													"type": "string"
+												},
+												"extension": {
+													"type": "string"
+												}
+											},
+											"required": ["id", "name", "pathLower", "extension"]
+										}
+									},
+									"folders": {
+										"type": "array",
+										"items": {
+											"type": "object",
+											"properties": {
+												"id": {
+													"type": "string"
+												},
+												"name": {
+													"type": "string"
+												},
+												"pathLower": {
+													"type": "string"
+												}
+											},
+											"required": ["id", "name", "pathLower"]
+										}
+									}
+								}
+							},
+							"console": {
+								"type": "array",
+								"items": {}
+							}
+						}
+					},
+					"error_handling": {},
+					"properties": {
+						"variables": {
+							"type": "array",
+							"value": [
+								{
+									"type": "object",
+									"value": {
+										"name": {
+											"type": "string",
+											"value": "syncedAssets"
+										},
+										"value": {
+											"type": "jsonpath",
+											"value": "$.steps.storage-20.value"
+										}
+									}
+								},
+								{
+									"type": "object",
+									"value": {
+										"name": {
+											"type": "string",
+											"value": "fileList"
+										},
+										"value": {
+											"type": "jsonpath",
+											"value": "$.steps.json-transformer-1.result"
+										}
+									}
+								},
+								{
+									"type": "object",
+									"value": {
+										"name": {
+											"type": "string",
+											"value": "supportedTypes"
+										},
+										"value": {
+											"type": "jsonpath",
+											"value": "$.steps.storage-1.value.supportedTypes.bynderTypes"
+										}
+									}
+								}
+							]
+						},
+						"script": {
+							"type": "string",
+							"value": "exports.step = function (input) {\n  let fileList = input.fileList;\n  const syncedAssets = input.syncedAssets;\n  for (let i = 0; i < fileList.files.length; i++) {\n    let obj = fileList.files[i];\n\n    if (syncedAssets.indexOf(obj.id) !== -1) {\n      fileList.files.splice(i, 1);\n      i--;\n    }\n  }\n\n  for (var i = 0; i < fileList.files.length; i++) {\n    let obj = fileList.files[i];\n\n    if (input.supportedTypes.includes(obj.extension) === false) {\n        fileList.files.splice(i, 1);\n        i--;\n    }\n  }\n  return fileList;\n};"
+						},
+						"file_output": {
+							"type": "boolean",
+							"value": false
+						}
+					}
+				},
+				"storage-12": {
+					"title": "Get uploadCount",
+					"connector": {
+						"name": "storage",
+						"version": "1.4"
+					},
+					"operation": "get",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"scope": {
+							"type": "string",
+							"value": "Account"
+						},
+						"key": {
+							"type": "string",
+							"value": "dropboxUploadCount-{$.env.solution_instance_id or:'testBox'}"
+						},
+						"default_value": {
+							"type": "null",
+							"value": null
+						}
+					}
+				},
+				"boolean-condition-11": {
+					"title": "Boolean Condition",
+					"connector": {
+						"name": "boolean-condition",
+						"version": "2.3"
+					},
+					"operation": "boolean_condition",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"conditions": {
+							"type": "array",
+							"value": [
+								{
+									"type": "object",
+									"value": {
+										"value1": {
+											"type": "jsonpath",
+											"value": "$.steps.storage-17.value"
+										},
+										"comparison_type": {
+											"type": "string",
+											"value": ">"
+										},
+										"value2": {
+											"type": "jsonpath",
+											"value": "$.config.folderLimiter"
+										}
+									}
+								}
+							]
+						},
+						"strictness": {
+							"type": "string",
+							"value": "All"
+						}
+					}
+				},
+				"boolean-condition-1": {
+					"title": "folderSyncList = null? Create",
+					"connector": {
+						"name": "boolean-condition",
+						"version": "2.3"
+					},
+					"operation": "boolean_condition",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"conditions": {
+							"type": "array",
+							"value": [
+								{
+									"type": "object",
+									"value": {
+										"value1": {
+											"type": "jsonpath",
+											"value": "$.steps.storage-4.value"
+										},
+										"comparison_type": {
+											"type": "string",
+											"value": "==="
+										},
+										"value2": {
+											"type": "null",
+											"value": null
+										}
+									}
+								}
+							]
+						},
+						"strictness": {
+							"type": "string",
+							"value": "All"
+						}
+					}
+				},
+				"boolean-condition-8": {
+					"title": "Boolean Condition",
+					"connector": {
+						"name": "boolean-condition",
+						"version": "2.3"
+					},
+					"operation": "boolean_condition",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"conditions": {
+							"type": "array",
+							"value": [
+								{
+									"type": "object",
+									"value": {
+										"value1": {
+											"type": "jsonpath",
+											"value": "$.steps.storage-10.value"
+										},
+										"comparison_type": {
+											"type": "string",
+											"value": ">="
+										},
+										"value2": {
+											"type": "jsonpath",
+											"value": "$.config.uploadLimiter"
+										}
+									}
+								}
+							]
+						},
+						"strictness": {
+							"type": "string",
+							"value": "All"
+						}
+					}
+				},
+				"boolean-condition-7": {
+					"title": "Boolean Condition",
+					"connector": {
+						"name": "boolean-condition",
+						"version": "2.3"
+					},
+					"operation": "boolean_condition",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"conditions": {
+							"type": "array",
+							"value": [
+								{
+									"type": "object",
+									"value": {
+										"value1": {
+											"type": "jsonpath",
+											"value": "$.steps.storage-13.value"
+										},
+										"comparison_type": {
+											"type": "string",
+											"value": ">="
+										},
+										"value2": {
+											"type": "jsonpath",
+											"value": "$.config.uploadLimiter"
+										}
+									}
+								}
+							]
+						},
+						"strictness": {
+							"type": "string",
+							"value": "All"
+						}
+					}
+				},
+				"dropbox-4": {
+					"title": "Get File",
+					"connector": {
+						"name": "dropbox",
+						"version": "5.4"
+					},
+					"operation": "get_file_by_path",
+					"output_schema": {},
+					"error_handling": {},
+					"authentication": {
+						"group": "188d9ffd-93b7-4ef3-b562-e26654ffdd8b",
+						"title": "Keiffer dropbox account",
+						"service_icon": {
+							"icon_type": "url",
+							"value": "//s3.amazonaws.com/images.tray.io/static/service/icons/2f33c46fab1f5e54cc9f97fe8571a4a6.png"
+						},
+						"scopes": [],
+						"service_name": "dropbox",
+						"service_version": 1
+					},
+					"properties": {
+						"access_token": {
+							"type": "jsonpath",
+							"value": "$.auth.access_token"
+						},
+						"path": {
+							"type": "jsonpath",
+							"value": "$.steps.loop-3.value.pathLower"
+						}
+					}
+				},
+				"storage-14": {
+					"title": "Set pageCursor",
+					"connector": {
+						"name": "storage",
+						"version": "1.4"
+					},
+					"operation": "set",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"scope": {
+							"type": "string",
+							"value": "Current Run"
+						},
+						"key": {
+							"type": "string",
+							"value": "pageCursor"
+						},
+						"value": {
+							"type": "jsonpath",
+							"value": "$.steps.dropbox-3.cursor",
+							"fallback": {
+								"value": "",
+								"type": "string"
+							}
+						}
+					}
+				},
+				"storage-21": {
+					"title": "Init pageCursor",
+					"connector": {
+						"name": "storage",
+						"version": "1.4"
+					},
+					"operation": "set",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"scope": {
+							"type": "string",
+							"value": "Current Run"
+						},
+						"key": {
+							"type": "string",
+							"value": "pageCursor"
+						},
+						"value": {
+							"type": "jsonpath",
+							"value": "$.steps.dropbox-1.cursor",
+							"fallback": {
+								"value": "",
+								"type": "string"
+							}
+						}
+					}
+				},
+				"loop-2": {
+					"title": "Continue Folder Objects",
+					"connector": {
+						"name": "loop",
+						"version": "1.3"
+					},
+					"operation": "loop_forever",
+					"output_schema": {
+						"type": "object",
+						"$schema": "http://json-schema.org/draft-03/schema",
+						"id": "http://jsonschema.net",
+						"properties": {
+							"index": {
+								"type": "number",
+								"id": "http://jsonschema.net/index"
+							}
+						}
+					},
+					"error_handling": {},
+					"properties": {}
+				},
+				"delay-1": {
+					"title": "Delay",
+					"connector": {
+						"name": "delay",
+						"version": "1.0"
+					},
+					"operation": "delay",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"time_unit": {
+							"type": "string",
+							"value": "seconds"
+						},
+						"delay_value": {
+							"type": "jsonpath",
+							"value": "$.config.delaySeconds"
+						}
+					}
+				},
+				"storage-20": {
+					"title": "Get folderSyncList",
+					"connector": {
+						"name": "storage",
+						"version": "1.4"
+					},
+					"operation": "get",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"scope": {
+							"type": "string",
+							"value": "Account"
+						},
+						"key": {
+							"type": "string",
+							"value": "dropboxWebdamFolderSyncList-{$.steps.storage-1.value.baseFolderID}-{$.env.solution_instance_id or:'testBox'}"
+						}
+					}
+				},
+				"delay-3": {
+					"title": "Delay",
+					"connector": {
+						"name": "delay",
+						"version": "1.0"
+					},
+					"operation": "delay",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"time_unit": {
+							"type": "string",
+							"value": "seconds"
+						},
+						"delay_value": {
+							"type": "jsonpath",
+							"value": "$.config.delaySeconds"
+						}
+					}
+				},
+				"dropbox-2": {
+					"title": "Get File",
+					"connector": {
+						"name": "dropbox",
+						"version": "5.4"
+					},
+					"operation": "get_file_by_path",
+					"output_schema": {},
+					"error_handling": {},
+					"authentication": {
+						"group": "188d9ffd-93b7-4ef3-b562-e26654ffdd8b",
+						"title": "Keiffer dropbox account",
+						"service_icon": {
+							"icon_type": "url",
+							"value": "//s3.amazonaws.com/images.tray.io/static/service/icons/2f33c46fab1f5e54cc9f97fe8571a4a6.png"
+						},
+						"scopes": [],
+						"service_name": "dropbox",
+						"service_version": 1
+					},
+					"properties": {
+						"access_token": {
+							"type": "jsonpath",
+							"value": "$.auth.access_token"
+						},
+						"path": {
+							"type": "jsonpath",
+							"value": "$.steps.loop-4.value.pathLower"
+						}
+					}
+				},
+				"loop-3": {
+					"title": "Loop File Items",
+					"connector": {
+						"name": "loop",
+						"version": "1.3"
+					},
+					"operation": "loop_array",
+					"output_schema": {
+						"$schema": "http://json-schema.org/draft-04/schema#",
+						"type": "object",
+						"properties": {
+							"value": {
+								"type": "object",
+								"properties": {
+									"id": {
+										"type": "string"
+									},
+									"name": {
+										"type": "string"
+									},
+									"pathLower": {
+										"type": "string"
+									},
+									"extension": {
+										"type": "string"
+									}
+								},
+								"required": ["id", "name", "pathLower", "extension"]
+							},
+							"count": {
+								"type": "number"
+							},
+							"index": {
+								"type": "number"
+							},
+							"is_first": {
+								"type": "boolean"
+							},
+							"is_last": {
+								"type": "boolean"
+							},
+							"branch_name": {
+								"type": "string"
+							}
+						}
+					},
+					"error_handling": {},
+					"properties": {
+						"array": {
+							"type": "jsonpath",
+							"value": "$.steps.script-2.result.files"
+						}
+					}
+				},
+				"storage-2": {
+					"title": "Set uploadCount",
+					"connector": {
+						"name": "storage",
+						"version": "1.4"
+					},
+					"operation": "set",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"scope": {
+							"type": "string",
+							"value": "Account"
+						},
+						"key": {
+							"type": "string",
+							"value": "dropboxUploadCount-{$.env.solution_instance_id or:'testBox'}"
+						},
+						"value": {
+							"type": "number",
+							"value": 0
+						}
+					}
+				},
+				"call-workflow-3": {
+					"title": "Call Workflow",
+					"connector": {
+						"name": "call-workflow",
+						"version": "2.0"
+					},
+					"operation": "fire_and_forget",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"workflow_id": {
+							"type": "string",
+							"value": "0b333b7b-4d32-4baf-8499-c673a400881a"
+						},
+						"trigger_input": {
+							"type": "object",
+							"value": {
+								"assetData": {
+									"type": "jsonpath",
+									"value": "$.steps.loop-4.value"
+								},
+								"fileName": {
+									"type": "jsonpath",
+									"value": "$.steps.loop-4.value.name"
+								},
+								"solutionData": {
+									"type": "jsonpath",
+									"value": "$.steps.storage-1.value"
+								},
+								"metaPropertyMap": {
+									"type": "jsonpath",
+									"value": "$.steps.storage-1.value.staticMetadata.staticMeta"
+								},
+								"downloadURL": {
+									"type": "jsonpath",
+									"value": "$.steps.dropbox-2.file"
+								},
+								"boxFolderID": {
+									"type": "jsonpath",
+									"value": "$.steps.storage-1.value.baseFolderID"
+								},
+								"baseURL": {
+									"type": "jsonpath",
+									"value": "$.steps.storage-1.value.baseURL"
+								}
+							}
+						}
+					}
+				},
+				"storage-16": {
+					"title": "Get folderList",
+					"connector": {
+						"name": "storage",
+						"version": "1.4"
+					},
+					"operation": "get",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"scope": {
+							"type": "string",
+							"value": "Current Run"
+						},
+						"key": {
+							"type": "string",
+							"value": "folderList"
+						},
+						"default_value": {
+							"type": "null",
+							"value": null
+						}
+					}
+				},
+				"delay-2": {
+					"title": "Delay",
+					"connector": {
+						"name": "delay",
+						"version": "1.0"
+					},
+					"operation": "delay",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"time_unit": {
+							"type": "string",
+							"value": "seconds"
+						},
+						"delay_value": {
+							"type": "jsonpath",
+							"value": "$.config.delaySeconds"
+						}
+					}
+				},
+				"storage-5": {
+					"title": "Set folderSyncList",
+					"connector": {
+						"name": "storage",
+						"version": "1.4"
+					},
+					"operation": "set",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"scope": {
+							"type": "string",
+							"value": "Account"
+						},
+						"key": {
+							"type": "string",
+							"value": "dropboxWebdamFolderSyncList-{$.steps.storage-1.value.baseFolderID}-{$.env.solution_instance_id or:'testBox'}"
+						},
+						"value": {
+							"type": "array",
+							"value": []
+						}
+					}
+				},
+				"boolean-condition-5": {
+					"title": "Empty? GoTo Next Page",
+					"connector": {
+						"name": "boolean-condition",
+						"version": "2.3"
+					},
+					"operation": "boolean_condition",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"conditions": {
+							"type": "array",
+							"value": [
+								{
+									"type": "object",
+									"value": {
+										"value1": {
+											"type": "jsonpath",
+											"value": "$.steps.json-transformer-2.result"
+										},
+										"comparison_type": {
+											"type": "string",
+											"value": "==="
+										},
+										"value2": {
+											"type": "array",
+											"value": []
+										}
+									}
+								}
+							]
+						},
+						"strictness": {
+							"type": "string",
+							"value": "All"
+						}
+					}
+				},
+				"storage-9": {
+					"title": "Get uploadCount",
+					"connector": {
+						"name": "storage",
+						"version": "1.4"
+					},
+					"operation": "get",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"scope": {
+							"type": "string",
+							"value": "Account"
+						},
+						"key": {
+							"type": "string",
+							"value": "dropboxUploadCount-{$.env.solution_instance_id or:'testBox'}"
+						},
+						"default_value": {
+							"type": "null",
+							"value": null
+						}
+					}
+				},
+				"boolean-condition-2": {
+					"title": "Empty? GoTo Next Page",
+					"connector": {
+						"name": "boolean-condition",
+						"version": "2.3"
+					},
+					"operation": "boolean_condition",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"conditions": {
+							"type": "array",
+							"value": [
+								{
+									"type": "object",
+									"value": {
+										"value1": {
+											"type": "jsonpath",
+											"value": "$.steps.json-transformer-1.result"
+										},
+										"comparison_type": {
+											"type": "string",
+											"value": "==="
+										},
+										"value2": {
+											"type": "array",
+											"value": []
+										}
+									}
+								}
+							]
+						},
+						"strictness": {
+							"type": "string",
+							"value": "All"
+						}
+					}
+				},
+				"call-workflow-2": {
+					"title": "Call Workflow",
+					"connector": {
+						"name": "call-workflow",
+						"version": "2.0"
+					},
+					"operation": "fire_and_forget",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"workflow_id": {
+							"type": "string",
+							"value": "0b333b7b-4d32-4baf-8499-c673a400881a"
+						},
+						"trigger_input": {
+							"type": "object",
+							"value": {
+								"assetData": {
+									"type": "jsonpath",
+									"value": "$.steps.loop-3.value"
+								},
+								"fileName": {
+									"type": "jsonpath",
+									"value": "$.steps.loop-3.value.name"
+								},
+								"solutionData": {
+									"type": "jsonpath",
+									"value": "$.steps.storage-1.value"
+								},
+								"metaPropertyMap": {
+									"type": "jsonpath",
+									"value": "$.steps.storage-1.value.staticMetadata.staticMeta"
+								},
+								"downloadURL": {
+									"type": "jsonpath",
+									"value": "$.steps.dropbox-4.file"
+								},
+								"boxFolderID": {
+									"type": "jsonpath",
+									"value": "$.steps.storage-1.value.baseFolderID"
+								},
+								"baseURL": {
+									"type": "jsonpath",
+									"value": "$.steps.storage-1.value.baseURL"
+								}
+							}
+						}
+					}
+				},
+				"json-transformer-2": {
+					"title": "JSON Transformer",
+					"connector": {
+						"name": "json-transformer",
+						"version": "1.0"
+					},
+					"operation": "transform",
+					"output_schema": {
+						"$schema": "http://json-schema.org/draft-04/schema#",
+						"type": "object",
+						"properties": {
+							"result": {
+								"type": "object",
+								"properties": {
+									"files": {
+										"type": "array",
+										"items": {
+											"type": "object",
+											"properties": {
+												"id": {
+													"type": "string"
+												},
+												"name": {
+													"type": "string"
+												},
+												"pathLower": {
+													"type": "string"
+												},
+												"extension": {
+													"type": "string"
+												}
+											},
+											"required": ["id", "name", "pathLower", "extension"]
+										}
+									},
+									"folders": {
+										"type": "array",
+										"items": {
+											"type": "object",
+											"properties": {
+												"id": {
+													"type": "string"
+												},
+												"name": {
+													"type": "string"
+												},
+												"pathLower": {
+													"type": "string"
+												}
+											},
+											"required": ["id", "name", "pathLower"]
+										}
+									}
+								}
+							}
+						}
+					},
+					"error_handling": {},
+					"properties": {
+						"query": {
+							"type": "string",
+							"value": "{\n    \"files\":[\n        entries[$contains(tag, \"file\")].{\n            \"id\": id,\n            \"name\": name,\n            \"pathLower\": path_lower,\n            \"extension\": $split(name, \".\")[-1]\n        }\n        ],\n    \"folders\": [\n        entries[$contains(tag, \"folder\")].{\n            \"id\": id,\n            \"name\": name,\n            \"pathLower\": path_lower\n        }\n    ]\n}"
+						},
+						"data": {
+							"type": "object",
+							"value": {
+								"entries": {
+									"type": "jsonpath",
+									"value": "$.steps.dropbox-3.entries"
+								}
+							}
+						}
+					}
+				},
+				"storage-3": {
+					"title": "Set folderCount",
+					"connector": {
+						"name": "storage",
+						"version": "1.4"
+					},
+					"operation": "set",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"scope": {
+							"type": "string",
+							"value": "Account"
+						},
+						"key": {
+							"type": "string",
+							"value": "dropboxFolderCount-{$.env.solution_instance_id or:'testBox'}"
+						},
+						"value": {
+							"type": "number",
+							"value": 0
+						}
+					}
+				},
+				"break-loop-4": {
+					"title": "Break Loop",
+					"connector": {
+						"name": "break-loop",
+						"version": "1.1"
+					},
+					"operation": "break",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {}
+				},
+				"storage-8": {
+					"title": "Get pageCursor",
+					"connector": {
+						"name": "storage",
+						"version": "1.4"
+					},
+					"operation": "get",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"scope": {
+							"type": "string",
+							"value": "Current Run"
+						},
+						"key": {
+							"type": "string",
+							"value": "pageCursor"
+						},
+						"default_value": {
+							"type": "null",
+							"value": null
+						}
+					}
+				},
+				"call-workflow-1": {
+					"title": "Call Workflow",
+					"connector": {
+						"name": "call-workflow",
+						"version": "2.0"
+					},
+					"operation": "fire_and_forget",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"workflow_id": {
+							"type": "string",
+							"value": "0b333b7b-4d32-4baf-8499-c673a400881a"
+						},
+						"trigger_input": {
+							"type": "object",
+							"value": {
+								"assetData": {
+									"type": "jsonpath",
+									"value": "$.steps.loop-4.value"
+								},
+								"fileName": {
+									"type": "jsonpath",
+									"value": "$.steps.loop-4.value.name"
+								},
+								"solutionData": {
+									"type": "jsonpath",
+									"value": "$.steps.storage-1.value"
+								},
+								"metaPropertyMap": {
+									"type": "jsonpath",
+									"value": "$.steps.storage-1.value.staticMetadata.staticMeta"
+								},
+								"downloadURL": {
+									"type": "jsonpath",
+									"value": "$.steps.dropbox-2.file"
+								},
+								"boxFolderID": {
+									"type": "jsonpath",
+									"value": "$.steps.storage-1.value.baseFolderID"
+								},
+								"baseURL": {
+									"type": "jsonpath",
+									"value": "$.steps.storage-1.value.baseURL"
+								}
+							}
+						}
+					}
+				},
+				"boolean-condition-12": {
+					"title": "Boolean Condition",
+					"connector": {
+						"name": "boolean-condition",
+						"version": "2.3"
+					},
+					"operation": "boolean_condition",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"conditions": {
+							"type": "array",
+							"value": [
+								{
+									"type": "object",
+									"value": {
+										"value1": {
+											"type": "jsonpath",
+											"value": "$.steps.storage-18.value"
+										},
+										"comparison_type": {
+											"type": "string",
+											"value": ">="
+										},
+										"value2": {
+											"type": "jsonpath",
+											"value": "$.config.folderLimiter"
+										}
+									}
+								}
+							]
+						},
+						"strictness": {
+							"type": "string",
+							"value": "All"
+						}
+					}
+				},
+				"break-loop-3": {
+					"title": "Break Folder Loop",
+					"connector": {
+						"name": "break-loop",
+						"version": "1.1"
+					},
+					"operation": "break",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {}
+				},
+				"boolean-condition-4": {
+					"title": "Boolean Condition",
+					"connector": {
+						"name": "boolean-condition",
+						"version": "2.3"
+					},
+					"operation": "boolean_condition",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"conditions": {
+							"type": "array",
+							"value": [
+								{
+									"type": "object",
+									"value": {
+										"value1": {
+											"type": "jsonpath",
+											"value": "$.steps.dropbox-1.has_more"
+										},
+										"comparison_type": {
+											"type": "string",
+											"value": "==="
+										},
+										"value2": {
+											"type": "boolean",
+											"value": true
+										}
+									}
+								}
+							]
+						},
+						"strictness": {
+							"type": "string",
+							"value": "All"
+						}
+					}
+				},
+				"storage-22": {
+					"title": "Init folderList",
+					"connector": {
+						"name": "storage",
+						"version": "1.4"
+					},
+					"operation": "set",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"scope": {
+							"type": "string",
+							"value": "Current Run"
+						},
+						"key": {
+							"type": "string",
+							"value": "folderList"
+						},
+						"value": {
+							"type": "array",
+							"value": []
+						}
+					}
+				},
+				"loop-1": {
+					"title": "Loop Folders",
+					"connector": {
+						"name": "loop",
+						"version": "1.3"
+					},
+					"operation": "loop_array",
+					"output_schema": {
+						"type": "object",
+						"$schema": "http://json-schema.org/draft-03/schema",
+						"id": "http://jsonschema.net",
+						"additionalProperties": false,
+						"properties": {
+							"value": {
+								"type": ["object", "array", "string", "number", "boolean", "null"],
+								"title": "Value",
+								"id": "http://jsonschema.net/value"
+							},
+							"count": {
+								"type": "number",
+								"id": "http://jsonschema.net/total"
+							},
+							"index": {
+								"type": "number",
+								"id": "http://jsonschema.net/index"
+							},
+							"is_first": {
+								"type": "boolean",
+								"id": "http://jsonschema.net/is_first"
+							},
+							"is_last": {
+								"type": "boolean",
+								"id": "http://jsonschema.net/is_last"
+							}
+						}
+					},
+					"error_handling": {},
+					"properties": {
+						"array": {
+							"type": "jsonpath",
+							"value": "$.steps.storage-16.value"
+						}
+					}
+				},
+				"storage-4": {
+					"title": "Get folderSyncList",
+					"connector": {
+						"name": "storage",
+						"version": "1.4"
+					},
+					"operation": "get",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"scope": {
+							"type": "string",
+							"value": "Account"
+						},
+						"key": {
+							"type": "string",
+							"value": "dropboxWebdamFolderSyncList-{$.steps.storage-1.value.baseFolderID}-{$.env.solution_instance_id or:'testBox'}"
+						}
+					}
+				},
+				"storage-11": {
+					"title": "Add Folders to folderList",
+					"connector": {
+						"name": "storage",
+						"version": "1.4"
+					},
+					"operation": "append_to_list",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"scope": {
+							"type": "string",
+							"value": "Current Run"
+						},
+						"key": {
+							"type": "string",
+							"value": "folderList"
+						},
+						"value": {
+							"type": "jsonpath",
+							"value": "$.steps.json-transformer-2.result.folders"
+						}
+					}
+				},
+				"loop-5": {
+					"title": "Loop Until Available",
+					"connector": {
+						"name": "loop",
+						"version": "1.3"
+					},
+					"operation": "loop_forever",
+					"output_schema": {
+						"type": "object",
+						"$schema": "http://json-schema.org/draft-03/schema",
+						"id": "http://jsonschema.net",
+						"properties": {
+							"index": {
+								"type": "number",
+								"id": "http://jsonschema.net/index"
+							}
+						}
+					},
+					"error_handling": {},
+					"properties": {}
+				},
+				"call-workflow-6": {
+					"title": "Call Folder Crawler",
+					"connector": {
+						"name": "call-workflow",
+						"version": "2.0"
+					},
+					"operation": "fire_and_forget",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"workflow_id": {
+							"type": "string",
+							"value": "ffa6d637-7785-4515-a1dc-aa762ac1545f"
+						},
+						"trigger_input": {
+							"type": "object",
+							"value": {
+								"baseFolderID": {
+									"type": "jsonpath",
+									"value": "$.steps.storage-1.value.baseFolderID"
+								},
+								"folderData": {
+									"type": "jsonpath",
+									"value": "$.steps.loop-1.value"
+								}
+							}
+						}
+					}
+				},
+				"loop-6": {
+					"title": "Loop Until Available",
+					"connector": {
+						"name": "loop",
+						"version": "1.3"
+					},
+					"operation": "loop_forever",
+					"output_schema": {
+						"type": "object",
+						"$schema": "http://json-schema.org/draft-03/schema",
+						"id": "http://jsonschema.net",
+						"properties": {
+							"index": {
+								"type": "number",
+								"id": "http://jsonschema.net/index"
+							}
+						}
+					},
+					"error_handling": {},
+					"properties": {}
+				},
+				"storage-15": {
+					"title": "Get folderList",
+					"connector": {
+						"name": "storage",
+						"version": "1.4"
+					},
+					"operation": "get",
+					"output_schema": {
+						"$schema": "http://json-schema.org/draft-04/schema#",
+						"type": "object",
+						"properties": {
+							"value": {
+								"type": "array",
+								"items": {
+									"type": "object",
+									"properties": {
+										"name": {
+											"type": "string"
+										},
+										"id": {
+											"type": "string"
+										},
+										"pathLower": {
+											"type": "string"
+										}
+									},
+									"required": ["name", "id", "pathLower"]
+								}
+							}
+						}
+					},
+					"error_handling": {},
+					"properties": {
+						"scope": {
+							"type": "string",
+							"value": "Current Run"
+						},
+						"key": {
+							"type": "string",
+							"value": "folderList"
+						},
+						"default_value": {
+							"type": "null",
+							"value": null
+						}
+					}
+				},
+				"storage-10": {
+					"title": "Check uploadCount",
+					"connector": {
+						"name": "storage",
+						"version": "1.4"
+					},
+					"operation": "get",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"scope": {
+							"type": "string",
+							"value": "Account"
+						},
+						"default_value": {
+							"type": "null",
+							"value": null
+						},
+						"key": {
+							"type": "string",
+							"value": "dropboxUploadCount-{$.env.solution_instance_id or:'testBox'}"
+						}
+					}
+				},
+				"break-loop-2": {
+					"title": "Break Loop",
+					"connector": {
+						"name": "break-loop",
+						"version": "1.1"
+					},
+					"operation": "break",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {}
+				},
+				"dropbox-1": {
+					"title": "Get Folder Content",
+					"connector": {
+						"name": "dropbox",
+						"version": "5.4"
+					},
+					"operation": "list_folder_content",
+					"output_schema": {
+						"$schema": "http://json-schema.org/draft-04/schema#",
+						"type": "object",
+						"properties": {
+							"entries": {
+								"type": "array",
+								"items": {
+									"type": "object",
+									"properties": {
+										"name": {
+											"type": "string"
+										},
+										"path_lower": {
+											"type": "string"
+										},
+										"path_display": {
+											"type": "string"
+										},
+										"id": {
+											"type": "string"
+										},
+										"tag": {
+											"type": "string"
+										},
+										"client_modified": {
+											"type": "string"
+										},
+										"server_modified": {
+											"type": "string"
+										},
+										"rev": {
+											"type": "string"
+										},
+										"size": {
+											"type": "number"
+										},
+										"is_downloadable": {
+											"type": "boolean"
+										},
+										"content_hash": {
+											"type": "string"
+										}
+									},
+									"required": ["name", "path_lower", "path_display", "id", "tag", "client_modified", "server_modified", "rev", "size", "is_downloadable", "content_hash"]
+								}
+							},
+							"cursor": {
+								"type": "string"
+							},
+							"has_more": {
+								"type": "boolean"
+							}
+						}
+					},
+					"error_handling": {},
+					"authentication": {
+						"group": "188d9ffd-93b7-4ef3-b562-e26654ffdd8b",
+						"title": "Keiffer dropbox account",
+						"service_icon": {
+							"icon_type": "url",
+							"value": "//s3.amazonaws.com/images.tray.io/static/service/icons/2f33c46fab1f5e54cc9f97fe8571a4a6.png"
+						},
+						"scopes": [],
+						"service_name": "dropbox",
+						"service_version": 1
+					},
+					"properties": {
+						"access_token": {
+							"type": "jsonpath",
+							"value": "$.auth.access_token"
+						},
+						"recursive": {
+							"type": "boolean",
+							"value": false
+						},
+						"include_deleted": {
+							"type": "boolean",
+							"value": false
+						},
+						"include_has_explicit_shared_members": {
+							"type": "boolean",
+							"value": false
+						},
+						"include_mounted_folders": {
+							"type": "boolean",
+							"value": true
+						},
+						"include_non_downloadable_files": {
+							"type": "boolean",
+							"value": false
+						},
+						"limit": {
+							"type": "integer",
+							"value": 100
+						},
+						"path": {
+							"type": "jsonpath",
+							"value": "$.steps.storage-1.value.baseFolderID"
+						}
+					}
+				},
+				"loop-7": {
+					"title": "Loop Until Available",
+					"connector": {
+						"name": "loop",
+						"version": "1.3"
+					},
+					"operation": "loop_forever",
+					"output_schema": {
+						"type": "object",
+						"$schema": "http://json-schema.org/draft-03/schema",
+						"id": "http://jsonschema.net",
+						"properties": {
+							"index": {
+								"type": "number",
+								"id": "http://jsonschema.net/index"
+							}
+						}
+					},
+					"error_handling": {},
+					"properties": {}
+				},
+				"dropbox-3": {
+					"title": "Get Folder Content",
+					"connector": {
+						"name": "dropbox",
+						"version": "5.4"
+					},
+					"operation": "continue_list",
+					"output_schema": {
+						"$schema": "http://json-schema.org/draft-04/schema#",
+						"type": "object",
+						"properties": {
+							"entries": {
+								"type": "array",
+								"items": {}
+							},
+							"cursor": {
+								"type": "string"
+							},
+							"has_more": {
+								"type": "boolean"
+							}
+						}
+					},
+					"error_handling": {},
+					"authentication": {
+						"group": "188d9ffd-93b7-4ef3-b562-e26654ffdd8b",
+						"title": "Keiffer dropbox account",
+						"service_icon": {
+							"icon_type": "url",
+							"value": "//s3.amazonaws.com/images.tray.io/static/service/icons/2f33c46fab1f5e54cc9f97fe8571a4a6.png"
+						},
+						"scopes": [],
+						"service_name": "dropbox",
+						"service_version": 1
+					},
+					"properties": {
+						"access_token": {
+							"type": "jsonpath",
+							"value": "$.auth.access_token"
+						},
+						"list_url": {
+							"type": "string",
+							"value": "/files/list_folder"
+						},
+						"cursor": {
+							"type": "jsonpath",
+							"value": "$.steps.storage-8.value"
+						}
+					}
+				},
+				"loop-4": {
+					"title": "Loop Folder Items",
+					"connector": {
+						"name": "loop",
+						"version": "1.3"
+					},
+					"operation": "loop_array",
+					"output_schema": {
+						"$schema": "http://json-schema.org/draft-04/schema#",
+						"type": "object",
+						"properties": {
+							"value": {
+								"type": "object",
+								"properties": {
+									"id": {
+										"type": "string"
+									},
+									"name": {
+										"type": "string"
+									},
+									"pathLower": {
+										"type": "string"
+									},
+									"extension": {
+										"type": "string"
+									}
+								},
+								"required": ["id", "name", "pathLower", "extension"]
+							},
+							"count": {
+								"type": "number"
+							},
+							"index": {
+								"type": "number"
+							},
+							"is_first": {
+								"type": "boolean"
+							},
+							"is_last": {
+								"type": "boolean"
+							},
+							"branch_name": {
+								"type": "string"
+							}
+						}
+					},
+					"error_handling": {},
+					"properties": {
+						"array": {
+							"type": "jsonpath",
+							"value": "$.steps.script-1.result.files"
+						}
+					}
+				},
+				"storage-13": {
+					"title": "Check uploadCount",
+					"connector": {
+						"name": "storage",
+						"version": "1.4"
+					},
+					"operation": "get",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"scope": {
+							"type": "string",
+							"value": "Account"
+						},
+						"default_value": {
+							"type": "null",
+							"value": null
+						},
+						"key": {
+							"type": "string",
+							"value": "dropboxUploadCount-{$.env.solution_instance_id or:'testBox'}"
+						}
+					}
+				},
+				"storage-18": {
+					"title": "Check folderCount",
+					"connector": {
+						"name": "storage",
+						"version": "1.4"
+					},
+					"operation": "get",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"scope": {
+							"type": "string",
+							"value": "Account"
+						},
+						"default_value": {
+							"type": "null",
+							"value": null
+						},
+						"key": {
+							"type": "string",
+							"value": "dropboxFolderCount-{$.env.solution_instance_id or:'testBox'}"
+						}
+					}
+				},
+				"boolean-condition-6": {
+					"title": "Boolean Condition",
+					"connector": {
+						"name": "boolean-condition",
+						"version": "2.3"
+					},
+					"operation": "boolean_condition",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"conditions": {
+							"type": "array",
+							"value": [
+								{
+									"type": "object",
+									"value": {
+										"value1": {
+											"type": "jsonpath",
+											"value": "$.steps.storage-12.value"
+										},
+										"comparison_type": {
+											"type": "string",
+											"value": ">"
+										},
+										"value2": {
+											"type": "jsonpath",
+											"value": "$.config.uploadLimiter"
+										}
+									}
+								}
+							]
+						},
+						"strictness": {
+							"type": "string",
+							"value": "All"
+						}
+					}
+				},
+				"storage-1": {
+					"title": "Get Solution Data",
+					"connector": {
+						"name": "storage",
+						"version": "1.4"
+					},
+					"operation": "get",
+					"output_schema": {
+						"$schema": "http://json-schema.org/draft-04/schema#",
+						"type": "object",
+						"properties": {
+							"value": {
+								"type": "object",
+								"properties": {
+									"baseFolderID": {
+										"type": "string"
+									},
+									"baseURL": {
+										"type": "string"
+									},
+									"staticMetadata": {
+										"type": "object",
+										"properties": {
+											"staticMeta": {
+												"type": "object",
+												"properties": {
+													"metaproperty.6C2EA67D-9A96-4769-A743413AD87B32A9": {
+														"type": "string"
+													}
+												}
+											}
+										}
+									},
+									"brandID": {
+										"type": "string"
+									},
+									"supportedTypes": {
+										"type": "object",
+										"properties": {
+											"bynderTypes": {
+												"type": "array",
+												"items": {
+													"type": "string"
+												}
+											}
+										}
+									},
+									"metadataMap": {
+										"type": "array",
+										"items": {
+											"type": "object",
+											"properties": {
+												"options": {
+													"type": "array",
+													"items": {
+														"type": "string"
+													}
+												},
+												"id": {
+													"type": "string"
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+					"error_handling": {},
+					"properties": {
+						"scope": {
+							"type": "string",
+							"value": "Account"
+						},
+						"key": {
+							"type": "string",
+							"value": "dropboxWebdamSolutionData-{$.env.solution_instance_id or:'testBox'}"
+						},
+						"default_value": {
+							"type": "null",
+							"value": null
+						}
+					}
+				},
+				"boolean-condition-9": {
+					"title": "hasMore False?",
+					"connector": {
+						"name": "boolean-condition",
+						"version": "2.3"
+					},
+					"operation": "boolean_condition",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"conditions": {
+							"type": "array",
+							"value": [
+								{
+									"type": "object",
+									"value": {
+										"value1": {
+											"type": "jsonpath",
+											"value": "$.steps.dropbox-3.has_more"
+										},
+										"comparison_type": {
+											"type": "string",
+											"value": "==="
+										},
+										"value2": {
+											"type": "boolean",
+											"value": false
+										}
+									}
+								}
+							]
+						},
+						"strictness": {
+							"type": "string",
+							"value": "All"
+						}
+					}
+				},
+				"break-loop-1": {
+					"title": "Break Loop",
+					"connector": {
+						"name": "break-loop",
+						"version": "1.1"
+					},
+					"operation": "break",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {}
+				},
+				"storage-6": {
+					"title": "Add Folders to folderList",
+					"connector": {
+						"name": "storage",
+						"version": "1.4"
+					},
+					"operation": "append_to_list",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"scope": {
+							"type": "string",
+							"value": "Current Run"
+						},
+						"key": {
+							"type": "string",
+							"value": "folderList"
+						},
+						"value": {
+							"type": "jsonpath",
+							"value": "$.steps.json-transformer-1.result.folders"
+						},
+						"create_if_missing": {
+							"value": true,
+							"type": "boolean"
+						}
+					}
+				},
+				"call-workflow-4": {
+					"title": "Call Workflow",
+					"connector": {
+						"name": "call-workflow",
+						"version": "2.0"
+					},
+					"operation": "fire_and_forget",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"workflow_id": {
+							"type": "string",
+							"value": "0b333b7b-4d32-4baf-8499-c673a400881a"
+						},
+						"trigger_input": {
+							"type": "object",
+							"value": {
+								"assetData": {
+									"type": "jsonpath",
+									"value": "$.steps.loop-3.value"
+								},
+								"fileName": {
+									"type": "jsonpath",
+									"value": "$.steps.loop-3.value.name"
+								},
+								"solutionData": {
+									"type": "jsonpath",
+									"value": "$.steps.storage-1.value"
+								},
+								"metaPropertyMap": {
+									"type": "jsonpath",
+									"value": "$.steps.storage-1.value.staticMetadata.staticMeta"
+								},
+								"downloadURL": {
+									"type": "jsonpath",
+									"value": "$.steps.dropbox-4.file"
+								},
+								"boxFolderID": {
+									"type": "jsonpath",
+									"value": "$.steps.storage-1.value.baseFolderID"
+								},
+								"baseURL": {
+									"type": "jsonpath",
+									"value": "$.steps.storage-1.value.baseURL"
+								}
+							}
+						}
+					}
+				},
+				"storage-17": {
+					"title": "Get folderCount",
+					"connector": {
+						"name": "storage",
+						"version": "1.4"
+					},
+					"operation": "get",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"scope": {
+							"type": "string",
+							"value": "Account"
+						},
+						"key": {
+							"type": "string",
+							"value": "dropboxFolderCount-{$.env.solution_instance_id or:'testBox'}"
+						},
+						"default_value": {
+							"type": "null",
+							"value": null
+						}
+					}
+				},
+				"script-2": {
+					"title": "Remove Synced Files",
+					"connector": {
+						"name": "script",
+						"version": "3.3"
+					},
+					"operation": "execute",
+					"output_schema": {
+						"$schema": "http://json-schema.org/draft-04/schema#",
+						"type": "object",
+						"properties": {
+							"result": {
+								"type": "object",
+								"properties": {
+									"files": {
+										"type": "array",
+										"items": {
+											"type": "object",
+											"properties": {
+												"id": {
+													"type": "string"
+												},
+												"name": {
+													"type": "string"
+												},
+												"pathLower": {
+													"type": "string"
+												},
+												"extension": {
+													"type": "string"
+												}
+											},
+											"required": ["id", "name", "pathLower", "extension"]
+										}
+									},
+									"folders": {
+										"type": "array",
+										"items": {
+											"type": "object",
+											"properties": {
+												"id": {
+													"type": "string"
+												},
+												"name": {
+													"type": "string"
+												},
+												"pathLower": {
+													"type": "string"
+												}
+											},
+											"required": ["id", "name", "pathLower"]
+										}
+									}
+								}
+							},
+							"console": {
+								"type": "array",
+								"items": {}
+							}
+						}
+					},
+					"error_handling": {},
+					"properties": {
+						"variables": {
+							"type": "array",
+							"value": [
+								{
+									"type": "object",
+									"value": {
+										"name": {
+											"type": "string",
+											"value": "syncedAssets"
+										},
+										"value": {
+											"type": "jsonpath",
+											"value": "$.steps.storage-20.value"
+										}
+									}
+								},
+								{
+									"type": "object",
+									"value": {
+										"name": {
+											"type": "string",
+											"value": "fileList"
+										},
+										"value": {
+											"type": "jsonpath",
+											"value": "$.steps.json-transformer-2.result"
+										}
+									}
+								},
+								{
+									"type": "object",
+									"value": {
+										"name": {
+											"type": "string",
+											"value": "supportedTypes"
+										},
+										"value": {
+											"type": "jsonpath",
+											"value": "$.steps.storage-1.value.supportedTypes.bynderTypes"
+										}
+									}
+								}
+							]
+						},
+						"script": {
+							"type": "string",
+							"value": "exports.step = function (input) {\n  let fileList = input.fileList;\n  const syncedAssets = input.syncedAssets;\n  for (let i = 0; i < fileList.files.length; i++) {\n    let obj = fileList.files[i];\n\n    if (syncedAssets.indexOf(obj.id) !== -1) {\n      fileList.files.splice(i, 1);\n      i--;\n    }\n  }\n\n  for (var i = 0; i < fileList.files.length; i++) {\n    let obj = fileList.files[i];\n\n    if (input.supportedTypes.includes(obj.extension) === false) {\n        fileList.files.splice(i, 1);\n        i--;\n    }\n  }\n  return fileList;\n};"
+						},
+						"file_output": {
+							"type": "boolean",
+							"value": false
+						}
+					}
+				},
+				"boolean-condition-3": {
+					"title": "Boolean Condition",
+					"connector": {
+						"name": "boolean-condition",
+						"version": "2.3"
+					},
+					"operation": "boolean_condition",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"conditions": {
+							"type": "array",
+							"value": [
+								{
+									"type": "object",
+									"value": {
+										"value1": {
+											"type": "jsonpath",
+											"value": "$.steps.storage-9.value"
+										},
+										"comparison_type": {
+											"type": "string",
+											"value": ">"
+										},
+										"value2": {
+											"type": "jsonpath",
+											"value": "$.config.uploadLimiter"
+										}
+									}
+								}
+							]
+						},
+						"strictness": {
+							"type": "string",
+							"value": "All"
+						}
+					}
+				},
+				"boolean-condition-10": {
+					"title": "Boolean Condition",
+					"connector": {
+						"name": "boolean-condition",
+						"version": "2.3"
+					},
+					"operation": "boolean_condition",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {
+						"conditions": {
+							"type": "array",
+							"value": [
+								{
+									"type": "object",
+									"value": {
+										"value1": {
+											"type": "jsonpath",
+											"value": "$.config.includeSubfolders"
+										},
+										"comparison_type": {
+											"type": "string",
+											"value": "==="
+										},
+										"value2": {
+											"type": "boolean",
+											"value": true
+										}
+									}
+								}
+							]
+						},
+						"strictness": {
+							"type": "string",
+							"value": "All"
+						}
+					}
+				},
+				"json-transformer-1": {
+					"title": "JSON Transformer",
+					"connector": {
+						"name": "json-transformer",
+						"version": "1.0"
+					},
+					"operation": "transform",
+					"output_schema": {
+						"$schema": "http://json-schema.org/draft-04/schema#",
+						"type": "object",
+						"properties": {
+							"result": {
+								"type": "object",
+								"properties": {
+									"files": {
+										"type": "array",
+										"items": {
+											"type": "object",
+											"properties": {
+												"id": {
+													"type": "string"
+												},
+												"name": {
+													"type": "string"
+												},
+												"pathLower": {
+													"type": "string"
+												},
+												"extension": {
+													"type": "string"
+												}
+											},
+											"required": ["id", "name", "pathLower", "extension"]
+										}
+									},
+									"folders": {
+										"type": "array",
+										"items": {
+											"type": "object",
+											"properties": {
+												"id": {
+													"type": "string"
+												},
+												"name": {
+													"type": "string"
+												},
+												"pathLower": {
+													"type": "string"
+												}
+											},
+											"required": ["id", "name", "pathLower"]
+										}
+									}
+								}
+							}
+						}
+					},
+					"error_handling": {},
+					"properties": {
+						"query": {
+							"type": "string",
+							"value": "{\n    \"files\":[\n        entries[$contains(tag, \"file\")].{\n            \"id\": id,\n            \"name\": name,\n            \"pathLower\": path_lower,\n            \"extension\": $split(name, \".\")[-1]\n        }\n        ],\n    \"folders\": [\n        entries[$contains(tag, \"folder\")].{\n            \"id\": id,\n            \"name\": name,\n            \"pathLower\": path_lower\n        }\n    ]\n}"
+						},
+						"data": {
+							"type": "object",
+							"value": {
+								"entries": {
+									"type": "jsonpath",
+									"value": "$.steps.dropbox-1.entries"
+								}
+							}
+						}
+					}
+				},
+				"trigger": {
+					"title": "Callable Trigger",
+					"connector": {
+						"name": "callable-trigger",
+						"version": "2.0"
+					},
+					"operation": "trigger",
+					"output_schema": {},
+					"error_handling": {},
+					"properties": {}
+				}
+			},
+			"dependencies": [
+				{
+					"id": "0b333b7b-4d32-4baf-8499-c673a400881a",
+					"name": "[Bynder - Dropbox] Bynder Uploader"
+				},
+				{
+					"id": "ffa6d637-7785-4515-a1dc-aa762ac1545f",
+					"name": "[Bynder - Dropbox] Recursive Folder Crawler"
+				}
+			]
+		}
+	],
+	"projects": []
+}

@@ -44,12 +44,15 @@ const groupBuilder = function (stepAry, parent, lastNode, nextNode, endNode) {
 	with no action needed) then we create a placeholder node so eraser can draw a path through it.
 	*/
 
-	if (stepAry === []) {
+	if (stepAry.length === 0) {
 		res.push({
-			name: `emptyBranch-${parent}`,
+			name: `emptyPath-${lastNode}`,
+			type: "normal",
+			description: `emptyPath-${lastNode}`,
+			icon: `[icon: function]`,
 			parent: parent,
 			lastNode: lastNode,
-			nextNode: nextNode,
+			nextNode: [endNode],
 		});
 		return res;
 	} else {
@@ -59,6 +62,9 @@ const groupBuilder = function (stepAry, parent, lastNode, nextNode, endNode) {
 
 		for (let i = 0; i < stepAry.length; i++) {
 			if (stepAry[i].type === "normal" || stepAry[i].type === "break") {
+				if (stepAry[i].name === "graphql-client-1") {
+					console.log(nextNode, JSON.stringify(stepAry[i], null, 2));
+				}
 				/*
 				if a node is the last one in the array, then the value for next node needs to be the
 				next value from it's parent array.  This is brought into the function by the endNode parameter
@@ -113,7 +119,7 @@ const groupBuilder = function (stepAry, parent, lastNode, nextNode, endNode) {
 						parent: parent,
 						lastNode: lastNode,
 						nextNode: nextNode,
-						branch: groupBuilder(stepAry[i].content[key], stepAry[i - 1].name, lastNode, nextNode, endNode),
+						branch: groupBuilder(stepAry[i].content[key], parent, lastNode, nextNode, endNode),
 					});
 				}
 
@@ -136,6 +142,7 @@ the groupBuilder function.
 
 const getNextNode = function (obj, parent) {
 	let res = [];
+	//console.log(obj.name, parent);
 	if (obj === undefined) {
 		res.push("undefined");
 	} else if (obj.type === "normal" || obj.type === "break") {
@@ -226,11 +233,15 @@ array and formats it for eraser.io to connect the nodes.
 const connectionBuilder = function (ary) {
 	ary.forEach((el) => {
 		if (el.type === "normal" || el.type === "break") {
-			next = ``;
+			next = [];
 			el.nextNode.forEach((el) => {
-				next = `${next} ${flatStructure.find((item) => item.name === el)}`;
+				if (el === undefined) {
+					// skip
+				} else {
+					next.push(flatStructure.find((item) => item.name === el).description);
+				}
 			});
-			connectAry.push(`${el.description} > ${next}`);
+			connectAry.push(`${el.description} > ${next.join(", ")}`);
 		} else if (el.type === "branch" || el.type === "loop") {
 			connectionBuilder(el.branch);
 		}
@@ -289,6 +300,8 @@ const nodeFind = function (obj, key) {
 };
 
 const structure = groupBuilder(importJSON.workflows[0].steps_structure, importJSON.workflows[0].title);
+//console.log(JSON.stringify(structure, null, 2));
+
 const eraserNodes = `${importJSON.workflows[0].title} [color: purple] {
 	${nodeCrawler(structure, importJSON.workflows[0].title).join("\n")}
 }`;
