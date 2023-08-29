@@ -1,6 +1,6 @@
 const fs = require("fs");
 const _ = require("lodash");
-const importJSON = JSON.parse(fs.readFileSync(`/Users/billkeiffer/Git/TrayCode/EraserExport/Workflows/workflow_Structurizr-Export-Test.json`));
+const importJSON = JSON.parse(fs.readFileSync(`/Users/billkeiffer/Git/TrayCode/EraserExport/Workflows/workflow_[Bynder-Dropbox]-Sync-Master.json`));
 
 /*
 nodeAry holds the elements of the diagram globally.  Functions add to that array as they run,
@@ -47,9 +47,9 @@ const groupBuilder = function (stepAry, parent, lastNode, nextNode, endNode) {
 
 	if (stepAry.length === 0) {
 		res.push({
-			name: `emptyPath-${strReplace(parent)}`,
+			name: `emptyPath (${strReplace(parent)})`,
 			type: "normal",
-			description: `emptyPath-${strReplace(parent)}`,
+			description: `emptyPath (${strReplace(parent)})`,
 			icon: `[icon: function]`,
 			parent: parent,
 			lastNode: lastNode,
@@ -85,7 +85,7 @@ const groupBuilder = function (stepAry, parent, lastNode, nextNode, endNode) {
 
 				res.push({
 					...stepAry[i],
-					description: strReplace(importJSON.workflows[0].steps[stepAry[i].name].title),
+					description: `${strReplace(importJSON.workflows[0].steps[stepAry[i].name].title)} (${stepAry[i].name})`,
 					connector: importJSON.workflows[0].steps[stepAry[i].name].connector.name,
 					operation: importJSON.workflows[0].steps[stepAry[i].name].operation,
 					icon: `[icon: function]`,
@@ -111,7 +111,7 @@ const groupBuilder = function (stepAry, parent, lastNode, nextNode, endNode) {
 					res.push({
 						name: stepAry[i].name,
 						type: stepAry[i].type,
-						description: `${strReplace(importJSON.workflows[0].steps[stepAry[i].name].title)}-${key}`,
+						description: `${strReplace(importJSON.workflows[0].steps[stepAry[i].name].title)} (${stepAry[i].name}-${key})`,
 						connector: importJSON.workflows[0].steps[stepAry[i].name].connector.name,
 						operation: importJSON.workflows[0].steps[stepAry[i].name].operation,
 						icon: `[color: red]`,
@@ -164,7 +164,7 @@ Branches can be arbitrarily deep, so it recurses to get all the first nodes.
 const getFirstNode = function (stepAry, parent) {
 	let res = "";
 	if (stepAry.length === 0) {
-		res = `emptyPath-${strReplace(parent)}`;
+		res = `emptyPath (${strReplace(parent)})`;
 	} else if (_.head(stepAry).type === "loop" || _.head(stepAry).type === "branch") {
 		let keysAry = [];
 		Object.keys(_.head(stepAry).content).forEach((el) => {
@@ -235,9 +235,11 @@ const connectionBuilder = function (ary) {
 		if (el.type === "normal" || el.type === "break") {
 			next = [];
 			el.nextNode.forEach((el) => {
-				if (el === undefined) {
+				if (el === undefined || flatStructure.find((item) => item.name === el) === undefined) {
 					// skip
 				} else {
+					// console.log(el);
+					// console.log(flatStructure.find((item) => item.name === el) === undefined);
 					next.push(flatStructure.find((item) => item.name === el).description);
 				}
 			});
@@ -303,7 +305,7 @@ const nodeFind = function (obj, key) {
 const structure = groupBuilder(importJSON.workflows[0].steps_structure, strReplace(importJSON.workflows[0].title));
 // console.log(JSON.stringify(structure, null, 2));
 
-const eraserNodes = `${importJSON.workflows[0].title} [color: purple] {
+const eraserNodes = `${strReplace(importJSON.workflows[0].title)} [color: purple] {
 	${nodeCrawler(structure, importJSON.workflows[0].title).join("\n")}
 }`;
 const flatStructure = deepFlat(structure);
