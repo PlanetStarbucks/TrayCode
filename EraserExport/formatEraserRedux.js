@@ -1,6 +1,6 @@
 const fs = require("fs");
 const _ = require("lodash");
-const importJSON = JSON.parse(fs.readFileSync(`/Users/billkeiffer/Git/TrayCode/EraserExport/Workflows/workflow_Structurizr-Export-Test.json`));
+const importJSON = JSON.parse(fs.readFileSync(`/Users/billkeiffer/Git/TrayCode/EraserExport/Workflows/workflow_Adobe-Stock-Keyword-Generator.json`));
 
 /*
 nodeAry holds the elements of the diagram globally.  Functions add to that array as they run,
@@ -39,6 +39,7 @@ endNode: the name of the node that would be at the end of the branch being crawl
 const groupBuilder = function (stepAry, parent, lastNode, nextNode, endNode) {
 	let res = [];
 	let resetNode = endNode;
+
 	/*
 	In the case where a branch is called, but that branch has no nodes (i.e. a false branch
 	with no action needed) then we create a placeholder node so eraser can draw a path through it.
@@ -62,9 +63,6 @@ const groupBuilder = function (stepAry, parent, lastNode, nextNode, endNode) {
 
 		for (let i = 0; i < stepAry.length; i++) {
 			if (stepAry[i].type === "normal" || stepAry[i].type === "break") {
-				if (stepAry[i].name === "graphql-client-1") {
-					console.log(nextNode, JSON.stringify(stepAry[i], null, 2));
-				}
 				/*
 				if a node is the last one in the array, then the value for next node needs to be the
 				next value from it's parent array.  This is brought into the function by the endNode parameter
@@ -103,6 +101,7 @@ const groupBuilder = function (stepAry, parent, lastNode, nextNode, endNode) {
 				array, then it should pass in the endNode of the parent for the last node to connect to
 				*/
 
+				nextNode = getNextNode(stepAry[i + 1], parent);
 				endNode = stepAry[i + 1] === undefined ? endNode : stepAry[i + 1].name;
 
 				//a for...in loop to go through any number of branches the node may have.
@@ -142,13 +141,14 @@ the groupBuilder function.
 
 const getNextNode = function (obj, parent) {
 	let res = [];
-	//console.log(obj.name, parent);
 	if (obj === undefined) {
 		res.push("undefined");
 	} else if (obj.type === "normal" || obj.type === "break") {
 		res.push(obj.name);
 	} else if (obj.type === "loop" || obj.type === "branch") {
 		for (const key in obj.content) {
+			if (obj.name === "loop-1") {
+			}
 			res.push(getFirstNode(obj.content[key], parent));
 		}
 	}
@@ -166,11 +166,12 @@ const getFirstNode = function (stepAry, parent) {
 	if (stepAry.length === 0) {
 		res = `emptyPath-${parent}`;
 	} else if (_.head(stepAry).type === "loop" || _.head(stepAry).type === "branch") {
-		let ary = [];
+		let keysAry = [];
+
 		Object.keys(_.head(stepAry).content).forEach((el) => {
-			ary.push(getFirstNode(el));
+			keysAry.push(getFirstNode(stepAry[0].content[el], parent));
 		});
-		res = ary;
+		res = keysAry.join(", ");
 	} else if (_.head(stepAry).type === "normal" || _.head(stepAry).type === "break") {
 		res = _.head(stepAry).name;
 	}
@@ -310,7 +311,7 @@ const connections = connectionBuilder(structure).join("\n");
 console.log(eraserNodes);
 console.log(connections);
 
-//console.log(nodeAry);
+//onsole.log(nodeAry);
 
 //console.log(connectionBuilder(importJSON.workflows[0].steps_structure, strReplace(importJSON.workflows[0].steps_structure[0].name), 0));
 //console.log(modelBuilder(importJSON.workflows[0].steps_structure))
