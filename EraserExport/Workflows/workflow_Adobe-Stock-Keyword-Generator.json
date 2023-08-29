@@ -1,612 +1,580 @@
- {
-  "tray_export_version": 4,
-  "export_type": "workflow",
-  "workflows": [
-    {
-      "id": "a0acf960-0801-4e7d-b8e1-2ac5831e54c8",
-      "created": "2022-08-22T15:52:17.327854Z",
-      "workspace_id": "139e4592-3b78-46ad-885b-bc64d04d3bed",
-      "project_id": "325733e9-d11c-4f74-ae45-2aa8ea782c3b",
-      "group": "3d87ce69-93c1-470a-97f6-35f1aaecd3a9",
-      "creator": "139e4592-3b78-46ad-885b-bc64d04d3bed",
-      "version": {
-        "id": "b30bc199-437f-4ad5-b46c-bcfccea5d86e",
-        "created": "2022-08-25T17:40:14.231065Z"
-      },
-      "title": "Adobe Stock Keyword Generator",
-      "enabled": true,
-      "tags": [],
-      "settings": {
-        "config": {
-          "syncVector": true,
-          "syncVideo": true,
-          "syncOrganization": "true",
-          "accountCredentials": "{\"CLIENT_SECRET\":\"p8e-HRu6yLAootQZLCTi9yIuXe_imXPLpeqo\",\"ORG_ID\":\"B22442B959EA26570A495EC7@AdobeOrg\",\"API_KEY\":\"eff2ff028e324868b0f32e773e3966cc\",\"TECHNICAL_ACCOUNT_ID\":\"F780157F62FD41310A495FC7@techacct.adobe.com\",\"TECHNICAL_ACCOUNT_EMAIL\":\"f5df7389-bb24-47ad-9dc2-e59bab8cb301@techacct.adobe.com\",\"PUBLIC_KEYS_WITH_EXPIRY\":{\"12e50b2d16b39ea42650a0e798054a88518606a4\":\"08/17/2023\",\"613cdacb4adb6758a0a8141d8459da61fae2f9f8\":\"08/18/2023\"}}",
-          "offsetSize": "100",
-          "waitingRoom": false
-        },
-        "input_schema": {},
-        "output_schema": {}
-      },
-      "steps_structure": [
-        {
-          "name": "trigger",
-          "type": "normal",
-          "content": {}
-        },
-        {
-          "name": "storage-1",
-          "type": "normal",
-          "content": {}
-        },
-        {
-          "name": "http-client-1",
-          "type": "normal",
-          "content": {}
-        },
-        {
-          "name": "list-helpers-1",
-          "type": "normal",
-          "content": {}
-        },
-        {
-          "name": "boolean-condition-1",
-          "type": "branch",
-          "content": {
-            "true": [
-              {
-                "name": "loop-1",
-                "type": "loop",
-                "content": {
-                  "_loop": [
-                    {
-                      "name": "storage-2",
-                      "type": "normal",
-                      "content": {}
-                    }
-                  ]
-                }
-              }
-            ],
-            "false": [
-              {
-                "name": "storage-4",
-                "type": "normal",
-                "content": {}
-              }
-            ]
-          }
-        },
-        {
-          "name": "storage-3",
-          "type": "normal",
-          "content": {}
-        },
-        {
-          "name": "callable-workflow-response-1",
-          "type": "normal",
-          "content": {}
-        }
-      ],
-      "steps": {
-        "storage-2": {
-          "title": "Add Keyword to Keyword List",
-          "connector": {
-            "name": "storage",
-            "version": "1.4"
-          },
-          "operation": "append_to_list",
-          "output_schema": {},
-          "error_handling": {},
-          "properties": {
-            "scope": {
-              "type": "string",
-              "value": "Current Run"
-            },
-            "key": {
-              "type": "string",
-              "value": "imageKeywordArray"
-            },
-            "value": {
-              "type": "jsonpath",
-              "value": "$.steps.loop-1.value.name"
-            }
-          }
-        },
-        "callable-workflow-response-1": {
-          "title": "Callable response",
-          "connector": {
-            "name": "callable-workflow-response",
-            "version": "1.0"
-          },
-          "operation": "response",
-          "output_schema": {},
-          "error_handling": {},
-          "properties": {
-            "response": {
-              "type": "jsonpath",
-              "value": "$.steps.storage-3.value"
-            }
-          }
-        },
-        "storage-3": {
-          "title": "Get Keyword List",
-          "connector": {
-            "name": "storage",
-            "version": "1.4"
-          },
-          "operation": "get",
-          "output_schema": {},
-          "error_handling": {},
-          "properties": {
-            "scope": {
-              "type": "string",
-              "value": "Current Run"
-            },
-            "key": {
-              "type": "string",
-              "value": "imageKeywordArray"
-            },
-            "default_value": {
-              "type": "null",
-              "value": null
-            }
-          }
-        },
-        "boolean-condition-1": {
-          "title": "Boolean Condition",
-          "connector": {
-            "name": "boolean-condition",
-            "version": "2.3"
-          },
-          "operation": "boolean_condition",
-          "output_schema": {},
-          "error_handling": {},
-          "properties": {
-            "conditions": {
-              "type": "array",
-              "value": [
-                {
-                  "type": "object",
-                  "value": {
-                    "value1": {
-                      "type": "jsonpath",
-                      "value": "$.steps.list-helpers-1.result"
-                    },
-                    "comparison_type": {
-                      "type": "string",
-                      "value": "!=="
-                    },
-                    "value2": {
-                      "type": "number",
-                      "value": 0
-                    }
-                  }
-                }
-              ]
-            },
-            "strictness": {
-              "type": "string",
-              "value": "All"
-            }
-          }
-        },
-        "storage-1": {
-          "title": "Create Keyword List",
-          "connector": {
-            "name": "storage",
-            "version": "1.4"
-          },
-          "operation": "append_to_list",
-          "output_schema": {},
-          "error_handling": {},
-          "properties": {
-            "scope": {
-              "type": "string",
-              "value": "Current Run"
-            },
-            "key": {
-              "type": "string",
-              "value": "imageKeywordArray"
-            },
-            "value": {
-              "type": "array",
-              "value": [
-                {
-                  "type": "string",
-                  "value": "Adobe Stock"
-                },
-                {
-                  "type": "jsonpath",
-                  "value": "$.steps.trigger.data.stockID"
-                }
-              ]
-            },
-            "create_if_missing": {
-              "value": true,
-              "type": "boolean"
-            }
-          }
-        },
-        "trigger": {
-          "title": "Callable Trigger",
-          "connector": {
-            "name": "callable-trigger",
-            "version": "2.0"
-          },
-          "operation": "trigger_and_respond",
-          "output_schema": {
-            "$schema": "http://json-schema.org/draft-04/schema#",
-            "type": "object",
-            "properties": {
-              "data": {
-                "type": "object",
-                "properties": {
-                  "bearer": {
-                    "type": "string"
-                  },
-                  "stockID": {
-                    "type": "number"
-                  }
-                }
-              },
-              "#calling_workflow": {
-                "type": "string"
-              },
-              "#calling_execution": {
-                "type": "string"
-              },
-              "#calling_execution_log_url": {
-                "type": "string"
-              }
-            }
-          },
-          "error_handling": {},
-          "properties": {}
-        },
-        "loop-1": {
-          "title": "Loop Collection",
-          "connector": {
-            "name": "loop",
-            "version": "1.3"
-          },
-          "operation": "loop_array",
-          "output_schema": {
-            "$schema": "http://json-schema.org/draft-04/schema#",
-            "type": "object",
-            "properties": {
-              "value": {},
-              "count": {
-                "type": "number"
-              },
-              "index": {
-                "type": "number"
-              },
-              "is_first": {
-                "type": "boolean"
-              },
-              "is_last": {
-                "type": "boolean"
-              },
-              "branch_name": {
-                "type": "string"
-              }
-            }
-          },
-          "error_handling": {},
-          "properties": {
-            "array": {
-              "type": "jsonpath",
-              "value": "$.steps.http-client-1.response.body.files[0].keywords"
-            }
-          }
-        },
-        "storage-4": {
-          "title": "Add Null Keyword",
-          "connector": {
-            "name": "storage",
-            "version": "1.4"
-          },
-          "operation": "append_to_list",
-          "output_schema": {},
-          "error_handling": {},
-          "properties": {
-            "scope": {
-              "type": "string",
-              "value": "Current Run"
-            },
-            "key": {
-              "type": "string",
-              "value": "imageKeywordArray"
-            },
-            "value": {
-              "type": "string",
-              "value": "no keywords"
-            }
-          }
-        },
-        "http-client-1": {
-          "title": "Get Image Keywords",
-          "connector": {
-            "name": "http-client",
-            "version": "5.5"
-          },
-          "operation": "get_request",
-          "output_schema": {
-            "$schema": "http://json-schema.org/draft-04/schema#",
-            "type": "object",
-            "properties": {
-              "response": {
-                "type": "object",
-                "properties": {
-                  "status_code": {
-                    "type": "number"
-                  },
-                  "headers": {
-                    "type": "object",
-                    "properties": {
-                      "server": {
-                        "type": "string"
-                      },
-                      "date": {
-                        "type": "string"
-                      },
-                      "content-type": {
-                        "type": "string"
-                      },
-                      "transfer-encoding": {
-                        "type": "string"
-                      },
-                      "connection": {
-                        "type": "string"
-                      },
-                      "expires": {
-                        "type": "string"
-                      },
-                      "cache-control": {
-                        "type": "string"
-                      },
-                      "pragma": {
-                        "type": "string"
-                      },
-                      "x-request-id": {
-                        "type": "string"
-                      },
-                      "access-control-allow-methods": {
-                        "type": "string"
-                      },
-                      "access-control-allow-origin": {
-                        "type": "string"
-                      },
-                      "access-control-expose-headers": {
-                        "type": "string"
-                      },
-                      "access-control-allow-credentials": {
-                        "type": "string"
-                      },
-                      "access-control-max-age": {
-                        "type": "string"
-                      },
-                      "allow": {
-                        "type": "string"
-                      },
-                      "x-content-type-options": {
-                        "type": "string"
-                      },
-                      "x-xss-protection": {
-                        "type": "string"
-                      },
-                      "accept-ranges": {
-                        "type": "string"
-                      },
-                      "via": {
-                        "type": "string"
-                      },
-                      "x-served-by": {
-                        "type": "string"
-                      },
-                      "x-cache": {
-                        "type": "string"
-                      },
-                      "x-cache-hits": {
-                        "type": "string"
-                      },
-                      "x-timer": {
-                        "type": "string"
-                      },
-                      "vary": {
-                        "type": "string"
-                      }
-                    }
-                  },
-                  "body": {
-                    "type": "object",
-                    "properties": {
-                      "files": {
-                        "type": "array",
-                        "items": {
-                          "type": "object",
-                          "properties": {
-                            "keywords": {
-                              "type": "array",
-                              "items": {
-                                "type": "object",
-                                "properties": {
-                                  "name": {
-                                    "type": "string"
-                                  }
-                                },
-                                "required": [
-                                  "name"
-                                ]
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "error_handling": {},
-          "properties": {
-            "auth": {
-              "type": "object",
-              "value": {
-                "none": {
-                  "type": "null",
-                  "value": null
-                }
-              }
-            },
-            "follow_redirect": {
-              "type": "boolean",
-              "value": true
-            },
-            "follow_keep_method": {
-              "type": "boolean",
-              "value": false
-            },
-            "reject_unauthorized": {
-              "type": "boolean",
-              "value": true
-            },
-            "follow_authorization_header": {
-              "type": "boolean",
-              "value": false
-            },
-            "parse_response": {
-              "type": "string",
-              "value": "true"
-            },
-            "status_code": {
-              "type": "object",
-              "value": {
-                "range": {
-                  "type": "object",
-                  "value": {
-                    "from": {
-                      "type": "integer",
-                      "value": 200
-                    },
-                    "to": {
-                      "type": "integer",
-                      "value": 299
-                    }
-                  }
-                }
-              }
-            },
-            "case_sensitive_headers": {
-              "type": "boolean",
-              "value": false
-            },
-            "url": {
-              "type": "string",
-              "value": "https://stock.adobe.io/Rest/Media/1/Files"
-            },
-            "headers": {
-              "type": "array",
-              "value": [
-                {
-                  "type": "object",
-                  "value": {
-                    "key": {
-                      "type": "string",
-                      "value": "x-api-key"
-                    },
-                    "value": {
-                      "type": "jsonpath",
-                      "value": "$.steps.trigger.data.apiKey"
-                    }
-                  }
-                },
-                {
-                  "type": "object",
-                  "value": {
-                    "key": {
-                      "type": "string",
-                      "value": "X-Product"
-                    },
-                    "value": {
-                      "type": "string",
-                      "value": "BynderSync"
-                    }
-                  }
-                },
-                {
-                  "type": "object",
-                  "value": {
-                    "key": {
-                      "type": "string",
-                      "value": "Authorization"
-                    },
-                    "value": {
-                      "type": "string",
-                      "value": "Bearer {$.steps.trigger.data.bearer}"
-                    }
-                  }
-                }
-              ]
-            },
-            "return_response_as_file": {
-              "value": false,
-              "type": "boolean"
-            },
-            "queries": {
-              "type": "array",
-              "value": [
-                {
-                  "type": "object",
-                  "value": {
-                    "key": {
-                      "type": "string",
-                      "value": "ids"
-                    },
-                    "value": {
-                      "type": "jsonpath",
-                      "value": "$.steps.trigger.data.stockID"
-                    }
-                  }
-                },
-                {
-                  "type": "object",
-                  "value": {
-                    "key": {
-                      "type": "string",
-                      "value": "result_columns[]"
-                    },
-                    "value": {
-                      "type": "string",
-                      "value": "keywords"
-                    }
-                  }
-                }
-              ]
-            }
-          }
-        },
-        "list-helpers-1": {
-          "title": "List Helpers",
-          "connector": {
-            "name": "list-helpers",
-            "version": "2.1"
-          },
-          "operation": "count_items",
-          "output_schema": {},
-          "error_handling": {},
-          "properties": {
-            "list": {
-              "type": "jsonpath",
-              "value": "$.steps.http-client-1.response.body.files"
-            }
-          }
-        }
-      },
-      "dependencies": []
-    }
-  ],
-  "projects": []
-}
+[
+	{
+		"name": "trigger",
+		"type": "normal",
+		"content": {},
+		"description": "Scheduled Trigger",
+		"connector": "scheduled",
+		"operation": "simple",
+		"icon": "[icon: function]",
+		"parent": "[Bynder - Monday] Sync Master",
+		"lastNode": "[Bynder - Monday] Sync Master",
+		"nextNode": ["storage-4"],
+		"branch": []
+	},
+	{
+		"name": "storage-4",
+		"type": "normal",
+		"content": {},
+		"description": "Get solutionData",
+		"connector": "storage",
+		"operation": "get",
+		"icon": "[icon: function]",
+		"parent": "[Bynder - Monday] Sync Master",
+		"lastNode": "trigger",
+		"nextNode": ["date-time-helpers-2"],
+		"branch": []
+	},
+	{
+		"name": "date-time-helpers-2",
+		"type": "normal",
+		"content": {},
+		"description": "Get Current Time",
+		"connector": "date-time-helpers",
+		"operation": "current_timestamp",
+		"icon": "[icon: function]",
+		"parent": "[Bynder - Monday] Sync Master",
+		"lastNode": "storage-4",
+		"nextNode": ["storage-1"],
+		"branch": []
+	},
+	{
+		"name": "storage-1",
+		"type": "normal",
+		"content": {},
+		"description": "Get lastRunTime",
+		"connector": "storage",
+		"operation": "get",
+		"icon": "[icon: function]",
+		"parent": "[Bynder - Monday] Sync Master",
+		"lastNode": "date-time-helpers-2",
+		"nextNode": ["date-time-helpers-1"],
+		"branch": []
+	},
+	{
+		"name": "date-time-helpers-1",
+		"type": "normal",
+		"content": {},
+		"description": "Convert to ISO 8601",
+		"connector": "date-time-helpers",
+		"operation": "format",
+		"icon": "[icon: function]",
+		"parent": "[Bynder - Monday] Sync Master",
+		"lastNode": "storage-1",
+		"nextNode": ["call-workflow-1", "emptyPath-[Bynder - Monday] Sync Master"],
+		"branch": []
+	},
+	{
+		"name": "boolean-condition-4",
+		"type": "branch",
+		"description": "Boolean Condition-true",
+		"connector": "boolean-condition",
+		"operation": "boolean_condition",
+		"icon": "[color: red]",
+		"parent": "[Bynder - Monday] Sync Master",
+		"lastNode": "storage-1",
+		"nextNode": ["storage-5"],
+		"branch": [
+			{
+				"name": "call-workflow-1",
+				"type": "normal",
+				"content": {},
+				"description": "This doesn't work yet",
+				"connector": "call-workflow",
+				"operation": "fire_and_wait_for_response",
+				"icon": "[icon: function]",
+				"parent": "[Bynder - Monday] Sync Master",
+				"lastNode": "[Bynder - Monday] Sync Master",
+				"nextNode": ["storage-5"],
+				"branch": []
+			}
+		]
+	},
+	{
+		"name": "boolean-condition-4",
+		"type": "branch",
+		"description": "Boolean Condition-false",
+		"connector": "boolean-condition",
+		"operation": "boolean_condition",
+		"icon": "[color: red]",
+		"parent": "[Bynder - Monday] Sync Master",
+		"lastNode": "storage-1",
+		"nextNode": ["storage-5"],
+		"branch": [
+			{
+				"name": "emptyPath-storage-1",
+				"type": "normal",
+				"description": "emptyPath-storage-1",
+				"icon": "[icon: function]",
+				"parent": "[Bynder - Monday] Sync Master",
+				"lastNode": "storage-1",
+				"nextNode": ["storage-5"]
+			}
+		]
+	},
+	{
+		"name": "storage-5",
+		"type": "normal",
+		"content": {},
+		"description": "Set New lastRunTime",
+		"connector": "storage",
+		"operation": "set",
+		"icon": "[icon: function]",
+		"parent": "[Bynder - Monday] Sync Master",
+		"lastNode": "boolean-condition-4",
+		"nextNode": ["storage-2"],
+		"branch": []
+	},
+	{
+		"name": "storage-2",
+		"type": "normal",
+		"content": {},
+		"description": "Init pageCount",
+		"connector": "storage",
+		"operation": "set",
+		"icon": "[icon: function]",
+		"parent": "[Bynder - Monday] Sync Master",
+		"lastNode": "storage-5",
+		"nextNode": ["storage-3"],
+		"branch": []
+	},
+	{
+		"name": "loop-2",
+		"type": "loop",
+		"description": "Loop Until End-_loop",
+		"connector": "loop",
+		"operation": "loop_forever",
+		"icon": "[color: red]",
+		"parent": "[Bynder - Monday] Sync Master",
+		"lastNode": "storage-5",
+		"nextNode": ["storage-12"],
+		"branch": [
+			{
+				"name": "storage-3",
+				"type": "normal",
+				"content": {},
+				"description": "Increment pageCount",
+				"connector": "storage",
+				"operation": "atomic_increment",
+				"icon": "[icon: function]",
+				"parent": "[Bynder - Monday] Sync Master",
+				"lastNode": "[Bynder - Monday] Sync Master",
+				"nextNode": ["graphql-client-1"],
+				"branch": []
+			},
+			{
+				"name": "graphql-client-1",
+				"type": "normal",
+				"content": {},
+				"description": "Get Events from lastRunTime",
+				"connector": "graphql-client",
+				"operation": "raw_query",
+				"icon": "[icon: function]",
+				"parent": "[Bynder - Monday] Sync Master",
+				"lastNode": "storage-3",
+				"nextNode": ["break-loop-1", "object-helpers-1"],
+				"branch": []
+			},
+			{
+				"name": "boolean-condition-2",
+				"type": "branch",
+				"description": "Events === Empty ? End Loop-true",
+				"connector": "boolean-condition",
+				"operation": "boolean_condition",
+				"icon": "[color: red]",
+				"parent": "[Bynder - Monday] Sync Master",
+				"lastNode": "storage-3",
+				"nextNode": ["undefined"],
+				"branch": [
+					{
+						"name": "break-loop-1",
+						"type": "break",
+						"content": {},
+						"target": "loop-2",
+						"description": "Break Loop",
+						"connector": "break-loop",
+						"operation": "break",
+						"icon": "[icon: function]",
+						"parent": "[Bynder - Monday] Sync Master",
+						"lastNode": "[Bynder - Monday] Sync Master",
+						"nextNode": ["storage-12"],
+						"branch": []
+					}
+				]
+			},
+			{
+				"name": "boolean-condition-2",
+				"type": "branch",
+				"description": "Events === Empty ? End Loop-false",
+				"connector": "boolean-condition",
+				"operation": "boolean_condition",
+				"icon": "[color: red]",
+				"parent": "[Bynder - Monday] Sync Master",
+				"lastNode": "storage-3",
+				"nextNode": ["undefined"],
+				"branch": [
+					{
+						"name": "loop-1",
+						"type": "loop",
+						"description": "Loop Events-_loop",
+						"connector": "loop",
+						"operation": "loop_array",
+						"icon": "[color: red]",
+						"parent": "[Bynder - Monday] Sync Master",
+						"lastNode": "storage-3",
+						"nextNode": ["undefined"],
+						"branch": [
+							{
+								"name": "object-helpers-1",
+								"type": "normal",
+								"content": {},
+								"description": "Objectify Event Data",
+								"connector": "object-helpers",
+								"operation": "json_parse",
+								"icon": "[icon: function]",
+								"parent": "[Bynder - Monday] Sync Master",
+								"lastNode": "[Bynder - Monday] Sync Master",
+								"nextNode": ["graphql-client-2", "emptyPath-[Bynder - Monday] Sync Master"],
+								"branch": []
+							},
+							{
+								"name": "boolean-condition-1",
+								"type": "branch",
+								"description": "Check Trigger Condition-true",
+								"connector": "boolean-condition",
+								"operation": "boolean_condition",
+								"icon": "[color: red]",
+								"parent": "[Bynder - Monday] Sync Master",
+								"lastNode": "[Bynder - Monday] Sync Master",
+								"nextNode": ["undefined"],
+								"branch": [
+									{
+										"name": "graphql-client-2",
+										"type": "normal",
+										"content": {},
+										"description": "Get Asset and Item Data",
+										"connector": "graphql-client",
+										"operation": "raw_query",
+										"icon": "[icon: function]",
+										"parent": "[Bynder - Monday] Sync Master",
+										"lastNode": "[Bynder - Monday] Sync Master",
+										"nextNode": ["list-helpers-1", "storage-9"],
+										"branch": []
+									},
+									{
+										"name": "boolean-condition-5",
+										"type": "branch",
+										"description": "Include Assets in Updates?-true",
+										"connector": "boolean-condition",
+										"operation": "boolean_condition",
+										"icon": "[color: red]",
+										"parent": "[Bynder - Monday] Sync Master",
+										"lastNode": "[Bynder - Monday] Sync Master",
+										"nextNode": ["storage-11"],
+										"branch": [
+											{
+												"name": "list-helpers-1",
+												"type": "normal",
+												"content": {},
+												"description": "Join Asset Lists",
+												"connector": "list-helpers",
+												"operation": "concatenate",
+												"icon": "[icon: function]",
+												"parent": "[Bynder - Monday] Sync Master",
+												"lastNode": "[Bynder - Monday] Sync Master",
+												"nextNode": ["storage-10"],
+												"branch": []
+											},
+											{
+												"name": "storage-10",
+												"type": "normal",
+												"content": {},
+												"description": "Set Asset List",
+												"connector": "storage",
+												"operation": "set",
+												"icon": "[icon: function]",
+												"parent": "[Bynder - Monday] Sync Master",
+												"lastNode": "list-helpers-1",
+												"nextNode": ["storage-11"],
+												"branch": []
+											}
+										]
+									},
+									{
+										"name": "boolean-condition-5",
+										"type": "branch",
+										"description": "Include Assets in Updates?-false",
+										"connector": "boolean-condition",
+										"operation": "boolean_condition",
+										"icon": "[color: red]",
+										"parent": "[Bynder - Monday] Sync Master",
+										"lastNode": "[Bynder - Monday] Sync Master",
+										"nextNode": ["storage-11"],
+										"branch": [
+											{
+												"name": "storage-9",
+												"type": "normal",
+												"content": {},
+												"description": "Set Asset List",
+												"connector": "storage",
+												"operation": "set",
+												"icon": "[icon: function]",
+												"parent": "[Bynder - Monday] Sync Master",
+												"lastNode": "[Bynder - Monday] Sync Master",
+												"nextNode": ["storage-11"],
+												"branch": []
+											}
+										]
+									},
+									{
+										"name": "storage-11",
+										"type": "normal",
+										"content": {},
+										"description": "Get Asset List",
+										"connector": "storage",
+										"operation": "get",
+										"icon": "[icon: function]",
+										"parent": "[Bynder - Monday] Sync Master",
+										"lastNode": "boolean-condition-5",
+										"nextNode": ["script-1"],
+										"branch": []
+									},
+									{
+										"name": "loop-3",
+										"type": "loop",
+										"description": "Loop Assets-_loop",
+										"connector": "loop",
+										"operation": "loop_array",
+										"icon": "[color: red]",
+										"parent": "[Bynder - Monday] Sync Master",
+										"lastNode": "boolean-condition-5",
+										"nextNode": ["undefined"],
+										"branch": [
+											{
+												"name": "script-1",
+												"type": "normal",
+												"content": {},
+												"description": "Format Metadata",
+												"connector": "script",
+												"operation": "execute",
+												"icon": "[icon: function]",
+												"parent": "[Bynder - Monday] Sync Master",
+												"lastNode": "[Bynder - Monday] Sync Master",
+												"nextNode": ["json-transformer-1"],
+												"branch": []
+											},
+											{
+												"name": "json-transformer-1",
+												"type": "normal",
+												"content": {},
+												"description": "Split Metadata to Array",
+												"connector": "json-transformer",
+												"operation": "transform",
+												"icon": "[icon: function]",
+												"parent": "[Bynder - Monday] Sync Master",
+												"lastNode": "script-1",
+												"nextNode": ["script-2"],
+												"branch": []
+											},
+											{
+												"name": "script-2",
+												"type": "normal",
+												"content": {},
+												"description": "Create bynderUploadObj",
+												"connector": "script",
+												"operation": "execute",
+												"icon": "[icon: function]",
+												"parent": "[Bynder - Monday] Sync Master",
+												"lastNode": "json-transformer-1",
+												"nextNode": ["file-helpers-1"],
+												"branch": []
+											},
+											{
+												"name": "file-helpers-1",
+												"type": "normal",
+												"content": {},
+												"description": "Get Asset",
+												"connector": "file-helpers",
+												"operation": "create_file",
+												"icon": "[icon: function]",
+												"parent": "[Bynder - Monday] Sync Master",
+												"lastNode": "script-2",
+												"nextNode": ["storage-7"],
+												"branch": []
+											},
+											{
+												"name": "storage-7",
+												"type": "normal",
+												"content": {},
+												"description": "Get Asset Data",
+												"connector": "storage",
+												"operation": "get",
+												"icon": "[icon: function]",
+												"parent": "[Bynder - Monday] Sync Master",
+												"lastNode": "file-helpers-1",
+												"nextNode": ["bynder-3, bynder-4", "bynder-1"],
+												"branch": []
+											},
+											{
+												"name": "boolean-condition-3",
+												"type": "branch",
+												"description": "Asset Already Uploaded-true",
+												"connector": "boolean-condition",
+												"operation": "boolean_condition",
+												"icon": "[color: red]",
+												"parent": "[Bynder - Monday] Sync Master",
+												"lastNode": "file-helpers-1",
+												"nextNode": ["undefined"],
+												"branch": [
+													{
+														"name": "bynder-2",
+														"type": "branch",
+														"description": "Check Bynder Asset-error",
+														"connector": "bynder",
+														"operation": "get_asset",
+														"icon": "[color: red]",
+														"parent": "[Bynder - Monday] Sync Master",
+														"lastNode": "file-helpers-1",
+														"nextNode": ["undefined"],
+														"branch": [
+															{
+																"name": "bynder-3",
+																"type": "normal",
+																"content": {},
+																"description": "Upload to Bynder",
+																"connector": "bynder",
+																"operation": "upload_asset",
+																"icon": "[icon: function]",
+																"parent": "[Bynder - Monday] Sync Master",
+																"lastNode": "[Bynder - Monday] Sync Master",
+																"nextNode": ["storage-8"],
+																"branch": []
+															},
+															{
+																"name": "storage-8",
+																"type": "normal",
+																"content": {},
+																"description": "Save Asset Data",
+																"connector": "storage",
+																"operation": "set",
+																"icon": "[icon: function]",
+																"parent": "[Bynder - Monday] Sync Master",
+																"lastNode": "bynder-3",
+																"nextNode": ["storage-12"],
+																"branch": []
+															}
+														]
+													},
+													{
+														"name": "bynder-2",
+														"type": "branch",
+														"description": "Check Bynder Asset-success",
+														"connector": "bynder",
+														"operation": "get_asset",
+														"icon": "[color: red]",
+														"parent": "[Bynder - Monday] Sync Master",
+														"lastNode": "file-helpers-1",
+														"nextNode": ["undefined"],
+														"branch": [
+															{
+																"name": "bynder-4",
+																"type": "normal",
+																"content": {},
+																"description": "Upload as Version",
+																"connector": "bynder",
+																"operation": "upload_asset",
+																"icon": "[icon: function]",
+																"parent": "[Bynder - Monday] Sync Master",
+																"lastNode": "[Bynder - Monday] Sync Master",
+																"nextNode": ["storage-12"],
+																"branch": []
+															}
+														]
+													}
+												]
+											},
+											{
+												"name": "boolean-condition-3",
+												"type": "branch",
+												"description": "Asset Already Uploaded-false",
+												"connector": "boolean-condition",
+												"operation": "boolean_condition",
+												"icon": "[color: red]",
+												"parent": "[Bynder - Monday] Sync Master",
+												"lastNode": "file-helpers-1",
+												"nextNode": ["undefined"],
+												"branch": [
+													{
+														"name": "bynder-1",
+														"type": "normal",
+														"content": {},
+														"description": "Upload to Bynder",
+														"connector": "bynder",
+														"operation": "upload_asset",
+														"icon": "[icon: function]",
+														"parent": "[Bynder - Monday] Sync Master",
+														"lastNode": "[Bynder - Monday] Sync Master",
+														"nextNode": ["storage-6"],
+														"branch": []
+													},
+													{
+														"name": "storage-6",
+														"type": "normal",
+														"content": {},
+														"description": "Save Asset Data",
+														"connector": "storage",
+														"operation": "set",
+														"icon": "[icon: function]",
+														"parent": "[Bynder - Monday] Sync Master",
+														"lastNode": "bynder-1",
+														"nextNode": ["storage-12"],
+														"branch": []
+													}
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								"name": "boolean-condition-1",
+								"type": "branch",
+								"description": "Check Trigger Condition-false",
+								"connector": "boolean-condition",
+								"operation": "boolean_condition",
+								"icon": "[color: red]",
+								"parent": "[Bynder - Monday] Sync Master",
+								"lastNode": "[Bynder - Monday] Sync Master",
+								"nextNode": ["undefined"],
+								"branch": [
+									{
+										"name": "emptyPath-[Bynder - Monday] Sync Master",
+										"type": "normal",
+										"description": "emptyPath-[Bynder - Monday] Sync Master",
+										"icon": "[icon: function]",
+										"parent": "[Bynder - Monday] Sync Master",
+										"lastNode": "[Bynder - Monday] Sync Master",
+										"nextNode": ["storage-12"]
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "storage-12",
+		"type": "normal",
+		"content": {},
+		"description": "Data Storage",
+		"connector": "storage",
+		"operation": "set",
+		"icon": "[icon: function]",
+		"parent": "[Bynder - Monday] Sync Master",
+		"lastNode": "loop-2",
+		"nextNode": [null],
+		"branch": []
+	}
+]
