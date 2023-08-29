@@ -1,6 +1,6 @@
 const fs = require("fs");
 const _ = require("lodash");
-const importJSON = JSON.parse(fs.readFileSync(`/Users/billkeiffer/Git/TrayCode/EraserExport/Workflows/workflow_[Bynder-Dropbox]-Sync-Master.json`));
+const importJSON = JSON.parse(fs.readFileSync(`/Users/billkeiffer/Git/TrayCode/EraserExport/Workflows/workflow_Structurizr-Export-Test.json`));
 
 /*
 nodeAry holds the elements of the diagram globally.  Functions add to that array as they run,
@@ -47,9 +47,9 @@ const groupBuilder = function (stepAry, parent, lastNode, nextNode, endNode) {
 
 	if (stepAry.length === 0) {
 		res.push({
-			name: `emptyPath-${parsedText(lastNode)}`,
+			name: `emptyPath-${strReplace(parent)}`,
 			type: "normal",
-			description: `emptyPath-${parsedText(lastNode)}`,
+			description: `emptyPath-${strReplace(parent)}`,
 			icon: `[icon: function]`,
 			parent: parent,
 			lastNode: lastNode,
@@ -73,7 +73,7 @@ const groupBuilder = function (stepAry, parent, lastNode, nextNode, endNode) {
 				if (i === stepAry.length - 1) {
 					nextNode = [endNode];
 				} else {
-					nextNode = getNextNode(stepAry[i + 1], parent);
+					nextNode = getNextNode(stepAry[i + 1], stepAry[i].name);
 				}
 
 				//sets the name of the node before this one.  If its the first one in the nodeAry, then it
@@ -85,7 +85,7 @@ const groupBuilder = function (stepAry, parent, lastNode, nextNode, endNode) {
 
 				res.push({
 					...stepAry[i],
-					description: parsedText(importJSON.workflows[0].steps[stepAry[i].name].title),
+					description: strReplace(importJSON.workflows[0].steps[stepAry[i].name].title),
 					connector: importJSON.workflows[0].steps[stepAry[i].name].connector.name,
 					operation: importJSON.workflows[0].steps[stepAry[i].name].operation,
 					icon: `[icon: function]`,
@@ -101,7 +101,7 @@ const groupBuilder = function (stepAry, parent, lastNode, nextNode, endNode) {
 				array, then it should pass in the endNode of the parent for the last node to connect to
 				*/
 
-				nextNode = getNextNode(stepAry[i + 1], parent);
+				nextNode = getNextNode(stepAry[i + 1], nextNode);
 				endNode = stepAry[i + 1] === undefined ? endNode : stepAry[i + 1].name;
 
 				//a for...in loop to go through any number of branches the node may have.
@@ -111,14 +111,14 @@ const groupBuilder = function (stepAry, parent, lastNode, nextNode, endNode) {
 					res.push({
 						name: stepAry[i].name,
 						type: stepAry[i].type,
-						description: `${parsedText(importJSON.workflows[0].steps[stepAry[i].name].title)}-${key}`,
+						description: `${strReplace(importJSON.workflows[0].steps[stepAry[i].name].title)}-${key}`,
 						connector: importJSON.workflows[0].steps[stepAry[i].name].connector.name,
 						operation: importJSON.workflows[0].steps[stepAry[i].name].operation,
 						icon: `[color: red]`,
 						parent: parent,
 						lastNode: lastNode,
 						nextNode: nextNode,
-						branch: groupBuilder(stepAry[i].content[key], parent, lastNode, nextNode, endNode),
+						branch: groupBuilder(stepAry[i].content[key], stepAry[i].name, lastNode, nextNode, endNode),
 					});
 				}
 
@@ -149,7 +149,7 @@ const getNextNode = function (obj, parent) {
 		for (const key in obj.content) {
 			if (obj.name === "loop-1") {
 			}
-			res.push(getFirstNode(obj.content[key], parent));
+			res.push(getFirstNode(obj.content[key], obj.name));
 		}
 	}
 	return res.flat();
@@ -164,10 +164,9 @@ Branches can be arbitrarily deep, so it recurses to get all the first nodes.
 const getFirstNode = function (stepAry, parent) {
 	let res = "";
 	if (stepAry.length === 0) {
-		res = `emptyPath-${parsedText(parent)}`;
+		res = `emptyPath-${strReplace(parent)}`;
 	} else if (_.head(stepAry).type === "loop" || _.head(stepAry).type === "branch") {
 		let keysAry = [];
-
 		Object.keys(_.head(stepAry).content).forEach((el) => {
 			keysAry.push(getFirstNode(stepAry[0].content[el], parent));
 		});
@@ -239,7 +238,6 @@ const connectionBuilder = function (ary) {
 				if (el === undefined) {
 					// skip
 				} else {
-					console.log(el);
 					next.push(flatStructure.find((item) => item.name === el).description);
 				}
 			});
@@ -262,6 +260,7 @@ const deepFlat = function (ary) {
 		if (el.type === "normal" || el.type === "break") {
 			flatAry.push(el);
 		} else if (el.type === "branch" || el.type === "loop") {
+			flatAry.push(el);
 			deepFlat(el.branch);
 		}
 	});
@@ -301,8 +300,8 @@ const nodeFind = function (obj, key) {
 	return res;
 };
 
-const structure = groupBuilder(importJSON.workflows[0].steps_structure, parsedText(importJSON.workflows[0].title));
-//console.log(JSON.stringify(structure, null, 2));
+const structure = groupBuilder(importJSON.workflows[0].steps_structure, strReplace(importJSON.workflows[0].title));
+// console.log(JSON.stringify(structure, null, 2));
 
 const eraserNodes = `${importJSON.workflows[0].title} [color: purple] {
 	${nodeCrawler(structure, importJSON.workflows[0].title).join("\n")}

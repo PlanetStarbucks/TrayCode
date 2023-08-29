@@ -8,8 +8,8 @@
       "workspace_id": "3bcfad28-3db5-4d34-b562-0e2e4978be5c",
       "creator": "c0fb1638-958b-4aa0-a664-c3effbe736a5",
       "version": {
-        "id": "d3e08992-e0b5-48cd-9229-9d0f5927347b",
-        "created": "2023-08-10T22:53:09.530830Z"
+        "id": "39a1ebe0-8b7b-4d79-9964-dd27233e3038",
+        "created": "2023-08-29T20:19:27.332898Z"
       },
       "title": "Structurizr Export Test",
       "enabled": false,
@@ -34,6 +34,20 @@
           "name": "text-helpers-1",
           "type": "normal",
           "content": {}
+        },
+        {
+          "name": "boolean-condition-2",
+          "type": "branch",
+          "content": {
+            "true": [
+              {
+                "name": "mustache-1",
+                "type": "normal",
+                "content": {}
+              }
+            ],
+            "false": []
+          }
         },
         {
           "name": "http-client-1",
@@ -182,6 +196,44 @@
             "scope": {
               "type": "string",
               "value": "Current Run"
+            }
+          }
+        },
+        "boolean-condition-2": {
+          "title": "Truth or Dare",
+          "connector": {
+            "name": "boolean-condition",
+            "version": "2.3"
+          },
+          "operation": "boolean_condition",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "conditions": {
+              "type": "array",
+              "value": [
+                {
+                  "type": "object",
+                  "value": {
+                    "value1": {
+                      "type": "string",
+                      "value": ""
+                    },
+                    "comparison_type": {
+                      "type": "string",
+                      "value": "==="
+                    },
+                    "value2": {
+                      "type": "string",
+                      "value": ""
+                    }
+                  }
+                }
+              ]
+            },
+            "strictness": {
+              "type": "string",
+              "value": "All"
             }
           }
         },
@@ -459,6 +511,17 @@
               "value": 1
             }
           }
+        },
+        "mustache-1": {
+          "title": "Mario Face",
+          "connector": {
+            "name": "mustache",
+            "version": "1.1"
+          },
+          "operation": "template",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {}
         },
         "csv-reader-1": {
           "title": "read the CSV",
