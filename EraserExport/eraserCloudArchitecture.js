@@ -1,6 +1,8 @@
 const fs = require("fs");
 const _ = require("lodash");
-const importJSON = JSON.parse(fs.readFileSync(`/Users/billkeiffer/Git/TrayCode/EraserExport/Workflows/workflow_[Bynder-Dropbox]-Sync-Master.json`));
+const importJSON = JSON.parse(fs.readFileSync(`/Users/billkeiffer/Git/TrayCode/EraserExport/Workflows/workflow_[Bynder-Monday]-Sync-Master.json`));
+const icons = JSON.parse(fs.readFileSync("/Users/billkeiffer/Git/TrayCode/EraserExport/IconLookup/trayConnectors.json"));
+const colors = JSON.parse(fs.readFileSync(`/Users/billkeiffer/Git/TrayCode/EraserExport/IconLookup/colorArray.json`));
 
 /*
 nodeAry holds the elements of the diagram globally.  Functions add to that array as they run,
@@ -11,11 +13,14 @@ final format
 
 flatAry holds the elements in a single flat array, so that the elements can be looked up easily
 in the connection builder
+
+colorCount holds the branch number for assigning colors to each branch.
 */
 
 let nodeAry = [];
 let connectAry = [];
 let flatAry = [];
+let colorCount = -1;
 
 /*
 groupBuilder is a recursive function that will call the workflow structure from Tray.io.
@@ -50,7 +55,7 @@ const groupBuilder = function (stepAry, parent, lastNode, nextNode, endNode) {
 			name: `emptyPath (${strReplace(parent)})`,
 			type: "normal",
 			description: `emptyPath (${strReplace(parent)})`,
-			icon: `[icon: function]`,
+			icon: `[icon: circle]`,
 			parent: parent,
 			lastNode: lastNode,
 			nextNode: [endNode],
@@ -88,7 +93,7 @@ const groupBuilder = function (stepAry, parent, lastNode, nextNode, endNode) {
 					description: `${strReplace(importJSON.workflows[0].steps[stepAry[i].name].title)} (${stepAry[i].name})`,
 					connector: importJSON.workflows[0].steps[stepAry[i].name].connector.name,
 					operation: importJSON.workflows[0].steps[stepAry[i].name].operation,
-					icon: `[icon: function]`,
+					icon: `[icon: ${getIcon(importJSON.workflows[0].steps[stepAry[i].name].connector.name)}]`,
 					parent: parent,
 					lastNode: lastNode,
 					nextNode: nextNode,
@@ -114,7 +119,7 @@ const groupBuilder = function (stepAry, parent, lastNode, nextNode, endNode) {
 						description: `${strReplace(importJSON.workflows[0].steps[stepAry[i].name].title)} (${stepAry[i].name}-${key})`,
 						connector: importJSON.workflows[0].steps[stepAry[i].name].connector.name,
 						operation: importJSON.workflows[0].steps[stepAry[i].name].operation,
-						icon: `[color: red]`,
+						icon: getColor(stepAry[i], key),
 						parent: parent,
 						lastNode: lastNode,
 						nextNode: nextNode,
@@ -302,13 +307,32 @@ const nodeFind = function (obj, key) {
 	return res;
 };
 
-const structure = groupBuilder(importJSON.workflows[0].steps_structure, strReplace(importJSON.workflows[0].title));
-// console.log(JSON.stringify(structure, null, 2));
+const getIcon = function (str) {
+	let res = `${icons.find((s) => s.connector === str).icon}`;
+	return res;
+};
 
-const eraserNodes = `${strReplace(importJSON.workflows[0].title)} [color: purple] {
+const getColor = function (obj, key) {
+	const icon = getIcon(importJSON.workflows[0].steps[obj.name].connector.name);
+	switch (importJSON.workflows[0].steps[obj.name].connector.name) {
+		case "boolean-condition":
+			return `[icon: ${icon}, color: ${key === "true" ? "green" : "red"}]`;
+		case "loop":
+			return `[icon: ${icon}, color: yellow`;
+		case "branch":
+			colorCount++;
+			return `[icon: ${icon}, color: ${colors[colorCount]}]`;
+	}
+};
+
+const structure = groupBuilder(importJSON.workflows[0].steps_structure, strReplace(importJSON.workflows[0].title));
+//console.log(JSON.stringify(structure, null, 2));
+
+const eraserNodes = `${strReplace(importJSON.workflows[0].title)} [color: cadetblue] {
 	${nodeCrawler(structure, importJSON.workflows[0].title).join("\n")}
 }`;
 const flatStructure = deepFlat(structure);
+//console.log(JSON.stringify(flatStructure, null, 2));
 const connections = connectionBuilder(structure).join("\n");
 console.log(eraserNodes);
 console.log(connections);
