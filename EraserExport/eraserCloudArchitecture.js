@@ -1,6 +1,6 @@
 const fs = require("fs");
 const _ = require("lodash");
-const importJSON = JSON.parse(fs.readFileSync(`/Users/billkeiffer/Git/TrayCode/EraserExport/Workflows/workflow_[Bynder-Monday]-Sync-Master.json`));
+const importJSON = JSON.parse(fs.readFileSync(`/Users/billkeiffer/Git/TrayCode/EraserExport/Workflows/workflow_[Bynder-Dropbox]-Sync-Master.json`));
 const icons = JSON.parse(fs.readFileSync("/Users/billkeiffer/Git/TrayCode/EraserExport/IconLookup/trayConnectors.json"));
 const colors = JSON.parse(fs.readFileSync(`/Users/billkeiffer/Git/TrayCode/EraserExport/IconLookup/colorArray.json`));
 
@@ -243,8 +243,6 @@ const connectionBuilder = function (ary) {
 				if (el === undefined || flatStructure.find((item) => item.name === el) === undefined) {
 					// skip
 				} else {
-					// console.log(el);
-					// console.log(flatStructure.find((item) => item.name === el) === undefined);
 					next.push(flatStructure.find((item) => item.name === el).description);
 				}
 			});
@@ -318,7 +316,8 @@ const getColor = function (obj, key) {
 		case "boolean-condition":
 			return `[icon: ${icon}, color: ${key === "true" ? "green" : "red"}]`;
 		case "loop":
-			return `[icon: ${icon}, color: yellow`;
+			colorCount++;
+			return `[icon: ${icon}, color: ${colors[colorCount]}]`;
 		case "branch":
 			colorCount++;
 			return `[icon: ${icon}, color: ${colors[colorCount]}]`;
@@ -326,7 +325,7 @@ const getColor = function (obj, key) {
 };
 
 const structure = groupBuilder(importJSON.workflows[0].steps_structure, strReplace(importJSON.workflows[0].title));
-//console.log(JSON.stringify(structure, null, 2));
+// console.log(JSON.stringify(structure, null, 2));
 
 const eraserNodes = `${strReplace(importJSON.workflows[0].title)} [color: cadetblue] {
 	${nodeCrawler(structure, importJSON.workflows[0].title).join("\n")}
