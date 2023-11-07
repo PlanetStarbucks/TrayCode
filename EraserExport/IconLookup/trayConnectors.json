@@ -1706,7 +1706,7 @@
 	},
 	{
 		"connector": "list-helpers",
-		"icon": "help-circle",
+		"icon": "menu",
 		"color": "green"
 	},
 	{
@@ -2656,7 +2656,7 @@
 	},
 	{
 		"connector": "script",
-		"icon": "help-circle",
+		"icon": "terminal",
 		"color": "green"
 	},
 	{

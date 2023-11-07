@@ -190,7 +190,7 @@ getLastNode is not currently in use.  it was designed to get the last node in th
 
 	const getLastNode = function (stepAry, parent) {
 		let res = "";
-		if (stepAry === []) {
+		if (stepAry.length === 0) {
 			res = "emptyPath";
 		} else if (_.last(stepAry).type === "loop" || _.last(stepAry).type === "branch") {
 			let ary = [];
@@ -350,7 +350,7 @@ const run = function (file) {
 	console.log(JSON.stringify(elements));
 };
 
-run(JSON.parse(fs.readFileSync(`/Users/billkeiffer/Git/TrayCode/EraserExport/Workflows/project_[Bynder]-Dropbox.json`)));
+run(JSON.parse(fs.readFileSync(`/Users/billkeiffer/Git/TrayCode/EraserExport/Workflows/project_Global-Connector-Storage (1).json`)));
 
 //console.log(nodeAry);
 
