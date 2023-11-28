@@ -1,0 +1,46 @@
+[
+	{
+		"name": "Vimeo_Content_Rating",
+		"label": "Vimeo Content Rating"
+	},
+	{
+		"name": "Vimeo_Hide_From_Vimeo",
+		"label": "Vimeo Private"
+	},
+	{
+		"name": "Vimeo_License",
+		"label": "Vimeo License"
+	},
+	{
+		"name": "Vimeo_Locale",
+		"label": "Vimeo Location"
+	},
+	{
+		"name": "Vimeo_Password",
+		"label": "Vimeo Password"
+	},
+	{
+		"name": "Vimeo_Privacy-Add",
+		"label": "Vimeo Allow User Add to Lists"
+	},
+	{
+		"name": "Vimeo_Privacy-Comments",
+		"label": "Vimeo Allow Comments"
+	},
+	{
+		"name": "Vimeo_Privacy-Download",
+		"label": "Vimeo Allow Downloads"
+	},
+	{
+		"name": "Vimeo_Privacy-Embed",
+		"label": "Vimeo Allow Embed"
+	},
+	{
+		"name": "Vimeo_Privacy-View",
+		"label": "Vimeo Allow View Count"
+	},
+	{
+		"name": "Vimeo_Review_Page-Active",
+		"label": "Vimeo Allow Review Page"
+	}
+]
