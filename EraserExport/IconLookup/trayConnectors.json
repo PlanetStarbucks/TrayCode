@@ -1,3437 +1,3437 @@
 [
-	{
-		"connector": "1e23formbuilder",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "15-five",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "2-checkout",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "accelevents",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "acoustic-campaign",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "act-on",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "activecampaign",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "acuity-scheduling",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "adaptive-insights",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "admithub",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "adobe-analytics-live-stream-trigger",
-		"icon": "adobe",
-		"color": "green"
-	},
-	{
-		"connector": "adobe-experience-manager",
-		"icon": "adobe",
-		"color": "green"
-	},
-	{
-		"connector": "adobe-user-management",
-		"icon": "adobe",
-		"color": "green"
-	},
-	{
-		"connector": "adp",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "adroll",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "aeries",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "affinity",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "agile-crm",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "ahrefs",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "aircall",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "aircall-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "airtable",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "alerting-trigger",
-		"icon": "alert-triangles",
-		"color": "green"
-	},
-	{
-		"connector": "alexa-top-sites",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "algolia",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "alida",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "alteryx",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "amazon-athena",
-		"icon": "aws-athena",
-		"color": "green"
-	},
-	{
-		"connector": "amazon-marketplace",
-		"icon": "aws-marketplace",
-		"color": "green"
-	},
-	{
-		"connector": "ambassador",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "ambassador-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "amplitude",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "amplitude-dashboard",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "anaplan",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "appdirect",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "appdirect-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "appneta",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "arcgis",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "asana",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "asana-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "aspireiq",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "asset-bank",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "atlassian",
-		"icon": "atlassian",
-		"color": "green"
-	},
-	{
-		"connector": "attentive-mobile",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "auth-0",
-		"icon": "auth0",
-		"color": "green"
-	},
-	{
-		"connector": "autopilot",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "avalara-avatax",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "aventri",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "aweber",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "aws",
-		"icon": "aws",
-		"color": "green"
-	},
-	{
-		"connector": "aws-cloudwatch",
-		"icon": "aws-cloudwatch",
-		"color": "green"
-	},
-	{
-		"connector": "aws-codedeploy",
-		"icon": "aws-codedeploy",
-		"color": "green"
-	},
-	{
-		"connector": "aws-codepipeline",
-		"icon": "aws-codepipeline",
-		"color": "green"
-	},
-	{
-		"connector": "aws-cognito",
-		"icon": "aws-cognito",
-		"color": "green"
-	},
-	{
-		"connector": "aws-comprehend",
-		"icon": "aws-comprehend",
-		"color": "green"
-	},
-	{
-		"connector": "aws-glue",
-		"icon": "aws-glue",
-		"color": "green"
-	},
-	{
-		"connector": "aws-kinesis",
-		"icon": "aws-kinesis",
-		"color": "green"
-	},
-	{
-		"connector": "aws-lambda",
-		"icon": "aws-lambda",
-		"color": "green"
-	},
-	{
-		"connector": "aws-s3",
-		"icon": "aws-s3",
-		"color": "green"
-	},
-	{
-		"connector": "aws-sagemaker",
-		"icon": "aws-sagemaker",
-		"color": "green"
-	},
-	{
-		"connector": "aws-sns",
-		"icon": "aws-sns",
-		"color": "green"
-	},
-	{
-		"connector": "aws-sqs",
-		"icon": "aws-sqs",
-		"color": "green"
-	},
-	{
-		"connector": "azure-active-directory",
-		"icon": "azure-active-directory",
-		"color": "green"
-	},
-	{
-		"connector": "azure-blob-storage",
-		"icon": "azure-blob-storage",
-		"color": "green"
-	},
-	{
-		"connector": "azure-devops",
-		"icon": "azure-devops",
-		"color": "green"
-	},
-	{
-		"connector": "bamboohr",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "basecamp",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "benchmark",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "bevy",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "bigcommerce",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "bigcommerce-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "bigquery",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "bing-ads",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "bitbucket-server",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "bizzabo",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "bloomreach",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "blue-lava",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "blueshift",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "bluesnap",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "bmc-remedy",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "boolean-condition",
-		"icon": "check",
-		"color": "green"
-	},
-	{
-		"connector": "boostr",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "box",
-		"icon": "box",
-		"color": "green"
-	},
-	{
-		"connector": "box-trigger",
-		"icon": "box",
-		"color": "green"
-	},
-	{
-		"connector": "braintree",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "braintree-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "branch",
-		"icon": "git-branch",
-		"color": "green"
-	},
-	{
-		"connector": "brandfolder",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "braze",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "break-loop",
-		"icon": "corner-left-up",
-		"color": "green"
-	},
-	{
-		"connector": "brightcove",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "briteverify",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "bullhorn",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "bynder",
-		"icon": "heart",
-		"color": "blue"
-	},
-	{
-		"connector": "calendar",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "calendly",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "calendly-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "call-rail",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "call-workflow",
-		"icon": "phone-forwarded",
-		"color": "green"
-	},
-	{
-		"connector": "callable-trigger",
-		"icon": "zap",
-		"color": "green"
-	},
-	{
-		"connector": "callable-workflow-response",
-		"icon": "phone-outgoing",
-		"color": "green"
-	},
-	{
-		"connector": "campaign-monitor",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "campaign-monitor-commerce",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "campaigner",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "canvas",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "capsule",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "carrierpoint",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "cascade",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "caspio",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "catchpoint-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "channeladvisor",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "chargeback",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "chargebee",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "chargify",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "chargify-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "chartmogul",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "chat-trayning",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "checkout",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "checkout-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "cisco-webex",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "clearbit",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "cleverreach",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "clickup",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "clickup-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "close",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "cloudfront",
-		"icon": "aws-cloudfront",
-		"color": "green"
-	},
-	{
-		"connector": "clubhouse",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "coda",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "confection",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "confluence",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "connectwise",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "constant-contact",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "contentsquare-metrics-api",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "contentsquare-raw-data-api",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "conversica",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "convertkit",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "copper",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "copper-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "criteo",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "crm-trayning",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "crossbeam",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "crosscap",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "crunchbase",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "crypto-helpers",
-		"icon": "cpu",
-		"color": "green"
-	},
-	{
-		"connector": "csv",
-		"icon": "menu",
-		"color": "green"
-	},
-	{
-		"connector": "csv-reader",
-		"icon": "menu",
-		"color": "green"
-	},
-	{
-		"connector": "cue",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "customer-io",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "customer-io-app",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "customer-io-beta",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "customer-io-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "cvent",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "data-mapper",
-		"icon": "repeat",
-		"color": "green"
-	},
-	{
-		"connector": "databricks",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "datadog",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "datadog-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "datanyze",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "date-time-helpers",
-		"icon": "calendar",
-		"color": "green"
-	},
-	{
-		"connector": "delay",
-		"icon": "more-horizontal",
-		"color": "green"
-	},
-	{
-		"connector": "delighted",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "demandbase",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "deputy",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "discoverorg",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "docebo",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "docraptor",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "docusign",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "domo",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "donately",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "donately-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "dotdigital",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "dotdigital-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "drata",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "drift",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "drip",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "drive",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "dropbox",
-		"icon": "dropbox",
-		"color": "green"
-	},
-	{
-		"connector": "dynamo",
-		"icon": "dynamodb",
-		"color": "green"
-	},
-	{
-		"connector": "easypromo",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "ellucian-ethos",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "eloqua",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "email-trigger",
-		"icon": "mail",
-		"color": "green"
-	},
-	{
-		"connector": "emarsys",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "emerge",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "emma",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "encryption-helper",
-		"icon": "lock",
-		"color": "green"
-	},
-	{
-		"connector": "entrata",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "epicor",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "etermin",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "eventbrite",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "eventbrite-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "eventgeek",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "everhour",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "evisort",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "expensify",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "exponenthr",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "facebook",
-		"icon": "facebook",
-		"color": "green"
-	},
-	{
-		"connector": "facebook-lead-ads-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "fastpath",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "file-helpers",
-		"icon": "file-plus",
-		"color": "green"
-	},
-	{
-		"connector": "filemaker-pro",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "firebase",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "firstrain",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "fixer",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "float",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "form-trigger",
-		"icon": "align-center",
-		"color": "green"
-	},
-	{
-		"connector": "formstack",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "formstack-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "freewheel-financial",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "freshdesk",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "freshsales",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "freshservice",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "freshworks-crm",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "front",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "frontify",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "ftp-client",
-		"icon": "arrow-up",
-		"color": "green"
-	},
-	{
-		"connector": "fulcrum",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "fulcrum-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "full-contact",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "fullstory",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "g-suite",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "gainsight",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "gatherup",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "getresponse",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "getty",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "giphy",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "github",
-		"icon": "github",
-		"color": "green"
-	},
-	{
-		"connector": "github-trigger",
-		"icon": "github",
-		"color": "green"
-	},
-	{
-		"connector": "gitlab",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "gmail",
-		"icon": "gmail",
-		"color": "green"
-	},
-	{
-		"connector": "gongio",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "google-ad-manager",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "google-ads",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "google-adwords",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "google-analytics",
-		"icon": "gcp-analytics-hub",
-		"color": "green"
-	},
-	{
-		"connector": "google-analytics-ga4",
-		"icon": "gcp-analytics-hub",
-		"color": "green"
-	},
-	{
-		"connector": "google-cloud-pubsub",
-		"icon": "gcp-cloud-generic",
-		"color": "green"
-	},
-	{
-		"connector": "google-cloud-pubsub-trigger",
-		"icon": "gcp-pubsub",
-		"color": "green"
-	},
-	{
-		"connector": "google-cloud-storage",
-		"icon": "gcp-cloud-storage",
-		"color": "green"
-	},
-	{
-		"connector": "google-contacts",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "google-docs",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "google-maps",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "google-meet",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "google-search-console",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "google-slides",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "google-tasks",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "google-vision",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "gosquared-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "gotomeeting",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "gotowebinar",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "gotowebinar-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "grade-us",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "grafana",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "graphql-client",
-		"icon": "graphql",
-		"color": "green"
-	},
-	{
-		"connector": "greenbits",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "greenhouse",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "groove",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "growth-engineering",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "gusto",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "hackerone",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "harvest",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "hatchbuck",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "heap",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "heap-data-out-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "heap-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "hellosign",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "hellosign-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "help-scout",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "hive",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "hive-hr",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "hivebrite",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "hootsuite",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "hranswerlink",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "html-dom-parser",
-		"icon": "twitch",
-		"color": "green"
-	},
-	{
-		"connector": "http-client",
-		"icon": "radio",
-		"color": "green"
-	},
-	{
-		"connector": "hubilo",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "hubinc",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "hubspot",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "hubspot-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "huddle",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "hunter",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "ibm-db2",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "ibm-mq",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "ibm-watson-nlu",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "ibm-watson-stt",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "ibm-watson-tts",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "icontact",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "imgflip",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "impact-com",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "impartner",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "infusionsoft",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "infusionsoft-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "insightly",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "instagram",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "instapage-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "intacct",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "intercom",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "intercom-notification",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "ioffice",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "ironclad",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "ironclad-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "iterable",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "jdbc-client",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "jenkins-build-token",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "jira",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "jira-cloud",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "jira-cloud-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "jira-service-desk",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "jira-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "jotform",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "jotform-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "json-reader",
-		"icon": "minimize",
-		"color": "green"
-	},
-	{
-		"connector": "json-transformer",
-		"icon": "skip-forward",
-		"color": "green"
-	},
-	{
-		"connector": "json-web-token",
-		"icon": "bookmark",
-		"color": "green"
-	},
-	{
-		"connector": "jumio",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "jumpcloud",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "kafka",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "kanban-tool",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "kapost",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "kazoo-hr",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "kbmax",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "keatext",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "keen.io",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "kenshoo",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "kibo",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "kickbox",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "klaviyo",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "kochava",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "krowai-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "kudos",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "lattice",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "launchdarkly",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "ldap-client",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "leadspace",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "leaflink",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "leaflink-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "lemlist",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "lever",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "levity",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "lexoffice",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "linkedin",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "linkedin-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "list-helpers",
-		"icon": "menu",
-		"color": "green"
-	},
-	{
-		"connector": "listrak",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "lithium",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "liveperson",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "liveramp",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "lodash",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "logic-helpers",
-		"icon": "filter",
-		"color": "green"
-	},
-	{
-		"connector": "logicmanager",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "logicmonitor",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "lokalise",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "looker",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "loop",
-		"icon": "refresh-ccw",
-		"color": "green"
-	},
-	{
-		"connector": "lufthansa",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "mad-mimi",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "magento-1",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "magento-2",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "mailboxlayer",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "mailchimp",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "mailchimp-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "mailerlite",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "mailjet",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "maintainx",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "managerplus",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "marketo",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "math-helpers",
-		"icon": "tablet",
-		"color": "green"
-	},
-	{
-		"connector": "mattermark",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "mav",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "messagebird",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "messagebird-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "metacx",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "microsoft-calendar",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "microsoft-dynamics",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "microsoft-dynamics-gp",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "microsoft-intune",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "microsoft-one-drive",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "microsoft-outlook",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "microsoft-sql-database",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "microsoft-teams",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "microsoft-teams-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "microsoft-text-translate",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "mindbody",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "miro",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "mixpanel",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "mixpanel-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "mode",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "monday",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "mongo-db",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "mongodb-cloud",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "mongodb-shell",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "monkey-learn",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "mosaic",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "motivosity",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "musixmatch",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "mustache",
-		"icon": "voicemail",
-		"color": "green"
-	},
-	{
-		"connector": "mysql",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "namely",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "nasa",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "netsuite",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "netsuite-soap",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "new-relic",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "newrelic-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "news-api",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "newscred",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "newscred-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "nexmo",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "nexmo-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "nimble",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "noop",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "notion",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "noyo",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "number-helpers",
-		"icon": "divide-square",
-		"color": "green"
-	},
-	{
-		"connector": "object-helpers",
-		"icon": "layers",
-		"color": "green"
-	},
-	{
-		"connector": "office365",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "office365-management",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "okta",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "okta-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "ometria",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "omnisend",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "onelogin",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "onelogin-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "onfido",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "onfido-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "onsolve",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "ontraport",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "ooma",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "ooma-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "opal",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "openai",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "opsgenie",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "optimizely",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "optimoroute",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "oracle-bronto",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "oracle-responsys",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "orderez",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "ordway",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "outreach",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "outreach-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "oxford-dictionaries",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "pagerduty",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "pageup",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "panaya",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "pandadoc",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "pardot",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "pardot-v3",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "partner-alerting-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "paylocity",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "paymo",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "paymo-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "paypal",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "paypal-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "pdf-helpers",
-		"icon": "folder-plus",
-		"color": "green"
-	},
-	{
-		"connector": "pdk",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "pendo",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "persistiq",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "personio",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "pestroutes",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "pex",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "phone-number-helpers",
-		"icon": "phone",
-		"color": "green"
-	},
-	{
-		"connector": "pigment",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "pipedrive",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "pipedrive-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "pipeline",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "pipeliner-crm-cloud",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "pitchly",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "plansource",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "plivo",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "podium",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "podium-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "portabilling",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "possiblenow",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "postgresql",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "postscript",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "powerbi",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "powerschool",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "process-street",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "prodpad",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "prodpad-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "productboard",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "productx",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "promoterio",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "pubsub",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "pubsub-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "pymetrics",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "python-script",
-		"icon": "python",
-		"color": "green"
-	},
-	{
-		"connector": "qlik",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "qualaroo",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "qualtrics",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "queue",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "quickbase",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "quickbooks",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "quickbooks-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "rabbitmq-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "rallyup",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "random-helpers",
-		"icon": "wind",
-		"color": "green"
-	},
-	{
-		"connector": "rareio",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "recurly",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "recurly-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "redshift",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "regonline",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "rejoiner",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "reltio",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "remarkety",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "resci-retention-science",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "retention-rocket",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "revio",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "revo-4-me",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "rho",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "ringcentral",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "ringcentral-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "ringover",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "ruum",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "sage-300",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "sailthru",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "sales-management-plus",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "salesforce",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "salesforce-marketing-cloud",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "salesforce-notification",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "salesforceiq",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "salesloft",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "salesloft-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "salesrabbit",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "salesrabbit-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "samsara",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "sap",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "sap-business-one",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "sap-s4hana-cloud",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "sapling",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "scheduled",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "scoop",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "scoop-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "script",
-		"icon": "terminal",
-		"color": "green"
-	},
-	{
-		"connector": "sdk-plivo",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "searchblox",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "sedna",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "segment",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "segment-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "semrush",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "send-email",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "sendgrid",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "sendgrid-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "sendinblue",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "sendinblue-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "sendlane",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "sendoso",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "sendpulse",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "servicenow",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "servicetitan",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "sharepoint",
-		"icon": "sharepoint",
-		"color": "green"
-	},
-	{
-		"connector": "sheets",
-		"icon": "google-sheets",
-		"color": "green"
-	},
-	{
-		"connector": "shibumi",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "shipstation",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "shopify",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "shopify-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "showpad",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "shutterstock",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "sift-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "simpli-fi",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "sitecore",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "skilljar-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "slack",
-		"icon": "slack",
-		"color": "green"
-	},
-	{
-		"connector": "slack-trigger",
-		"icon": "slack",
-		"color": "green"
-	},
-	{
-		"connector": "smartrmail",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "smartsheet",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "smartsheet-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "snapchat",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "snowflake",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "snowflake-okta",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "soap-client",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "solution-instance-trigger",
-		"icon": "activity",
-		"color": "green"
-	},
-	{
-		"connector": "splash",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "splunk-http-event-collector",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "spotdraft",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "sprinklr",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "square",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "stat",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "stedi",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "storage",
-		"icon": "layers",
-		"color": "green"
-	},
-	{
-		"connector": "storedge",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "strava",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "streak",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "stripe",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "stripe-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "sugarcrm",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "sugarmarket",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "surefire",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "survey-monkey",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "survey-monkey-apply",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "survey-monkey-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "surveysparrow",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "swoogo",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "synthesio",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "talkdesk",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "tatango",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "tatango-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "teamwork",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "teamwork-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "terminate",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "terminus",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "text-helpers",
-		"icon": "type",
-		"color": "green"
-	},
-	{
-		"connector": "thinkific",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "thumbtack",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "tnx",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "toggl",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "totango",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "tradogram",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "transport-for-london-tfl",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "traygramming-assistant",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "trayning-salesforce",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "trello",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "trello-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "trigger-reply",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "twilio-input",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "twilio-output",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "typeform",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "typeform-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "uberflip",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "udemy",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "udemy-for-business",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "ultipro",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "unbounce",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "unbounce-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "urban-airship-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "uservoice",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "vbrick",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "veeva",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "velocify",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "vertical-response",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "verve",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "vibes",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "videoask",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "videoask-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "virtuous-crm",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "vonage",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "vonage-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "vtiger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "vwo",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "walmart-marketplace",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "webdam",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "webhook",
-		"icon": "log-in",
-		"color": "green"
-	},
-	{
-		"connector": "welcome",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "welcome-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "whatcounts",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "wicket",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "widen",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "wolfram-alpha-full-results",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "wolfram-alpha-short-answers",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "wordpress",
-		"icon": "wordpress",
-		"color": "green"
-	},
-	{
-		"connector": "workable",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "workable-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "workflowmax",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "workfront",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "workplace",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "workstack",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "wrike",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "wrike-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "wufoo",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "wunderground",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "wunderlist",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "xero",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "xero-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "xlsx-helpers",
-		"icon": "excel",
-		"color": "green"
-	},
-	{
-		"connector": "xml-helpers",
-		"icon": "chevron-left",
-		"color": "green"
-	},
-	{
-		"connector": "xpressdocs",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "xverify",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "yammer",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "yext",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "yext-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "yodiz",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "yotpo",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "yotpo-loyalty",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "zaius",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "zelo-pay",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "zendesk",
-		"icon": "zendesk",
-		"color": "green"
-	},
-	{
-		"connector": "zendesk-sell",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "zendesk-sunshine",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "zendesk-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "zenefits",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "zerobounce",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "zip",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "zoho",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "zoho-creator",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "zoho-desk",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "zoom",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "zoom-trigger",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "zoominfo",
-		"icon": "help-circle",
-		"color": "green"
-	},
-	{
-		"connector": "zuora",
-		"icon": "help-circle",
-		"color": "green"
-	}
+  {
+    "connector": "1e23formbuilder",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "15-five",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "2-checkout",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "accelevents",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "acoustic-campaign",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "act-on",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "activecampaign",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "acuity-scheduling",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "adaptive-insights",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "admithub",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "adobe-analytics-live-stream-trigger",
+    "icon": "adobe",
+    "color": "green"
+  },
+  {
+    "connector": "adobe-experience-manager",
+    "icon": "adobe",
+    "color": "green"
+  },
+  {
+    "connector": "adobe-user-management",
+    "icon": "adobe",
+    "color": "green"
+  },
+  {
+    "connector": "adp",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "adroll",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "aeries",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "affinity",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "agile-crm",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "ahrefs",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "aircall",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "aircall-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "airtable",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "alerting-trigger",
+    "icon": "alert-triangles",
+    "color": "green"
+  },
+  {
+    "connector": "alexa-top-sites",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "algolia",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "alida",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "alteryx",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "amazon-athena",
+    "icon": "aws-athena",
+    "color": "green"
+  },
+  {
+    "connector": "amazon-marketplace",
+    "icon": "aws-marketplace",
+    "color": "green"
+  },
+  {
+    "connector": "ambassador",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "ambassador-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "amplitude",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "amplitude-dashboard",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "anaplan",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "appdirect",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "appdirect-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "appneta",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "arcgis",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "asana",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "asana-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "aspireiq",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "asset-bank",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "atlassian",
+    "icon": "atlassian",
+    "color": "green"
+  },
+  {
+    "connector": "attentive-mobile",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "auth-0",
+    "icon": "auth0",
+    "color": "green"
+  },
+  {
+    "connector": "autopilot",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "avalara-avatax",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "aventri",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "aweber",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "aws",
+    "icon": "aws",
+    "color": "green"
+  },
+  {
+    "connector": "aws-cloudwatch",
+    "icon": "aws-cloudwatch",
+    "color": "green"
+  },
+  {
+    "connector": "aws-codedeploy",
+    "icon": "aws-codedeploy",
+    "color": "green"
+  },
+  {
+    "connector": "aws-codepipeline",
+    "icon": "aws-codepipeline",
+    "color": "green"
+  },
+  {
+    "connector": "aws-cognito",
+    "icon": "aws-cognito",
+    "color": "green"
+  },
+  {
+    "connector": "aws-comprehend",
+    "icon": "aws-comprehend",
+    "color": "green"
+  },
+  {
+    "connector": "aws-glue",
+    "icon": "aws-glue",
+    "color": "green"
+  },
+  {
+    "connector": "aws-kinesis",
+    "icon": "aws-kinesis",
+    "color": "green"
+  },
+  {
+    "connector": "aws-lambda",
+    "icon": "aws-lambda",
+    "color": "green"
+  },
+  {
+    "connector": "aws-s3",
+    "icon": "aws-s3",
+    "color": "green"
+  },
+  {
+    "connector": "aws-sagemaker",
+    "icon": "aws-sagemaker",
+    "color": "green"
+  },
+  {
+    "connector": "aws-sns",
+    "icon": "aws-sns",
+    "color": "green"
+  },
+  {
+    "connector": "aws-sqs",
+    "icon": "aws-sqs",
+    "color": "green"
+  },
+  {
+    "connector": "azure-active-directory",
+    "icon": "azure-active-directory",
+    "color": "green"
+  },
+  {
+    "connector": "azure-blob-storage",
+    "icon": "azure-blob-storage",
+    "color": "green"
+  },
+  {
+    "connector": "azure-devops",
+    "icon": "azure-devops",
+    "color": "green"
+  },
+  {
+    "connector": "bamboohr",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "basecamp",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "benchmark",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "bevy",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "bigcommerce",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "bigcommerce-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "bigquery",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "bing-ads",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "bitbucket-server",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "bizzabo",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "bloomreach",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "blue-lava",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "blueshift",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "bluesnap",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "bmc-remedy",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "boolean-condition",
+    "icon": "check",
+    "color": "green"
+  },
+  {
+    "connector": "boostr",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "box",
+    "icon": "box",
+    "color": "green"
+  },
+  {
+    "connector": "box-trigger",
+    "icon": "box",
+    "color": "green"
+  },
+  {
+    "connector": "braintree",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "braintree-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "branch",
+    "icon": "git-branch",
+    "color": "green"
+  },
+  {
+    "connector": "brandfolder",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "braze",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "break-loop",
+    "icon": "corner-left-up",
+    "color": "green"
+  },
+  {
+    "connector": "brightcove",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "briteverify",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "bullhorn",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "bynder",
+    "icon": "heart",
+    "color": "blue"
+  },
+  {
+    "connector": "calendar",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "calendly",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "calendly-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "call-rail",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "call-workflow",
+    "icon": "phone-forwarded",
+    "color": "green"
+  },
+  {
+    "connector": "callable-trigger",
+    "icon": "zap",
+    "color": "green"
+  },
+  {
+    "connector": "callable-workflow-response",
+    "icon": "phone-outgoing",
+    "color": "green"
+  },
+  {
+    "connector": "campaign-monitor",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "campaign-monitor-commerce",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "campaigner",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "canvas",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "capsule",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "carrierpoint",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "cascade",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "caspio",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "catchpoint-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "channeladvisor",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "chargeback",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "chargebee",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "chargify",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "chargify-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "chartmogul",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "chat-trayning",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "checkout",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "checkout-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "cisco-webex",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "clearbit",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "cleverreach",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "clickup",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "clickup-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "close",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "cloudfront",
+    "icon": "aws-cloudfront",
+    "color": "green"
+  },
+  {
+    "connector": "clubhouse",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "coda",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "confection",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "confluence",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "connectwise",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "constant-contact",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "contentsquare-metrics-api",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "contentsquare-raw-data-api",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "conversica",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "convertkit",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "copper",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "copper-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "criteo",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "crm-trayning",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "crossbeam",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "crosscap",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "crunchbase",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "crypto-helpers",
+    "icon": "cpu",
+    "color": "green"
+  },
+  {
+    "connector": "csv",
+    "icon": "menu",
+    "color": "green"
+  },
+  {
+    "connector": "csv-reader",
+    "icon": "menu",
+    "color": "green"
+  },
+  {
+    "connector": "cue",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "customer-io",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "customer-io-app",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "customer-io-beta",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "customer-io-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "cvent",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "data-mapper",
+    "icon": "repeat",
+    "color": "green"
+  },
+  {
+    "connector": "databricks",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "datadog",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "datadog-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "datanyze",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "date-time-helpers",
+    "icon": "calendar",
+    "color": "green"
+  },
+  {
+    "connector": "delay",
+    "icon": "more-horizontal",
+    "color": "green"
+  },
+  {
+    "connector": "delighted",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "demandbase",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "deputy",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "discoverorg",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "docebo",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "docraptor",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "docusign",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "domo",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "donately",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "donately-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "dotdigital",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "dotdigital-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "drata",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "drift",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "drip",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "drive",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "dropbox",
+    "icon": "dropbox",
+    "color": "green"
+  },
+  {
+    "connector": "dynamo",
+    "icon": "dynamodb",
+    "color": "green"
+  },
+  {
+    "connector": "easypromo",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "ellucian-ethos",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "eloqua",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "email-trigger",
+    "icon": "mail",
+    "color": "green"
+  },
+  {
+    "connector": "emarsys",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "emerge",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "emma",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "encryption-helper",
+    "icon": "lock",
+    "color": "green"
+  },
+  {
+    "connector": "entrata",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "epicor",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "etermin",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "eventbrite",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "eventbrite-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "eventgeek",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "everhour",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "evisort",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "expensify",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "exponenthr",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "facebook",
+    "icon": "facebook",
+    "color": "green"
+  },
+  {
+    "connector": "facebook-lead-ads-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "fastpath",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "file-helpers",
+    "icon": "file-plus",
+    "color": "green"
+  },
+  {
+    "connector": "filemaker-pro",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "firebase",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "firstrain",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "fixer",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "float",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "form-trigger",
+    "icon": "align-center",
+    "color": "green"
+  },
+  {
+    "connector": "formstack",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "formstack-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "freewheel-financial",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "freshdesk",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "freshsales",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "freshservice",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "freshworks-crm",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "front",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "frontify",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "ftp-client",
+    "icon": "arrow-up",
+    "color": "green"
+  },
+  {
+    "connector": "fulcrum",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "fulcrum-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "full-contact",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "fullstory",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "g-suite",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "gainsight",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "gatherup",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "getresponse",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "getty",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "giphy",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "github",
+    "icon": "github",
+    "color": "green"
+  },
+  {
+    "connector": "github-trigger",
+    "icon": "github",
+    "color": "green"
+  },
+  {
+    "connector": "gitlab",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "gmail",
+    "icon": "gmail",
+    "color": "green"
+  },
+  {
+    "connector": "gongio",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "google-ad-manager",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "google-ads",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "google-adwords",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "google-analytics",
+    "icon": "gcp-analytics-hub",
+    "color": "green"
+  },
+  {
+    "connector": "google-analytics-ga4",
+    "icon": "gcp-analytics-hub",
+    "color": "green"
+  },
+  {
+    "connector": "google-cloud-pubsub",
+    "icon": "gcp-cloud-generic",
+    "color": "green"
+  },
+  {
+    "connector": "google-cloud-pubsub-trigger",
+    "icon": "gcp-pubsub",
+    "color": "green"
+  },
+  {
+    "connector": "google-cloud-storage",
+    "icon": "gcp-cloud-storage",
+    "color": "green"
+  },
+  {
+    "connector": "google-contacts",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "google-docs",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "google-maps",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "google-meet",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "google-search-console",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "google-slides",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "google-tasks",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "google-vision",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "gosquared-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "gotomeeting",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "gotowebinar",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "gotowebinar-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "grade-us",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "grafana",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "graphql-client",
+    "icon": "graphql",
+    "color": "green"
+  },
+  {
+    "connector": "greenbits",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "greenhouse",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "groove",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "growth-engineering",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "gusto",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "hackerone",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "harvest",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "hatchbuck",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "heap",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "heap-data-out-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "heap-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "hellosign",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "hellosign-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "help-scout",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "hive",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "hive-hr",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "hivebrite",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "hootsuite",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "hranswerlink",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "html-dom-parser",
+    "icon": "twitch",
+    "color": "green"
+  },
+  {
+    "connector": "http-client",
+    "icon": "radio",
+    "color": "green"
+  },
+  {
+    "connector": "hubilo",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "hubinc",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "hubspot",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "hubspot-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "huddle",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "hunter",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "ibm-db2",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "ibm-mq",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "ibm-watson-nlu",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "ibm-watson-stt",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "ibm-watson-tts",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "icontact",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "imgflip",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "impact-com",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "impartner",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "infusionsoft",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "infusionsoft-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "insightly",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "instagram",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "instapage-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "intacct",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "intercom",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "intercom-notification",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "ioffice",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "ironclad",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "ironclad-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "iterable",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "jdbc-client",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "jenkins-build-token",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "jira",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "jira-cloud",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "jira-cloud-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "jira-service-desk",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "jira-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "jotform",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "jotform-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "json-reader",
+    "icon": "minimize",
+    "color": "green"
+  },
+  {
+    "connector": "json-transformer",
+    "icon": "skip-forward",
+    "color": "green"
+  },
+  {
+    "connector": "json-web-token",
+    "icon": "bookmark",
+    "color": "green"
+  },
+  {
+    "connector": "jumio",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "jumpcloud",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "kafka",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "kanban-tool",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "kapost",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "kazoo-hr",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "kbmax",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "keatext",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "keen.io",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "kenshoo",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "kibo",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "kickbox",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "klaviyo",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "kochava",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "krowai-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "kudos",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "lattice",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "launchdarkly",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "ldap-client",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "leadspace",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "leaflink",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "leaflink-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "lemlist",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "lever",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "levity",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "lexoffice",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "linkedin",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "linkedin-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "list-helpers",
+    "icon": "menu",
+    "color": "green"
+  },
+  {
+    "connector": "listrak",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "lithium",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "liveperson",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "liveramp",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "lodash",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "logic-helpers",
+    "icon": "filter",
+    "color": "green"
+  },
+  {
+    "connector": "logicmanager",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "logicmonitor",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "lokalise",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "looker",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "loop",
+    "icon": "refresh-ccw",
+    "color": "green"
+  },
+  {
+    "connector": "lufthansa",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "mad-mimi",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "magento-1",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "magento-2",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "mailboxlayer",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "mailchimp",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "mailchimp-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "mailerlite",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "mailjet",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "maintainx",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "managerplus",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "marketo",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "math-helpers",
+    "icon": "tablet",
+    "color": "green"
+  },
+  {
+    "connector": "mattermark",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "mav",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "messagebird",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "messagebird-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "metacx",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "microsoft-calendar",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "microsoft-dynamics",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "microsoft-dynamics-gp",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "microsoft-intune",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "microsoft-one-drive",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "microsoft-outlook",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "microsoft-sql-database",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "microsoft-teams",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "microsoft-teams-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "microsoft-text-translate",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "mindbody",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "miro",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "mixpanel",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "mixpanel-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "mode",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "monday",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "mongo-db",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "mongodb-cloud",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "mongodb-shell",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "monkey-learn",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "mosaic",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "motivosity",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "musixmatch",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "mustache",
+    "icon": "voicemail",
+    "color": "green"
+  },
+  {
+    "connector": "mysql",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "namely",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "nasa",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "netsuite",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "netsuite-soap",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "new-relic",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "newrelic-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "news-api",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "newscred",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "newscred-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "nexmo",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "nexmo-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "nimble",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "noop",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "notion",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "noyo",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "number-helpers",
+    "icon": "divide-square",
+    "color": "green"
+  },
+  {
+    "connector": "object-helpers",
+    "icon": "layers",
+    "color": "green"
+  },
+  {
+    "connector": "office365",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "office365-management",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "okta",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "okta-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "ometria",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "omnisend",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "onelogin",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "onelogin-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "onfido",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "onfido-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "onsolve",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "ontraport",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "ooma",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "ooma-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "opal",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "openai",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "opsgenie",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "optimizely",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "optimoroute",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "oracle-bronto",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "oracle-responsys",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "orderez",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "ordway",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "outreach",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "outreach-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "oxford-dictionaries",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "pagerduty",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "pageup",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "panaya",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "pandadoc",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "pardot",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "pardot-v3",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "partner-alerting-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "paylocity",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "paymo",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "paymo-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "paypal",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "paypal-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "pdf-helpers",
+    "icon": "folder-plus",
+    "color": "green"
+  },
+  {
+    "connector": "pdk",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "pendo",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "persistiq",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "personio",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "pestroutes",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "pex",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "phone-number-helpers",
+    "icon": "phone",
+    "color": "green"
+  },
+  {
+    "connector": "pigment",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "pipedrive",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "pipedrive-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "pipeline",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "pipeliner-crm-cloud",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "pitchly",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "plansource",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "plivo",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "podium",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "podium-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "portabilling",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "possiblenow",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "postgresql",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "postscript",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "powerbi",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "powerschool",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "process-street",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "prodpad",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "prodpad-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "productboard",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "productx",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "promoterio",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "pubsub",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "pubsub-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "pymetrics",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "python-script",
+    "icon": "python",
+    "color": "green"
+  },
+  {
+    "connector": "qlik",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "qualaroo",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "qualtrics",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "queue",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "quickbase",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "quickbooks",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "quickbooks-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "rabbitmq-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "rallyup",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "random-helpers",
+    "icon": "wind",
+    "color": "green"
+  },
+  {
+    "connector": "rareio",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "recurly",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "recurly-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "redshift",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "regonline",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "rejoiner",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "reltio",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "remarkety",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "resci-retention-science",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "retention-rocket",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "revio",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "revo-4-me",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "rho",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "ringcentral",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "ringcentral-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "ringover",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "ruum",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "sage-300",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "sailthru",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "sales-management-plus",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "salesforce",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "salesforce-marketing-cloud",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "salesforce-notification",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "salesforceiq",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "salesloft",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "salesloft-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "salesrabbit",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "salesrabbit-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "samsara",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "sap",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "sap-business-one",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "sap-s4hana-cloud",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "sapling",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "scheduled",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "scoop",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "scoop-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "script",
+    "icon": "terminal",
+    "color": "green"
+  },
+  {
+    "connector": "sdk-plivo",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "searchblox",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "sedna",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "segment",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "segment-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "semrush",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "send-email",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "sendgrid",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "sendgrid-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "sendinblue",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "sendinblue-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "sendlane",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "sendoso",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "sendpulse",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "servicenow",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "servicetitan",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "sharepoint",
+    "icon": "sharepoint",
+    "color": "green"
+  },
+  {
+    "connector": "sheets",
+    "icon": "google-sheets",
+    "color": "green"
+  },
+  {
+    "connector": "shibumi",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "shipstation",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "shopify",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "shopify-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "showpad",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "shutterstock",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "sift-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "simpli-fi",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "sitecore",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "skilljar-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "slack",
+    "icon": "slack",
+    "color": "green"
+  },
+  {
+    "connector": "slack-trigger",
+    "icon": "slack",
+    "color": "green"
+  },
+  {
+    "connector": "smartrmail",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "smartsheet",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "smartsheet-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "snapchat",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "snowflake",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "snowflake-okta",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "soap-client",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "solution-instance-trigger",
+    "icon": "activity",
+    "color": "green"
+  },
+  {
+    "connector": "splash",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "splunk-http-event-collector",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "spotdraft",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "sprinklr",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "square",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "stat",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "stedi",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "storage",
+    "icon": "layers",
+    "color": "green"
+  },
+  {
+    "connector": "storedge",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "strava",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "streak",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "stripe",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "stripe-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "sugarcrm",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "sugarmarket",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "surefire",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "survey-monkey",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "survey-monkey-apply",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "survey-monkey-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "surveysparrow",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "swoogo",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "synthesio",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "talkdesk",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "tatango",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "tatango-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "teamwork",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "teamwork-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "terminate",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "terminus",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "text-helpers",
+    "icon": "type",
+    "color": "green"
+  },
+  {
+    "connector": "thinkific",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "thumbtack",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "tnx",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "toggl",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "totango",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "tradogram",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "transport-for-london-tfl",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "traygramming-assistant",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "trayning-salesforce",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "trello",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "trello-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "trigger-reply",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "twilio-input",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "twilio-output",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "typeform",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "typeform-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "uberflip",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "udemy",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "udemy-for-business",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "ultipro",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "unbounce",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "unbounce-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "urban-airship-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "uservoice",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "vbrick",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "veeva",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "velocify",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "vertical-response",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "verve",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "vibes",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "videoask",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "videoask-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "virtuous-crm",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "vonage",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "vonage-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "vtiger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "vwo",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "walmart-marketplace",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "webdam",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "webhook",
+    "icon": "log-in",
+    "color": "green"
+  },
+  {
+    "connector": "welcome",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "welcome-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "whatcounts",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "wicket",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "widen",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "wolfram-alpha-full-results",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "wolfram-alpha-short-answers",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "wordpress",
+    "icon": "wordpress",
+    "color": "green"
+  },
+  {
+    "connector": "workable",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "workable-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "workflowmax",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "workfront",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "workplace",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "workstack",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "wrike",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "wrike-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "wufoo",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "wunderground",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "wunderlist",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "xero",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "xero-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "xlsx-helpers",
+    "icon": "excel",
+    "color": "green"
+  },
+  {
+    "connector": "xml-helpers",
+    "icon": "chevron-left",
+    "color": "green"
+  },
+  {
+    "connector": "xpressdocs",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "xverify",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "yammer",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "yext",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "yext-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "yodiz",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "yotpo",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "yotpo-loyalty",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "zaius",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "zelo-pay",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "zendesk",
+    "icon": "zendesk",
+    "color": "green"
+  },
+  {
+    "connector": "zendesk-sell",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "zendesk-sunshine",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "zendesk-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "zenefits",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "zerobounce",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "zip",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "zoho",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "zoho-creator",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "zoho-desk",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "zoom",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "zoom-trigger",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "zoominfo",
+    "icon": "help-circle",
+    "color": "green"
+  },
+  {
+    "connector": "zuora",
+    "icon": "help-circle",
+    "color": "green"
+  }
 ]
