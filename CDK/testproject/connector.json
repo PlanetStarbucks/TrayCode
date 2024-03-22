@@ -1,0 +1,12 @@
+{
+  "name": "bynder-custom-connectors-testproject",
+  "version": "1.0",
+  "title": "CDK Test Project",
+  "description": "",
+  "service": {
+    "name": "l5mGmhyVwWaXDd_cdk-test-project",
+    "version": "1"
+  },
+  "tags": ["service"],
+  "isTrigger": false
+}
