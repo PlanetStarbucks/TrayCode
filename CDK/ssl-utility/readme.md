@@ -36,4 +36,4 @@ This assumes you've already installed the Tray CDK. If not, follow the guides at
 
 If deployment is successful, the new SSL Utility node should be available in your Tray environment.
 
-!(CDK/SSLUtility.png)
+!(SSLUtility.png)
