@@ -3,9 +3,11 @@ const fs = require("fs");
 const _ = require("lodash");
 const { type } = require("os");
 
+const icons = JSON.parse(fs.readFileSync("/Users/bill.keiffer/Desktop/Git/TrayCode/EraserExport/IconLookup/trayConnectors.json"));
+const colors = JSON.parse(fs.readFileSync(`/Users/bill.keiffer/Desktop/Git/TrayCode/EraserExport/IconLookup/colorArray.json`));
 const testFile = JSON.parse(fs.readFileSync("EraserExport/IconLookup/Workflows/workflow_Erasar-Export-Test.json", "utf8"));
 const result = {
-	workflows: [],
+	groups: [],
 };
 
 // Constructor function to hold a group of nodes
@@ -26,10 +28,9 @@ const lookupStep = (stepID) => {
 	};
 };
 
-// function to parse a workflow structure and return the stringified structure for eraser.io
-const parseWorkflow = (workflow) => {
+const parseSteps = (group) => {
 	// get the step structure from the workflow and send it to the parseStep function
-	const steps = workflow.workflows[0].steps_structure.map((step) => {
+	const steps = group.map((step) => {
 		if (step.type === "normal") {
 			return {
 				id: step.name,
@@ -43,7 +44,96 @@ const parseWorkflow = (workflow) => {
 		}
 	});
 
-	result.workflows.push(new NodeGroup("Initial Group", workflow.workflows[0].steps_structure[0], workflow.workflows[0].steps_structure[workflow.workflows[0].steps_structure.length - 1], steps));
+	return steps;
+};
+
+const parseGroup = (id, group) => {
+	// the first group will be the inital group that holds all the sub groups, push that to the result object
+	// for readability, using a let with the initial structure to pass into the NodeGroup constructor
+	let start = firstStep(group);
+	let end = lastStep(group);
+	let steps = parseSteps(group);
+
+	// push the group to the result object
+	// using the NodeGroup constructor to create a new group object
+	result.groups.push(new NodeGroup(id, start, end, steps));
+
+	const subGroups = group.filter((step) => step.type !== "normal");
+	console.log(subGroups);
+	for (let i = 0; i < subGroups.length; i++) {
+		switch (subGroups[i].type) {
+			case "loop":
+				parseGroup(subGroups[i].name, subGroups[i].content._loop);
+				break;
+			case "branch":
+				Object.keys(subGroups[i].content).forEach((key) => {
+					parseGroup(subGroups[i].name, subGroups[i].content[key]);
+				});
+				break;
+			default:
+				break;
+		}
+	}
+};
+
+const lastStep = (steps) => {
+	// check if the last step is a normal step or a sub group
+	// if it is a normal step, return the last step
+	// if it is a sub group, return a new object with the type of sub group
+	if (steps.length === 0) {
+		return {
+			type: "emptySubGroup",
+		};
+	} else if (_.last(steps).type === "normal") {
+		return steps[steps.length - 1];
+	} else {
+		return {
+			type: "subGroup",
+		};
+	}
+};
+
+const firstStep = (steps) => {
+	// check if the first step is a normal step or a sub group
+	// if it is a normal step, return the first step
+	// if it is a sub group, return a new object with the type of sub group
+	if (steps.length === 0) {
+		return {
+			type: "emptySubGroup",
+		};
+	} else if (_.first(steps).type === "normal") {
+		return steps[0];
+	} else {
+		return {
+			type: "subGroup",
+		};
+	}
+};
+
+const getIcon = function (str) {
+	let res = `${icons.find((s) => s.connector === str).icon}`;
+	return res;
+};
+
+const getColor = function (obj, key) {
+	const icon = getIcon(importJSON.steps[obj.name].connector.name);
+	switch (importJSON.steps[obj.name].connector.name) {
+		case "boolean-condition":
+			return `[icon: ${icon}, color: ${key === "true" ? "green" : "red"}]`;
+		case "loop":
+			colorCount++;
+			return `[icon: ${icon}, color: ${colors[colorCount]}]`;
+		case "branch":
+			colorCount++;
+			return `[icon: ${icon}, color: ${colors[colorCount]}]`;
+	}
+};
+
+// function to parse a workflow structure and return the stringified structure for eraser.io
+const parseWorkflow = (workflow) => {
+	// the first group will be the inital group that holds all the sub groups, push that to the result object
+	// for readability, using a let with the initial structure to pass into the NodeGroup constructor
+	result.groups.push(parseGroup("Initial Group", workflow.workflows[0].steps_structure));
 
 	console.log(JSON.stringify(result, 0, 2));
 };
