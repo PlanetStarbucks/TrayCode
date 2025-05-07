@@ -3,20 +3,21 @@ const fs = require("fs");
 const _ = require("lodash");
 const { type } = require("os");
 
-const icons = JSON.parse(fs.readFileSync("/Users/bill.keiffer/Desktop/Git/TrayCode/EraserExport/IconLookup/trayConnectors.json"));
-const colors = JSON.parse(fs.readFileSync(`/Users/bill.keiffer/Desktop/Git/TrayCode/EraserExport/IconLookup/colorArray.json`));
+const icons = JSON.parse(fs.readFileSync("EraserExport/IconLookup/trayConnectors.json"));
+const colors = JSON.parse(fs.readFileSync(`EraserExport/IconLookup/colorArray.json`));
 const testFile = JSON.parse(fs.readFileSync("EraserExport/IconLookup/Workflows/workflow_Erasar-Export-Test.json", "utf8"));
 const result = {
 	groups: [],
 };
 
-const CACHE = {
+let CACHE = {
 	labels: [],
+	lastParent: {},
 };
 
 // Constructor function to hold a group of nodes
 function NodeGroup(id, name, start, end, steps, parent) {
-	this.id = name;
+	this.id = id;
 	this.label = CACHE.labels.includes(name) ? `${name} ${CACHE.labels.length}` : name;
 	this.start = start;
 	this.end = end;
@@ -26,11 +27,12 @@ function NodeGroup(id, name, start, end, steps, parent) {
 }
 
 // Function to lookup the step data needed from the steps part of the input object
-const lookupStep = (stepID) => {
-	const step = testFile.workflows[0].steps[stepID];
+const lookupStep = (stepId) => {
+	const step = testFile.workflows[0].steps[stepId];
 	return {
 		title: step.title,
 		type: step.connector.name,
+		id: stepId,
 		// add more properties as needed
 	};
 };
@@ -56,27 +58,31 @@ const parseSteps = (group) => {
 	return steps;
 };
 
-const parseGroup = (id, group, parent) => {
+const parseGroup = (id, name, group, parent) => {
 	// the first group will be the inital group that holds all the sub groups, push that to the result object
 	// for readability, using a let with the initial structure to pass into the NodeGroup constructor
 	let start = firstStep(group);
 	let end = lastStep(group);
 	let steps = parseSteps(group);
+	let parentNode = CACHE.lastParent;
 
 	// push the group to the result object
 	// using the NodeGroup constructor to create a new group object
-	result.groups.push(new NodeGroup(id, name, start, end, steps, parent));
+	result.groups.push(new NodeGroup(id, name, start, end, steps, parentNode));
 
 	const subGroups = group.filter((step) => step.type !== "normal");
 	for (let i = 0; i < subGroups.length; i++) {
+		const lastStep = parentStep(subGroups[i].content, steps);
+		// const thisStep = lookupStep(subGroups[i - 1].name);
+		// CACHE.lastParent = thisStep;
 		switch (subGroups[i].type) {
 			case "loop":
-				parseGroup(lookupStep(subGroups[i].name).title, subGroups[i].content._loop, id);
+				parseGroup(thisStep.id, thisStep.title, subGroups[i].content._loop, id);
 				break;
 			case "branch":
 				Object.keys(subGroups[i].content).forEach((key) => {
-					const branchName = `${lookupStep(subGroups[i].name).title} - ${key}`;
-					parseGroup(branchName, subGroups[i].content[key], id);
+					const branchName = `${thisStep.title} - ${key}`;
+					parseGroup(thisStep.id, branchName, subGroups[i].content[key], id);
 				});
 				break;
 			default:
@@ -84,6 +90,8 @@ const parseGroup = (id, group, parent) => {
 		}
 	}
 };
+
+const parentStep = (steps, allSteps) => {};
 
 const lastStep = (steps) => {
 	// check if the last step is a normal step or a sub group
@@ -142,7 +150,7 @@ const getColor = function (obj, key) {
 const parseWorkflow = (workflow) => {
 	// the first group will be the inital group that holds all the sub groups, push that to the result object
 	// for readability, using a let with the initial structure to pass into the NodeGroup constructor
-	result.groups.push(parseGroup("Initial Group", workflow.workflows[0].steps_structure, null));
+	result.groups.push(parseGroup("trigger", "Initial Group", workflow.workflows[0].steps_structure, null));
 
 	console.log(JSON.stringify(result, 0, 2));
 };
