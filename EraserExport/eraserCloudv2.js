@@ -10,12 +10,19 @@ const result = {
 	groups: [],
 };
 
+const CACHE = {
+	labels: [],
+};
+
 // Constructor function to hold a group of nodes
-function NodeGroup(name, start, end, steps) {
+function NodeGroup(id, name, start, end, steps, parent) {
 	this.id = name;
+	this.label = CACHE.labels.includes(name) ? `${name} ${CACHE.labels.length}` : name;
 	this.start = start;
 	this.end = end;
 	this.steps = steps;
+	this.parent = parent;
+	CACHE.labels.push(name);
 }
 
 // Function to lookup the step data needed from the steps part of the input object
@@ -39,7 +46,9 @@ const parseSteps = (group) => {
 			};
 		} else {
 			return {
-				subGroup: "placeholder",
+				id: step.name,
+				type: "subGroup",
+				stepData: lookupStep(step.name),
 			};
 		}
 	});
@@ -47,7 +56,7 @@ const parseSteps = (group) => {
 	return steps;
 };
 
-const parseGroup = (id, group) => {
+const parseGroup = (id, group, parent) => {
 	// the first group will be the inital group that holds all the sub groups, push that to the result object
 	// for readability, using a let with the initial structure to pass into the NodeGroup constructor
 	let start = firstStep(group);
@@ -56,18 +65,18 @@ const parseGroup = (id, group) => {
 
 	// push the group to the result object
 	// using the NodeGroup constructor to create a new group object
-	result.groups.push(new NodeGroup(id, start, end, steps));
+	result.groups.push(new NodeGroup(id, name, start, end, steps, parent));
 
 	const subGroups = group.filter((step) => step.type !== "normal");
-	console.log(subGroups);
 	for (let i = 0; i < subGroups.length; i++) {
 		switch (subGroups[i].type) {
 			case "loop":
-				parseGroup(subGroups[i].name, subGroups[i].content._loop);
+				parseGroup(lookupStep(subGroups[i].name).title, subGroups[i].content._loop, id);
 				break;
 			case "branch":
 				Object.keys(subGroups[i].content).forEach((key) => {
-					parseGroup(subGroups[i].name, subGroups[i].content[key]);
+					const branchName = `${lookupStep(subGroups[i].name).title} - ${key}`;
+					parseGroup(branchName, subGroups[i].content[key], id);
 				});
 				break;
 			default:
@@ -133,7 +142,7 @@ const getColor = function (obj, key) {
 const parseWorkflow = (workflow) => {
 	// the first group will be the inital group that holds all the sub groups, push that to the result object
 	// for readability, using a let with the initial structure to pass into the NodeGroup constructor
-	result.groups.push(parseGroup("Initial Group", workflow.workflows[0].steps_structure));
+	result.groups.push(parseGroup("Initial Group", workflow.workflows[0].steps_structure, null));
 
 	console.log(JSON.stringify(result, 0, 2));
 };
