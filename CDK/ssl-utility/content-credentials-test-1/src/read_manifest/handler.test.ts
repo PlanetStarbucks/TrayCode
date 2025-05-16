@@ -11,8 +11,8 @@ OperationHandlerTestSetup.configureHandlerTest(readManifestHandler, (handlerTest
 				.givenNothing()
 				.when(() => ({
 					file: {
-						name: "test.jpg",
-						url: "/Users/bill.keiffer/Desktop/Git/connectors-code-storage/CDK/bynder-custom-connectors/content-credentials-test-1/src/read_manifest/testImage1.jpg",
+						name: "testImage1.jpg",
+						url: "https://raw.githubusercontent.com/PlanetStarbucks/TrayCode/refs/heads/eraserUpdates/CDK/content-credentials-test-1/src/read_manifest/testImage1.jpg",
 						mime_type: "image/jpeg",
 						expires: 1747360816,
 					},

@@ -7,3 +7,10 @@ export type ReadManifestInput = {
 	 */
 	file: FileReference;
 };
+
+// export type FileReference = {
+// 	name: string;
+// 	url: string;
+// 	mime_type: string;
+// 	expires: number;
+// };
