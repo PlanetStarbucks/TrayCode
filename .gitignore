@@ -4,3 +4,11 @@
 .DS_Store
 .AppleDouble
 .LSOverride
+
+# Tray CDK
+dist
+node_modules
+node_modules
+.DS_Store
+**/src/**/input.json
+**/src/**/output.json
