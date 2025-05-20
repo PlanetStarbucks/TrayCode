@@ -1,7 +1,7 @@
 {
-	"name": "content-credentials-test-1",
+	"name": "content-credentials-beta",
 	"version": "1.0.0",
-	"description": "ContentCredentialsTest1",
+	"description": "ContentCredentialsBeta",
 	"engines": {
 		"node": ">=18.x"
 	},
@@ -22,6 +22,7 @@
 	"dependencies": {
 		"@trayio/cdk-dsl": "*",
 		"@trayio/cdk-runtime": "*",
+		"c2pa": "^0.30.9",
 		"c2pa-node": "^0.5.25"
 	},
 	"devDependencies": {

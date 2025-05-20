@@ -1,0 +1,10 @@
+{
+	"name": "bynder-custom-connectors-content-credentials-beta",
+	"version": "1.0",
+	"title": "Content credentials beta",
+	"description": "",
+	"service": { "name": "json-placeholder", "version": "1" },
+	"tags": ["service"],
+	"isTrigger": false,
+	"rawHttp": { "enabled": false }
+}

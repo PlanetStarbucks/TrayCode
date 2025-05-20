@@ -1,5 +1,5 @@
 import { OperationGlobalConfigHttp } from '@trayio/cdk-dsl/connector/operation/OperationGlobalConfig';
-import { ContentCredentialsTest1Auth } from './ContentCredentialsTest1Auth';
+import { ContentCredentialsBetaAuth } from './ContentCredentialsBetaAuth';
 
 /*
  * IMPORTANT NOTE: DO NOT DELETE THIS FILE
@@ -11,6 +11,6 @@ import { ContentCredentialsTest1Auth } from './ContentCredentialsTest1Auth';
  * You can ignore this configuration if you have disabled the Raw Http Operation in connector.json
  */
 export const globalConfigHttp =
-	OperationGlobalConfigHttp.create<ContentCredentialsTest1Auth>().withBaseUrl(
+	OperationGlobalConfigHttp.create<ContentCredentialsBetaAuth>().withBaseUrl(
 		(ctx) => 'https://jsonplaceholder.typicode.com'
 	);
