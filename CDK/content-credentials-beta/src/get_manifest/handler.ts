@@ -17,7 +17,7 @@ export const getManifestHandler = OperationHandlerSetup.configureHandler<Content
 			const manifest = await c2pa.read({ buffer, mimeType });
 
 			return OperationHandlerResult.success({
-				manifest: manifest ? manifest.label : null,
+				manifest: manifest && manifest.active_manifest ? manifest.active_manifest.label : null,
 			});
 		} catch (error) {
 			return OperationHandlerResult.failure(OperationHandlerError.connectorError(`An error occurred while reading the manifest ${error}`));
