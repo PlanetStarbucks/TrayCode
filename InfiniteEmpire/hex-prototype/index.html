@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Infinite Empire — Hex Prototype</title>
+<style>
+  html, body {
+    margin: 0;
+    height: 100%;
+    background: #14161a;
+    color: #e8e8e8;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+  body {
+    display: flex;
+  }
+  #sidebar {
+    width: 240px;
+    flex-shrink: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #1e2126;
+    border-right: 1px solid #33363d;
+  }
+  #sidebar h1 {
+    font-size: 17px;
+    margin: 0 0 4px;
+  }
+  #sidebar p {
+    font-size: 13px;
+    color: #9aa0aa;
+    margin: 0 0 16px;
+  }
+  .legend {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+    font-size: 13px;
+  }
+  .legend li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+    text-transform: capitalize;
+  }
+  .swatch {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+  #tileInfo {
+    font-size: 13px;
+    line-height: 1.6;
+    background: #14161a;
+    border: 1px solid #33363d;
+    border-radius: 6px;
+    padding: 12px;
+  }
+  #tileInfo .label {
+    color: #9aa0aa;
+  }
+  #canvasWrap {
+    flex: 1;
+    overflow: auto;
+  }
+  canvas {
+    display: block;
+  }
+</style>
+</head>
+<body>
+  <div id="sidebar">
+    <h1>Infinite Empire</h1>
+    <p>Hex grid prototype — click a tile to inspect it.</p>
+
+    <ul class="legend" id="legend"></ul>
+
+    <div id="tileInfo">No tile selected.</div>
+  </div>
+  <div id="canvasWrap">
+    <canvas id="hexCanvas" width="960" height="800"></canvas>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
